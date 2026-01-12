@@ -7,3 +7,4 @@
 - [Azure DevOps & CI/CD 常用用語集](07.md)
 - [DB 関連常用用語集](08.md)
 - [Git 常用コマンド & 現場フレーズ](09.md)
+- [Azure Repos 専用・現場ノート](10.md)
