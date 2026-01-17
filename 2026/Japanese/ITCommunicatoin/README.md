@@ -2,7 +2,7 @@
 ---
 - [日語發音全對照表](vocabulary/00.md)
 - [Teams](conversation/README.md)
-- [語彙](vocabulary/)
+- [語彙](vocabulary/README.md)
 
 様々なシーン
 ---
