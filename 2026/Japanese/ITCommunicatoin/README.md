@@ -1,7 +1,8 @@
 打合せ
 ---
 - [日語發音全對照表](vocabulary/00.md)
-- [Teams](00.md)
+- [Teams](conversation/README.md)
+- [語彙](vocabulary/)
 
 様々なシーン
 ---
