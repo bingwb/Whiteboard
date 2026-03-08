@@ -56,7 +56,7 @@ function Import-Ini {
 
     try {
         while (-Not $parser.EndOfData) {
-            $fields = $parser.ReadFields() | Where-Object { $_ -ne '' }
+            $fields = $parser.ReadFields() | Where-Object Length
 
             if ($fields.Count -ge 2) {
                 $key = $fields[0]
