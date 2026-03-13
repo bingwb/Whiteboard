@@ -389,3 +389,95 @@ Write-Host "该文件大小为: $sizeStr Bytes"
 * `[System.IO.File]::ReadLines`: 纯净的 .NET 字符串流，**速度比 `Get-Content` 快数倍**，同时保持极低的内存占用。
 
 你想看看如何利用这个流式特性，在不打开大文件的情况下搜索其中的特定关键词吗？
+
+### A:
+
+Select-Object -ExpandProperty Count
+
+### Q:
+
+在使用 PowerShell 时，`Select-Object -ExpandProperty` 是一个非常关键的进阶技巧。简单来说，它的作用是**“拆箱”**——把对象里的某个属性值直接拿出来，变成一个纯粹的数值或字符串。
+
+### 1. 为什么要“展开” (Expand)？
+
+当你运行 `Measure-Object` 时，它返回的是一个**对象**（即 `TextMeasureInfo` 对象），而不仅仅是一个数字。
+
+* **如果不使用 `-ExpandProperty`：**
+```powershell
+$result = "a","b","c" | Measure-Object
+$result | Get-Member
+# 输出：TypeName: Microsoft.PowerShell.Commands.GenericMeasureInfo
+# 它包含属性：Count, Average, Sum 等
+
+```
+
+
+此时 `$result` 是一个“盒子”，盒子里装着 `Count`（值为 3）。如果你直接把 `$result` 传给其他需要数字的命令，程序可能会报错。
+* **如果使用 `-ExpandProperty`：**
+```powershell
+$count = "a","b","c" | Measure-Object | Select-Object -ExpandProperty Count
+$count.GetType().Name
+# 输出：Int32
+
+```
+
+
+此时 `$count` 直接就是数字 `3`，没有任何包装。
+
+---
+
+### 2. 直观对比：提取 vs. 展开
+
+假设我们有一个对象 `$A`，它有一个属性叫 `Count`。
+
+| 命令 | 结果类型 | 结果内容示例 |
+| --- | --- | --- |
+| `Select-Object Count` | **PSCustomObject** (带标签的盒子) | `@{Count=3}` |
+| `Select-Object -ExpandProperty Count` | **Integer** (纯数据) | `3` |
+
+---
+
+### 3. 实际应用场景：管道衔接
+
+当你需要把结果直接用于数学计算或文件名时，展开属性是必须的。
+
+**错误示范：**
+
+```powershell
+$measure = Get-ChildItem | Measure-Object
+# 尝试做加法
+$measure + 1
+# 报错：无法将“GenericMeasureInfo”转换为“System.Int32”
+
+```
+
+**正确示范：**
+
+```powershell
+$count = Get-ChildItem | Measure-Object | Select-Object -ExpandProperty Count
+$count + 1
+# 顺利输出结果，比如 11
+
+```
+
+---
+
+### 4. 一个有趣的“简写”技巧
+
+在 PowerShell 中，如果你只是想快速拿到属性值，还有一种更现代（且更短）的写法，效果等同于 `-ExpandProperty`：
+
+```powershell
+# 使用圆括号包裹命令，然后直接点出属性名
+(Get-Content "file.txt" | Measure-Object).Count
+
+```
+
+这种写法在交互式命令行（Console）中非常流行，但在正式脚本中，`Select-Object -ExpandProperty` 的可读性通常更好。
+
+---
+
+### 总结
+
+`Select-Object -ExpandProperty Count` 的核心逻辑就是：**丢掉对象的壳子，只提取里面的数值。**
+
+既然你已经掌握了如何提取文件行数和大小，想不想试试写一个命令，找出某个文件夹下**行数最多**的那个文件名？
