@@ -3,7 +3,7 @@ using namespace System.Collections.Generic
 
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory, Position = 0)]
     [string]$Path
 )
 
