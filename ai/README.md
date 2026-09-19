@@ -13,17 +13,17 @@
 
 > **目标**：打通数学与深度学习底层逻辑，实现从“传统软件开发”到“概率/张量编程”的思想转变。
 
-* **1. 数学与 Python 强化**
+**1. 数学与 Python 强化**
 * **核心知识**：线性代数（矩阵乘法、特征值）、微积分（偏导数、梯度下降）、概率统计（贝叶斯、分布）。
 * **Python 科学计算**：深入掌握 `NumPy`（张量操作）、`Pandas`（数据处理）、`Matplotlib/Seaborn`（数据可视化）。您在履历中有写过 Python，建议快速重构这部分知识。
 
 
-* **2. 经典机器学习（ML）**
+**2. 经典机器学习（ML）**
 * **核心算法**：线性回归、逻辑回归、决策树、随机森林、SVM、XGBoost。
 * **上手实战**：熟练掌握 `Scikit-learn`，理解过拟合/欠拟合、特征工程、交叉验证与评估指标（Precision, Recall, ROC-AUC）。
 
 
-* **3. 深度学习原理（DL）**
+**3. 深度学习原理（DL）**
 * **原理理解**：多层感知机（MLP）、前向传播与反向传播算法（BP）、损失函数、优化器（SGD, Adam）。
 * **上手实战**：学习 **PyTorch**（推荐，工业界与学术界主流）。动手写一个简单的神经网络完成 MNIST 手写数字识别或分类任务。
 
@@ -33,27 +33,25 @@
 
 > **目标**：深入主流 LLM 原理，掌握企业级 AI 系统的构建与应用开发（这是目前市场上最火爆、落地最快的领域）。
 
-* **1. 深入 Transformer 与 LLM 原理**
+**1. 深入 Transformer 与 LLM 原理**
 * **原理剖析**：深入理解 Attention 机制（Self-Attention、Multi-Head Attention）、Transformer 的 Encoder-Decoder 架构、Tokenization（BPETokenizer）。
 * **模型演进**：理解 BERT、GPT 系列、Llama 系列等模型演进逻辑，了解 Pre-training、SFT（指令微调）、RLHF/DPO（人类反馈强化学习）的工作流程。
 
 
-* **2. AI 应用开发套件（RAG 与 Agent）**
-* **RAG 架构（检索增强生成）**：
-* 深入理解 Vector Embeddings（向量嵌入）与向量数据库（Milvus, Qdrant, PGvector, Pinecone）。
-* 学习 Chunking 策略、混合检索（Hybrid Search: 关键词+语义）、Rerank 重排序。
+**2. AI 应用开发套件（RAG 与 Agent）**
+  - **RAG 架构（检索增强生成）**：
+    * 深入理解 Vector Embeddings（向量嵌入）与向量数据库（Milvus, Qdrant, PGvector, Pinecone）。
+    * 学习 Chunking 策略、混合检索（Hybrid Search: 关键词+语义）、Rerank 重排序。
+
+  * **Agent（智能体）与 Tool Calling**：
+    * 学习 ReAct 框架、Function Calling 机制，让 AI 能够自主调用外部 API、操作 SQL 数据库等。<br><br>
+
+  * **主流开发框架**：熟练使用 **LangChain** 或 **LlamaIndex**，结合 API（OpenAI, Claude, DeepSeek）快速搭建智能对话/文档 QA 系统。
 
 
-* **Agent（智能体）与 Tool Calling**：
-* 学习 ReAct 框架、Function Calling 机制，让 AI 能够自主调用外部 API、操作 SQL 数据库等。
-
-
-* **主流开发框架**：熟练使用 **LangChain** 或 **LlamaIndex**，结合 API（OpenAI, Claude, DeepSeek）快速搭建智能对话/文档 QA 系统。
-
-
-* **3. C# / .NET 生态中的 AI 集成（发挥您的绝对优势）**
-* **Semantic Kernel (SK)**：微软官方出品的轻量级 AI 框架，专为 C#/.NET 开发者打造。它能将 LLM 的 Prompt/插件与传统 C# 代码缝合。
-* **ML.NET / ONNX Runtime**：学习如何在 .NET 环境下直接运行和加载训练好的 AI 模型（ONNX 格式），做端侧/边缘端的推理。
+**3. C# / .NET 生态中的 AI 集成（发挥您的绝对优势）**
+  * **Semantic Kernel (SK)**：微软官方出品的轻量级 AI 框架，专为 C#/.NET 开发者打造。它能将 LLM 的 Prompt/插件与传统 C# 代码缝合。
+  * **ML.NET / ONNX Runtime**：学习如何在 .NET 环境下直接运行和加载训练好的 AI 模型（ONNX 格式），做端侧/边缘端的推理。
 
 
 
@@ -61,34 +59,34 @@
 
 > **目标**：从“调用 API”提升到“能微调模型、部署私有化模型、搭建高并发 AI 架构”。
 
-* **1. LLM 高效微调（PEFT / LoRA）**
-* **实战技术**：学习使用 `Hugging Face (Transformers, PEFT, TRL)` 库。
-* **掌握方法**：LoRA、QLoRA、Prompt Tuning。学会使用私有业务数据对开源大模型（如 Llama 3、Qwen 2.5、DeepSeek 等）进行领域增量微调。
+**1. LLM 高效微调（PEFT / LoRA）**
+  * **实战技术**：学习使用 `Hugging Face (Transformers, PEFT, TRL)` 库。
+  * **掌握方法**：LoRA、QLoRA、Prompt Tuning。学会使用私有业务数据对开源大模型（如 Llama 3、Qwen 2.5、DeepSeek 等）进行领域增量微调。
 
 
-* **2. 开源模型本地化与私有部署**
-* **本地轻量推理**：Ollama、LM Studio、vLLM、TGI（Text Generation Inference）。
-* **量化技术**：理解 INT8/INT4 量化（GGUF, AWQ, GPTQ），掌握如何在有限显存（如单张 4090 或 Cloud GPU）上高效运行模型。
+**2. 开源模型本地化与私有部署**
+  * **本地轻量推理**：Ollama、LM Studio、vLLM、TGI（Text Generation Inference）。
+  * **量化技术**：理解 INT8/INT4 量化（GGUF, AWQ, GPTQ），掌握如何在有限显存（如单张 4090 或 Cloud GPU）上高效运行模型。
 
 
-* **3. 云原生 AI 架构与 MLOps（结合您的 Azure / AWS 背景）**
-* **Azure AI / OpenAI Service**：结合您在 Azure Synapse、Function App、Service Bus 的经验，将 AI 服务作为消息驱动架构的一环嵌入企业工作流。
-* **MLOps**：模型的版本控制（MLflow）、提示词评估（Promptflow/LangSmith）、数据隐私与安全治理。
+**3. 云原生 AI 架构与 MLOps（结合您的 Azure / AWS 背景）**
+  * **Azure AI / OpenAI Service**：结合您在 Azure Synapse、Function App、Service Bus 的经验，将 AI 服务作为消息驱动架构的一环嵌入企业工作流。
+  * **MLOps**：模型的版本控制（MLflow）、提示词评估（Promptflow/LangSmith）、数据隐私与安全治理。
 
 
 
 ### 建议的学习路径与资源推荐
 
-1. **经典课程推荐**：
-* **Andrew Ng（吴恩达）** 的《Machine Learning Specialization》与《Deep Learning Specialization》（Coursera / B站）：原理入门首选。
-* **DeepLearning.AI 短期微课**：有很多关于 LangChain, RAG, Semantic Kernel, LoRA 微调的实操小课（免费且非常实用）。
-* **李沐（Muking）** 的《动手学深度学习》（PyTorch版）：注重原理与代码结合。
+**1. 经典课程推荐：**
+  * **Andrew Ng（吴恩达）** 的《Machine Learning Specialization》与《Deep Learning Specialization》（Coursera / B站）：原理入门首选。
+  * **DeepLearning.AI 短期微课**：有很多关于 LangChain, RAG, Semantic Kernel, LoRA 微调的实操小课（免费且非常实用）。
+  * **李沐（Muking）** 的《动手学深度学习》（PyTorch版）：注重原理与代码结合。
 
 
-2. **推荐实战项目选题**：
-* **项目 1（C# + AI）**：基于 **Semantic Kernel + Azure OpenAI + Qdrant** 搭建一个**企业级私有知识库客服系统**（支持 PDF/Word 导入、向量检索、混合排查）。
-* **项目 2（Python + Agent）**：开发一个**智能 SQL 助手 Agent**，能够根据用户自然语言提问，自动生成 SQL，调用数据库查询并生成可视化图表（完全结合您的 SQL/DB 强项）。
-* **项目 3（模型微调）**：使用 QLoRA 微调一个开源代码大模型，让其专门生成或审查特定 C# 规范的代码。
+**2. 推荐实战项目选题：**
+  * **项目 1（C# + AI）**：基于 **Semantic Kernel + Azure OpenAI + Qdrant** 搭建一个**企业级私有知识库客服系统**（支持 PDF/Word 导入、向量检索、混合排查）。
+  * **项目 2（Python + Agent）**：开发一个**智能 SQL 助手 Agent**，能够根据用户自然语言提问，自动生成 SQL，调用数据库查询并生成可视化图表（完全结合您的 SQL/DB 强项）。
+  * **项目 3（模型微调）**：使用 QLoRA 微调一个开源代码大模型，让其专门生成或审查特定 C# 规范的代码。
 
 
 
@@ -113,13 +111,13 @@
 #### 1. 推荐学习资源（日语）
 
 * **Python 与数据科学基础**：
-* [東京大学 Pythonプログラミング入門](https://utokyo-ipp.github.io/?utm_source=gemini)：东京大学公开的开源 Python 教程，包含 `NumPy`、`Pandas`、`Matplotlib` 等数据处理库的权威使用说明。
-* [Python.jp (ゼロからのPython入門講座)](https://www.python.jp/train/index.html?utm_source=gemini)：针对 Google Colab 环境的日语 Python 入门教程。
+  * [東京大学 Pythonプログラミング入門](https://utokyo-ipp.github.io/?utm_source=gemini)：东京大学公开的开源 Python 教程，包含 `NumPy`、`Pandas`、`Matplotlib` 等数据处理库的权威使用说明。
+  * [Python.jp (ゼロからのPython入門講座)](https://www.python.jp/train/index.html?utm_source=gemini)：针对 Google Colab 环境的日语 Python 入门教程。
 
 
 * **机器学习与深度学习**：
-* [Chainer/PyTorch ビギナー向けチュートリアル](https://tutorials.chainer.org/?utm_source=gemini)：由日本首屈一指的 AI 企业 Preferred Networks (PFN) 与东京大学联合打造的完全免费、高质量日语 AI 教程（从数学基础、Python 到深度学习全覆盖）。
-* [PyTorch チュートリアル（日本語翻訳版）](https://yutaroogawa.github.io/pytorch_tutorials_jp/?utm_source=gemini)：PyTorch 官方文档的高质量日语翻译版。
+  * [Chainer/PyTorch ビギナー向けチュートリアル](https://tutorials.chainer.org/?utm_source=gemini)：由日本首屈一指的 AI 企业 Preferred Networks (PFN) 与东京大学联合打造的完全免费、高质量日语 AI 教程（从数学基础、Python 到深度学习全覆盖）。
+  * [PyTorch チュートリアル（日本語翻訳版）](https://yutaroogawa.github.io/pytorch_tutorials_jp/?utm_source=gemini)：PyTorch 官方文档的高质量日语翻译版。
 
 
 
@@ -139,13 +137,13 @@
 #### 1. 推荐学习资源（日语）
 
 * **LLM 机制与应用开发**：
-* [Zenn - LLM/生成AI 記事一覧](https://zenn.dev/topics/llm?utm_source=gemini)：日本工程师最活跃的技术社区之一，上有大量的 RAG、Agent、LangChain 和 Semantic Kernel 实践案例。
-* [Qiita - Semantic Kernel 入門](https://qiita.com/tags/semantickernel?utm_source=gemini)：针对 C#/.NET 开发者，Qiita 上有许多日本微软 MVP 写的 Semantic Kernel 结合 Azure OpenAI 的实战文章。
-* [Microsoft Learn - Semantic Kernel の概要](https://learn.microsoft.com/ja-jp/semantic-kernel/overview/?utm_source=gemini)：微软官方的日语文档，非常适合您查阅 C# 中的概念（如 `Kernel`、`Plugins`、`Prompts` 等）。
+  * [Zenn - LLM/生成AI 記事一覧](https://zenn.dev/topics/llm?utm_source=gemini)：日本工程师最活跃的技术社区之一，上有大量的 RAG、Agent、LangChain 和 Semantic Kernel 实践案例。
+  * [Qiita - Semantic Kernel 入門](https://qiita.com/tags/semantickernel?utm_source=gemini)：针对 C#/.NET 开发者，Qiita 上有许多日本微软 MVP 写的 Semantic Kernel 结合 Azure OpenAI 的实战文章。
+  * [Microsoft Learn - Semantic Kernel の概要](https://learn.microsoft.com/ja-jp/semantic-kernel/overview/?utm_source=gemini)：微软官方的日语文档，非常适合您查阅 C# 中的概念（如 `Kernel`、`Plugins`、`Prompts` 等）。
 
 
 * **开发框架**：
-* [LangChain 公式ドキュメント (日本語表示機能付き)](https://python.langchain.com/?utm_source=gemini)：配合浏览器翻译，学习 RAG 和 Agent 构建。
+  * [LangChain 公式ドキュメント (日本語表示機能付き)](https://python.langchain.com/?utm_source=gemini)：配合浏览器翻译，学习 RAG 和 Agent 构建。
 
 
 
@@ -167,12 +165,12 @@
 #### 1. 推荐学习资源（日语）
 
 * **LLM 微调与开源模型**：
-* [Hugging Face 日本コミュニティ / Zenn HuggingFace タグ](https://zenn.dev/topics/huggingface?utm_source=gemini)：学习如何在 Hugging Face 上调取日本本土主流开源模型（如 Qwen、Llama-3、SBVT/CyberAgent 日本语大模型）。
-* [vLLM / Ollama 日本語活用ガイド](https://qiita.com/tags/ollama?utm_source=gemini)：学习本地与服务器端部署 LLM 的日语实践指南。
+  * [Hugging Face 日本コミュニティ / Zenn HuggingFace タグ](https://zenn.dev/topics/huggingface?utm_source=gemini)：学习如何在 Hugging Face 上调取日本本土主流开源模型（如 Qwen、Llama-3、SBVT/CyberAgent 日本语大模型）。
+  * [vLLM / Ollama 日本語活用ガイド](https://qiita.com/tags/ollama?utm_source=gemini)：学习本地与服务器端部署 LLM 的日语实践指南。
 
 
 * **Azure AI / MLOps (结合您的云端背景)**：
-* [Microsoft Learn - Azure OpenAI Service ドキュメント](https://learn.microsoft.com/ja-jp/azure/ai-services/openai/?utm_source=gemini)：微软官方关于 企业级 Azure OpenAI 架构、安全与 RAG 构建的日语文档。
+  * [Microsoft Learn - Azure OpenAI Service ドキュメント](https://learn.microsoft.com/ja-jp/azure/ai-services/openai/?utm_source=gemini)：微软官方关于 企业级 Azure OpenAI 架构、安全与 RAG 构建的日语文档。
 
 
 
@@ -212,9 +210,9 @@
 ### 1. 核心工具链选型与配置
 
 * **行内补全与 Code Agent 工具**：
-* **GitHub Copilot / Copilot Chat**：Visual Studio / VS Code 必备插件，熟练掌握快捷键（如 `Tab` 采纳、`Ctrl+I` 行内对话）。
-* **Cursor / Windsurf**：目前最强的 AI-first IDE。掌握其核心功能：`Cmd+K`（内联修改）、`Cmd+L`（全局 Chat）、`Composer`（多文件跨架构自动修改）。
-* **Claude 3.5 Sonnet / DeepSeek-V3 / GPT-4o**：选择最擅长写代码的大模型作为底座。
+  * **GitHub Copilot / Copilot Chat**：Visual Studio / VS Code 必备插件，熟练掌握快捷键（如 `Tab` 采纳、`Ctrl+I` 行内对话）。
+  * **Cursor / Windsurf**：目前最强的 AI-first IDE。掌握其核心功能：`Cmd+K`（内联修改）、`Cmd+L`（全局 Chat）、`Composer`（多文件跨架构自动修改）。
+  * **Claude 3.5 Sonnet / DeepSeek-V3 / GPT-4o**：选择最擅长写代码的大模型作为底座。
 
 
 
@@ -250,9 +248,9 @@
 ### 1. Spec-Driven Development (SDD / 规范驱动开发)
 
 * **Workflow**：
-1. **PRD / 设计文档**：人类编写 Markdown 格式的详细要件定义或 API 契约（OpenAPI/Swagger）。
-2. **Agent 调度**：使用 Cursor Composer、Devin 或 AutoGPT 类型工具，让 AI 依据规范自动建文件夹、写接口、实现业务逻辑、补充单元测试。
-3. **Human-in-the-Loop**：人类工程师扮演 **Tech Lead / Code Reviewer**，对 AI 生成的 Pull Request 进行代码审查、安全性检查与性能测试。
+  1. **PRD / 设计文档**：人类编写 Markdown 格式的详细要件定义或 API 契约（OpenAPI/Swagger）。
+  2. **Agent 调度**：使用 Cursor Composer、Devin 或 AutoGPT 类型工具，让 AI 依据规范自动建文件夹、写接口、实现业务逻辑、补充单元测试。
+  3. **Human-in-the-Loop**：人类工程师扮演 **Tech Lead / Code Reviewer**，对 AI 生成的 Pull Request 进行代码审查、安全性检查与性能测试。
 
 
 
@@ -430,15 +428,9 @@ Anthropic 的 Claude 体系（及配套工具）在成本（费用）方面，�
 
 | 模型系列 | 输入单价 (Input) | 输出单价 (Output) | 定位与成本评估 |
 | --- | --- | --- | --- |
-| **Claude Sonnet**<br>
-
-<br>*(Sonnet 5 / 4.6，主力模型)* | **$2.00 ~ $3.00** / 1M Token | **$10.00 ~ $15.00** / 1M Token | **生产力与性价比之王**。绝大多数代码生成、重构、单元测试和 RAG 开发都建议用它，综合成本极低且质量顶尖。 |
-| **Claude Opus**<br>
-
-<br>*(Opus 5 / 4.6，顶级推理)* | **$5.00** / 1M Token | **$25.00** / 1M Token | **高难架构与 Agent 专用**。成本约为 Sonnet 的 2~2.5 倍，适合极其复杂的跨项目重构或需要高自治度的智能体任务。 |
-| **Claude Haiku**<br>
-
-<br>*(Haiku 4.5，轻量模型)* | **$1.00** / 1M Token | **$5.00** / 1M Token | **极致低成本**。适合轻量级的文本分类、简单代码注释生成或高并发的 API 路由。 |
+| **Claude Sonnet**<br>*(Sonnet 5 / 4.6，主力模型)* | **$2.00 ~ $3.00** / 1M Token | **$10.00 ~ $15.00** / 1M Token | **生产力与性价比之王**。绝大多数代码生成、重构、单元测试和 RAG 开发都建议用它，综合成本极低且质量顶尖。 |
+| **Claude Opus**<br>*(Opus 5 / 4.6，顶级推理)* | **$5.00** / 1M Token | **$25.00** / 1M Token | **高难架构与 Agent 专用**。成本约为 Sonnet 的 2~2.5 倍，适合极其复杂的跨项目重构或需要高自治度的智能体任务。 |
+| **Claude Haiku**<br>*(Haiku 4.5，轻量模型)* | **$1.00** / 1M Token | **$5.00** / 1M Token | **极致低成本**。适合轻量级的文本分类、简单代码注释生成或高并发的 API 路由。 |
 
 
 ### 三、 极致节省 API 成本的 2 个核心技术
@@ -696,19 +688,19 @@ Anthropic 的 Claude 体系（及配套工具）在成本（费用）方面，�
 支持 AI 编程 Agent 自主工作的内部机制包括：
 
 1. **Planning (规划能力)**
-* 将复杂需求拆解为可执行的 Sub-tasks（子任务）。
-* **日文**：**タスク分解 (Task Breakdown) / 計画立案**
+  * 将复杂需求拆解为可执行的 Sub-tasks（子任务）。
+  * **日文**：**タスク分解 (Task Breakdown) / 計画立案**
 
 
 2. **Tools & MCP (工具调用与上下文协议)**
-* 允许 Agent 像人类程序员一样读写文件系统、执行 Bash 命令行、查询数据库等。目前主流的标准协议为 **MCP (Model Context Protocol)**。
-* **日文**：**ツール利用 (Tool Use) / 外部ツール連携**
+  * 允许 Agent 像人类程序员一样读写文件系统、执行 Bash 命令行、查询数据库等。目前主流的标准协议为 **MCP (Model Context Protocol)**。
+  * **日文**：**ツール利用 (Tool Use) / 外部ツール連携**
 
 
 3. **Memory & Context (内存与上下文)**
-* **Short-term Memory**：当前对话的 Context Window。
-* **Long-term Memory**：通过 RAG 或向量数据库，记忆整套解决方案（Solution）的架构与历史重构记录。
-* **日文**：**記憶・コンテキスト保持 (Memory & Context Management)**
+  * **Short-term Memory**：当前对话的 Context Window。
+  * **Long-term Memory**：通过 RAG 或向量数据库，记忆整套解决方案（Solution）的架构与历史重构记录。
+  * **日文**：**記憶・コンテキスト保持 (Memory & Context Management)**
 
 
 
@@ -753,8 +745,8 @@ Anthropic 的 Claude 体系（及配套工具）在成本（费用）方面，�
 
 * **概念**：指通过技术手段，让 AI 的目标、行为和输出**与人类的意图、伦理观及安全规范保持一致**，防止 AI 产生幻觉、毒性言论或越权行为。
 * **日语表达**：
-* **AIアライメント** / **アラインメント**（技术界最通用）
-* **人間の意図や価値観との整合**（学术/公文表达）
+  * **AIアライメント** / **アラインメント**（技术界最通用）
+  * **人間の意図や価値観との整合**（学术/公文表达）
 
 
 
@@ -762,8 +754,8 @@ Anthropic 的 Claude 体系（及配套工具）在成本（费用）方面，�
 
 * **概念**：实现“AI 对齐”最关键的技术手段。先由人类标注者对 AI 的多个回答打分或排序，训练出一个“奖励模型（Reward Model）”，再通过强化学习（如 PPO/DPO 算法）引导 AI 模型输出更符合人类偏好的回答。
 * **日语表达**：
-* **RLHF**（直接用英文首字母）
-* **人間のフィードバックによる強化学習**（正式名称）
+  * **RLHF**（直接用英文首字母）
+  * **人間のフィードバックによる強化学習**（正式名称）
 
 
 
@@ -771,8 +763,8 @@ Anthropic 的 Claude 体系（及配套工具）在成本（费用）方面，�
 
 * **概念**：在回答用户问题前，AI 先去外部知识库（如企业文档、SQL 数据库）中**检索**相关信息，再结合这些参考资料**生成**回答。这是解决 AI 幻觉、实现企业私有数据问答的标准方案。
 * **日语表达**：
-* **RAG**（最常用）
-* **検索拡張生成**（正式名称）
+  * **RAG**（最常用）
+  * **検索拡張生成**（正式名称）
 
 
 
@@ -780,8 +772,8 @@ Anthropic 的 Claude 体系（及配套工具）在成本（费用）方面，�
 
 * **概念**：将 AI 的输出严格限制在给定的“事实依据（Context / Enterprise Data）”之内，避免 AI 瞎编。RAG 就是一种典型的 Grounding 技术。
 * **日语表达**：
-* **グラウンディング**
-* **根拠付け** / **事実に基づく出力**
+  * **グラウンディング**
+  * **根拠付け** / **事実に基づく出力**
 
 
 
@@ -789,8 +781,8 @@ Anthropic 的 Claude 体系（及配套工具）在成本（费用）方面，�
 
 * **概念**：由 Anthropic 主导并逐渐成为行业标准的**开放协议**。它为 LLM 接入本地文件系统、GitHub、数据库、外部 API 提供了一条标准化的管道，被称为“AI 界的 USB 接口”。
 * **日语表达**：
-* **MCP (Model Context Protocol)**
-* **モデル・コンテキスト・プロトコル**
+  * **MCP (Model Context Protocol)**
+  * **モデル・コンテキスト・プロトコル**
 
 
 
@@ -798,21 +790,21 @@ Anthropic 的 Claude 体系（及配套工具）在成本（费用）方面，�
 
 * **概念**：在通用基座模型（Base Model）之上，使用特定领域的高质量数据集（如 C# 项目代码、特定行业 SQL 架构）进行二次训练，使模型掌握特定领域的专业知识或输出格式。
 * **日语表达**：
-* **ファインチューニング**
-* **微調整** / **追加学習**
+  * **ファインチューニング**
+  * **微調整** / **追加学習**
 
 
 
 #### 7. System Prompt & Guardrails (系统提示词与安全围栏)
 
 * **概念**：
-* **System Prompt**：在用户输入之前预先设定的全局指令，用于规定 AI 的角色（如“你是一位高级 C# 架构师”）、回复风格和边界。
-* **Guardrails**：在输入/输出侧设置的过滤拦截层，防止 Prompt 注入攻击或敏感数据泄露。
+  * **System Prompt**：在用户输入之前预先设定的全局指令，用于规定 AI 的角色（如“你是一位高级 C# 架构师”）、回复风格和边界。
+  * **Guardrails**：在输入/输出侧设置的过滤拦截层，防止 Prompt 注入攻击或敏感数据泄露。
 
 
 * **日语表达**：
-* **システムプロンプト**
-* **ガードレール** / **安全フィルター**
+  * **システムプロンプト**
+  * **ガードレール** / **安全フィルター**
 
 
 
