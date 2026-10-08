@@ -1,5 +1,75 @@
-准备 Java 面试时，如果好久没写代码，最容易在项目结构、包声明、依赖管理这些基础细节上卡壳。
-目前主流企业开发基本都使用 IntelliJ IDEA + Maven / Spring Boot 组合。以下为你梳理面试和上手实操最核心的知识点： [1, 2]
+在 Java 开发（尤其是企业级 Spring Boot 项目）中，有几个几乎每个项目必带的“国民级”库。面试官如果让你聊聊日常开发或技术栈，熟练说出这些库并解释其核心作用，会显得你很有工程经验。
+以下是为你整理的高频常用库列表，按功能分类：
+------------------------------
+## 1. 效率神器与基础增强
+
+*
+* Lombok
+* 作用：通过注解自动生成 Getter/Setter、toString()、构造函数、Builder 模式等。
+   * 核心注解：@Data, @Slf4j, @Builder, @NoArgsConstructor, @AllArgsConstructor。
+   * 面试加分点：它是编译期通过字节码增强（APT 技术）生效的，不影响运行期性能。
+* Google Guava / Apache Commons Lang
+* 作用：Java 原生 API 的大补丸。提供了大量的字符串处理、集合操作（如不可变集合）、防空判断、缓存等工具类。
+   * 常用类：StringUtils (Apache), Lists, Maps, Preconditions (Guava)。
+*
+
+------------------------------
+## 2. JSON 序列化与反序列化
+在 Web 开发中，Java 对象与前端 JSON 字符串的相互转换最常用的是这三个：
+
+*
+* Jackson
+* 作用：Spring Boot 默认集成的 JSON 解析库，生态最好，功能最稳健。
+   * 常用类：ObjectMapper。
+* Fastjson2 (Alibaba)
+* 作用：国内大厂非常爱问，主打极致的性能和速度，但历史版本曾因为反序列化安全漏洞较多引发争议。
+* Gson (Google)
+* 作用：轻量级，常用于移动端（Android）或不需要复杂配置的小型项目。
+*
+
+------------------------------
+## 3. 对象映射（Bean 复制）
+
+*
+* MapStruct
+* 作用：在分层架构中（如 Entity 转 DTO），快速进行属性拷贝。
+   * 面试加分点：相比古老的 BeanUtils.copyProperties（利用反射，性能较差），MapStruct 是在编译期生成原生的 set/get 代码，性能等同于纯手动硬编码，非常高效。
+*
+
+------------------------------
+## 4. 工具类与网络请求
+
+*
+* Hutool
+* 作用：国内热度极高的开源国货工具类库，被称为 Java 的“万能口袋”。把日期处理、加解密、文件读写、正则、网络请求等都封装成了极简的 API（如 DateUtil, HttpUtil）。
+* OkHttp / Apache HttpClient
+* 作用：用于在 Java 代码中作为客户端发送 HTTP 请求（比如调用第三方支付接口）。OkHttp 性能更好，是目前的主流选择。
+*
+
+------------------------------
+## 5. 数据校验
+
+*
+* Hibernate Validator (Jakarta Bean Validation)
+* 作用：Spring Boot 默认集成，用于在接收前端参数时做合法性校验，避免写一堆 if-else。
+   * 核心注解：@NotNull, @NotBlank, @Size, @Min, @Email。
+*
+
+------------------------------
+## 6. 核心依赖速查表（可直接放入 pom.xml）
+
+| 库名 | 核心依赖 coordinates (groupId:artifactId) | 一句话大白话作用 |
+|---|---|---|
+| Lombok | org.projectlombok:lombok | 让你少写几百行 getter/setter |
+| Hutool | cn.hutool:hutool-all | 各种好用的 Java 现成工具箱 |
+| MapStruct | org.mapstruct:mapstruct | 超高性能的 DTO 转 Entity 拷贝工具 |
+| Fastjson2 | com.alibaba.fastjson2:fastjson2 | 阿里出品，速度极快的 JSON 转换器 |
+| Guava | com.google.guava:guava | 谷歌出品，强大的集合与缓存基础库 |
+
+------------------------------
+这些库里你过去有用过哪几个吗？如果你想知道面试中如何聊到这些库的避坑指南（比如 Fastjson 的安全问题，或者 BeanUtils 的性能陷阱），我可以为你梳理几个经典的面试话术。
+---
+
 ------------------------------
 ## 一、 Java 项目的新建与结构（以 Maven / Spring Boot 为例）
 现在绝大多数 Java 项目都是 Maven 工程。 [1, 2]
@@ -15,6 +85,7 @@
 ## 2. 标准 Maven 工程目录结构
 记住下面这个经典的“约定大于配置”目录树，面试时如果让你画或者口述项目结构，非常加分：
 
+```
 my-project/
 ├── pom.xml                      # Maven 核心配置文件（管理依赖、版本、插件）
 └── src/
@@ -31,6 +102,7 @@ my-project/
     └── test/
         └── java/                # 单元测试代码目录
 
+```
 ------------------------------
 ## 二、 包（Package）与引用（Import）机制
 这是 Java 编译和类查找的底层逻辑，面试官常用来考察基础功。
@@ -563,74 +635,3 @@ public class AccountService {
 * 更多的 COBOL 语法与 Java 语法的映射演练
 
 请告诉我你想深入哪一部分！
-
-在 Java 开发（尤其是企业级 Spring Boot 项目）中，有几个几乎每个项目必带的“国民级”库。面试官如果让你聊聊日常开发或技术栈，熟练说出这些库并解释其核心作用，会显得你很有工程经验。
-以下是为你整理的高频常用库列表，按功能分类：
-------------------------------
-## 1. 效率神器与基础增强
-
-*
-* Lombok
-* 作用：通过注解自动生成 Getter/Setter、toString()、构造函数、Builder 模式等。
-   * 核心注解：@Data, @Slf4j, @Builder, @NoArgsConstructor, @AllArgsConstructor。
-   * 面试加分点：它是编译期通过字节码增强（APT 技术）生效的，不影响运行期性能。
-* Google Guava / Apache Commons Lang
-* 作用：Java 原生 API 的大补丸。提供了大量的字符串处理、集合操作（如不可变集合）、防空判断、缓存等工具类。
-   * 常用类：StringUtils (Apache), Lists, Maps, Preconditions (Guava)。
-*
-
-------------------------------
-## 2. JSON 序列化与反序列化
-在 Web 开发中，Java 对象与前端 JSON 字符串的相互转换最常用的是这三个：
-
-*
-* Jackson
-* 作用：Spring Boot 默认集成的 JSON 解析库，生态最好，功能最稳健。
-   * 常用类：ObjectMapper。
-* Fastjson2 (Alibaba)
-* 作用：国内大厂非常爱问，主打极致的性能和速度，但历史版本曾因为反序列化安全漏洞较多引发争议。
-* Gson (Google)
-* 作用：轻量级，常用于移动端（Android）或不需要复杂配置的小型项目。
-*
-
-------------------------------
-## 3. 对象映射（Bean 复制）
-
-*
-* MapStruct
-* 作用：在分层架构中（如 Entity 转 DTO），快速进行属性拷贝。
-   * 面试加分点：相比古老的 BeanUtils.copyProperties（利用反射，性能较差），MapStruct 是在编译期生成原生的 set/get 代码，性能等同于纯手动硬编码，非常高效。
-*
-
-------------------------------
-## 4. 工具类与网络请求
-
-*
-* Hutool
-* 作用：国内热度极高的开源国货工具类库，被称为 Java 的“万能口袋”。把日期处理、加解密、文件读写、正则、网络请求等都封装成了极简的 API（如 DateUtil, HttpUtil）。
-* OkHttp / Apache HttpClient
-* 作用：用于在 Java 代码中作为客户端发送 HTTP 请求（比如调用第三方支付接口）。OkHttp 性能更好，是目前的主流选择。
-*
-
-------------------------------
-## 5. 数据校验
-
-*
-* Hibernate Validator (Jakarta Bean Validation)
-* 作用：Spring Boot 默认集成，用于在接收前端参数时做合法性校验，避免写一堆 if-else。
-   * 核心注解：@NotNull, @NotBlank, @Size, @Min, @Email。
-*
-
-------------------------------
-## 6. 核心依赖速查表（可直接放入 pom.xml）
-
-| 库名 | 核心依赖 coordinates (groupId:artifactId) | 一句话大白话作用 |
-|---|---|---|
-| Lombok | org.projectlombok:lombok | 让你少写几百行 getter/setter |
-| Hutool | cn.hutool:hutool-all | 各种好用的 Java 现成工具箱 |
-| MapStruct | org.mapstruct:mapstruct | 超高性能的 DTO 转 Entity 拷贝工具 |
-| Fastjson2 | com.alibaba.fastjson2:fastjson2 | 阿里出品，速度极快的 JSON 转换器 |
-| Guava | com.google.guava:guava | 谷歌出品，强大的集合与缓存基础库 |
-
-------------------------------
-这些库里你过去有用过哪几个吗？如果你想知道面试中如何聊到这些库的避坑指南（比如 Fastjson 的安全问题，或者 BeanUtils 的性能陷阱），我可以为你梳理几个经典的面试话术。
