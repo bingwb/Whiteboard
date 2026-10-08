@@ -411,7 +411,7 @@
 <br><br>・コンピュート（演算(えんざん)・実行(じっこう)基盤(きばん)）：
 <br>Azureでは App Service や Azure Functions（サーバーレス）、AWSでは AWS Lambda や Amazon ECS / EKS（コンテナ基盤）を駆使(くし)し、スケーラブル(Scalable)なAPI(エーピーアイ)やバックグラウンド(Background)処理(しょり)を構築(こうちく)してきました。
 <br><br>・データベース（データ(Data)管理(かんり)）：
-<br>リレーショナル(Relational)データベース(Database)である Azure SQL Database や Amazon RDS はもちろん、高(こう)スループット(Throughput)が求(もと)められるシステム(System)では Azure Cosmos DB や Amazon DynamoDB などのNoSQL(ノー・シークェル)も用(もち)いて最適(さいてき)なデータ(Data)設計(せっけい)を行(おくだ→おこな)ってまいりました。
+<br>リレーショナル(Relational)データベース(Database)である Azure SQL Database や Amazon RDS はもちろん、高(こう)スループット(Throughput)が求(もと)められるシステム(System)では Azure Cosmos DB や Amazon DynamoDB などのNoSQL(ノー・シークェル)も用(もち)いて最適(さいてき)なデータ(Data)設計(せっけい)を行(おこな)ってまいりました。
 <br><br>・ストレージ(Storage)・インフラ(Infrastructure)・連携(れんけい)：
 <br>ファイル(File)や画像(がぞう)データの保存(ほぞん)に Azure Blob Storage / Amazon S3 を使(つか)い、サービス間(かん)の非同期(ひどうき)連携(れんけい)には Azure Service Bus や Amazon SQS を組(く)み込(こ)むなど、堅牢(けんろう)で拡張性(かくちょうせい)の高(たか)いクラウド(Cloud)アーキテクチャ(Architecture)の設計(せっけい)・実装(じっこう)を得意(とくい)としております。
 <br><br>これらクラウド(Cloud)特有(とくゆう)のサービス特性(とくせい)を熟知(じゅくち)しており、システムの負荷(ふか)やコスト(Cost)を考慮(こうりょ)した最適なクラウド構成(こうせい)をご提案・実現(じつげん)することができます。
