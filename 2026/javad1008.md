@@ -1,3 +1,101 @@
+### 新宿面试流程：
+一. 介绍项目
+二. 自我介绍
+三. 问答
+
+一. 介绍项目
+展示了一个excel文档，里面是AI检测代码后给的建议。
+工作内容：
+审核AI的建议。
+填写像单元测试那样的OK还是NG的判断。
+
+二. 略
+三. 问答：
+1. 对AI建议审核这工作内容有什么疑问，看法吗？
+答：（在gemini里搜索【AI审核代码后会给一些建议，我们应该如何处理？】理解gemini的处理思路，回答的时候回答个大概就行。不用提出疑问，只是提出解决问题的想法，说大概是这样做吧？这样说）
+
+（2，3，4在自我介绍后，会用日文直接提问，所以日文回答）
+2. 详细设计书里都有什么？
+理解：
+内部结构与模块划分：类（Class）、包（Package）或微服务模块的划分。
+画面/API 详细逻辑：每个方法/函数的输入参数、输出结果、异常处理、核心算法与流程（通常配合序列图 Sequence Diagram 或流程图）。
+物理数据库设计 (Physical DB Design)：具体的表结构定义（列名、数据类型、主键、外键、索引、约束等）。
+错误定义（Error Definition）：系统定义的错误代码（Error Code）、错误信息及触发场景。
+内部接口定义：类与类之间、模块与模块之间的调用契约。
+回答：内部结构与模块划分，画面和API 详细逻辑，物理数据库设计，错误定义，内部接口定义
+    内部構造（naibu kōzō）とモジュール分割（mojūru bunkatsu）、画面（gamen）および API の詳細ロジック（shōsai rojikku）、物理データベース設計（butsuri dētabēsu sekkei）、エラー定義（erā teigi）、内部インターフェース定義（naibu intāfēsu teigi）
+
+3. 详细设计書根据什么来设计？
+答： 基本设计书
+        基本設計書（kihon sekkeisho）
+
+4. 基础设计书里都有什么？
+理解：
+技术选型与架构：系统目的、运行环境、整体架构图、技术选型。
+画面布局与交互（画面レイアウト）：所有画面的原型图、字段说明、输入校验规则、画面跳转关系。
+业务流程与状态机（Business Flow / 状態遷移）：业务用例（Use Case）、业务流程图（Flowchart）、订单/数据状态流转逻辑。
+权限与安全性设计（権限定義）：用户角色（Role）、菜单权限、操作权限矩阵。
+
+回答：技术选型与架构，画面布局与交互，业务流程与状态机，权限与安全性设计
+技术选定（gijutsu senteku）とアーキテクチャ、画面レイアウト（gamen reiauto）とインタラクション、業務プロセス（gyōmu purosesu）とステートマシン、権限（kengen）およびセキュリティ設計（sekyuriti sekkei）
+
+
+理解思路，回答的时候中文回答思路
+1. 今天的时间加20天后是怎么算出来。
+   （某个时间）X天
+```java
+        LocalDate today = LocalDate.now();
+        long xDays = 20; // 或是任意的天数 X
+        LocalDate futureDate = today.plusDays(xDays);
+        System.out.println("几天后：" + futureDate);
+```
+回答：用 `LocalDate.now().plusDays()`
+
+2. 取出时间的月或天或年？
+```java
+LocalDate today = LocalDate.now();
+int year = today.getYear();          // 年
+int month = today.getMonthValue();   // 月 (1-12)
+int day = today.getDayOfMonth();     // 日
+```
+回答：用 `LocalDate.now().getYear();` 或者 `.getMonthValue();`或者`.getDayOfMonth();`
+
+3. 两个字符串如何算比较大小？
+```java
+String s1 = "apple";
+String s2 = "banana";
+int result = s1.compareTo(s2); // 结果小于0，说明 s1 排在 s2 前面
+```
+回答： `s1.compareTo(s2);` // 结果小于0，说明 s1 排在 s2 前面
+
+4. 截取字符串里第一位置的字符。// 从0数起
+```java
+String str = "Hello Java";
+char c = str.charAt(0); // 获取第5个字符，结果是 'o'
+```
+回答：用`str.charAt(0);`
+
+5. 取出时间2024/07/06的月或天或年？
+```java
+     String dateStr = "2024/07/06";
+      // 定义日期格式化器以匹配输入的字符串格式
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        // 解析字符串为 LocalDate 对象
+        LocalDate date = LocalDate.parse(dateStr, formatter);
+        // 分别取出年、月、日
+        int year = date.getYear();          // 年: 2024
+        int month = date.getMonthValue();   // 月: 7 (或 date.getMonth() 获取英文月份)
+        int day = date.getDayOfMonth();     // 日: 6
+        System.out.println("年: " + year);
+        System.out.println("月: " + month);
+        System.out.println("日: " + day);
+```
+
+回答：
+   用`LocalDate`和`DateTimeFormatter`把字符串转换成时间格式字符串.然后用`getYear()`取出年，`getMonthValue`取出月，`getDayOfMonth`取出日。
+
+---
+
 Your CSV file is ready
 
 
