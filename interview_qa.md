@@ -298,6 +298,7 @@
 ウォーターフォール型(がた)（Waterfall）は、要件定義(ようけんていぎ)からテスト(Test)まで上流(じょうりゅう)から下流(かりゅう)へ順番(じゅんばん)にしっかり工程(こうてい)を進(すす)めていくスタイル(Style)で、スケジュール(Schedule)や仕様(しよう)がカチッと決(きま)っているシステム(System)開発(かいはつ)でよく使(つか)われます。
 <br><br>一方(いっぽう)でアジャイル型(がた)（Agile）は、短(みじか)いサイクル(Cycle)（スプリント/Sprint）を回(まわ)しながら小刻(こぎざ)みにつくって確認(かくにん)を繰(く)り返(かえ)すので、仕様(しよう)が柔軟(じゅうなん)に変わる(かわる)スピード感(すぴーどかん)のあるプロジェクト(Project)に向(む)いていると思っています！
 <br><br>案件(あんけん)の性質(せいしつ)やチーム(Team)の状況(じょうきょう)に合わせて適切(てきせつ)に使い分け(つかいわけ)てきました。
+
 <br><br>(是的，就是开发方法的区别呢！瀑布流型是从需求定义到测试、从上游到下游依次稳步推进工程的风格，常用于进度和规格已经明确固定的系统开发。
 <br><br>而敏捷型则是一边通过较短的周期（冲刺/Sprint）不断制作并反复确认，所以比较适合规格灵活变动、富有速度感的项目！
 <br><br>我会根据项目的性质和团队的情况进行适当的区分使用。)
@@ -534,15 +535,28 @@
 - 例えば、C#で「Hello World」プログラムを書きました。これをDocker化し、ローカルで実行してから、Azureへデプロイするにはどうすればよいですか。
 (假如说你用 C# 写了一个 HelloWorld 程序，请问如何把它 Docker 化，然后如何在本地运行，然后如何布署到 Azure 上？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>C#(シーシャープ)のコンソール(Console)アプリ(Application)を例(れい)に、Docker(ドッカー)化(か)からローカル(Local)での実行(じっこう)、そしてAzure(アジュール)へのデプロイ(Deploy)に至(いた)る一連(いちれん)のクラウド(Cloud)ネイティブ(Native)な開発(かいはつ)フローについてご説明(せつめい)いたします。
-<br><br>実装(じっそう)およびデプロイ(Deploy)のステップは以下(いか)の通りです。
-<br><br>1. コンテナ化(か)（Docker(ドッカー)構築(こうちく)）：
-<br>まず、C#(.NET)のコードを書(か)いた後(あと)、マルチステージビルド(Multi-stage build)を採用(さいよう)した最適化(さいてきか)されたDockerfileを作成(さくせい)します。SDK(Software Development Kit)イメージ(Image)でコンパイル(Compile)を行(おこな)い、軽量(けいりょう)なランタイム(Runtime)イメージにバイナリ(Binary)をコピー(Copy)することで、セキュリティ(Security)とイメージ(Image)サイズの軽量化(けいりょうか)を図(はか)ります。
-<br><br>2. ローカル(Local)での動作(どうさ)確認(かくにん)：
-<br>docker build コマンド(Command)でイメージ(Image)をビルド(Build)し、docker run でローカル(Local)環境(かんきょう)にて コンテナ(Container)として正常(せいじょう)に動作(どうさ)することを確認(かくにん)します。
-<br><br>3. Azure(アジュール)へのデプロイ(Deploy)：
-<br>作成(さくせい)したコンテナ(Container)イメージ(Image)を、Azure(アジュール)のコンテナ(Container)レジストリ(Registry)（ACR: Azure Container Registry）にプッシュ(Push)します。その後(あと)、Azure App Service や Azure Container Apps などのプラットフォーム(Platform)を利用(りよう)して、クラウド(Cloud)上(じょう)へセキュア(Secure)かつスケーラブル(Scalable)にデプロイ(Deploy)・公開(こうかい)を完了(かんりょう)させます。
-<br><br>このように、ローカル(Local)での開発(かいはつ)環境(かんきょう)からクラウド(Cloud)の本番(ほんばん)環境(かんきょう)まで、コンテナ(Container)を軸(じく)にした一貫(いっかん)したデリバリー(Delivery)プロセス(Process)を構築(こうちく)することができます。
+<p style="padding: 0 2em;"><strong>A: </strong>C#のコンソールアプリを例に、Docker化からローカルでの実行、そしてAzureへのデプロイに至る一連のクラウドネイティブな開発フローについてご説明いたします。
+<br><br>実装およびデプロイのステップは以下の通りです。
+<br><br>1. コンテナ化（Docker構築）：
+<br>まず、C#のコードを書いた後、マルチステージビルドを採用した最適化されたDockerfileを作成します。SDKイメージでコンパイルを行い、軽量なランタイムイメージにバイナリをコピーすることで、セキュリティとイメージサイズの軽量化を図ります。
+<br><br>2. ローカルでの動作確認：
+<br>docker build コマンドでイメージをビルドし、docker run でローカル環境にて コンテナとして正常に動作することを確認します。
+<br><br>3. Azureへのデプロイ：
+<br>作成したコンテナイメージを、Azureのコンテナレジストリ（ACR: Azure Container Registry）にプッシュします。その後、Azure App Service や Azure Container Apps などのプラットフォームを利用して、クラウド上へセキュアかつスケーラブルにデプロイ・公開を完了させます。
+<br><br>このように、ローカルでの開発環境からクラウドの本番環境まで、コンテナを軸にした一貫したデリバリープロセスを構築することができます。
+
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>C#<rt>シーシャープ</rt></ruby>の<ruby>コンソールアプリ<rt>Console Application</rt></ruby>を<ruby>例<rp>（</rp><rt>れい</rt><rp>）</rp></ruby>に、<ruby>Docker<rt>ドッカー</rt></ruby><ruby>化<rt>か</rt></ruby>から<ruby>ローカル<rt>Local</rt></ruby>での<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>、速度・効率に優れた<ruby>Azure<rt>アジュール</rt></ruby>への<ruby>デプロイ<rt>Deploy</rt></ruby>に<ruby>至<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>る<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp></ruby>の<ruby>クラウドネイティブ<rt>Cloud Native</rt></ruby>な<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>フロー<rt>Flow</rt></ruby>についてご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>いたします。
+<br><br><ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>装<rp>（</rp><rt>そう</rt><rp>）</rp></ruby>および<ruby>デプロイ<rt>Deploy</rt></ruby>の<ruby>ステップ<rt>Step</rt></ruby>は<ruby>以<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>下<rp>（</rp><rt>か</rt><rp>）</rp></ruby>の<ruby>通<rp>（</rp><rt>とお</rt><rp>）</rp></ruby>りです。
+<br><br>1. <ruby>コンテナ化<rt>Container化</rt></ruby>（<ruby>Docker<rt>ドッカー</rt></ruby><ruby>構築<rp>（</rp><rt>こうちく</rt><rp>）</rp></ruby>）：
+<br>まず、<ruby>C#<rt>シーシャープ</rt></ruby>(<ruby>.NET<rt>ドットネット</rt></ruby>)の<ruby>コード<rt>Code</rt></ruby>を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いた<ruby>後<rp>（</rp><rt>あと</rt><rp>）</rp>, <ruby>マルチステージビルド<rt>Multi-stage build</rt></ruby>を<ruby>採<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>した<ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>適<rp>（</rp><rt>てき</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>された<ruby>Dockerfile<rt>ドッカーファイル</rt></ruby>を<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>します。<ruby>SDK<rt>エスディーケー</rt></ruby><ruby>イメージ<rt>Image</rt></ruby>で<ruby>コンパイル<rt>Compile</rt></ruby>を<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>い、<ruby>軽<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby>な<ruby>ランタイムイメージ<rt>Runtime Image</rt></ruby>に<ruby>バイナリ<rt>Binary</rt></ruby>を<ruby>コピー<rt>Copy</rt></ruby>することで、<ruby>セキュリティ<rt>Security</rt></ruby>と<ruby>イメージサイズ<rt>Image Size</rt></ruby>の<ruby>軽<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>を<ruby>図<rp>（</rp><rt>はか</rt><rp>）</rp></ruby>ります。
+<br><br>2. <ruby>ローカル<rt>Local</rt></ruby>での<ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>確<rp>（</rp><rt>かく</rt><rp>）</rp></ruby><ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>：
+<br><ruby>docker build<rt>ドッカー ビルド</rt></ruby> <ruby>コマンド<rt>Command</rt></ruby>で<ruby>イメージ<rt>Image</rt></ruby>を<ruby>ビルド<rt>Build</rt></ruby>し、<ruby>docker run<rt>ドッカー ラン</rt></ruby> で<ruby>ローカル環境<rt>Local 環境</rt></ruby>にて<ruby>コンテナ<rt>Container</rt></ruby>として<ruby>正<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>常<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>に<rt></rt></ruby><ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>することを確認(かくにん)します。
+<br><br>3. <ruby>Azure<rt>アジュール</rt></ruby>への<ruby>デプロイ<rt>Deploy</rt></ruby>：
+<br><ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>した<ruby>コンテナイメージ<rt>Container Image</rt></ruby>を、<ruby>Azure<rt>アジュール</rt></ruby>の<ruby>コンテナレジストリ<rt>Container Registry</rt></ruby>（<ruby>ACR<rt>エーシーアール</rt></ruby>: <ruby>Azure Container Registry<rt>アジュール コンテナ レジストリ</rt></ruby>）に<ruby>プッシュ<rt>Push</rt></ruby>します。その<ruby>後<rp>（</rp><rt>あと</rt><rp>）</rp></ruby><ruby>Azure App Service<rt>アジュール アップ サービス</rt></ruby> や <ruby>Azure Container Apps<rt>アジュール コンテナ アップス</rt></ruby> などの<ruby>プラットフォーム<rt>Platform</rt></ruby>を<ruby>利<rp>（</rp><rt>り</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>して、<ruby>クラウド上<rt>Cloud 上</rt></ruby>へ<ruby>セキュア<rt>Secure</rt></ruby>かつ<ruby>スケーラブル<rt>Scalable</rt></ruby>に<ruby>デプロイ<rt>Deploy</rt></ruby>・<ruby>公<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>完<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>了<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby>させます。
+<br><br>このように、<ruby>ローカル<rt>Local</rt></ruby>での<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>から<ruby>クラウド<rt>Cloud</rt></ruby>の<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>まで、<ruby>コンテナ<rt>Container</rt></ruby>を<ruby>軸<rp>（</rp><rt>じく</rt><rp>）</rp></ruby><ruby>に<rt></rt></ruby>した<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp></ruby><ruby>貫<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>した<rt>した</rt></ruby><ruby>デリバリープロセス<rt>Delivery Process</rt></ruby>を<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>することができます。</p>
+
+
+
 <br><br>(以 C# 的控制台应用程序为例，关于从 Docker 化、本地运行，一直到部署至 Azure 的一系列云原生开发流程，我来为您做个说明。
 <br><br>实现与部署的步骤如下：
 <br><br>1. 容器化（Docker 构建）：
@@ -554,15 +568,26 @@
 <br><br>通过这种方式，从本地的开发环境到云端的生产环境，能够构建起以容器为核心的、前后一致的交付流程。)
 </p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>C#(.NET)の「Hello World」のようなシンプル(Simple)なアプリ(Application)をベース(Base)に、Docker(ドッカー)でコンテナ(Container)にして、ローカル(Local)で動(うご)かしてからAzure(アジュール)にデプロイ(Deploy)するまでの流れですね！
-<br><br>いつも現場(げんば)で実践(じっせん)している手順(てじゅん)は、大体(だいたい)こんな感じです！
-<br><br>まずは Dockerfile を書(か)いてコンテナ化(か)：
-<br>.NETのSDK(Software Development Kit)イメージ(Image)でビルド(Build)して、実行(じっこう)用(よう)の軽量(けいりょう)なランタイム(Runtime)イメージに成果物(せいかぶつ)をまとめる、マルチステージビルド(Multi-stage build)というやり方(やりかた)で無駄(むだ)のないきれいなイメージを作ります。
-<br><br>ローカル(Local)でサクッとテスト：
-<br>docker build でイメージ(Image)を作ったら、docker run で自分のパソコン(Personal Computer)のコンテナ(Container)内(ない)でちゃんと動くかを自分の目でしっかり確認(かくにん)します。
-<br><br>Azure(アジュール)へデプロイ(Deploy)してクラウド(Cloud)で公開(こうかい)：
-<br>出来(でき)たイメージ(Image)をAzure(アジュール)のレジストリ(Registry)（ACR: Azure Container Registry）にプッシュ(Push)して、Azure App Service や Azure Container Apps などのサービス(Service)を使(つか)えば、そのままクラウド(Cloud)上(じょう)でアプリ(Application)を爆速(ばくそく)で動かすことができます！
-<br><br>こんなふうに、手元(てもと)のパソコン(Personal Computer)からクラウド(Cloud)のサーバー(Server)まで、まっすぐスムーズ(Smooth)につなげるのがコンテナ(Container)開発(かいはつ)の醍醐味(だいごみ)だと思っています！
+<p style="padding: 0 2em;"><strong>A: </strong>C#の「Hello World」のようなシンプルなアプリをベースに、Dockerでコンテナにして、ローカルで動かしてからAzureにデプロイするまでの流れですね！
+<br><br>いつも現場で実践している手順は、大体こんな感じです！
+<br><br>まずは Dockerfile を書いてコンテナ化：
+<br>.NETのSDKイメージでビルドして、実行用の軽量なランタイムイメージに成果物をまとめる、マルチステージビルドというやり方で無駄のないきれいなイメージを作ります。
+<br><br>ローカルでサクッとテスト：
+<br>docker build でイメージを作ったら、docker run で自分のパソコンのコンテナ内でちゃんと動くかを自分の目でしっかり確認します。
+<br><br>Azureへデプロイしてクラウドで公開：
+<br>出来たイメージをAzureのレジストリ（ACR: Azure Container Registry）にプッシュして、Azure App Service や Azure Container Apps などのサービスを使えば、そのままクラウド上でアプリを爆速で動かすことができます！
+<br><br>こんなふうに、手元のパソコンからクラウドのサーバーまで、まっすぐスムーズにつなげるのがコンテナ開発の醍醐味だと思っています！</p>
+
+
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>C#<rt>シーシャープ</rt></ruby>(<ruby>.NET<rt>ドットネット</rt></ruby>)の「Hello World」のような<ruby>シンプル<rp>（</rp><rt>Simple</rt><rp>）</rp></ruby>な<ruby>アプリ<rp>（</rp><rt>Application</rt><rp>）</rp></ruby>を<ruby>ベース<rp>（</rp><rt>Base</rt><rp>）</rp></ruby>に、<ruby>Docker<rp>（</rp><rt>ドッカー</rt><rp>）</rp></ruby>で<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>にして、<ruby>ローカル<rp>（</rp><rt>Local</rt><rp>）</rp></ruby>で<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かしてから<ruby>Azure<rp>（</rp><rt>アジュール</rt><rp>）</rp></ruby>に<ruby>デプロイ<rp>（</rp><rt>Deploy</rt><rp>）</rp></ruby>するまでの<ruby>流<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>れですね！
+<br><br>いつも<ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby>で<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>践<rp>（</rp><rt>せん</rt><rp>）</rp></ruby>している<ruby>手<rp>（</rp><rt>て</rt><rp>）</rp></ruby><ruby>順<rp>（</rp><rt>じゅん</rt><rp>）</rp></ruby>は、<ruby>大<rp>（</rp><rt>だい</rt><rp>）</rp></ruby><ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby>こんな<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じです！
+<br><br>まずは Dockerfile を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いてコンテナ<ruby>化<rt>か</rt></ruby>：
+<br>.NETの<ruby>SDK<rp>（</rp><rt>Software Development Kit</rt><rp>）</rp></ruby><ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>で<ruby>ビルド<rp>（</rp><rt>Build</rt><rp>）</rp></ruby>して、<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>の<ruby>軽<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby>な<ruby>ランタイム<rp>（</rp><rt>Runtime</rt><rp>）</rp></ruby>イメージに<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>果<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>物<rp>（</rp><rt>ぶつ</rt><rp>）</rp></ruby>をまとめる、<ruby>マルチステージビルド<rp>（</rp><rt>Multi-stage build</rt><rp>）</rp></ruby>というやり<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>で<ruby>無<rp>（</rp><rt>む</rt><rp>）</rp></ruby><ruby>駄<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>のないきれいなイメージを<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>ります。
+<br><br><ruby>ローカル<rp>（</rp><rt>Local</rt><rp>）</rp></ruby>でサクッとテスト：
+<br>docker build で<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>を<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>ったら、docker run で<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>のパソコン(<ruby>Personal Computer<rt>パーソナルコンピューター</rt></ruby>)のコンテナ(<ruby>Container<rt>コンテナ</rt></ruby>)<ruby>内<rp>（</rp><rt>ない</rt><rp>）</rp></ruby>でちゃんと<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>くかを<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>の<ruby>目<rp>（</rp><rt>め</rt><rp>）</rp></ruby>でしっかり<ruby>確<rp>（</rp><rt>かく</rt><rp>）</rp></ruby><ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>します。
+<br><br><ruby>Azure<rp>（</rp><rt>アジュール</rt><rp>）</rp></ruby>へ<ruby>デプロイ<rp>（</rp><rt>Deploy</rt><rp>）</rp></ruby>して<ruby>クラウ ド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>で<ruby>公<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>：
+<br><ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby><ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby>たイメージを<ruby>Azure<rp>（</rp><rt>アジュール</rt><rp>）</rp></ruby>の<ruby>レジストリ<rp>（</rp><rt>Registry</rt><rp>）</rp></ruby>（ACR: Azure Container Registry）に<ruby>プッシュ<rp>（</rp><rt>Push</rt><rp>）</rp></ruby>して、Azure App Service や Azure Container Apps などの<ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>えば、そのまま<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby><ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>で<ruby>アプリ<rp>（</rp><rt>Application</rt><rp>）</rp></ruby>を<ruby>爆<rp>（</rp><rt>バク</rt><rp>）</rp></ruby><ruby>速<rp>（</rp><rt>ソク</rt><rp>）</rp></ruby>で<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かすことができます！
+<br><br>こんなふうに、<ruby>手<rp>（</rp><rt>て</rt><rp>）</rp></ruby><ruby>元<rp>（</rp><rt>もと</rt><rp>）</rp></ruby>のパソコン(<ruby>Personal Computer<rt>パーソナルコンピューター</rt></ruby>)から<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>の<ruby>サーバー<rp>（</rp><rt>Server</rt><rp>）</rp></ruby>まで、まっすぐ<ruby>スムーズ<rp>（</rp><rt>Smooth</rt><rp>）</rp></ruby>につなげるのがコンテナ(<ruby>Container<rt>コンテナ</rt></ruby>)<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>hatsu</rt><rp>）</rp></ruby>の<ruby>醍<rp>（</rp><rt>だい</rt><rp>）</rp></ruby><ruby>醐<rp>（</rp><rt>ご</rt><rp>）</rp></ruby><ruby>味<rp>（</rp><rt>み</rt><rp>）</rp></ruby>だと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>っています！</p>
 <br><br>(以 C# (.NET) 的“Hello World”这样简单的应用程序为基础，关于用 Docker 做成容器、在本地运行、然后部署到 Azure 的整个流程！
 <br><br>我平时在现场实际操作的步骤，大致是这样的：
 <br><br>首先写个 Dockerfile 进行容器化：
