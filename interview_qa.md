@@ -100,29 +100,47 @@
 
 ---
 
-- まずはこの当(とう)時(じ)のキーワード(Keyword)であるMVCの正式(せいしき)な名称(めいしょう)とそれぞれのお役割(やくわり)についてご説明(せつめい)できますでしょうか。
+- まずはこの<ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>の<ruby>キーワード<rt>Keyword</rt></ruby>である<ruby>MVC<rt>エムブイシー</rt></ruby>の<ruby>正<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>式<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>な<ruby>名<rp>（</rp><rt>めい</rt><rp>）</rp></ruby><ruby>称<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>とそれぞれのお<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby><ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby>についてご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
+(まずはこの当時のキーワードであるMVCの正式な名称とそれぞれのお役割についてご説明できますでしょうか。)
 <br>(请问能否说明一下作为当时关键词的 MVC 的正式名称以及各自的职责（作用）？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>MVCは、アプリケーション(Application)の構造(こうぞう)をModel（モデル）、View（ビュー）、Controller（コントローラー）の3つに分割(ぶんかつ)して設計(せっけい)するデザインパターン(Design Pattern)です。
-それぞれの役割(やくわり)として、Modelはデータ(Data)の管理(かんり)やビジネスロジック(Business Logic)を担当(たんとう)し、Viewはユーザー(User)に画面(がめん)を表示(ひょうじ)する役割(やくわり)を持ち(もち)ます。そしてControllerは、ユーザー(User)からの入力(にゅうりょく)を受け付け(うけつけ)、ModelとViewの間(あいだ)で制御(せいぎょ)を行う(おこなう)仲介役(ちゅうかいやく)となります。
+1.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>MVC<rt>エムブイシー</rt></ruby>は、<ruby>アプリケーション<rt>Application</rt></ruby>の<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>造<rp>（</rp><rt>ぞう</rt><rp>）</rp></ruby>を<ruby>Model<rt>モデル</rt></ruby>、<ruby>View<rt>ビュー</rt></ruby>、<ruby>Controller<rt>コントローラー</rt></ruby>の3つに<ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby><ruby>割<rp>（</rp><rt>かつ</rt><rp>）</rp></ruby>して<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>する<ruby>デザインパターン<rt>Design Pattern</rt></ruby>です。それぞれの<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby><ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby>として、<ruby>Model<rt>モデル</rt></ruby>は<ruby>データ<rt>Data</rt></ruby>の<ruby>管<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>や<ruby>ビジネスロジック<rt>Business Logic</rt></ruby>を<ruby>担<rp>（</rp><rt>たん</rt><rp>）</rp></ruby><ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby>し、<ruby>View<rt>ビュー</rt></ruby>は<ruby>ユーザー<rt>User</rt></ruby>に<ruby>画<rp>（</rp><rt>が</rt><rp>）</rp></ruby><ruby>面<rp>（</rp><rt>めん</rt><rp>）</rp></ruby>を<ruby>表<rp>（</rp><rt>ひょう</rt><rp>）</rp></ruby><ruby>示<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>する<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby><ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby>を<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>ちます。そして<ruby>Controller<rt>コントローラー</rt></ruby>は、<ruby>ユーザー<rt>User</rt></ruby>からの<ruby>入<rp>（</rp><rt>にゅう</rt><rp>）</rp></ruby><ruby>力<rp>（</rp><rt>りょく</rt><rp>）</rp></ruby>を<ruby>受<rp>（</rp><rt>う</rt><rp>）</rp></ruby>け<ruby>付<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>け、<ruby>Model<rt>モデル</rt></ruby>と<ruby>View<rt>ビュー</rt></ruby>の<ruby>間<rp>（</rp><rt>あい</rt><rp>）</rp></ruby>で<ruby>制<rp>（</rp><rt>ぎょ</rt><rp>）</rp></ruby><ruby>御<rp>（</rp><rt>ぎょ</rt><rp>）</rp></ruby>を<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>う<ruby>仲<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>介<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>となります。</p>
+
+
+<p style="padding: 0 2em;"><strong>A: </strong>MVCは、アプリケーションの構造をModel、View、Controllerの3つに分割して設計するデザインパターンです。それぞれの役割として、Modelはデータの管理やビジネスロジックを担当し、Viewはユーザーに画面を表示する役割を持ちます。そしてControllerは、ユーザーからの入力を受け付け、ModelとViewの間で制御を行う仲介役となります。
 <br>(MVC 是将应用程序的结构分割为 Model（模型）、View（视图）、Controller（控制器）*三个部分进行设计的设计模式。从各自的职责来看，Model 负责数据管理与业务逻辑，View 负责向用户展示界面。而 Controller 则负责接收用户的输入，并在 Model 和 View 之间进行控制，充当纽带与协调者的角色。)
 </p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>MVCって、データを扱う(あつかう)Modelと、画面(がめん)を表示(ひょうじ)するView、その間(あいだ)をつなぐControllerの3つに分ける(わける)アーキテクチャ(Architecture)ですよね！処理(しょり)がきれいに分離(ぶんり)されるので、コード(Code)がすっきりしてメンテナンス(Maintenance)しやすくなるのがメリット(Merit)だと思います。
-<br>(MVC 就是把处理数据的 Model、显示画面的 View、以及连接两者的 Controller 拆分成三个部分的架构对吧！因为处理逻辑能被清晰地分离，所以代码会很干净，也更容易进行维护。)
-</p>
+2.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>MVC<rt>エムブイシー</rt></ruby>って、データを<ruby>扱<rp>（</rp><rt>あつか</rt><rp>）</rp></ruby>う<ruby>Model<rt>モデル</rt></ruby>と、<ruby>画<rp>（</rp><rt>が</rt><rp>）</rp></ruby><ruby>面<rp>（</rp><rt>めん</rt><rp>）</rp></ruby>を<ruby>表<rp>（</rp><rt>ひょう</rt><rp>）</rp></ruby><ruby>示<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>する<ruby>View<rt>ビュー</rt></ruby>、その<ruby>間<rp>（</rp><rt>あいだ</rt><rp>）</rp></ruby>をつなぐ<ruby>Controller<rt>コントローラー</rt></ruby>の3つに<ruby>分<rp>（</rp><rt>わ</rt><rp>）</rp></ruby>ける<ruby>アーキテクチャ<rt>Architecture</rt></ruby>ですよね！<ruby>処<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>がきれいに<ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby><ruby>離<rp>（</rp><rt>り</rt><rp>）</rp></ruby>されるので、<ruby>コード<rt>Code</rt></ruby>がすっきりして<ruby>メンテナンス<rt>Maintenance</rt></ruby>しやすくなるのが<ruby>メリット<rt>Merit</rt></ruby>だと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>います。</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>MVCって、データを扱うModelと、画面を表示するView、その間をつなぐControllerの3つに分けるアーキテクチャですよね！処理がきれいに分離されるので、コードがすっきりしてメンテナンスしやすくなるのがメリットだと思います。
+<br><br>(MVC 就是把处理数据的 Model、显示画面的 View、以及连接两者的 Controller 拆分成三个部分的架构对吧！因为处理逻辑能被清晰地分离，所以代码会很干净，也更容易进行维护。)</p>
+
 
 ---
 
-- 当時(とうじ)はあの要件(ようけん)定義(ていぎ)と具体(ぐたいてき)的(てき)にどのようなあの作業(さぎょう)を担当(たんとう)されているか成果(せいか)物(ぶつ)は何(なに)を作成(さくせい)したか簡単(かんたん)にご説明(せつめい)できますでしょうか。
+- <ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>はあの<ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby>と<ruby>具<rp>（</rp><rt>ぐ</rt><rp>）</rp></ruby><ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>にどのようなあの<ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby>を<ruby>担<rp>（</rp><rt>たん</rt><rp>）</rp></ruby><ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby>されているか<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>果<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>物<rp>（</rp><rt>ぶつ</rt><rp>）</rp></ruby>は<ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby><ruby>を<rt></rt></ruby><ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>したか<ruby>簡<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>単<rp>（</rp><rt>たん</rt><rp>）</rp></ruby>にご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
+<br>当時はあの要件定義と具体的にどのようなあの作業を担当されているか成果物は何を作成したか簡単にご説明できますでしょうか。
 <br>(请问能否简单说明一下，在当时的需求定义（Specs/Requirements Definition）阶段，您具体负责了哪些工作，以及制作了哪些成果物（Deliverables）？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>要件(ようけん)定義(ていぎ)の段階(だんかい)では、主(おも)にクライアント(Client)とのヒアリング(Hearing)を通じた業務(ぎょうむ)フロー(Flow)の整理(せいり)や、機能(きのう)要件(ようけん)・非機能(ひきのう)要件(ようけん)の定義(ていぎ)を担当(たんとう)いたしました。
-成果(せいか)物(ぶつ)としては、要件(ようけん)定義(ていぎ)書(しょ)や業務(ぎょうむ)フロー(Flow)図(ず)、画面(がめん)レイアウト(Layout)案(あん)などを作成(さくせい)し、開発(かいはつ)チーム(Team)および顧客(こきゃく)との共通(きょうつう)認識(にんしき)を図る(はかる)ためのベース(Base)といたしました。
-<br>(在需求定义阶段，我主要负责通过与客户的面谈（Hearing）整理业务流程，以及定义功能需求与非功能需求。作为成果物，我制作了需求定义书、业务流程图以及画面布局方案等，并将其作为与开发团队及客户达成共识的基础。)
+1.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby>の<ruby>段<rp>（</rp><rt>だん</rt><rp>）</rp></ruby><ruby>階<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>では、<ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>に<ruby>クライアント<rt>Client</rt></ruby>との<ruby>ヒアリング<rt>Hearing</rt></ruby>を<ruby>通<rp>（</rp><rt>とお</rt><rp>）</rp></ruby>じた<ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby><ruby>フロー<rt>Flow</rt></ruby>の<ruby>整<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>や、<ruby>機<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>能<rp>（</rp><rt>のう</rt><rp>）</rp></ruby><ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>・<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby><ruby>機<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>能<rp>（</rp><rt>のう</rt><rp>）</rp></ruby><ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>の<ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby>を<ruby>担<rp>（</rp><rt>たん</rt><rp>）</rp></ruby><ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby>いたしました。
+<br><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>果<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>物<rp>（</rp><rt>ぶつ</rt><rp>）</rp></ruby>としては、<ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby><ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>や<ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby><ruby>フロー<rt>Flow</rt></ruby><ruby>図<rp>（</rp><rt>ず</rt><rp>）</rp></ruby>、<ruby>画<rp>（</rp><rt>が</rt><rp>）</rp></ruby><ruby>面<rp>（</rp><rt>めん</rt><rp>）</rp></ruby><ruby>レイアウト<rt>Layout</rt></ruby><ruby>案<rp>（</rp><rt>あん</rt><rp>）</rp></ruby>などを<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>し、<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>チーム<rt>Team</rt></ruby>および<ruby>顧<rp>（</rp><rt>こ</rt><rp>）</rp></ruby><ruby>客<rp>（</rp><rt>きゃく</rt><rp>）</rp></ruby>との<ruby>共<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby><ruby>通<rp>（</rp><rt>つう</rt><rp>）</rp></ruby><ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby><ruby>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>を<ruby>図<rp>（</rp><rt>はか</rt><rp>）</rp></ruby>るための<ruby>ベース<rt>Base</rt></ruby>といたしました。
+<br>(在需求定义阶段，我主要负责通过与客户的面谈（Hearing）整理业务流程，以及定义功能需求与非功能需求。作为成果物，我制作了需求定义书、业务流程图以及画面布局方案等，并将其作为与开发团队及客户达成共识的基础。)</p>
+
+
+<p style="padding: 0 2em;"><strong>A: </strong>要件定義の段階では、主にクライアントとのヒアリングを通じた業務フローの整理や、機能要件・非機能要件の定義を担当いたしました。
+成果物としては、要件定義書や業務フロー図、画面レイアウト案などを作成し、開発チームおよび顧客との共通認識を図るためのベースといたしました。
+<br>(在需求定义阶段，我主要负责通过与客户的面谈（Hearing）整理业务流程，以及定义功能需求与非功能需求。作为成果物，我制作了需求定义书、业务流程图以及画面布局方案等，并将其作为与开发团队及客户达成共识的基础。)</p>
+
+2.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby>の<ruby>フェーズ<rt>Phase</rt></ruby>では、お<ruby>客<rp>（</rp><rt>きゃく</rt><rp>）</rp></ruby>さんの<ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>望<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>を<ruby>ヒアリング<rt>Hearing</rt></ruby>して、どんな<ruby>機<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>能<rp>（</rp><rt>のう</rt><rp>）</rp></ruby>が<ruby>必<rp>（</rp><rt>ひつ</rt><rp>）</rp></ruby><ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>かを<ruby>落<rp>（</rp><rt>おと</rt><rp>）</rp></ruby>し<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>む<ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby>をしていました。<ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>に<ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby><ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>や<ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby><ruby>フロー<rt>Flow</rt></ruby>をまとめて、あとから<ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby><ruby>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>のズレが<ruby>起<rp>（</rp><rt>お</rt><rp>）</rp></ruby>きないように<ruby>ドキュメント化<rt>Document化</rt></ruby>するのがメインの<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>果<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>物<rp>（</rp><rt>ぶつ</rt><rp>）</rp></ruby>でしたね！
+<br>(在需求定义阶段，我主要负责听取客户的需求，并将其梳理落成为具体需要哪些功能的工作。主要的成果物就是汇总需求定义书和业务流程图，通过文档化来避免后期产生认知偏差！)
 </p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>要件(ようけん)定義(ていぎ)のフェーズ(Phase)では、お客(きゃく)さんの要望(ようぼう)をヒアリング(Hearing)して、どんな機能(きのう)が必要(ひつよう)かを落とし込む(おとしこむ)作業(さぎょう)をしていました。主(おも)に要件(ようけん)定義(ていぎ)書(しょ)や業務(ぎょうむ)フロー(Flow)をまとめて、あとから認識(にんしき)のズレが起きないようにドキュメント(Document)化(か)するのがメインの成果(せいか)物(ぶつ)でしたね！
+<p style="padding: 0 2em;"><strong>A: </strong>要件定義のフェーズでは、お客さんの要望をヒアリングして、どんな機能が必要かを落とし込む作業をしていました。主に要件定義書や業務フローをまとめて、あとから認識のズレが起きないようにドキュメント化するのがメインの成果物でしたね！
 <br>(在需求定义阶段，我主要负责听取客户的需求，并将其梳理落成为具体需要哪些功能的工作。主要的成果物就是汇总需求定义书和业务流程图，通过文档化来避免后期产生认知偏差！)
 </p>
 
@@ -132,106 +150,155 @@
 (※注：「追加アップ」は音声認識や口语での「成果物（せいかぶつ）」の言い間違い・あるいは変換ゆらぎを想定して記載します)
 <br>那么，简单说说也行，在基本设计和详细设计这两个阶段中，分别制作了什么样的附加内容/成果物呢？
 
-<p style="padding: 0 2em;"><strong>A: </strong>基本(きほん)設計(せっけい)と詳細(しょうさい)設計(せっけい)の各(かく)フェーズ(Phase)で作成(さくせい)する成果(せいか)物(ぶつ)についてですね。
-基本(きほん)設計(せっけい)フェーズ(Phase)では、要件(ようけん)を外部(がいぶ)仕様(しよう)として落とし込む(おとしこむ)ため、画面(がめん)設計(せっけい)書(しょ)や機能(きのう)一覧(いちらん)、データ(Data)モデル(Model)（ER図(ず)）やシステム(System)アーキテクチャ(Architecture)図(ず)などを作成(さくせい)し、全体(ぜんたい)の枠組み(わくぐみ)を固め(かため)ました。
-一方(いっぽう)、詳細(しょうさい)設計(せっけい)フェーズ(Phase)では、それをもとに開発(かいはつ)チーム(Team)が実際(じっさい)にコーディング(Coding)できるよう、クラス図(ず)やシーケンス図(ず)などの詳細(しょうさい)設計(せっけい)書(しょ)（内部(ないぶ)仕様(しよう)書(しょ)）、テーブル定義(ていぎ)書(しょ)、関数(かんすう)やメソッド(Method)の仕様(しよう)などを細かく(こまかく)定義(ていぎ)して作成(さくせい)いたしました。
+1.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>と<ruby>詳<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>細<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>の<ruby>各<rp>（</rp><rt>かく</rt><rp>）</rp></ruby><ruby>フェーズ<rt>Phase</rt></ruby>で<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>する<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>果<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>物<rp>（</rp><rt>ぶつ</rt><rp>）</rp></ruby>についてですね。
+<br><ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>フェーズ<rt>Phase</rt></ruby>では、<ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>を<ruby>外<rp>（</rp><rt>がい</rt><rp>）</rp></ruby><ruby>部<rp>（</rp><rt>ぶ</rt><rp>）</rp></ruby><ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>様<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>として<ruby>落<rp>（</rp><rt>おと</rt><rp>）</rp></ruby>し<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>むため、<ruby>画<rp>（</rp><rt>が</rt><rp>）</rp></ruby><ruby>面<rp>（</rp><rt>めん</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>や<ruby>機<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>能<rp>（</rp><rt>のう</rt><rp>）</rp></ruby><ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>覧<rp>（</rp><rt>らん</rt><rp>）</rp></ruby>、<ruby>データ<rt>Data</rt></ruby><ruby>モデル<rt>Model</rt></ruby>（<ruby>E<rt>イー</rt></ruby><ruby>R<rt>アール</rt></ruby><ruby>図<rp>（</rp><rt>ず</rt><rp>）</rp></ruby>）や<ruby>システム<rt>System</rt></ruby><ruby>アーキテクチャ<rt>Architecture</rt></ruby><ruby>図<rp>（</rp><rt>ず</rt><rp>）</rp></ruby>などを<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>し、<ruby>全<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby><ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby>の<ruby>枠<rp>（</rp><rt>わく</rt><rp>）</rp></ruby><ruby>組<rp>（</rp><rt>ぐ</rt><rp>）</rp></ruby>みを<ruby>固<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>めました。
+<br><ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp></ruby><ruby>方<rp>（</rp><rt>ぽう</rt><rp>）</rp></ruby>、<ruby>詳<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>細<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>フェーズ<rt>Phase</rt></ruby>では、それをもとに<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>チーム<rt>Team</rt></ruby>が<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>際<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>に<rt></rt></ruby><ruby>コーディング<rt>Coding</rt></ruby>できるよう、<ruby>クラス<rt>Class</rt></ruby><ruby>図<rp>（</rp><rt>ず</rt><rp>）</rp></ruby>や<ruby>シーケンス<rt>Sequence</rt></ruby><ruby>図<rp>（</rp><rt>ず</rt><rp>）</rp></ruby>などの<ruby>詳<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>細<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>（<ruby>内<rp>（</rp><rt>ない</rt><rp>）</rp></ruby><ruby>部<rp>（</rp><rt>ぶ</rt><rp>）</rp></ruby><ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>様<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>）、<ruby>テーブル<rt>Table</rt></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby><ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>、<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>数<rp>（</rp><rt>すう</rt><rp>）</rp></ruby>や<ruby>メソッド<rt>Method</rt></ruby>の<ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>様<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>などを<ruby>細<rp>（</rp><rt>こま</rt><rp>）</rp></ruby><ruby>かく<rt></rt></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby>して<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>いたしました。
+<br>(关于基本设计和详细设计各阶段所制作的成果物。在基本设计阶段，为了将需求转化为外部规格，我制作了画面设计书、功能一览表、数据模型（ER图）以及系统架构图等，确定了整体框架。而在详细设计阶段，为了让开发团队能据此进行实际编码，我制作了类图、时序图等详细设计书（内部规格书）、表定义书，并对函数或方法的规格进行了详细定义。)</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>基本設計と詳細設計の各フェーズで作成する成果物についてですね。
+<br>基本設計フェーズでは、要件を外部仕様として落とし込むため、画面設計書や機能一覧、データモデル（ER図）やシステムアーキテクチャ図などを作成し、全体の枠組みを固めました。
+<br>一方、詳細設計フェーズでは、それをもとに開発チームが実際にコーディングできるよう、クラス図やシーケンス図などの詳細設計書（内部仕様書）、テーブル定義書、関数やメソッドの仕様などを細かく定義して作成いたしました。
 <br>(关于基本设计和详细设计各阶段所制作的成果物。在基本设计阶段，为了将需求转化为外部规格，我制作了画面设计书、功能一览表、数据模型（ER图）以及系统架构图等，确定了整体框架。而在详细设计阶段，为了让开发团队能据此进行实际编码，我制作了类图、时序图等详细设计书（内部规格书）、表定义书，并对函数或方法的规格进行了详细定义。)
 </p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>基本(きほん)設計(せっけい)と詳細(しょうさい)設計(せっけい)で作る(つくる)ドキュメント(Document)の違い(ちがい)ですね！
-基本(きほん)設計(せっけい)では、ユーザー(User)から見える(みえる)画面(がめん)や全体の(ぜんたいの)データ(Data)構造(こうぞう)といった「外側(そとがわ)の設計(せっけい)」として画面(がめん)設計(せっけい)書(しょ)やER図(ず)を作っていました。
-詳細(しょうさい)設計(せっけい)ではそれをさらに落とし込んで(おとしこんで)、プログラム(Program)のクラス(Class)構造(こうぞう)や処理(しょり)の流れ(ながれ)を示す(しめす)シーケンス図(ず)やテーブル(Table)定義(ていぎ)書(しょ)など、実際に(じっさいに)コード(Code)を書く(かく)ための具体的な(ぐたいてきな)設計(せっけい)書(しょ)を作成(さくせい)していました！
-<br>(就是基本设计和详细设计所制作文档的区别呢！在基本设计中，作为能看到的用户界面和整体数据结构等“外部设计”，我制作了画面设计书和 ER 图。在详细设计中则会进一步细化，制作出展示程序类结构或处理流程的时序图和表定义书等用于实际编写代码的具体设计书！)
-</p>
+2.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>と<ruby>詳<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>細<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>で<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>る<ruby>ドキュメント<rt>Document</rt></ruby>の<ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いですね！
+<br><ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>では、<ruby>ユーザー<rt>User</rt></ruby>から<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>える<ruby>画<rp>（</rp><rt>が</rt><rp>）</rp></ruby><ruby>面<rp>（</rp><rt>めん</rt><rp>）</rp></ruby>や<ruby>全<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby><ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby>の<ruby>データ<rt>Data</rt></ruby><ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>造<rp>（</rp><rt>ぞう</rt><rp>）</rp></ruby>といった「<ruby>外<rp>（</rp><rt>そと</rt><rp>）</rp></ruby><ruby>側<rp>（</rp><rt>がわ</rt><rp>）</rp></ruby>の<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>」として<ruby>画<rp>（</rp><rt>が</rt><rp>）</rp></ruby><ruby>面<rp>（</rp><rt>めん</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>や<ruby>E<rt>イー</rt></ruby><ruby>R<rt>アール</rt></ruby><ruby>図<rp>（</rp><rt>ず</rt><rp>）</rp></ruby>を<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>っていました。
+<br><ruby>詳<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>細<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>ではそれをさらに<ruby>落<rp>（</rp><rt>おと</rt><rp>）</rp></ruby>し<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>んで、<ruby>プログラム<rt>Program</rt></ruby>の<ruby>クラス<rt>Class</rt></ruby><ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>造<rp>（</rp><rt>ぞう</rt><rp>）</rp></ruby>や<ruby>処<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>の<ruby>流<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>れを<ruby>示<rp>（</rp><rt>しめ</rt><rp>）</rp></ruby>す<ruby>シーケンス<rt>Sequence</rt></ruby><ruby>図<rp>（</rp><rt>ず</rt><rp>）</rp></ruby>や<ruby>テーブル<rt>Table</rt></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby><ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>など、<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>際<rp>（</rp><rt>さい</rt><rp>）</rp></ruby>に<ruby>コード<rt>Code</rt></ruby>を<ruby>書<rp>（</rp><rt>かく</rt><rp>）</rp></ruby>くための<ruby>具<rp>（</rp><rt>ぐ</rt><rp>）</rp></ruby><ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>な<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>を<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>していました！
+<br>(就是基本设计和详细设计所制作文档的区别呢！在基本设计中，作为能看到的用户界面和整体数据结构等“外部设计”，我制作了画面设计书和 ER 图。在详细设计中则会进一步细化，制作出展示程序类结构或处理流程的时序图和表定义书等用于实际编写代码的具体设计书！)</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>基本設計と詳細設計で作るドキュメントの違いですね！
+基本設計では、ユーザーから見える画面や全体のデータ構造といった「外側の設計」として画面設計書やER図を作っていました。
+<br>詳細設計ではそれをさらに落とし込んで、プログラムのクラス構造や処理の流れを示すシーケンス図やテーブル定義書など、実際にコードを書くための具体的な設計書を作成していました！
+<br>(就是基本设计和详细设计所制作文档的区别呢！在基本设计中，作为能看到的用户界面和整体数据结构等“外部设计”，我制作了画面设计书和 ER 图。在详细设计中则会进一步细化，制作出展示程序类结构或处理流程的时序图和表定义书等用于实际编写代码的具体设计书！)</p>
 
 ---
 
-- テーブル(Table)のユニークキー(Unique Key)と主(しゅ)キー(Key)をご存知(ぞんじ)ですか。
-<br>请问您知道数据表（Table）中的唯一键（Unique Key）和主键（Primary Key）吗？
+- <ruby>テーブル<rt>Table</rt></ruby>の<ruby>ユニークキー<rt>Unique Key</rt></ruby>と<ruby>主<rp>（</rp><rt>しゅ</rt><rp>）</rp></ruby><ruby>キー<rt>Key</rt></ruby>をご<ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>じですか。
+(请问您知道数据表（Table）中的唯一键（Unique Key）和主键（Primary Key）吗？)
+<br>テーブルのユニークキーと主キーをご存知ですか。
+(请问您知道数据表（Table）中的唯一键（Unique Key）和主键（Primary Key）吗？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>はい、存(ぞん)じております。
-<br>主キー（プライマリーキー）は、テーブル(Table)内(ない)の各(かく)レコード(Record)を唯一(ゆいいつ)に特定(とくてい)するための識別子(しきべつし)であり、「重複(ちょうふく)不可（NULL不可）」という制約(せいがく)を持ち(もち)、1つのテーブルに原則(げんそく)1つのみ設定(せってい)できます。
-一方(いっぽう)、ユニークキー（一意(いちい)制約(せいがく)）もデータの重複(ちょうふく)を許可(きょか)しない点は同様(どうよう)ですが、「NULL値(ち)を許容(きょよう)する場合がある（※DBMSによる）」点や、1つのテーブルに複数(ふくすう)設定(せってい)できる点などが異(こと)なります。
-<br>(是的，我了解。主键（Primary Key）是用于唯一标识表中每条记录的标识符，具有“不可重复且不可为 NULL”的约束，原则上一个表中只能设置一个。
-*而唯一键（Unique Key）虽然同样不允许数据重复，但其区别在于“允许存在 NULL 值（视 DBMS 而定）”，并且一个表中可以设置多个)
-</p>
+1.
+<p style="padding: 0 2em;"><strong>A: </strong>はい、<ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>じております。
+<br><ruby>主キー<rt>Primary Key</rt></ruby>（<ruby>プライマリーキー<rt>Primary Key</rt></ruby>）は、<ruby>テーブル<rt>Table</rt></ruby><ruby>内<rp>（</rp><rt>ない</rt><rp>）</rp></ruby>の<ruby>各<rp>（</rp><rt>かく</rt><rp>）</rp></ruby><ruby>レコード<rt>Record</rt></ruby>を<ruby>唯<rp>（</rp><rt>ゆい</rt><rp>）</rp></ruby><ruby>一<rp>（</rp><rt>いつ</rt><rp>）</rp></ruby>に<ruby>特<rp>（</rp><rt>とく</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>するための<ruby>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby><ruby>別<rp>（</rp><rt>べつ</rt><rp>）</rp></ruby><ruby>子<rp>（</rp><rt>し</rt><rp>）</rp></ruby>であり、「<ruby>重<rp>（</rp><rt>ちょう</rt><rp>）</rp></ruby><ruby>複<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby>不可（<ruby>NULL不可<rt>ヌルふか</rt></ruby>）」という<ruby>制<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>約<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>を<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>ち、1つの<ruby>テーブル<rt>Table</rt></ruby>に<ruby>原<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><ruby>則<rp>（</rp><rt>そく</rt><rp>）</rp></ruby>1つのみ<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>できます。
+<br><ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp></ruby><ruby>方<rp>（</rp><rt>ぽう</rt><rp>）</rp></ruby>、<ruby>ユニークキー<rt>Unique Key</rt></ruby>（<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>制<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>約<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>）も<ruby>データ<rt>Data</rt></ruby>の<ruby>重<rp>（</rp><rt>ちょう</rt><rp>）</rp></ruby><ruby>複<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby>を<ruby>許<rp>（</rp><rt>きょ</rt><rp>）</rp></ruby><ruby>化<rt>か</rt></ruby>しない<ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>は<ruby>同<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>様<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>ですが、「<ruby>NULL値<rt>ヌルち</rt></ruby>を<ruby>許<rp>（</rp><rt>きょ</rt><rp>）</rp></ruby><ruby>容<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>する場合がある（※<ruby>DBMS<rt>Database Management System</rt></ruby>による）」<ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>や、1つの<ruby>テーブル<rt>Table</rt></ruby>に<ruby>複<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby><ruby>数<rp>（</rp><rt>すう</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>できる<ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>などが<ruby>異<rp>（</rp><rt>こと</rt><rp>）</rp></ruby>なります。
+<br>(在需求定义阶段，我主要负责通过与客户的面谈（Hearing）整理业务流程，以及定义功能需求与非功能需求。作为成果物，我制作了需求定义书、业务流程图以及画面布局方案等，并将其作为与开发团队及客户达成共识的基础。)</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>はい、存じております。
+<br>主キー（プライマリーキー）は、テーブル内の各レコードを唯一に特定するための識別子であり、「重複不可（NULL不可）」という制約を持ち、1つのテーブルに原則1つのみ設定できます。
+<br>一方、ユニークキー（一意制約）もデータの重複を許可しない点は同様ですが、「NULL値を许容する場合がある（※DBMSによる）」点や、1つのテーブルに複数設定できる点などが異なります。
+<br>(在需求定义阶段，我主要负责通过与客户的面谈（Hearing）整理业务流程，以及定义功能需求与非功能需求。作为成果物，我制作了需求定义书、业务流程图以及画面布局方案等，并将其作为与开发团队及客户达成共识的基础。)</p>
+
+2.
+<p style="padding: 0 2em;"><strong>A: </strong>はい、もちろん<ruby>知<rp>（</rp><rt>し</rt><rp>）</rp></ruby>っています！
+<br><ruby>主<rp>（</rp><rt>しゅ</rt><rp>）</rp></ruby><ruby>キー<rt>Key</rt></ruby>は<ruby>テーブル<rt>Table</rt></ruby>の「<ruby>絶<rp>（</rp><rt>ぜっ</rt><rp>）</rp></ruby><ruby>対<rp>（</rp><rt>たい</rt><rp>）</rp></ruby>に<ruby>被<rp>（</rp><rt>かぶ</rt><rp>）</rp></ruby>らない、かつ<ruby>空<rp>（</rp><rt>くう</rt><rp>）</rp></ruby><ruby>欄<rp>（</rp><rt>らん</rt><rp>）</rp></ruby>（<ruby>NULL<rt>ヌル</rt></ruby>）もダメな<ruby>絶<rp>（</rp><rt>ぜっ</rt><rp>）</rp></ruby><ruby>対<rp>（</rp><rt>たい</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>な<ruby>目<rp>（</rp><rt>め</rt><rp>）</rp></ruby><ruby>印<rp>（</rp><rt>じるし</rt><rp>）</rp></ruby>」で、1つの<ruby>テーブル<rt>Table</rt></ruby>に1つだけ<ruby>置<rp>（</rp><rt>お</rt><rp>）</rp></ruby>けるものですよね。
+<br><ruby>ユニークキー<rt>Unique Key</rt></ruby>も「<ruby>重<rp>（</rp><rt>ちょう</rt><rp>）</rp></ruby><ruby>複<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby>しちゃいけない」という<ruby>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>味<rp>（</rp><rt>み</rt><rp>）</rp></ruby>では<ruby>似<rp>（</rp><rt>に</rt><rp>）</rp></ruby>ているんですけど、こちらは<ruby>複<rp>（</rp><rt>ふく</rt><rp>）</rp></ruby><ruby>数<rp>（</rp><rt>すう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>れたり、<ruby>NULL<rt>ヌル</rt></ruby>を<ruby>許<rp>（</rp><rt>きょ</rt><rp>）</rp></ruby><ruby>容<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>したりする<ruby>ケース<rt>Case</rt></ruby>があるのが<ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いですね！
+<br>(是的，当然知道！主键就是表中“绝对不能重复、也不能为空（NULL）的绝对标记”，一个表里只能设一个。唯一键在“不能重复”这一点上很像，但区别在于它可以设多个，或者在某些情况下允许为 NULL！)</p>
 
 <p style="padding: 0 2em;"><strong>A: </strong>はい、もちろん知っています！
-<br>主キー（しゅきー）はテーブルの「絶対（ぜったい）に被（かぶ）らない、かつ空欄（くうらん）（NULL）もダメな絶対的（ぜったいてき）な目印（めじるし）」で、1つのテーブルに1つだけ置（お）けるものですよね。
-ユニークキーも「重複（じゅうふく）しちゃいけない」という意味（いみ）では似（に）ているんですけど、こちらは複数（ふくすう）作（つく）れたり、NULLを許容（きょよう）したりするケースがあるのが違い（ちがい）ですね！
-<br>(是的，当然知道！主键就是表中“绝对不能重复、也不能为空（NULL）的绝对标记”，一个表里只能设一个。唯一键在“不能重复”这一点上很像，但区别在于它可以设多个，或者在某些情况下允许为 NULL！)
+<br>主キーはテーブルの「絶対に被らない、かつ空欄（NULL）もダメな絶対的な目印」で、1つのテーブルに1つだけ置けるものですよね。
+<br>ユニークキーも「重複しちゃいけない」という意味では似ているんですけど、こちらは複数作れたり、NULLを許容したりするケースがあるのが違いですね！
+<br>(是的，当然知道！主键就是表中“绝对不能重复、也不能为空（NULL）的绝对标记”，一个表里只能设一个。唯一键在“不能重复”这一点上很像，但区别在于它可以设多个，或者在某些情况下允许为 NULL！)</p>
 
 ---
 
-- テーブルって例(たと)えばえっと普通(ふつう)にあのう基本的(きほんてき)には今(いま)は関係(かんけい)あるあのうリレーション(Relation)のデータベース(Database)なんですけど、例(たと)えばえっとテーブル二つ(ふたつ)親(おや)と子(こ)テーブルがありまして、そのテーブルのあのう登録(とうろく)操作(そうさ)する際(さい)に登録(とうろく)と削(さく)減(げん)［※削除（さくじょ）の言い間違い］に注意点(ちゅういてん)か、いくつありますが、その注意点(ちゅういてん)についてご認識(にんしき)している範囲(はんい)で教(おし)えていかがでしょうか。
-<br>(说到表，比如现在通常基本上都是有关系的、也就是关系型数据库（Relational Database）。比如说，如果有父表和子表这两张表，在对这些表进行注册（插入/写入）和删除操作时，有什么需要注意的地方吗？有多少个注意事项呢？请在您认识的范围内为我解答一下。)
+- <ruby>テーブル<rt>Table</rt></ruby>って<ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えばえっと<ruby>普<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby><ruby>通<rp>（</rp><rt>つう</rt><rp>）</rp></ruby>にあのう<ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>には<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>は<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>係<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>あるあのう<ruby>リレーション<rt>Relation</rt></ruby>の<ruby>データベース<rt>Database</rt></ruby>なんですけど、<ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えばえっと<ruby>テーブル<rt>Table</rt></ruby><ruby>二<rp>（</rp><rt>ふた</rt><rp>）</rp></ruby>つ<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby>と<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>テーブルがありまして、そのテーブルのあのう<ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby><ruby>操<rp>（</rp><rt>そう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>する<ruby>際<rp>（</rp><rt>さい</rt><rp>）</rp></ruby>に<ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>と<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>減<rp>（</rp><rt>げん</rt><rp>）</rp></ruby>［※<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>の<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>い<ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby>違い］に<ruby>注<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>か、いくつありますが、その<ruby>注<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>についてご<ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby><ruby>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>している<ruby>範<rp>（</rp><rt>はん</rt><rp>）</rp></ruby><ruby>囲<rp>（</rp><rt>い</rt><rp>）</rp></ruby>で<ruby>教<rp>（</rp><rt>おし</rt><rp>）</rp></ruby>えていかがでしょうか。
+(说到表，比如现在通常基本上都是有关系的、也就是关系型数据库（Relational Database）。比如说，如果有父表和子表这两张表，在对 these 表进行注册（插入/写入）和删除操作时，有什么需要注意的地方吗？有多少个注意事项呢？请在您认识的范围内为我解答一下。)
+<br>テーブルって例えばえっと普通にあのう基本的には今は関係あるあのうリレーションのデータベースなんですけど、例えばえっとテーブル二つ親と子テーブルがありまして、そのテーブルのあのう登録操作する際に登録と削減［※削除の言い間違い］に注意点か、いくつありますが、その注意点についてご認識している範囲で教えていかがでしょうか。
+(说到表，比如现在通常基本上都是有关系的、也就是关系型数据库（Relational Database）。比如说，如果有父表和子表这两张表，在对 these 表进行注册（插入/写入）和删除操作时，有什么需要注意的地方吗？有多少个注意事项见？请在您认识的范围内为我解答一下。)</p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>親(おや)テーブルと子(こ)テーブルのようなリレーショナル(Relational)データベース(Database)における登録(とうろく)（インサート）および削除(さくじょ)（デリート）の注意点(ちゅういてん)ですね。
-主(おも)に以下の点(てん)に注意(ちゅうい)が必要(ひつよう)と認識(にんしき)しております。
-
-① 登録時（とうろくじ）（インサート [Insert]）の順序（じゅんじょ）：
-子（こ）テーブル [Table] には親（おや）テーブル [Table] の主キー（しゅきー） [Primary Key] （外部キー（がいぶきー） [Foreign Key] ）が紐（ひも）づくため、必ず（かならず）親（おや）テーブル [Table] へ先（さき）にデータを登録（とうろく）し、その後（あと）に子（こ）テーブル [Table] を登録（とうろく）する必要（ひつよう）があります。逆（ぎゃく）の順序（じゅんじょ）だと外部キー制約（がいぶきーせいやく） [Foreign Key Constraint] （エラー [Error] ）が発生（ハっせい）します。
-
-② 削除時（さくじょじ）（デリート [Delete]）の順序（じゅんじょ）と制約（せいやく）：
-削除（さくじょ）はその逆（ぎゃく）で、親（おや）データを先（さき）に削除（さくじょ）しようとすると、子（こ）データが存在（そんざい）している場合（ばあい）に外部キー制約違反（がいぶきーせいやくいはん）となります。そのため、子（こ）データを先（さき）に削除（さくじょ）するか、カスケード削除（かすけーどさくじょ） [Cascade Delete] などの設定（せってい）を適切（てきせつ）に行（おこな）う必要（ひつよう）があります。
-
-③ トランザクション管理（とらんざくしょんかんり） [Transaction Management] （整合性（せいごうせい）の維持（いじ））：
-親子（おやこ）にまたがる一連（いちれん）の登録（とうろく）・削除処理（さくじょしょり）は、途中（とちゅう）でエラー [Error] が起（お）きた場合（ばあい）にデータ [Data] 不整合（ふせいごう）が起（お）きないよう、トランザクション [Transaction] （BEGIN / COMMIT / ROLLBACK）で囲（かこ）み、すべて成功（せいこう）するかすべてロールバック [Rollback] するかを保証（ほしょう）する必要（ひつよう）があります。
-
+1.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby><ruby>テーブル<rt>Table</rt></ruby>と<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby><ruby>テーブル<rt>Table</rt></ruby>のような<ruby>リレーショナルデータベース<rt>Relational Database</rt></ruby>における<ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>（<ruby>インサート<rt>Insert</rt></ruby>）および<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>（<ruby>デリート<rt>Delete</rt></ruby>）の<ruby>注<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>ですね。<ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>に<ruby>以<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>下<rp>（</rp><rt>か</rt><rp>）</rp></ruby>の<ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>に<ruby>注<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>が<ruby>必<rp>（</rp><rt>ひつ</rt><rp>）</rp></ruby><ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>と<ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby><ruby>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>しております。
+<br><br>① <ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby><ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>（<ruby>インサート<rt>Insert</rt></ruby>）の<ruby>順<rp>（</rp><rt>じゅん</rt><rp>）</rp></ruby><ruby>序<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>：
+<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby><ruby>テーブル<rt>Table</rt></ruby>には<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby><ruby>テーブル<rt>Table</rt></ruby>の<ruby>主<rp>（</rp><rt>しゅ</rt><rp>）</rp></ruby><ruby>キー<rt>Key</rt></ruby>（<ruby>外<rp>（</rp><rt>がい</rt><rp>）</rp></ruby><ruby>部<rp>（</rp><rt>ぶ</rt><rp>）</rp></ruby><ruby>キー<rt>Key</rt></ruby>）が<ruby>紐<rp>（</rp><rt>ひも</rt><rp>）</rp></ruby>づくため、<ruby>必<rp>（</rp><rt>かな</rt><rp>）</rp></ruby>ず<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby><ruby>テーブル<rt>Table</rt></ruby>へ<ruby>先<rp>（</rp><rt>さき</rt><rp>）</rp></ruby>にデータを<ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>し、その<ruby>後<rp>（</rp><rt>あと</rt><rp>）</rp></ruby>に<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby><ruby>テーブル<rt>Table</rt></ruby>を<ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>する<ruby>必<rp>（</rp><rt>ひつ</rt><rp>）</rp></ruby><ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>があります。<ruby>逆<rp>（</rp><rt>ぎゃく</rt><rp>）</rp></ruby>の<ruby>順<rp>（</rp><rt>じゅん</rt><rp>）</rp></ruby><ruby>序<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>だと<ruby>外<rp>（</rp><rt>がい</rt><rp>）</rp></ruby><ruby>部<rp>（</rp><rt>ぶ</rt><rp>）</rp></ruby><ruby>キー<rt>Key</rt></ruby><ruby>制<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>約<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>（<ruby>エラー<rt>Error</rt></ruby>）が<ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>生<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>します。
+<br><br>② <ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby><ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>（<ruby>デリート<rt>Delete</rt></ruby>）の<ruby>順<rp>（</rp><rt>じゅん</rt><rp>）</rp></ruby><ruby>序<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>と<ruby>制<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>約<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>：
+<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>はその<ruby>逆<rp>（</rp><rt>ぎゃく</rt><rp>）</rp></ruby>で、<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby>データを<ruby>先<rp>（</rp><rt>さき</rt><rp>）</rp></ruby>に<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>しようとすると、<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>データが<ruby>存<rp>（</rp><rt>そん</rt><rp>）</rp></ruby><ruby>在<rp>（</rp><rt>ざい</rt><rp>）</rp></ruby>している<ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby><ruby>合<rp>（</rp><rt>あい</rt><rp>）</rp></ruby>に<ruby>外<rp>（</rp><rt>がい</rt><rp>）</rp></ruby><ruby>部<rp>（</rp><rt>ぶ</rt><rp>）</rp></ruby><ruby>キー<rt>Key</rt></ruby><ruby>制<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>約<rp>（</rp><rt>やく</rt><rp>）</rp></ruby><ruby>違<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>反<rp>（</rp><rt>はん</rt><rp>）</rp></ruby>となります。そのため、<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>データを<ruby>先<rp>（</rp><rt>さき</rt><rp>）</rp></ruby>に<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>するか、<ruby>カスケード<rt>Cascade</rt></ruby><ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>などの<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>を<ruby>適<rp>（</rp><rt>てき</rt><rp>）</rp></ruby><ruby>切<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>う<ruby>必<rp>（</rp><rt>ひつ</rt><rp>）</rp></ruby><ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>があります。
+<br><br>③ <ruby>トランザクション<rt>Transaction</rt></ruby><ruby>管<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（<ruby>整<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>合<rp>（</rp><rt>ごう</rt><rp>）</rp></ruby><ruby>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>の<ruby>維<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>持<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>）：
+<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby><ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>にまたがる<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp></ruby>の<ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>・<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby><ruby>処<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>は、<ruby>途<rp>（</rp><rt>と</rt><rp>）</rp></ruby><ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>で<ruby>エラー<rt>Error</rt></ruby>が<ruby>起<rp>（</rp><rt>お</rt><rp>）</rp></ruby><ruby>きた<rt></rt></ruby><ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby><ruby>合<rp>（</rp><rt>あい</rt><rp>）</rp></ruby><ruby>に<rt></rt></ruby><ruby>データ<rt>Data</rt></ruby><ruby>不<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby><ruby>整<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>合<rp>（</rp><rt>ごう</rt><rp>）</rp></ruby>が<ruby>起<rp>（</rp><rt>お</rt><rp>）</rp></ruby>きないよう、<ruby>トランザクション<rt>Transaction</rt></ruby>（<ruby>BEGIN<rt>ビギン</rt></ruby> / <ruby>COMMIT<rt>コミット</rt></ruby> / <ruby>ROLLBACK<rt>ロールバック</rt></ruby>）で<ruby>囲<rp>（</rp><rt>かこ</rt><rp>）</rp></ruby>み、すべて<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>功<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>するかすべて<ruby>ロールバック<rt>Rollback</rt></ruby>するかを<ruby>保<rp>（</rp><rt>ほ</rt><rp>）</rp></ruby><ruby>証<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>する<ruby>必<rp>（</rp><rt>ひつ</rt><rp>）</rp></ruby><ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>があります。
 <br>(这是指在存在父表和子表的关系型数据库中，进行注册（插入）与删除操作时的注意事项。我认识到主要需要注意以下几点：
+<br><br>① 注册时的顺序：由于子表关联了父表的主键（外键），因此必须先将数据注册到父表，之后再注册子表。如果顺序颠倒，就会发生外键约束错误。
+<br><br>② 删除时的顺序与约束：删除则刚好相反，如果试图先删除父数据，当子数据仍然存在时就会违反外键约束。因此，需要先删除子数据，或者正确配置级联删除（CASCADE）等设置。
+<br><br>③ 事务管理（维持一致性）：跨越父子表的一系列注册、删除处理，为了防止中途出错导致数据不一致，必须使用事务（Transaction）将其包裹，以保证要么全部成功，要么全部回滚。)</p>
 
-① 注册时的顺序：由于子表关联了父表的主键（外键），因此必须先将数据注册到父表，之后再注册子表。如果顺序颠倒，就会发生外键约束错误。
+<p style="padding: 0 2em;"><strong>A: </strong>親テーブルと子テーブルのようなリレーショナルデータベースにおける登録（インサート）および削除（デリート）の注意点ですね。主には以下の点に注意が必要と認識しております。
+<br><br>① 登録時の順序：子テーブルには親テーブルの主キー（外部キー）が紐づくため、必ず親テーブルへ先にデータを登録し、その後に子テーブルを登録する必要があります。逆の順序だと外部キー制約（エラー）が発生します。
+<br><br>② 削除時の順序と制約：削除はその逆で、親データを先に削除しようとすると、子データが存在している場合に外部キー制約違反となります。そのため、子データを先に削除するか、カスケード削除などの設定を適切に行う必要があります。
+<br><br>③ トランザクション管理（整合性の維持）：親子にまたがる一連の登録・削除処理は、途中でエラーが起きた場合にデータ不整合が起きないよう、トランザクション（BEGIN / COMMIT / ROLLBACK）で囲み、すべて成功するかすべてロールバックするかを保証する必要があります。
+<br>(这是指在存在父表和子表的关系型数据库中，进行注册（插入）与删除操作时的注意事项。我认识到主要需要注意以下几点：
+<br><br>① 注册时的顺序：由于子表关联了父表的主键（外键），因此必须先将数据注册到父表，之后再注册子表。如果顺序颠倒，就会发生外键约束错误。
+<br><br>② 删除时的顺序与约束：删除则刚好相反，如果试图先删除父数据，当子数据仍然存在时就会违反外键约束。因此，需要先删除子数据，或者正确配置级联删除（CASCADE）等设置。
+<br><br>③ 事务管理（维持一致性）：跨越父子表的一系列注册、删除处理，为了防止中途出错导致数据不一致，必须使用事务（Transaction）将其包裹，以保证要么全部成功，要么全部回滚。)</p>
 
-② 删除时的顺序与约束：删除则刚好相反，如果试图先删除父数据，当子数据仍然存在时就会违反外键约束。因此，*需要先删除子数据，或者正确配置级联删除（CASCADE）等设置。
+2.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby><ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby><ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>係<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>のある<ruby>テーブル<rt>Table</rt></ruby>をいじる<ruby>時<rp>（</rp><rt>とき</rt><rp>）</rp></ruby>の<ruby>注<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>ですね！
+<br><br><ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>には、<ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>する<ruby>時<rp>（</rp><rt>とき</rt><rp>）</rp></ruby>は「<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby>から<ruby>先<rp>（</rp><rt>さき</rt><rp>）</rp></ruby>」で、<ruby>外<rp>（</rp><rt>がい</rt><rp>）</rp></ruby><ruby>部<rp>（</rp><rt>ぶ</rt><rp>）</rp></ruby><ruby>キー<rt>Foreign Key</rt></ruby>の<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby>がいないと<ruby>エラー<rt>Error</rt></ruby>になっちゃうので<ruby>気<rp>（</rp><rt>き</rt><rp>）</rp></ruby>をつけます。
+<br><br><ruby>逆<rp>（</rp><rt>ぎゃく</rt><rp>）</rp></ruby>に<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>する<ruby>時<rp>（</rp><rt>とき</rt><rp>）</rp></ruby>は「<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>から<ruby>先<rp>（</rp><rt>さき</rt><rp>）</rp></ruby>」に<ruby>消<rp>（</rp><rt>け</rt><rp>）</rp></ruby>さないと、<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>に<ruby>紐<rp>（</rp><rt>ひも</rt><rp>）</rp></ruby>づく<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby>が<ruby>消<rp>（</rp><rt>け</rt><rp>）</rp></ruby>せないっていう<ruby>制<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>約<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>に<ruby>引<rp>（</rp><rt>ひっ</rt><rp>）</rp></ruby>っかかりますよね。
+<br><br>あとは、この<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp></ruby>の<ruby>処<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>を<ruby>安<rp>（</rp><rt>あん</rt><rp>）</rp></ruby><ruby>全<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby>に<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>うために、ちゃんと<ruby>トランザクション<rt>Transaction</rt></ruby>を<ruby>張<rp>（</rp><rt>は</rt><rp>）</rp></ruby>って、<ruby>途<rp>（</rp><rt>と</rt><rp>）</rp></ruby><ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>で<ruby>失<rp>（</rp><rt>しっ</rt><rp>）</rp></ruby><ruby>敗<rp>（</rp><rt>ぱい</rt><rp>）</rp></ruby>したら<ruby>全<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby><ruby>部<rp>（</rp><rt>ぶ</rt><rp>）</rp></ruby><ruby>ロールバック<rt>Rollback</rt></ruby>できるようにすることが<ruby>大<rp>（</rp><rt>だい</rt><rp>）</rp></ruby><ruby>事<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>だと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>っています！
+<br><br>(就是处理具有父子关系表时的注意事项呢！基本上，注册时“先从父表开始”，如果外键找不到对应的父级就会报错，所以需要注意。反过来删除时“先从子表开始”删，否则就会触及“无法删除被子表关联的父级”这种约束。另外，为了安全地完成这一系列操作，我觉得很重要的一点是正确开启事务，确保中途失败时能够全部回滚！)</p>
 
-③ 事务管理（维持一致性）：跨越父子表的一系列注册、删除处理，为了防止中途出错导致数据不一致，必须使用事务（Transaction）*将其包裹，以保证要么全部成功，要么全部回滚。)
-</p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>親子関係（おやこかんけい）のあるテーブル [Table] をいじる時（とき）の注意点（ちゅういてん）ですね！
-
-基本（きほん）的（てき）には、登録（とうろく）する時（とき）は「親（おや）から先（さき）」で、外部キー（がいぶきー） [Foreign Key] の親（おや）がいないとエラー [Error] になっちゃうので気（き）をつけます。
-
-逆（ぎゃく）に削除（さくじょ）する時（とき）は「子（こ）から先（さき）」に消（け）さないと、子（こ）に紐（ひも）づく親（おや）が消（け）せないっていう制約（せいやく）に引っかかり（ひっかかり）ますよね。
-
-あとは、この一連（いちれん）の処理（しょり）を安全（あんぜん）に行（おこな）うために、ちゃんとトランザクション [Transaction] を張（は）って、途中（とちゅう）で失敗（しっぱい）したら全部（ぜんぶ）ロールバック [Rollback] できるようにすることが大事（だいじ）だと思（おも）っています！
-
-<br>(就是处理具有父子关系表时的注意事项呢！基本上，注册时“先从父表开始”，如果外键找不到对应的父级就会报错，所以需要注意。反过来删除时“先从子表开始”删，否则就会触及“无法删除被子表关联的父级”这种约束。另外，为了安全地完成这一系列操作，我觉得很重要的一点是正确开启事务，确保中途失败时能够全部回滚！)
-</p>
+<p style="padding: 0 2em;"><strong>A: </strong>親子関係のあるテーブルをいじる時の注意点ですね！
+<br><br>基本的には、登録する時は「親から先」で、外部キーの親がいないとエラーになっちゃうので気をつけます。
+<br><br>逆に削除する時は「子から先」に消さないと、子に紐づく親が消せないっていう制約に引っかかりますよね。
+<br><br>あとは、この一連の処理を安全に行うために、ちゃんとトランザクションを張って、途中で失敗したら全部ロールバックできるようにすることが大事だと思っています！
+<br><br>(就是处理具有父子关系表时的注意事项呢！基本上，注册时“先从父表开始”，如果外键找不到对应的父级就会报错，所以需要注意。反过来删除时“先从子表开始”删，否则就会触及“无法删除被子表关联的父级”这种约束。另外，为了安全地完成这一系列操作，我觉得很重要的一点是正确开启事务，确保中途失败时能够全部回滚！)</p>
 
 ---
 
-- 直近(ちょっきん)でなんかソース(Source)のバージョン管理(かんり)でどのようなツール(Tool)を使(つか)ってるんですか。
-<br>(最近在源码版本管理方面，大家一般都在使用什么工具呢？)
+- <ruby>直<rp>（</rp><rt>ちょっ</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>でなんか<ruby>ソース<rt>Source</rt></ruby>の<ruby>バージョン管理<rt>Version Control</rt></ruby>でどのような<ruby>ツール<rt>Tool</rt></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>ってるんですか。
+(最近在源码版本管理方面，大家一般都在使用什么工具呢？)
+<br>直近でなんかソースのバージョン管理でどのようなツールを使ってるんですか。
+(最近在源码版本管理方面，大家一般都在使用什么工具呢？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>近(ちょっきん)の開発(かいはつ)現場(げんば)におきましては、ソースコード(Source Code)のバージョン(Version)管理(かんり)としてGitを主(おも)に使用(しよう)しております。
-プラットフォーム(Platform)としては、案件(あんけん)やチーム(Team)の方針(ほうしん)に合(あ)わせてGitHub、GitLab、あるいはAzure DevOpsなどを使い分け(つかいわけ)ており、プルリクエスト(Pull Request)を活用(かつよう)したコード(Code)レビュー(Review)や、CI/CD(Continuous Integration/Continuous Deployment)パイプライン(Pipeline)による自動(じどう)ビルド(Build)・テスト(Test)の連携(れんけい)といった、チーム(Team)開発(かいはつ)における標準的(ひょうじゅんてき)なワークフロー(Workflow)を日常的(にちじょうてき)に実践(じっせん)しております。
-<br>(在最近的开发现场中，源码版本管理主要使用 Git。作为平台，根据项目和团队的方针灵活选用 GitHub、GitLab 或 Azure DevOps 等，并通过利用 Pull Request 进行代码审查，以及通过 CI/CD 管道联动自动构建与测试等，日常实践着团队开发中的标准工作流。)
-</p>
+1.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>直<rp>（</rp><rt>ちょっ</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>の<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby>におきましては、<ruby>ソースコード<rt>Source Code</rt></ruby>の<ruby>バージョン管理<rt>Version Control</rt></ruby>として<ruby>Git<rt>ギット</rt></ruby>を<ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>に<ruby>使<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>しております。
+<br><ruby>プラットフォーム<rt>Platform</rt></ruby>としては、<ruby>案<rp>（</rp><rt>あん</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>や<ruby>チーム<rt>Team</rt></ruby>の<ruby>方<rp>（</rp><rt>ほう</rt><rp>）</rp></ruby><ruby>針<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>に<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わせて<ruby>GitHub<rt>ギットハブ</rt></ruby>、<ruby>GitLab<rt>ギットラブ</rt></ruby>、あるいは<ruby>Azure DevOps<rt>アジュール デブオプス</rt></ruby>などを<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>い<ruby>分<rp>（</rp><rt>わ</rt><rp>）</rp></ruby>けており、<ruby>プルリクエスト<rt>Pull Request</rt></ruby>を<ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>した<ruby>コードレビュー<rt>Code Review</rt></ruby>や、<ruby>CI/CD<rt>シーアイシーディー</rt></ruby><ruby>パイプライン<rt>Pipeline</rt></ruby>による<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>ビルド<rt>Build</rt></ruby>・<ruby>テスト<rt>Test</rt></ruby>の<ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp></ruby><ruby>携<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>といった、<ruby>チーム<rt>Team</rt></ruby><ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>における<ruby>標<rp>（</rp><rt>ひょう</rt><rp>）</rp></ruby><ruby>準<rp>（</rp><rt>じゅん</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>な<ruby>ワークフロー<rt>Workflow</rt></ruby>を<ruby>日<rp>（</rp><rt>にち</rt><rp>）</rp></ruby><ruby>常<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>に<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>践<rp>（</rp><rt>せん</rt><rp>）</rp></ruby>しております。
+<br>(在最近的开发现场中，源码版本管理主要使用 Git。作为平台，根据项目和团队的方针灵活选用 GitHub、GitLab 或 Azure DevOps 等，并通过利用 Pull Request 进行代码审查，以及通过 CI/CD 管道联动自动构建与测试等，日常实践着团队开发中的标准工作流。)</p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>最近（さいきん）だと、やっぱりGitをメイン [Main] に使（つか）っていますね！
-ホスティング [Hosting] サービス [Service] と中心（ちゅうしん）としてはGitHubやGitLabを使（つか）うことが多く（おおく）て、普段（ふだん）からブランチ [Branch] を切（き）って、プルリクエスト [Pull Request] を投（な）げて、チームメンバー [Team Member] にコード [Code] レビュー [Review] をしてもらうというフロー [Flow] で開発（かいはつ）を進（すす）めています。GitHub CopilotなどのAI [Artificial Intelligence] ツール [Tool] を組み合わせて効率化（こうりつか）を図る（はかる）ことも多い（おおいい）ですね！
-<br>(最近的话，主要还是在使用 Git 呢！作为托管服务，经常使用 GitHub 或 GitLab，平时都是通过开分支、提 Pull Request、让团队成员帮忙做 Code Review 的流程来推进开发的。也经常结合 GitHub Copilot 等 AI 工具来提高效率！)
-</p>
+<p style="padding: 0 2em;"><strong>A: </strong>直近の開発現場におきましては、ソースコードのバージョン管理としてGitを主に使用しております。
+<br>プラットフォームとしては、案件やチームの方針に合わせてGitHub、GitLab、あるいはAzure DevOpsなどを使い分けており、プルリクエストを活用したコードレビューや、CI/CDパイプラインによる自動ビルド・テストの連携といった、チーム開発における標準的なワークフローを日常的に実践しております。
+<br>(在最近的开发现场中，源码版本管理主要使用 Git。作为平台，根据项目和团队的方针灵活选用 GitHub、GitLab 或 Azure DevOps 等，并通过利用 Pull Request 进行代码审查，以及通过 CI/CD 管道联动自动构建与测试等，日常实践着团队开发中的标准工作流。)</p>
+
+2.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>だと、やっぱり<ruby>Git<rt>ギット</rt></ruby>を<ruby>メイン<rt>Main</rt></ruby>に<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>っていますね！
+<br><ruby>ホスティング<rt>Hosting</rt></ruby><ruby>サービス<rt>Service</rt></ruby>を<ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>心<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>としては<ruby>GitHub<rt>ギットハブ</rt></ruby>や<ruby>GitLab<rt>ギットラブ</rt></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>うことが<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>くて、<ruby>普<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby><ruby>段<rp>（</rp><rt>だん</rt><rp>）</rp></ruby>から<ruby>ブランチ<rt>Branch</rt></ruby>を<ruby>切<rp>（</rp><rt>き</rt><rp>）</rp></ruby>って、<ruby>プルリクエスト<rt>Pull Request</rt></ruby>を<ruby>投<rp>（</rp><rt>な</rt><rp>）</rp></ruby>げて、<ruby>チームメンバー<rt>Team Member</rt></ruby>に<ruby>コード<rt>Code</rt></ruby><ruby>レビュー<rt>Review</rt></ruby>をしてもらうという<ruby>フロー<rt>Flow</rt></ruby>で<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>を<ruby>進<rp>（</rp><rt>すす</rt><rp>）</rp></ruby>めています。<ruby>GitHub Copilot<rt>ギットハブ コパイロット</rt></ruby>などの<ruby>AI<rt>エーアイ</rt></ruby><ruby>ツール<rt>Tool</rt></ruby>を<ruby>組<rp>（</rp><rt>く</rt><rp>）</rp></ruby><ruby>み<rt></rt></ruby><ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わせて<ruby>効<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>率<rp>（</rp><rt>りつ</rt><rp>）</rp></ruby><ruby>化<rt>か</rt></ruby><ruby>を<rt></rt></ruby><ruby>図<rp>（</rp><rt>はか</rt><rp>）</rp></ruby>ることも<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>いですね！
+<br>(最近的话，主要还是在使用 Git 呢！作为托管服务，经常使用 GitHub 或 GitLab，平时都是通过开分支、提 Pull Request、让团队成员帮忙做 Code Review 的流程来推进开发的。也经常结合 GitHub Copilot 等 AI 工具来提高效率！)</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>最近だと、やっぱりGitをメインに使っていますね！
+<br>ホスティングサービスを中心としてはGitHubやGitLabを使うことが多くて、普段からブランチを切って、プルリクエストを投げて、チームメンバーにコードレビューをしてもらうというフローで开发を進めています。GitHub CopilotなどのAIツールを組み合わせて効率化を図ることも多いですね！
+<br>(最近的话，主要还是在使用 Git 呢！作为托管服务，经常使用 GitHub 或 GitLab，平时都是通过开分支、提 Pull Request、让团队成员帮忙做 Code Review 的流程来推进开发的。也经常结合 GitHub Copilot 等 AI 工具来提高效率！)</p>
 
 ---
 
 - ギット [Git] ってえっとまず初め（はじめ）はコミット [Commit] とプッシュ [Push] の違い（ちがい）をご存知（ぞんじ）ですか。
-<br>(请问您知道 Git 中的 commit（提交）和 push（推送）的区别吗？)
+(请问您知道 Git 中的 commit（提交）和 push（推送）的区别吗？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>はい、存(ぞん)じております。
-コミット（Commit）は、ローカル(Local)リポジトリ(Repository)に対して変更(へんこう)履歴(りれき)（スナップショット）を記録(きろく)する作業(さぎょう)であり、自分(じぶん)の手元(てもと)の環境(かんきょう)で完結(かんけつ)します。
-一方(いっぽう)、プッシュ（Push）は、そのローカル(Local)でコミット(Commit)された変更(へんこう)内容(ないよう)を、リモート(Remote)リポジトリ（GitHubやGitLabなどのサーバー(Server)上(じょう)）へ送信(そうしん)して反映(はんえい)させる操作(そうさ)です。
-<br>(是的，我了解。Commit（提交）*是将变更历史（快照）记录到本地仓库的操作，在自己手头的环境中即可完成。
-*而 Push（推送）*则是将本地已 commit 的变更内容发送并反映到远程仓库（如 GitHub 或 GitLab 等服务器端）的操作。)
-</p>
+1.
+<p style="padding: 0 2em;"><strong>A: </strong>はい、<ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>じております。
+<br><ruby>コミット<rt>Commit</rt></ruby>は、<ruby>ローカル<rt>Local</rt></ruby><ruby>リポジトリ<rt>Repository</rt></ruby>に<ruby>対<rp>（</rp><rt>たい</rt><rp>）</rp></ruby>して<ruby>変<rp>（</rp><rt>へん</rt><rp>）</rp></ruby><ruby>更<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>履<rp>（</rp><rt>り</rt><rp>）</rp></ruby><ruby>歴<rp>（</rp><rt>れき</rt><rp>）</rp></ruby>（<ruby>スナップショット<rt>Snapshot</rt></ruby>）を<ruby>記<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>する<ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby>であり、<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>の<ruby>手<rp>（</rp><rt>て</rt><rp>）</rp></ruby><ruby>元<rp>（</rp><rt>もと</rt><rp>）</rp></ruby>の<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>で<ruby>完<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>結<rp>（</rp><rt>けつ</rt><rp>）</rp></ruby>します。
+<br><ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp></ruby><ruby>方<rp>（</rp><rt>ぽう</rt><rp>）</rp></ruby>、<ruby>プッシュ<rt>Push</rt></ruby>は、その<ruby>ローカル<rt>Local</rt></ruby>で<ruby>コミット<rt>Commit</rt></ruby>された<ruby>変<rp>（</rp><rt>へん</rt><rp>）</rp></ruby><ruby>更<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>内<rp>（</rp><rt>ない</rt><rp>）</rp></ruby><ruby>容<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>を、<ruby>リモート<rt>Remote</rt></ruby><ruby>リポジトリ<rt>Repository</rt></ruby>（<ruby>GitHub<rt>ギットハブ</rt></ruby>や<ruby>GitLab<rt>ギットラブ</rt></ruby>などの<ruby>サーバー<rt>Server</rt></ruby><ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>）へ<ruby>送<rp>（</rp><rt>そう</rt><rp>）</rp></ruby><ruby>信<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>して<ruby>反<rp>（</rp><rt>はん</rt><rp>）</rp></ruby><ruby>映<rp>（</rp><rt>えい</rt><rp>）</rp></ruby>させる<ruby>操<rp>（</rp><rt>そう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>です。
+<br>(是的，我了解。Commit（提交）是将变更历史（快照）记录到本地仓库的操作，在自己手头的环境中即可完成。
+*而 Push（推送）则是将本地已 commit 的变更内容发送并反映到远程仓库（如 GitHub 或 GitLab 等服务器端）的操作。)</p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>はい、もちろん知（し）っています！
-コミット [Commit] は、自分（じぶん）のパソコン [PC] （ローカル [Local] ）上（じょう）の作業記録（さぎょうきろく）に「ここまでを保存（ほぞん）！」と区切り（くぎり）をつけるイメージ [Image] です。
-で、その溜（た）めたコミット [Commit] を、チーム [Team] みんなで見（み）られるサーバー [Server] （リモートリポジトリ [Remote Repository] ）にアップロード [Upload] するのがプッシュ [Push] ね！
-こちらのテキスト [Text] の形式（けいしき）で問題（もんだい）ないでしょうか？
-もし続（つづ）けて変換（へんかん）したい文章（ぶんしょう）があれば、いつでも送（おく）ってください！
+<p style="padding: 0 2em;"><strong>A: </strong>はい、存じております。
+<br>コミットは、ローカルリポジトリに対して変更履歴（スナップショット）を記録する作業であり、自分の手元の環境で完結します。
+<br>一方、プッシュは、そのローカルでコミットされた変更内容を、リモートリポジトリ（GitHubやGitLabなどのサーバー上）へ送信して反映させる操作です。
+<br>(是的，我了解。Commit（提交）是将变更历史（快照）记录到本地仓库的操作，在自己手头的环境中即可完成。
+*而 Push（推送）则是将本地已 commit 的变更内容发送并反映到远程仓库（如 GitHub 或 GitLab 等服务器端）的操作。)</p>
+
+2.
+<p style="padding: 0 2em;"><strong>A: </strong>はい、もちろん<ruby>知<rp>（</rp><rt>し</rt><rp>）</rp></ruby>っています！
+<br><ruby>コミット<rt>Commit</rt></ruby>は、<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>の<ruby>パソコン<rt>Personal Computer</rt></ruby>（<ruby>ローカル<rt>Local</rt></ruby>）<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>の<ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>記<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>に「ここまでを<ruby>保<rp>（</rp><rt>ほ</rt><rp>）</rp></ruby><ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>！」と<ruby>区<rp>（</rp><rt>く</rt><rp>）</rp></ruby>切りをつける<ruby>イメージ<rt>Image</rt></ruby>です。
+<br>で、その<ruby>溜<rp>（</rp><rt>た</rt><rp>）</rp></ruby>めた<ruby>コミット<rt>Commit</rt></ruby>を、<ruby>チーム<rt>Team</rt></ruby>みんなで<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>られる<ruby>サーバー<rt>Server</rt></ruby>（<ruby>リモートリポジトリ<rt>Remote Repository</rt></ruby>）に<ruby>アップロード<rt>Upload</rt></ruby>するのが<ruby>プッシュ<rt>Push</rt></ruby>ね！
 <br>(是的，当然知道！Commit 的感觉就像是在自己电脑（本地）的工作记录上打上“保存到这里！”的标记。而要把这些积攒的 commit 上传到团队大家都能看到的服务器（远程仓库）上，就是 Push 啦！)
 </p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>はい、もちろん知っています！
+<br>コミットは、自分のパソコン（ローカル）上の作業記録に「ここまでを保存！」と区切りをつけるイメージです。
+<br>で、その溜めたコミットを、チームみんなで見られるサーバー（リモートリポジトリ）にアップロードするのがプッシュね！
+<br>(是的，当然知道！Commit 的感觉就像是在自己电脑（本地）的工作记录上打上“保存到这里！”的标记。而要把这些积攒 of commit 上传到团队大家都能看到的服务器（远程仓库）上，就是 Push 啦！)</p>
 
 ---
 
