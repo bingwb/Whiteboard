@@ -613,36 +613,76 @@
 
 ---
 
-- クラウド(Cloud)って開発(かいはつ)経験(けいけん)は豊富(ほうふ)にあるイメージ(Image)と感(かん)じてますね。やはりアジュール(Azure)やAWS(エーダブリューエス)はよく開発(かいはつ)されているでしょうね。少々(しょうしょう)その中(なか)に色々(いろいろ)なサービス(Service)が説明(せつめい)できますでしょうか
+- <ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）って<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>は<ruby>豊<rp>（</rp><rt>ほう</rt><rp>）</rp>富<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>にある（１）<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>（２）と<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp>じ<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>て（２）ますね。やはり<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）や<ruby>AWS<rp>（</rp><rt>エーダブリューエス</rt><rp>）</rp></ruby>（<ruby>Amazon<rp>（</rp><rt>アマゾン</rt><rp>）</rp></ruby> <ruby>Web<rp>（</rp><rt>ウェブ</rt><rp>）</rp></ruby> <ruby>Services<rp>（</rp><rt>サービシズ</rt><rp>）</rp></ruby>）はよく（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>されているでしょうね。<ruby>少<rp>（</rp><rt>しょう</rt><rp>）</rp>々<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>（１）その（１）<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>（１）に<ruby>色<rp>（</rp><rt>いろ</rt><rp>）</rp>々<rp>（</rp><rt>いろ</rt><rp>）</rp></ruby>な<ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１）が<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できます（２）でしょうか。
+<br>クラウドって開発経験は豊富にあるイメージと感じてますね。やはりアジュールやAWSはよく開発されているでしょうね。少々その中に色々なサービスが説明できますでしょうか
+クラウドって開発経験は豊富にあるイメージと感じてますね。やはりアジュールやAWSはよく開発されているでしょうね。少々その中に色々なサービスが説明できますでしょうか
+<br>(感觉对于云有着丰富的开发经验的印象呢。想必大家也经常在 Azure 和 AWS 上进行开发吧。能否稍微为我说明一下其中的各种服务呢？)
 
+1.
 <p style="padding: 0 2em;"><strong>A: </strong>
-はい、私(わたし)はこれまで、Azure(アジュール)やAWS(エーダブリューエス)を中心(ちゅうしん)としたクラウド(Cloud)ネイティブ(Native)なバックエンド(Backend)開発(かいはつ)に多数(たすう)携(たずさ)わってまいりました。
-<br><br>特に頻繁(ひんぱん)に利用(りよ)する代表的(だいひょうてきな)なサービス(Service)といたしましては、以下(いか)のようになります。
-<br><br>・コンピュート（演算(えんざん)・実行(じっこう)基盤(きばん)）：
-<br>Azureでは App Service や Azure Functions（サーバーレス）、AWSでは AWS Lambda や Amazon ECS / EKS（コンテナ基盤）を駆使(くし)し、スケーラブル(Scalable)なAPI(エーピーアイ)やバックグラウンド(Background)処理(しょり)を構築(こうちく)してきました。
-<br><br>・データベース（データ(Data)管理(かんり)）：
-<br>リレーショナル(Relational)データベース(Database)である Azure SQL Database や Amazon RDS はもちろん、高(こう)スループット(Throughput)が求(もと)められるシステム(System)では Azure Cosmos DB や Amazon DynamoDB などのNoSQL(ノー・シークェル)も用(もち)いて最適(さいてき)なデータ(Data)設計(せっけい)を行(おこな)ってまいりました。
-<br><br>・ストレージ(Storage)・インフラ(Infrastructure)・連携(れんけい)：
-<br>ファイル(File)や画像(がぞう)データの保存(ほぞん)に Azure Blob Storage / Amazon S3 を使(つか)い、サービス間(かん)の非同期(ひどうき)連携(れんけい)には Azure Service Bus や Amazon SQS を組(く)み込(こ)むなど、堅牢(けんろう)で拡張性(かくちょうせい)の高(たか)いクラウド(Cloud)アーキテクチャ(Architecture)の設計(せっけい)・実装(じっこう)を得意(とくい)としております。
-<br><br>これらクラウド(Cloud)特有(とくゆう)のサービス特性(とくせい)を熟知(じゅくち)しており、システムの負荷(ふか)やコスト(Cost)を考慮(こうりょ)した最適なクラウド構成(こうせい)をご提案・実現(じつげん)することができます。
+はい、<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>はこれまで、<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）や<ruby>エーダブリューエス<rp>（</rp><rt>AWS</rt><rp>）</rp></ruby>（<ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>ウェブ<rp>（</rp><rt>Web</rt><rp>）</rp></ruby> <ruby>サービシズ<rp>（</rp><rt>Services</rt><rp>）</rp></ruby>）を<ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp>心<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>とした<ruby>クラウドネイティブ<rp>（</rp><rt>Cloud Native</rt><rp>）</rp></ruby>（５）な<ruby>バックエンド<rp>（</rp><rt>Backend</rt><rp>）</rp></ruby>（４）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>に<ruby>多<rp>（</rp><rt>た</rt><rp>）</rp>数<rp>（</rp><rt>すう</rt><rp>）</rp></ruby>（１）<ruby>携<rp>（</rp><rt>たずさ</rt><rp>）</rp></ruby>わってまいりました。
+<br><br>特に（１）<ruby>頻<rp>（</rp><rt>ひん</rt><rp>）</rp>繁<rp>（</rp><rt>はん</rt><rp>）</rp></ruby>に（１）<ruby>利<rp>（</rp><rt>り</rt><rp>）</rp>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>する<ruby>代<rp>（</rp><rt>だい</rt><rp>）</rp>表<rp>（</rp><rt>ひょう</rt><rp>）</rp>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>な<ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１）といたしましては、<ruby>以<rp>（</rp><rt>い</rt><rp>）</rp>下<rp>（</rp><rt>か</rt><rp>）</rp></ruby>（１）のようになります。
+<br><br>・<ruby>コンピュート<rp>（</rp><rt>Compute</rt><rp>）</rp></ruby>（３）（<ruby>演<rp>（</rp><rt>えん</rt><rp>）</rp>算<rp>（</rp><rt>ざん</rt><rp>）</rp></ruby>・<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp>基<rp>（</rp><rt>き</rt><rp>）</rp>盤<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>）：
+<br><ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）では <ruby>アップ<rp>（</rp><rt>App</rt><rp>）</rp></ruby>（１） <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１） や <ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２） <ruby>ファンクションズ<rp>（</rp><rt>Functions</rt><rp>）</rp></ruby>（３）（<ruby>サーバーレス<rp>（</rp><rt>Serverless</rt><rp>）</rp></ruby>（３））、<ruby>エーダブリューエス<rp>（</rp><rt>AWS</rt><rp>）</rp></ruby>では <ruby>ラムダ<rp>（</rp><rt>Lambda</rt><rp>）</rp></ruby>（１） や <ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>イーシーエス<rp>（</rp><rt>ECS</rt><rp>）</rp></ruby>（<ruby>エラスティック<rp>（</rp><rt>Elastic</rt><rp>）</rp></ruby> <ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>） / <ruby>イーケーエス<rp>（</rp><rt>EKS</rt><rp>）</rp></ruby>（<ruby>エラスティック<rp>（</rp><rt>Elastic</rt><rp>）</rp></ruby> <ruby>クバネティス<rp>（</rp><rt>Kubernetes</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）（<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>（１）<ruby>基<rp>（</rp><rt>き</rt><rp>）</rp>盤<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>）を<ruby>駆<rp>（</rp><rt>く</rt><rp>）</rp>使<rp>（</rp><rt>し</rt><rp>）</rp></ruby>（１）し、<ruby>スケーラブル<rp>（</rp><rt>Scalable</rt><rp>）</rp></ruby>（２）な<ruby>エーピーアイ<rp>（</rp><rt>API</rt><rp>）</rp></ruby>（<ruby>アプリケーション<rp>（</rp><rt>Application</rt><rp>）</rp></ruby> <ruby>プログラミング<rp>（</rp><rt>Programming</rt><rp>）</rp></ruby> <ruby>インターフェイス<rp>（</rp><rt>Interface</rt><rp>）</rp></ruby>）や<ruby>バックグラウンド<rp>（</rp><rt>Background</rt><rp>）</rp></ruby>（４）<ruby>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）を<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>してきました。
+<br><br>・<ruby>データベース<rp>（</rp><rt>Database</rt><rp>）</rp></ruby>（４）（<ruby>データ<rp>（</rp><rt>Data</rt><rp>）</rp></ruby>（１）<ruby>管<rp>（</rp><rt>かん</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）：
+<br><ruby>リレーショナルデータベース<rp>（</rp><rt>Relational Database</rt><rp>）</rp></ruby>である <ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２） <ruby>エスキューエル<rp>（</rp><rt>SQL</rt><rp>）</rp></ruby>（<ruby>ストラクチャード<rp>（</rp><rt>Structured</rt><rp>）</rp></ruby> <ruby>クエリ<rp>（</rp><rt>Query</rt><rp>）</rp></ruby> <ruby>ランゲージ<rp>（</rp><rt>Language</rt><rp>）</rp></ruby>） <ruby>データベース<rp>（</rp><rt>Database</rt><rp>）</rp></ruby>（４） や <ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>アールディーエス<rp>（</rp><rt>RDS</rt><rp>）</rp></ruby>（<ruby>リレーショナル<rp>（</rp><rt>Relational</rt><rp>）</rp></ruby> <ruby>データベース<rp>（</rp><rt>Database</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）はもちろん、高スループット（４）が<ruby>求<rp>（</rp><rt>もと</rt><rp>）</rp></ruby>められる（４）<ruby>システム<rp>（</rp><rt>System</rt><rp>）</rp></ruby>（１）では <ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２） <ruby>コスモス<rp>（</rp><rt>Cosmos</rt><rp>）</rp></ruby>（１） <ruby>ディービー<rp>（</rp><rt>DB</rt><rp>）</rp></ruby>（<ruby>データベース<rp>（</rp><rt>Database</rt><rp>）</rp></ruby>） や <ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>ダイナモディービー<rp>（</rp><rt>DynamoDB</rt><rp>）</rp></ruby>（４） などの<ruby>ノーエスキューエル<rp>（</rp><rt>NoSQL</rt><rp>）</rp></ruby>（<ruby>ノット<rp>（</rp><rt>Not</rt><rp>）</rp></ruby> <ruby>オンリー<rp>（</rp><rt>only</rt><rp>）</rp></ruby> <ruby>エスキューエル<rp>（</rp><rt>SQL</rt><rp>）</rp></ruby>）も<ruby>用<rp>（</rp><rt>もち</rt><rp>）</rp></ruby>いて（２）<ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp>適<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>な<ruby>データ<rp>（</rp><rt>Data</rt><rp>）</rp></ruby>（１）<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>を<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>してまいりました。
+<br><br>・<ruby>ストレージ<rp>（</rp><rt>Storage</rt><rp>）</rp></ruby>（３）・<ruby>インフラ<rp>（</rp><rt>Infrastructure</rt><rp>）</rp></ruby>（１）・<ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp>携<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>：
+<br><ruby>ファイル<rp>（</rp><rt>File</rt><rp>）</rp></ruby>（１）や<ruby>画<rp>（</rp><rt>が</rt><rp>）</rp>像<rp>（</rp><rt>ぞう</rt><rp>）</rp></ruby><ruby>データ<rp>（</rp><rt>Data</rt><rp>）</rp></ruby>（１）の<ruby>保<rp>（</rp><rt>ほ</rt><rp>）</rp>存<rp>（</rp><rt>ん</rt><rp>）</rp></ruby>に <ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２） <ruby>ブロブ<rp>（</rp><rt>Blob</rt><rp>）</rp></ruby>（１） <ruby>ストレージ<rp>（</rp><rt>Storage</rt><rp>）</rp></ruby>（３） / <ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>エススリー<rp>（</rp><rt>S3</rt><rp>）</rp></ruby>（<ruby>シンプル<rp>（</rp><rt>Simple</rt><rp>）</rp></ruby> <ruby>ストレージ<rp>（</rp><rt>Storage</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>い、<ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１）<ruby>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>（１）の<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp>同<rp>（</rp><rt>どう</rt><rp>）</rp>期<rp>（</rp><rt>き</rt><rp>）</rp>連<rp>（</rp><rt>れん</rt><rp>）</rp>携<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>には <ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２） <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１） <ruby>バス<rp>（</rp><rt>Bus</rt><rp>）</rp></ruby>（１） や <ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>エスキューエス<rp>（</rp><rt>SQS</rt><rp>）</rp></ruby>（<ruby>シンプル<rp>（</rp><rt>Simple</rt><rp>）</rp></ruby> <ruby>キュー<rp>（</rp><rt>Queue</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）を<ruby>組<rp>（</rp><rt>く</rt><rp>）</rp></ruby>み<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>むなど、<ruby>堅<rp>（</rp><rt>けん</rt><rp>）</rp>牢<rp>（</rp><rt>ろう</rt><rp>）</rp></ruby>で<ruby>拡<rp>（</rp><rt>かく</rt><rp>）</rp>張<rp>（</rp><rt>ちょう</rt><rp>）</rp>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>の<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>い（２）<ruby>クラウドアーキテクチャ<rp>（</rp><rt>Cloud Architecture</rt><rp>）</rp></ruby>（５）の<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>・<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>装<rp>（</rp><rt>そう</rt><rp>）</rp></ruby>を<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>としております。
+<br><br>これら<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）<ruby>特<rp>（</rp><rt>とく</rt><rp>）</rp>有<rp>（</rp><rt>ゆう</rt><rp>）</rp></ruby>の<ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１）<ruby>特<rp>（</rp><rt>とく</rt><rp>）</rp>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>を<ruby>熟<rp>（</rp><rt>じゅく</rt><rp>）</rp>知<rp>（</rp><rt>ち</rt><rp>）</rp></ruby>（１）しており、<ruby>システム<rp>（</rp><rt>System</rt><rp>）</rp></ruby>（１）の<ruby>負<rp>（</rp><rt>ふ</rt><rp>）</rp>荷<rp>（</rp><rt>か</rt><rp>）</rp></ruby>（１）や<ruby>コスト<rp>（</rp><rt>Cost</rt><rp>）</rp></ruby>（１）を<ruby>考<rp>（</rp><rt>こう</rt><rp>）</rp>慮<rp>（</rp><rt>りょ</rt><rp>）</rp></ruby>（１）した<ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp>適<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>な<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>をご<ruby>提<rp>（</rp><rt>てい</rt><rp>）</rp>案<rp>（</rp><rt>あん</rt><rp>）</rp></ruby>・<ruby>実<rp>（</rp><rt>じつ</rt><rp>）</rp>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby>することができます。
 <br><br>(关于在云计算环境中的开发经验以及主要服务。
 是的，我过去曾多次参与以 Azure 和 AWS 为中心、基于云原生（Cloud Native）的后端开发。
 特别是经常使用的代表性服务主要有以下这些：
 <br>1. 计算（运算与执行基础）： 在 Azure 中运用 App Service 或 Azure Functions（无服务器），在 AWS 中运用 AWS Lambda 或 Amazon ECS / EKS（容器基础），构建了可扩展的 API 及后台处理。
-<br>2. 数据库（数据管理）： 除了关系型数据库 Azure SQL Database 和 Amazon RDS 之外，在需要高吞吐量的系统中，也使用过 Azure Cosmos DB 和 Amazon DynamoDB 等 NoSQL，并进行了最优的数据设计。
-<br>3. 存储、基础设施与集成： 使用 Azure Blob Storage / Amazon S3 保存文件与图像数据，并在服务间集成中结合使用 Azure Service Bus 或 Amazon S3（注：口语/面试中常指 SQS），擅长设计与实现坚固且具高扩展性的云架构。
-我非常熟悉这些云计算特有的服务特性，能够综合考量系统负载与成本，为您提出并实现最优的云端配置。)
+<br>2. 数据库（数据管理）： 除了关系型数据库 Azure SQL Database 和 Amazon RDS 之外，在需要高吞吐量的系统中，也使用过 Azure Cosmos DB 和 Amazon ... )
 </p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>クラウド(Cloud)での開発(かいはつ)経験(けいけん)や、Azure(アジュール)・AWS(エーダブリューエス)の具体的なサービス(Service)ですね！
-はい、これまでもAzureやAWSをメイン(Main)に使(つ)ったバックエンド(Backend)開発(かいはつ)をたくさん経験(けいけん)してきました。よく使(つ)う主要(しゅよう)なサービスをいくつか挙(あ)げると、こんな感じです！
-<br><br>・アプリ(Application)を動(うご)かす場所（コンピュート）：
-<br>Azureの App Service や Azure Functions（サーバーレス）、AWSの AWS Lambda や Amazon ECS / EKS（コンテナ(Container)）などを使って、API(エーピーアイ)サーバーや自動処理(しょり)の仕組みを作ってきました。
-<br><br>・データを保存(ほぞん)する場所（データベース）：
-<br>定番(ていばん)の Azure SQL Database や Amazon RDS だけでなく、超(ちょう)高速(こうそく)な処理(しょり)が必要な場面では Azure Cosmos DB や Amazon DynamoDB などのNoSQL(ノーエスケイエル)も組み合わせて、データ設計(せっけい)を行(おこな)ってきました。
-<br><br>・ファイル(File)置(お)き場(ば)やシステム間(かん)の連携(れんけい)：
-<br>画像(がぞう)やドキュメント(Document)の保存(ほぞん)には Azure Blob Storage や Amazon S3 を使い、サービス同士(どうし)のメッセージ(Message)やりとりには Azure Service Bus や Amazon SQS を使った非同期(ひどうき)処理(しょり)を組(く)み込(こ)むのが得意(とくい)です。
-<br><br>クラウド(Cloud)ならではの強み（自動(じどう)でスケール(Scale)することやコスパ(Cost performance)の良さなど）をしっかり活かした設計(せっけい)や開発(かいはつ)ができるのが、私の強みです！
+<p style="padding: 0 2em;"><strong>A: </strong>
+はい、私はこれまで、AzureやAWSを中心としたクラウドネイティブなバックエンド開発に多数携わってまいりました。
+<br><br>特に頻繁に利用する代表的なサービスといたしましては、以下のようになります。
+<br><br>・コンピュート（演算・実行基盤）：
+<br>Azureでは App Service や Azure Functions（サーバーレス）、AWSでは AWS Lambda や Amazon ECS / EKS（コンテナ基盤）を駆使し、スケーラブルなAPIやバックグラウンド処理を構築してきました。
+<br><br>・データベース（データ管理）：
+<br>リレーショナルデータベースである Azure SQL Database や Amazon RDS はもちろん、高スループットが求められるシステムでは Azure Cosmos DB や Amazon DynamoDB などのNoSQLも用いて最適なデータ設計を行ってまいりました。
+<br><br>・ストレージ・インフラ・連携：
+<br>ファイルや画像データの保存に Azure Blob Storage / Amazon S3 を使い、サービス間の非同期連携には Azure Service Bus や Amazon SQS を組み込むなど、堅牢で拡張性の高いクラウドアーキテクチャの設計・実装を得意としております。
+<br><br>これらクラウド特有のサービス特性を熟知しており、システムの負荷やコストを考慮した最適なクラウド構成をご提案・実現することができます。
+<br><br>(关于在云计算环境中的开发经验以及主要服务。
+是的，我过去曾多次参与以 Azure 和 AWS 为中心、基于云原生（Cloud Native）的后端开发。
+特别是经常使用的代表性服务主要有以下这些：
+<br>1. 计算（运算与执行基础）： 在 Azure 中运用 App Service 或 Azure Functions（无服务器），在 AWS 中运用 AWS Lambda 或 Amazon ECS / EKS（容器基础），构建了可扩展 svi API 及后台处理。
+<br>2. 数据库（数据管理）： 除了关系型数据库 Azure SQL Database 和 Amazon RDS 之外，在需要高吞吐量的系统中，也使用过 Azure Cosmos DB 和 Amazon DynamoDB 等 NoSQL，并进行了最优的数据设计。
+<br>3. 存储、基础设施与集成： 使用 Azure Blob Storage / Amazon S3 保存文件与图像数据，并在服务间集成中结合使用 Azure Service Bus 或 Amazon S3（注：口语/面试中常指 SQS），擅长设计与实现坚固且具高扩展性的云架构。
+我非常熟悉 these 云计算特有的服务特性，能够综合考量系统负载与成本，为您提出并实现最优的云端配置。)
+</p>
+
+2.
+<p style="padding: 0 2em;"><strong>A: </strong>
+<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）での<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>や、<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）・<ruby>エーダブリューエス<rp>（</rp><rt>AWS</rt><rp>）</rp></ruby>（<ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>ウェブ<rp>（</rp><rt>Web</rt><rp>）</rp></ruby> <ruby>サービシズ<rp>（</rp><rt>Services</rt><rp>）</rp></ruby>）の<ruby>具<rp>（</rp><rt>ぐ</rt><rp>）</rp>体<rp>（</rp><rt>たい</rt><rp>）</rp>前<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>な<ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１）ですね！
+<br>はい、これまでも<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）や<ruby>エーダブリューエス<rp>（</rp><rt>AWS</rt><rp>）</rp></ruby>（<ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>ウェブ<rp>（</rp><rt>Web</rt><rp>）</rp></ruby> <ruby>サービシズ<rp>（</rp><rt>Services</rt><rp>）</rp></ruby>）を<ruby>メイン<rp>（</rp><rt>Main</rt><rp>）</rp></ruby>（１）に<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>った<ruby>バックエンド<rp>（</rp><rt>Backend</rt><rp>）</rp></ruby>（４）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>をたくさん<ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>してきました。<ruby>良<rp>（</rp><rt>よ</rt><rp>）</rp>く<rp>（</rp><rt>く</rt><rp>）</rp></ruby>（１）<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>う<ruby>主<rp>（</rp><rt>しゅ</rt><rp>）</rp>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>な（５）<ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１）をいくつか<ruby>挙<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>げると、こんな<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp>じ<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>です！
+<br><br>・<ruby>アプリ<rp>（</rp><rt>Application</rt><rp>）</rp></ruby>（１）を<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かす<ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp>所<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>（<ruby>コンピュート<rp>（</rp><rt>Compute</rt><rp>）</rp></ruby>（３））：
+<br><ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）の <ruby>アップ<rp>（</rp><rt>App</rt><rp>）</rp></ruby>（１） <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１） や <ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２） <ruby>ファンクションズ<rp>（</rp><rt>Functions</rt><rp>）</rp></ruby>（３）（<ruby>サーバーレス<rp>（</rp><rt>Serverless</rt><rp>）</rp></ruby>（３））、<ruby>エーダブリューエス<rp>（</rp><rt>AWS</rt><rp>）</rp></ruby>の <ruby>ラムダ<rp>（</rp><rt>Lambda</rt><rp>）</rp></ruby>（１） や <ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>イーシーエス<rp>（</rp><rt>ECS</rt><rp>）</rp></ruby>（<ruby>エラスティック<rp>（</rp><rt>Elastic</rt><rp>）</rp></ruby> <ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>） / <ruby>イーケーエス<rp>（</rp><rt>EKS</rt><rp>）</rp></ruby>（<ruby>エラスティック<rp>（</rp><rt>Elastic</rt><rp>）</rp></ruby> <ruby>クバネティス<rp>（</rp><rt>Kubernetes</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）（<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>（１））などを使って、<ruby>エーピーアイ<rp>（</rp><rt>API</rt><rp>）</rp></ruby>（<ruby>アプリケーション<rp>（</rp><rt>Application</rt><rp>）</rp></ruby> <ruby>プログラミング<rp>（</rp><rt>Programming</rt><rp>）</rp></ruby> <ruby>インターフェイス<rp>（</rp><rt>Interface</rt><rp>）</rp></ruby>）<ruby>サーバー<rp>（</rp><rt>Server</rt><rp>）</rp></ruby>（１）や<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp>動<rp>（</rp><rt>どう</rt><rp>）</rp>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）の<ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp>組<rp>（</rp><rt>く</rt><rp>）</rp>み<rp>（</rp><rt>み</rt><rp>）</rp></ruby>を<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>ってしてきました。
+<br><br>・<ruby>データ<rp>（</rp><rt>Data</rt><rp>）</rp></ruby>（１）を<ruby>保<rp>（</rp><rt>ほ</rt><rp>）</rp>存<rp>（</rp><rt>ん</rt><rp>）</rp></ruby>する<ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp>所<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>（<ruby>データベース<rp>（</rp><rt>Database</rt><rp>）</rp></ruby>（４））：
+<br><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>の <ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２） <ruby>エスキューエル<rp>（</rp><rt>SQL</rt><rp>）</rp></ruby>（<ruby>ストラクチャード<rp>（</rp><rt>Structured</rt><rp>）</rp></ruby> <ruby>クエリ<rp>（</rp><rt>Query</rt><rp>）</rp></ruby> <ruby>ランゲージ<rp>（</rp><rt>Language</rt><rp>）</rp></ruby>） <ruby>データベース<rp>（</rp><rt>Database</rt><rp>）</rp></ruby>（４） や <ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>アールディーエス<rp>（</rp><rt>RDS</rt><rp>）</rp></ruby>（<ruby>リレーショナル<rp>（</rp><rt>Relational</rt><rp>）</rp></ruby> <ruby>データベース<rp>（</rp><rt>Database</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）だけでなく、<ruby>超<rp>（</rp><rt>ちょう</rt><rp>）</rp>高<rp>（</rp><rt>こう</rt><rp>）</rp>速<rp>（</rp><rt>そく</rt><rp>）</rp></ruby>な<ruby>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）が<ruby>必<rp>（</rp><rt>ひつ</rt><rp>）</rp>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>な<ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp>面<rp>（</rp><rt>めん</rt><rp>）</rp></ruby>では <ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２） <ruby>コスモス<rp>（</rp><rt>Cosmos</rt><rp>）</rp></ruby>（１） <ruby>ディービー<rp>（</rp><rt>DB</rt><rp>）</rp></ruby>（<ruby>データベース<rp>（</rp><rt>Database</rt><rp>）</rp></ruby>） や <ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>ダイナモディービー<rp>（</rp><rt>DynamoDB</rt><rp>）</rp></ruby>（４） などの<ruby>ノーエスキューエル<rp>（</rp><rt>NoSQL</rt><rp>）</rp></ruby>（<ruby>ノット<rp>（</rp><rt>Not</rt><rp>）</rp></ruby> <ruby>オンリー<rp>（</rp><rt>only</rt><rp>）</rp></ruby> <ruby>エスキューエル<rp>（</rp><rt>SQL</rt><rp>）</rp></ruby>）も<ruby>組<rp>（</rp><rt>く</rt><rp>）</rp></ruby>み<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わせて、<ruby>データ<rp>（</rp><rt>Data</rt><rp>）</rp></ruby>（１）<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>を<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>ってきました。
+<br><br>・<ruby>ファイル<rp>（</rp><rt>File</rt><rp>）</rp></ruby>（１）<ruby>置<rp>（</rp><rt>お</rt><rp>）</rp></ruby>き<ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby>や<ruby>システム<rp>（</rp><rt>System</rt><rp>）</rp></ruby>（１）<ruby>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>の<ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp>携<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>：
+<br><ruby>画<rp>（</rp><rt>が</rt><rp>）</rp>像<rp>（</rp><rt>ぞう</rt><rp>）</rp></ruby>や<ruby>ドキュメント<rp>（</rp><rt>Document</rt><rp>）</rp></ruby>（４）の<ruby>保<rp>（</rp><rt>ほ</rt><rp>）</rp>存<rp>（</rp><rt>ん</rt><rp>）</rp></ruby>には <ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２） <ruby>ブロブ<rp>（</rp><rt>Blob</rt><rp>）</rp></ruby>（１） <ruby>ストレージ<rp>（</rp><rt>Storage</rt><rp>）</rp></ruby>（３） や <ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>エススリー<rp>（</rp><rt>S3</rt><rp>）</rp></ruby>（<ruby>Simple<rp>（</rp><rt>シンプル</rt><rp>）</rp></ruby> <ruby>Storage<rp>（</rp><rt>ストレージ</rt><rp>）</rp></ruby> <ruby>Service<rp>（</rp><rt>サービス</rt><rp>）</rp></ruby>）を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>い、<ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１）<ruby>同<rp>（</rp><rt>どう</rt><rp>）</rp>士<rp>（</rp><rt>し</rt><rp>）</rp></ruby>の<ruby>メッセージ<rp>（</rp><rt>Message</rt><rp>）</rp></ruby>（１）やりとりには <ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２） <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１） <ruby>バス<rp>（</rp><rt>Bus</rt><rp>）</rp></ruby>（１） や <ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>エスキューエス<rp>（</rp><rt>SQS</rt><rp>）</rp></ruby>（<ruby>Simple<rp>（</rp><rt>シンプル</rt><rp>）</rp></ruby> <ruby>キュー<rp>（</rp><rt>Queue</rt><rp>）</rp></ruby> <ruby>Service<rp>（</rp><rt>サービス</rt><rp>）</rp></ruby>）を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>った<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp>同<rp>（</rp><rt>どう</rt><rp>）</rp>期<rp>（</rp><rt>き</rt><rp>）</rp>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）を<ruby>組<rp>（</rp><rt>く</rt><rp>）</rp></ruby>み<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>むのが<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>です。
+<br><br><ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）ならではの<ruby>強<rp>（</rp><rt>つよ</rt><rp>）</rp></ruby>み（<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby>で<ruby>スケール<rp>（</rp><rt>Scale</rt><rp>）</rp></ruby>（１）することや<ruby>コスパ<rp>（</rp><rt>Cost Performance</rt><rp>）</rp></ruby>（１）の<ruby>良<rp>（</rp><rt>よ</rt><rp>）</rp></ruby>さなど）をしっかり<ruby>活<rp>（</rp><rt>いか</rt><rp>）</rp></ruby>した<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>や<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>hastu</rt><rp>）</rp></ruby>ができるのが、<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の<ruby>強<rp>（</rp><rt>つよ</rt><rp>）</rp></ruby>みです！
+<br><br>(关于云端开发经验以及 Azure 和 AWS 的具体服务！
+是的，我过去积累了大量以 Azure 和 AWS 为主要平台的后端开发经验。如果举几个经常使用的主要服务，大概是这样的：
+<br>1. 运行应用的场所（计算）： 使用 Azure 的 App Service、Azure Functions（无服务器），以及 AWS 的 AWS Lambda、Amazon ECS / EKS（容器）等，构建了 API 服务器和自动处理机制。
+<br>2. 保存数据的场所（数据库）： 不仅是经典的 Azure SQL Database 和 Amazon RDS，在需要超高速处理的场景下，也结合使用了 Azure Cosmos DB 和 Amazon DynamoDB 等 NoSQL 来进行数据设计。
+<br>3. 文件存储与系统间集成： 使用 Azure Blob Storage 或 Amazon S3 保存图像和文档，并擅长在服务间的消息传递中嵌入使用 Azure Service Bus 或 Amazon S3（注：此处应为 SQS）的异步处理。
+充分发挥云特有的优势（如自动扩展、高性价比等）进行设计与开发，正是我的强项！)
+</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>クラウドでの開発経験や、Azure・AWSの具体的なサービスですね！
+はい、これまでもAzureやAWSをメインに使ったバックエンド開発をたくさん経験してきました。よく使う主要なサービスをいくつか挙げると、こんな感じです！
+<br><br>・アプリを動かす場所（コンピュート）：
+<br>Azureの App Service や Azure Functions（サーバーレス）、AWSの AWS Lambda や Amazon ECS / EKS（コンテナ）などを使って、APIサーバーや自動処理の仕組みを作ってしてきました。
+<br><br>・データを保存する場所（データベース）：
+<br>定番の Azure SQL Database や Amazon RDS だけでなく、超高速な処理が必要な場面では Azure Cosmos DB や Amazon DynamoDB などのNoSQLも組み合わせて、データ設計を行ってきました。
+<br><br>・ファイル置き場やシステム間の連携：
+<br>画像やドキュメントの保存には Azure Blob Storage や Amazon S3 を使い、サービス同士のメッセージやりとりには Azure Service Bus や Amazon SQS を使った非同期処理を組み込むのが得意です。
+<br><br>クラウドならではの強み（自動でスケールすることやコスパの良さなど）をしっかり活かした設計や開発ができるのが、私の強みです！
 <br><br>(关于云端开发经验以及 Azure 和 AWS 的具体服务！
 是的，我过去积累了大量以 Azure 和 AWS 为主要平台的后端开发经验。如果举几个经常使用的主要服务，大概是这样的：
 <br>1. 运行应用的场所（计算）： 使用 Azure 的 App Service、Azure Functions（无服务器），以及 AWS 的 AWS Lambda、Amazon ECS / EKS（容器）等，构建了 API 服务器和自动处理机制。
@@ -653,21 +693,23 @@
 
 ---
 
-- C#(シーシャープ)が一番(いちばん)得意(とくい)な言語(げんご)としては、非同期(ひどうき)処理(しょり)にはよく使(つ)う技術(ぎじゅつ)は少(すこ)し展開(てんかい)して説明(せつめい)していただけないでしょうか。
-(作为以 C# 为最拿手语言的程序员，能否稍微展开详细说明一下在异步处理中经常使用的技术呢？)
+- <ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）が<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>な<ruby>言<rp>（</rp><rt>げん</rt><rp>）</rp>語<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>としては、<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp>同<rp>（</rp><rt>どう</rt><rp>）</rp>期<rp>（</rp><rt>き</rt><rp>）</rp>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）にはよく（１）<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>う<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）は<ruby>少<rp>（</rp><rt>しょう</rt><rp>）</rp>々<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>（１）<ruby>展<rp>（</rp><rt>てん</rt><rp>）</rp>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>して<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>していただけないでしょうか。
+<br>C#が一番得意な言語としては、非同期処理にはよく使う技術は少し展開して説明していただけないでしょうか。
+<br>(作为以 C# 为最拿手语言的程序员，能否稍微展开详细说明一下在异步处理中经常使用的技术呢？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>C#(シーシャープ)における非同期(ひどうき)処理(しょり)の技術(ぎじゅつ)と活用(かつよう)についてですね。
-<br>はい、高(たか)いスループット(Throughput)なバックエンド(Backend)システム(System)やクラウド(Cloud)開発(かいはつ)において、非同期(ひどうき)処理(しょり)の習熟(しゅうじゅく)は不可欠(ふかけつ)であると認識(にんしき)しております。
-<br><br>私(わたし)が実務(じつむ)で主(おも)に駆使(くし)している技術(ぎじゅつ)としては、以下(いか)の4点(てん)が挙げ(あげ)られます。
-<br><br>1. async / await とコンパイラ(Compiler)が生成(せいせい)するステートマシン(State Machine)：
-<br>ノンブロッキング(Non-blocking)で可読性(かどくせい)の高(たか)いコードを構築(こうちく)し、スレッドプール(Thread Pool)を効率的(こうりつてき)に利用(りよう)しています。
-<br><br>2. Task.WhenAll による並行(へいこう)処理(しょり)：
-<br>複数(ふくすう)の外部(がいぶ)API(エーピーアイ)やデータベース(Database)クエリ(Query)を効率的(こうりつてき)に並行(へいこう)実行(じっこう)し、レイテンシ(Latency)を大幅(おおはば)に削減(さくげん)してきました。
-<br><br>3. ConfigureAwait(false) による最適化(さいてきか)：
-<br>バックエンド(Backend)のライブラリ(Library)開発(かいはつ)において、不必要(ふひつよう)なコンテキスト(Context)スイッチ(Switch)を防(ふせ)ぎ、デッドロック(Deadlock)を回避(かいひ)するとともにスループット(Throughput)を向上(こうじょう)させています。
-<br><br>4. CancellationToken による堅牢(けんろう)なキャンセル制御(せいぎょ)：
-<br>タイムアウト(Timeout)やクライアント(Client)の切断(せつだん)時(じ)に、リソース(Resource)を迅速(じんそく)かつ安全(あんぜん)に解放(かいほう)する仕組み(しくみ)を組(く)み込(こ)んできました。
-<br><br>これらの非同期(ひどうき)技術(ぎじゅつ)を適切(てきせつ)に組(く)み合(あ)わせることで、リソース(Resource)を無駄(むだ)に消費(しょうひ)しない、スケーラブル(Scalable)なサーバーサイド(Server-side)アーキテクチャ(Architecture)を設計(せっけい)・実装(じっこう)してまいりました。
+1.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）における<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp>同<rp>（</rp><rt>どう</rt><rp>）</rp>期<rp>（</rp><rt>き</rt><rp>）</rp>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）の<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）と<ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>についてですね。
+<br>はい、<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp>い</ruby>（２）スループット（４）な<ruby>バックエンドシステム<rp>（</rp><rt>Backend System</rt><rp>）</rp></ruby>（６）や<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>において、<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp>同<rp>（</rp><rt>どう</rt><rp>）</rp>期<rp>（</rp><rt>き</rt><rp>）</rp>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）の<ruby>習<rp>（</rp><rt>しゅう</rt><rp>）</rp>熟<rp>（</rp><rt>じゅく</rt><rp>）</rp></ruby>は<ruby>不<rp>（</rp><rt>ふ</rt><rp>）</rp>可<rp>（</rp><rt>か</rt><rp>）</rp>欠<rp>（</rp><rt>けつ</rt><rp>）</rp></ruby>（２）であると<ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>しております。
+<br><br><ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby><ruby>が実<rp>（</rp><rt>じつ</rt><rp>）</rp>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby>（１）で<ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp>に</ruby><ruby>（１）駆<rp>（</rp><rt>く</rt><rp>）</rp>使<rp>（</rp><rt>し</rt><rp>）</rp></ruby>（１）している<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）としては、<ruby>以<rp>（</rp><rt>い</rt><rp>）</rp>下<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>の４点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>（１）がが<ruby>出<rp>（</rp><rt>しゅっ</rt><rp>）</rp>力<rp>（</rp><rt>りょく</rt><rp>）</rp></ruby>（１）に<ruby>挙<rp>（</rp><rt>あ</rt><rp>）</rp>げられます。</ruby>
+<br><br>１．<ruby>async<rp>（</rp><rt>エイシンク</rt><rp>）</rp></ruby>（１） / <ruby>await<rp>（</rp><rt>アウェイト</rt><rp>）</rp></ruby> と<ruby>コンパイラ<rp>（</rp><rt>Compiler</rt><rp>）</rp></ruby>（３）が<ruby>生<rp>（</rp><rt>せい</rt><rp>）</rp>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>する<ruby>ステートマシン<rp>（</rp><rt>State Machine</rt><rp>）</rp></ruby>（４）：
+<br><ruby>ノンブロッキング<rp>（</rp><rt>Non-blocking</rt><rp>）</rp></ruby>（４）で<ruby>可<rp>（</rp><rt>か</rt><rp>）</rp>読<rp>（</rp><rt>どく</rt><rp>）</rp>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>の<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp>い</ruby>（２）<ruby>コード<rp>（</rp><rt>Code</rt><rp>）</rp></ruby>（１）を<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>し、<ruby>スレッドプール<rp>（</rp><rt>Thread Pool</rt><rp>）</rp></ruby>（４）を<ruby>効<rp>（</rp><rt>こう</rt><rp>）</rp>率<rp>（</rp><rt>りつ</rt><rp>）</rp>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>に<ruby>利<rp>（</rp><rt>り</rt><rp>）</rp>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>しています。
+<br><br>２．Task.WhenAll による<ruby>並<rp>（</rp><rt>へい</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>：
+<br><ruby>複<rp>（</rp><rt>ふく</rt><rp>）</rp>数<rp>（</rp><rt>すう</rt><rp>）</rp></ruby>（３）の<ruby>外<rp>（</rp><rt>がい</rt><rp>）</rp>部<rp>（</rp><rt>ぶ</rt><rp>）</rp>API<rp>（</rp><rt>エーピーアイ</rt><rp>）</rp></ruby>（<ruby>Application<rp>（</rp><rt>アプリケーション</rt><rp>）</rp></ruby> <ruby>Programming<rp>（</rp><rt>プログラミング</rt><rp>）</rp></ruby> <ruby>Interface<rp>（</rp><rt>インターフェイス</rt><rp>）</rp></ruby>）や<ruby>データベースクエリ<rp>（</rp><rt>Database Query</rt><rp>）</rp></ruby>（６）を<ruby>効<rp>（</rp><rt>こう</rt><rp>）</rp>率<rp>（</rp><rt>りつ</rt><rp>）</rp>精度的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>に<ruby>並<rp>（</rp><rt>へい</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp>実<rp>（</rp><rt>じっ</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>し、レイテンシ（３）を<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp>きく</ruby>（１）<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp>減<rp>（</rp><rt>げん</rt><rp>）</rp></ruby>してきました。
+<br><br>３．ConfigureAwait(false) による<ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp>適<rp>（</rp><rt>てき</rt><rp>）</rp>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>：
+<br><ruby>バックエンド<rp>（</rp><rt>Backend</rt><rp>）</rp></ruby>（４）の<ruby>ライブラリ<rp>（</rp><rt>Library</rt><rp>）</rp></ruby>（３）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>において、<ruby>不<rp>（</rp><rt>ふ</rt><rp>）</rp>必<rp>（</rp><rt>よう</rt><rp>）</rp>要<rp>（</rp><rt>よう</rt><rp>）</rp>な</ruby>（２）<ruby>コンテキストスイッチ<rp>（</rp><rt>Context Switch</rt><rp>）</rp></ruby>（６）を<ruby>防<rp>（</rp><rt>ふせ</rt><rp>）</rp></ruby>ぎ、<ruby>デッドロック<rp>（</rp><rt>Deadlock</rt><rp>）</rp></ruby>（４）を<ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp>避<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>するとともにスループット（４）を<ruby>向<rp>（</rp><rt>こう</rt><rp>）</rp>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>させています。
+<br><br>４．CancellationToken による<ruby>堅<rp>（</rp><rt>けん</rt><rp>）</rp>牢<rp>（</rp><rt>ろう</rt><rp>）</rp></ruby>なキャンセル（１）<ruby>制<rp>（</rp><rt>せい</rt><rp>）</rp>御<rp>（</rp><rt>ぎょ</rt><rp>）</rp></ruby><ruby>（１）：</ruby>
+<br><ruby>タイムアウト<rp>（</rp><rt>Timeout</rt><rp>）</rp></ruby>（３）や<ruby>クライアント<rp>（</rp><rt>Client</rt><rp>）</rp></ruby>（２）の<ruby>切<rp>（</rp><rt>せつ</rt><rp>）</rp>断<rp>（</rp><rt>だん</rt><rp>）</rp>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>に、<ruby>リソース<rp>（</rp><rt>Resource</rt><rp>）</rp></ruby>（２）を<ruby>迅<rp>（</rp><rt>じん</rt><rp>）</rp>速<rp>（</rp><rt>そく</rt><rp>）</rp>かつ</ruby><ruby>安<rp>（</rp><rt>あん</rt><rp>）</rp>全<rp>（</rp><rt>ぜん</rt><rp>）</rp>に</ruby><ruby>解<rp>（</rp><rt>かい</rt><rp>）</rp>放<rp>（</rp><rt>ほう</rt><rp>）</rp></ruby>する<ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp>組<rp>（</rp><rt>く</rt><rp>）</rp>み<rp>（</rp><rt>み</rt><rp>）</rp></ruby>を組み込んできました。
+<br><br>これらの<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp>同<rp>（</rp><rt>どう</rt><rp>）</rp>期<rp>（</rp><rt>き</rt><rp>）</rp>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>を適切に組み合わせることで、<ruby>リソース<rp>（</rp><rt>Resource</rt><rp>）</rp></ruby>（２）を無駄に消費しない、<ruby>スケーラブル<rp>（</rp><rt>Scalable</rt><rp>）</rp></ruby>（２）な<ruby>サーバーサイドアーキテクチャ<rp>（</rp><rt>Server-side Architecture</rt><rp>）</rp></ruby>（７）を<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp>計<rp>（</rp><rt>けい</rt><rp>）</rp>・実<rp>（</rp><rt>じっ</rt><rp>）</rp>装<rp>（</rp><rt>そう</rt><rp>）</rp></ruby>してきました。
 <br><br>(关于 C# 中的异步处理技术与应用。
 <br>是的，我认识到在具备高吞吐量的后端系统和云开发中，熟练掌握异步处理是不可或缺的。
 <br><br>我在实务中主要运用的技术主要有以下 4 点：
@@ -678,18 +720,63 @@
 <br><br>通过恰当组合这些异步技术，我一直致力于设计与实现不浪费资源、具备高扩展性的服务端架构。)
 </p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>C#(シーシャープ)で一番(いちばん)得意(とくい)な非同期(ひどうき)処理(しょり)の技術(ぎじゅつ)ですね！
-<br>はい、バックエンド(Backend)開発(かいはつ)やクラウド(Cloud)の設計(せっけい)では、非同期(ひどうき)をいかにうまく使(つか)うかがパフォーマンス(Performance)の鍵(かぎ)になるので、すごくこだわってきた部分(ぶぶん)です。
-<br><br>よく現場(げんば)でガリガリ使(つか)っているのは、主(おも)にこのあたりの技術(ぎじゅつ)です！
-<br><br>・async / await と裏側(うらがわ)のステートマシン(State Machine)：
-<br>書(か)きやすさはもちろん、スレッド(Thread)を無駄(むだ)に止め(とめ)ないノンブロッキング(Non-blocking)な処理(しょり)をベース(Base)にしています。
-<br><br>・Task.WhenAll での並行(へいこう)リクエスト(Request)：
-<br>独立(どくりつ)した複数(ふくすう)のAPI(エーピーアイ)やデータベース(Database)へのアクセス(Access)を同時(どうじ)に走(はし)らせて、画面(がめん)や処理(しょり)のスピード(Speed)を爆速(ばくそく)にするのによく使(つか)います。
-<br><br>・ConfigureAwait(false) での細(こま)かいパフォーマンス(Performance)チューニング(Tuning)：
-<br>ライブラリ(Library)側(がわ)のコードなどでは、余計(よけい)なコンテキスト(Context)に戻(もど)さないことでデッドロック(Deadlock)を防(ふせ)ぎつつ、スループット(Throughput)を稼(かせ)ぎます。
-<br><br>・CancellationToken での安全(あんぜん)なキャンセル：
-重(おも)い処理(しょり)の途中(とちゅう)でユーザー(User)が画面(がめん)を閉じ(とじ)たり、タイムアウト(Timeout)した時(とき)に、ちゃんとリソース(Resource)を解放(かいほう)できるようにしっかり仕込(しこ)んでいます。
-<br><br>こういう細かい非同期(ひどうき)の仕組み(しくみ)をちゃんと理解(りかい)して組(く)み合(あ)わせることで、負荷(ふか)に強(つ)いシステム(System)を作(つく)るのが得意(とくい)です！
+<p style="padding: 0 2em;"><strong>A: </strong>C#における非同期処理の技術と活用についてですね。
+<br>はい、高いスループットなバックエンドシステムやクラウド開発において、非同期処理の習熟は不可欠であると認識しております。
+<br><br>私が実務で主に駆使している技術としては、以下の4点が出力に挙げられます。
+<br><br>1. async / await とコンパイラが生成するステートマシン：
+<br>ノンブロッキングで可読性の高いコードを構築し、スレッドプールを効率的に利用しています。
+<br><br>2. Task.WhenAll による並行処理：
+<br>複数の外部APIやデータベースクエリを効率的に並行実行し、レイテンシを大幅に削減してきました。
+<br><br>3. ConfigureAwait(false) による最適化：
+<br>バックエンドのライブラリ開発において、不必要なコンテキストスイッチを防ぎ、デッドロックを回避するとともにスループットを向上させています。
+<br><br>4. CancellationToken による堅牢なキャンセル制御：
+<br>タイムアウトやクライアントの切断時に、リソースを迅速かつ安全に解放する仕組みを組み込んできました。
+<br><br>これらの非同期技術を適切に組み合わせることで、リソースを無駄に消費しない、スケーラブルなサーバーサイドアーキテクチャを設計・実装してまいりました。
+<br><br>(关于 C# 中的异步处理技术与应用。
+<br>是的，我认识到在具备高吞吐量的后端系统和云开发中，熟练掌握异步处理是不可或缺的。
+<br><br>我在实务中主要运用的技术主要有以下 4 点：
+<br><br>1. async / await 与编译器生成的代码状态机（State Machine）： 构建非阻塞且具备高可读性的代码，高效利用线程池。
+<br>2. 利用 Task.WhenAll 进行并行处理： 高效并行执行多个外部 API 或数据库查询，大幅缩减延迟。
+<br>3. 通过 ConfigureAwait(false) 进行优化：在后端类库开发中，防止不必要的上下文切换，规避死锁并提升吞吐量。
+<br>4. 通过 CancellationToken 进行稳健的取消控制： 在超时或客户端断开连接时，植入迅速且安全释放资源的机制。
+<br><br>通过恰当组合这些异步技术，我一直致力于设计与实现不浪费资源、具备高扩展性的服务端架构。)
+</p>
+
+2.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）で<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>な<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp>同<rp>（</rp><rt>どう</rt><rp>）</rp>期<rp>（</rp><rt>き</rt><rp>）</rp>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）の<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）ですね！
+<br>はい、<ruby>バックエンド<rp>（</rp><rt>Backend</rt><rp>）</rp></ruby>（４）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>や<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）の<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>では、<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp>同<rp>（</rp><rt>どう</rt><rp>）</rp>期<rp>（</rp><rt>き</rt><rp>）</rp></ruby>（１）をいかにうまく（１）<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>うかが<ruby>パフォーマンス<rp>（</rp><rt>Performance</rt><rp>）</rp></ruby>（４）の<ruby>鍵<rp>（</rp><rt>かぎ</rt><rp>）</rp></ruby>（２）になるので、すごくこだわってきた<ruby>部<rp>（</rp><rt>ぶ</rt><rp>）</rp>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>です。
+<br><br><ruby>良<rp>（</rp><rt>よ</rt><rp>）</rp>く</ruby>（１）<ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby>でガリガリ<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>っているのは、<ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp>に</ruby><ruby>（１）このあたりの技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）です！
+<br><br>・<ruby>async<rp>（</rp><rt>エイシンク</rt><rp>）</rp></ruby>（１） / <ruby>await<rp>（</rp><rt>アウェイト</rt><rp>）</rp></ruby> と<ruby>裏<rp>（</rp><rt>うら</rt><rp>）</rp>側<rp>（</rp><rt>がわ</rt><rp>）</rp></ruby>の<ruby>ステートマシン<rp>（</rp><rt>State Machine</rt><rp>）</rp></ruby>（４）：
+<br><ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>きやすさはもちろん、<ruby>スレッド<rp>（</rp><rt>Thread</rt><rp>）</rp></ruby>を<ruby>無<rp>（</rp><rt>む</rt><rp>）</rp>駄<rp>（</rp><rt>だ</rt><rp>）</rp>に</ruby><ruby>止<rp>（</rp><rt>と</rt><rp>）</rp>めないノンブロッキング<rp>（</rp><rt>Non-blocking</rt><rp>）</rp></ruby>（４）な<ruby>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）を<ruby>ベース<rp>（</rp><rt>Base</rt><rp>）</rp></ruby>（１）にしています。
+<br><br>・Task.WhenAll での<ruby>並<rp>（</rp><rt>へい</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>リクエスト<rp>（</rp><rt>Request</rt><rp>）</rp></ruby>（３）：
+<br><ruby>独<rp>（</rp><rt>どく</rt><rp>）</rp>立<rp>（</rp><rt>りつ</rt><rp>）</rp></ruby>した<ruby>複<rp>（</rp><rt>ふく</rt><rp>）</rp>数<rp>（</rp><rt>すう</rt><rp>）</rp></ruby>（３）のAPI<rp>（</rp><rt>エーピーアイ</rt><rp>）</rp>（<ruby>Application<rp>（</rp><rt>アプリケーション</rt><rp>）</rp></ruby> <ruby>Programming<rp>（</rp><rt>プログラミング</rt><rp>）</rp></ruby> <ruby>Interface<rp>（</rp><rt>インターフェイス</rt><rp>）</rp></ruby>）や<ruby>データベース<rp>（</rp><rt>Database</rt><rp>）</rp></ruby>（４）への<ruby>アクセス<rp>（</rp><rt>Access</rt><rp>）</rp></ruby>（１）を<ruby>同<rp>（</rp><rt>どう</rt><rp>）</rp>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>に<ruby>走<rp>（</rp><rt>はし</rt><rp>）</rp>らせて、画<rp>（</rp><rt>が</rt><rp>）</rp>面<rp>（</rp><rt>めん</rt><rp>）</rp></ruby>（１）や<ruby>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）の<ruby>スピード<rp>（</rp><rt>Speed</rt><rp>）</rp></ruby>（３）を<ruby>爆<rp>（</rp><rt>ばく</rt><rp>）</rp>速<rp>（</rp><rt>そく</rt><rp>）</rp></ruby>にするのによく（１）<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp>います。</ruby>
+<br><br>・ConfigureAwait(false) での<ruby>細<rp>（</rp><rt>こま</rt><rp>）</rp>かい</ruby>（３）<ruby>パフォーマンスチューニング<rp>（</rp><rt>Performance Tuning</rt><rp>）</rp></ruby>（６）：
+<br><ruby>ライブラリ<rp>（</rp><rt>Library</rt><rp>）</rp></ruby>（３）<ruby>側<rp>（</rp><rt>がわ</rt><rp>）</rp></ruby>の<ruby>コード<rp>（</rp><rt>Code</rt><rp>）</rp></ruby>（１）などでは、<ruby>余<rp>（</rp><rt>よ</rt><rp>）</rp>計<rp>（</rp><rt>けい</rt><rp>）</rp>な</ruby><ruby>コンテキスト<rp>（</rp><rt>Context</rt><rp>）</rp></ruby>（４）に<ruby>戻<rp>（</rp><rt>もど</rt><rp>）</rp>さないことでデッドロック<rp>（</rp><rt>Deadlock</rt><rp>）</rp></ruby>（４）を<ruby>防<rp>（</rp><rt>ふせ</rt><rp>）</rp>ぎつつ、スループット<rp>（</rp><rt>Throughput</rt><rp>）</rp></ruby>（４）を<ruby>稼<rp>（</rp><rt>かせ</rt><rp>）</rp>ぎます。</ruby>
+<br><br>・CancellationToken での<ruby>安<rp>（</rp><rt>あん</rt><rp>）</rp>全<rp>（</rp><rt>ぜん</rt><rp>）</rp>なキャンセル<rp>（</rp><rt>Cancellation</rt><rp>）</rp></ruby>（１）：
+<br><ruby>重<rp>（</rp><rt>おも</rt><rp>）</rp>い</ruby><ruby>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp>の途<rp>（</rp><rt>と</rt><rp>）</rp>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>で<ruby>ユーザー<rp>（</rp><rt>User</rt><rp>）</rp></ruby>（１）が<ruby>画<rp>（</rp><rt>が</rt><rp>）</rp>面<rp>（</rp><rt>めん</rt><rp>）</rp></ruby>（１）を<ruby>閉<rp>（</rp><rt>と</rt><rp>）</rp>じたり、タイムアウト<rp>（</rp><rt>Timeout</rt><rp>）</rp></ruby>（３）した<ruby>時<rp>（</rp><rt>とき</rt><rp>）</rp></ruby>に、ちゃんと<ruby>リソース<rp>（</rp><rt>Resource</rt><rp>）</rp></ruby>（２）を<ruby>解<rp>（</rp><rt>かい</rt><rp>）</rp>放<rp>（</rp><rt>ほう</rt><rp>）</rp>できるようにしっかり仕<rp>（</rp><rt>し</rt><rp>）</rp>込<rp>（</rp><rt>こ</rt><rp>）</rp>んでいます。</ruby>
+<br><br>こういう<ruby>細<rp>（</rp><rt>こま</rt><rp>）</rp>かい</ruby>（３）<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp>同<rp>（</rp><rt>どう</rt><rp>）</rp>期<rp>（</rp><rt>き</rt><rp>）</rp></ruby>の<ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp>組<rp>（</rp><rt>く</rt><rp>）</rp>みをちゃんと理<rp>（</rp><rt>り</rt><rp>）</rp>解<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>して<ruby>組<rp>（</rp><rt>く</rt><rp>）</rp>み合<rp>（</rp><rt>あ</rt><rp>）</rp>わせることで、負<rp>（</rp><rt>ふ</rt><rp>）</rp>荷<rp>（</rp><rt>か</rt><rp>）</rp></ruby>（１）に<ruby>強<rp>（</rp><rt>つよ</rt><rp>）</rp>い（２）システム<rp>（</rp><rt>System</rt><rp>）</rp></ruby>（１）を<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp>るのが得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>です！
+<br><br>(关于我在 C# 中最拿手的异步处理技术！
+<br>是的，在后端开发和云架构设计中，异步用得有多好直接决定了性能的上限，所以这也是我非常讲究的部分。
+<br><br>我在开发现场经常深度使用的主要是这些技术：
+<br>・async / await 与背后的状态机（State Machine）： 除了代码好写之外，基础是用不白白占用线程的非阻塞处理。
+<br>・用 Task.WhenAll 进行并行请求： 经常用来同时发起对多个独立 API 或数据库的访问，从而大幅提升响应速度。
+<br>・用 ConfigureAwait(false) 进行精细的性能调优： 在类库代码等场景下，通过不返回多余的上下文来防止死锁，同时赚取更高的吞吐量。
+<br>・用 CancellationToken 进行安全取消： 在繁重处理进行中用户关闭页面或超时的时候，扎实地嵌入逻辑以确保资源能够被释放。
+<br><br>通过透彻理解并组合 these 异步机制，我非常擅长构建抗高负载的系统！)
+</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>C#で一番得意な非同期処理の技術ですね！
+<br>はい、バックエンド開発やクラウドの設計では、非同期をいかにうまく使うかがパフォーマンスの鍵になるので、すごくこだわってきた部分です。
+<br><br>よく現場でガリガリ使っているのは、主にこのあたりの技術です！
+<br><br>・async / await と裏側のステートマシン：
+<br>書きやすさはもちろん、スレッドを無駄に止めないノンブロッキングな処理をベースにしています。
+<br><br>・Task.WhenAll での並行リクエスト：
+<br>独立した複数のAPIやデータベースへのアクセスを同時に走らせて、画面や処理のスピードを爆速にするのによく使います。
+<br><br>・ConfigureAwait(false) での細かいパフォーマンスチューニング：
+<br>ライブラリ側のコードなどでは、余計なコンテキストに戻さないことでデッドロックを防ぎつつ、スループットを稼ぎます。
+<br><br>・CancellationToken での安全なキャンセル：
+重い処理の途中でユーザーが画面を閉じたり、タイムアウトした時に、ちゃんとリソースを解放できるようにしっかり仕込んでいます。
+<br><br>こういう細かい非同期の仕組みをちゃんと理解して組み合わせることで、負荷に強いシステムを作るのが得意です！
 <br><br>(关于我在 C# 中最拿手的异步处理技术！
 <br>是的，在后端开发和云架构设计中，异步用得有多好直接决定了性能的上限，所以这也是我非常讲究的部分。
 <br><br>我在开发现场经常深度使用的主要是这些技术：
@@ -702,17 +789,19 @@
 
 ---
 
-- 長(なが)い開発(かいはつ)経験(けいけん)の中で、ドッカー（Docker）っていう技術(ぎじゅつ)も習熟(しゅうじゅく)ですよね。少(すこ)しだけ説明(せつめい)していただけないでしょうか。
-(在长期的开发经验中，Docker 这项技术您也很熟练吧？能否稍微向我说明一下呢？)
+- <ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>い（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>の<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>（１）で、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）っていう<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）も<ruby>習<rp>（</rp><rt>しゅう</rt><rp>）</rp>熟<rp>（</rp><rt>じゅく</rt><rp>）</rp></ruby>ですよね。<ruby>少<rp>（</rp><rt>すこ</rt><rp>）</rp></ruby>し（２）だけ<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>していただけないでしょうか。
+<br><br>長い開発経験の中で、ドッカーっていう技術も習熟ですよね。少しだけ説明していただけないでしょうか。
+<br>(在长期的开发经验中，Docker 这项技术您也很熟练吧？能否稍微向我说明一下呢？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>Docker(ドッカー)をはじめとするコンテナ(Container)技術(ぎじゅつ)の実務(じつむ)経験(けいけん)についてですね。
-<br>はい、開発(かいはつ)環境(かんきょう)の統一(とういつ)から、本番(ほんばん)環境(かんきょう)（Azure(アジュール)やAWS(エーダブリューエス)上(じょう)のECS(Elastic Container Service)やAKS(Azure Kubernetes Service)など）へのデプロイ(Deploy)に至(いた)るまで、Docker(ドッカー)を活用(かつよう)したコンテナ(Container)化(か)を長年(ながねん)実務(じつむ)で実践(じっせん)してまいりました。
-<br><br>Docker(ドッカー)の主なメリットと私の活用(かつよう)アプローチとしては、以下(いか)の通りです。
-<br><br>・環境差異(かんきょうさい)の排除(はいじょ)（環境トラブルの防止）：
-<br>「自分(じぶん)のローカル(Local)PC(Personal Computer)では動(うご)いたのに、本番(ほんばん)環境(かんきょう)や他(ほか)のメンバーの環境で動かない」という問題を、Docker(ドッカー)によって完全(かんぜん)に解決(かいけつ)し、どの環境(かんきょう)でも一貫(いっかん)して動作(どうさ)する再現性(さいげんせい)の高(たか)いシステム構築(こうちく)を行(おこな)ってきました。
-<br><br>・マイクロサービス(Microservices)とクラウド(Cloud)連携(れんけい)：
-<br>C#(.NET)で構築(こうちく)したバックエンド(Backend)API(Application Programming Interface)や各種(かくしゅ)サービスをコンテナ(Container)イメージ(Image)にパッケージング(Packaging)し、Docker Compose(ドッカーコンポーズ)を用いたローカル(Local)での統合(とうごう)テストから、クラウド(Cloud)上のKubernetes(クバネティス)やコンテナ(Container)サービスへのスムーズ(Smooth)な移行(いこう)・運用(うんよう)を得意(とくい)としています。
-<br><br>これにより、開発(かいはつ)からリリース(Release)までのリードタイム(Lead time)を大幅(おおはば)に短縮(たんしゅく)し、インフラ(Infrastructure)の管理(かんり)コスト(Cost)を最適化(さいてきか)するアーキテクチャ(Architecture)を提供(ていきょう)してまいりました。
+1.
+<p style="padding: 0 2em;"><strong>A: </strong>Dockerをはじめとするコンテナ技術の実務経験についてですね。
+<br>はい、開発環境の統一から、本番環境（AzureやAWS上のECSやAKSなど）へのデプロイに至るまで、Dockerを活用したコンテナ化を長年実務で実践してまいりました。
+<br><br>Dockerの主なメリットと私の活用アプローチとしては、以下の通りです。
+<br><br>・環境差異の排除（環境トラブルの防止）：
+<br>「自分のローカルPCでは動いたのに、本番環境や他のメンバーの環境で動かない」という問題を、Dockerによって完全に解決し、どの環境でも一貫して動作する再現性の高いシステム構築を行ってきました。
+<br><br>・マイクロサービスとクラウド連携：
+<br>C#(.NET)で構築したバックエンドAPIや各種サービスをコンテナイメージにパッケージングし、Docker Composeを用いたローカルでの統合テストから、クラウド上のKubernetesやコンテナサービスへのスムーズな移行・運用を得意としています。
+<br><br>これにより、開発からリリースまでのリードタイムを大幅に短縮し、インフラの管理コストを最適化するアーキテクチャを提供してまいりました。
 <br><br>(关于以 Docker 为首的容器（Container）技术的实务经验。
 <br>是的，从开发环境的统一到生产环境（如 Azure 或 AWS 上的 ECS、AKS 等）的部署，我多年来一直在实务中实践基于 Docker 的容器化。
 <br><br>Docker 的主要优势及我的应用方法如下：
@@ -721,14 +810,15 @@
 通过这些，我一直致力于大幅缩短从开发到发布的前置时间（Lead time），并提供优化基础设施管理成本的架构。)
 </p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>Docker(ドッカー)を使(つか)ったコンテナ(Container)開発(かいはつ)の経験(けいけん)ですね！
-<br>はい、もう毎日の開発(かいはつ)で当(あ)たり前(まえ)のようにガリガリ使(つか)っています。
-<br>特(とく)によく実感(じっかん)しているDocker(ドッカー)の良(よ)さは、このあたりですね！
-<br>・「動かない！」という環境(かんきょう)トラブルの消滅(しょうめつ)：
-<br>「自分のパソコン(Personal Computer)では動くのに、サーバー(Server)だと動かない」という昔よくあった面倒(めんどう)なエラー(Error)が、Docker(ドッカー)を使うことで綺麗(きれい)になくなるのが本当に最高(さいこう)です。どこでも全く同じ環境(かんきょう)を秒(びょう)で作(つく)れます。
-<br><br>・クラウド(Cloud)やマイクロサービス(Microservices)との相性(あいしょう)抜群(ばつぐん)：
-<br>C#(.NET)で作ったバックエンド(Backend)のアプリ(Application)をサクッとコンテナ(Container)にまとめて、Docker Compose(ドッカーコンポーズ)でDB(Database)やRedis(REmote DIctionary Server)と一緒にローカル(Local)でまとめてテストしたり、そのままAzure(アジュール)やAWS(エーダブリューエス)のクラウド(Cloud)環境(かんきょう)へデプロイ(Deploy)したりするのが得意(とくい)です。
-<br><br>インフラ(Infrastructure)の構築(こうちく)や環境(かんきょう)設定(せってい)で無駄(むだ)に悩(なや)む時間を減らして、開発(かいはつ)のスピードを爆速(ばくそく)にするためのマスト(Must)な相棒(あいぼう)として、長年(ながねん)使い込んでいます！
+2.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>った<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>の<ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>ですね！
+<br>はい、もう<ruby>毎<rp>（</rp><rt>まい</rt><rp>）</rp>日<rp>（</rp><rt>にち</rt><rp>）</rp></ruby>（１）の<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>で<ruby>当<rp>（</rp><rt>あた</rt><rp>）</rp></ruby>たり<ruby>前<rp>（</rp><rt>まえ</rt><rp>）</rp></ruby>のようにガリガリ<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>っています。
+<br>よく<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>している<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）の<ruby>良<rp>（</rp><rt>よ</rt><rp>）</rp>さ</ruby>（１）は、このあたりですね！
+<br>・「<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かない！」という<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby><ruby>トラブル<rp>（</rp><rt>Trouble</rt><rp>）</rp></ruby>（２）の<ruby>消<rp>（</rp><rt>しょう</rt><rp>）</rp>滅<rp>（</rp><rt>めつ</rt><rp>）</rp></ruby>：
+<br>「<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>の<ruby>パソコン<rp>（</rp><rt>Personal Computer</rt><rp>）</rp></ruby>では<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>くのに、<ruby>サーバー<rp>（</rp><rt>Server</rt><rp>）</rp></ruby>（１）だと<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かない」という<ruby>昔<rp>（</rp><rt>むかし</rt><rp>）</rp></ruby>よくあった<ruby>面<rp>（</rp><rt>めん</rt><rp>）</rp>倒<rp>（</rp><rt>どう</rt><rp>）</rp></ruby>な（３）<ruby>エラー<rp>（</rp><rt>Error</rt><rp>）</rp></ruby>（１）が、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>うことで、きれいになくなるのが<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby>に<ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp>高<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>です。どこでも<ruby>全<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby>く<ruby>同<rp>（</rp><rt>おな</rt><rp>）</rp>じ</ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>を<ruby>秒<rp>（</rp><rt>びょう</rt><rp>）</rp></ruby>（１）で<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>れます。
+<br><br>・<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）や<ruby>マイクロサービス<rp>（</rp><rt>Microservices</rt><rp>）</rp></ruby>（４）との<ruby>相<rp>（</rp><rt>あい</rt><rp>）</rp>性<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>バツグン：
+<br><ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）（.NET<rp>（</rp><rt>ドットネット</rt><rp>）</rp>（<ruby>Dot<rp>（</rp><rt>ドット</rt><rp>）</rp></ruby> <ruby>Network<rp>（</rp><rt>ネットワーク</rt><rp>）</rp></ruby>））で<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>った<ruby>バックエンド<rp>（</rp><rt>Backend</rt><rp>）</rp></ruby>（４）の<ruby>アプリ<rp>（</rp><rt>Application</rt><rp>）</rp></ruby>（１）をサクッと<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>（１）にまとめて、<ruby>ドッカーコンポーズ<rp>（</rp><rt>Docker Compose</rt><rp>）</rp></ruby>（５）で<ruby>DB<rp>（</rp><rt>ディービー</rt><rp>）</rp></ruby>（<ruby>Database<rp>（</rp><rt>データベース</rt><rp>）</rp></ruby>）や<ruby>Redis<rp>（</rp><rt>レディス</rt><rp>）</rp></ruby>（<ruby>Remote<rp>（</rp><rt>リモート</rt><rp>）</rp></ruby> <ruby>Dictionary<rp>（</rp><rt>ディクショナリー</rt><rp>）</rp></ruby> <ruby>Server<rp>（</rp><rt>サーバー</rt><rp>）</rp></ruby>）と<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp>緒<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>に<ruby>ローカル<rp>（</rp><rt>Local</rt><rp>）</rp></ruby>（２）でまとめて<ruby>テスト<rp>（</rp><rt>Test</rt><rp>）</rp></ruby>（１）したり、そのまま<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）や<ruby>エーダブリューエス<rp>（</rp><rt>AWS</rt><rp>）</rp></ruby>（<ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>ウェブ<rp>（</rp><rt>Web</rt><rp>）</rp></ruby> <ruby>サービシズ<rp>（</rp><rt>Services</rt><rp>）</rp></ruby>）の<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>へデプロイしたりするのが<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>です。
+<br><br><ruby>インフラ<rp>（</rp><rt>Infrastructure</rt><rp>）</rp></ruby>（１）の<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>や<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp>設<rp>（</rp><rt>せっ</rt><rp>）</rp>定<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>で<ruby>無<rp>（</rp><rt>む</rt><rp>）</rp>駄<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>に<ruby>悩<rp>（</rp><rt>なや</rt><rp>）</rp></ruby>む（２）<ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>を<ruby>減<rp>（</rp><rt>へら</rt><rp>）</rp></ruby>して、<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>の<ruby>スピード<rp>（</rp><rt>Speed</rt><rp>）</rp></ruby>（３）を<ruby>爆<rp>（</rp><rt>ばく</rt><rp>）</rp>速<rp>（</rp><rt>そく</rt><rp>）</rp></ruby>にするための<ruby>マスト<rp>（</rp><rt>Must</rt><rp>）</rp></ruby>（１）な<ruby>相<rp>（</rp><rt>あい</rt><rp>）</rp>棒<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>として、<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp>年<rp>（</rp><rt>ねん</rt><rp>）</rp></ruby><ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>い<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>んでいます。
 <br><br>(关于使用 Docker 的容器开发经验！
 <br>是的，在每天的开发中就像理所当然一样深度使用着。
 我特别深有同感的 Docker 的优点主要有这些：
@@ -736,22 +826,41 @@
 <br>像以前经常遇到的“在我的电脑上能跑，但在服务器上跑不起来”这种麻烦错误，用 Docker 可以完美解决，真的是太棒了。无论在哪里都能秒级创建完全相同的环境。
 <br><br>・与云端和微服务的契合度极佳：
 <br>擅长把用 C# (.NET) 编写的后端应用轻快地打包进容器，用 Docker Compose 在本地和数据库、Redis 一起进行统一测试，或者直接部署到 Azure、AWS 的云环境中。
-减少在基础设施搭建和环境配置上白白烦恼的时间，作为将开发速度拉满的必备搭档，我已经使用多年了！)
+减少在基础设施搭建 and 环境配置上白白烦恼的时间，作为将开发速度拉满的必备搭档，我已经使用多年了。)
+</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>Dockerを使ったコンテナ開発の経験ですね！
+<br>はい、もう毎日の開発で当たり前のようにガリガリ使っています。
+<br>よく実感しているDockerの良さは、このあたりですね！
+<br>・「動かない！」という環境トラブルの消滅：
+<br>「自分のパソコンでは動くのに、サーバーだと動かない」という昔よくあった面倒なエラーが、Dockerを使うことで綺麗になくなるのが本当に最高です。どこでも全く同じ環境を秒で作れます。
+<br><br>・クラウドやマイクロサービスとの相性抜群：
+<br>C#(.NET)で作ったバックエンドのアプリをサクッとコンテナにまとめて、Docker ComposeでDBやRedisと一緒にローカルでまとめてテストしたり、そのままAzureやAWSのクラウド環境へデプロイしたりするのが得意です。
+<br><br>インフラの構築や環境設定で無駄に悩む時間を減らして、開発のスピードを爆速にするためのマストな相棒として、長年使い込んでいます！
+<br><br>(关于使用 Docker 的容器开发经验！
+<br>是的，在每天的开发中就像理所当然一样深度使用着。
+我特别深有同感的 Docker 的优点主要有这些：
+<br><br>・消灭“无法运行！”的环境故障：
+<br>像以前经常遇到的“在我的电脑上能跑，但在服务器上跑不起来”这种麻烦错误，用 Docker 可以完美解决，真的是太棒了。无论在哪里都能秒级创建完全相同的环境。
+<br><br>・与云端和微服务的契合度极佳：
+<br>擅长把用 C# (.NET) 编写的后端应用轻快地打包进容器，用 Docker Compose 在本地和数据库、Redis 一起进行统一测试，或者直接部署到 Azure、AWS 的云环境中。
+减少在基础设施搭建 and 环境配置上白白烦恼的时间，作为将开发速度拉满的必备搭档，我已经使用多年了。)
 </p>
 
 ---
 
-- 例えば、C#で「Hello World」プログラムを書きました。これをDocker化し、ローカルで実行してから、Azureへデプロイするにはどうすればよいですか。
-(假如说你用 C# 写了一个 HelloWorld 程序，请问如何把它 Docker 化，然后如何在本地运行，然后如何布署到 Azure 上？)
+- <ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えば、<ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）で<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>な「Hello World」<ruby>プログラム<rp>（</rp><rt>Program</rt><rp>）</rp></ruby>（４）を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>きました。これを<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）<ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>し、<ruby>ローカル<rp>（</rp><rt>Local</rt><rp>）</rp></ruby>（２）で<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>してから、<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）へデプロイするにはどうすればよいですか。
+<br><br>例えば、C#で「Hello World」プログラムを書きました。これをDocker化し、ローカルで実行してから、Azureへデプロイするにはどうすればよいですか。
+<br>(假如说你用 C# 写了一个 HelloWorld 程序，请问如何把它 Docker 化，然后如何在本地运行，然后如何布署到 Azure 上？)
 
 <p style="padding: 0 2em;"><strong>A: </strong><ruby>C#<rt>シーシャープ</rt></ruby>の<ruby>コンソールアプリ<rt>Console Application</rt></ruby>を<ruby>例<rp>（</rp><rt>れい</rt><rp>）</rp></ruby>に、<ruby>Docker<rt>ドッカー</rt></ruby><ruby>化<rt>か</rt></ruby>から<ruby>ローカル<rt>Local</rt></ruby>での<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>、<ruby>速<rp>（</rp><rt>そく</rt><rp>）</rp></ruby><ruby>度<rp>（</rp><rt>ど</rt><rp>）</rp></ruby>・<ruby>効<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>率<rp>（</rp><rt>りつ</rt><rp>）</rp></ruby>に<ruby>優<rp>（</rp><rt>すぐ</rt><rp>）</rp></ruby>れた<ruby>Azure<rt>アジュール</rt></ruby>への<ruby>デプロイ<rt>Deploy</rt></ruby>に<ruby>至<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>る<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp></ruby>の<ruby>クラウドネイティブ<rt>Cloud Native</rt></ruby>な<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>フロー<rt>Flow</rt></ruby>についてご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>いたします。
-<br><br>1. <ruby>コンテナ化<rt>Container化</rt></ruby>（<ruby>Docker<rt>ドッカー</rt></ruby><ruby>構築<rp>（</rp><rt>こうちく</rt><rp>）</rp></ruby>）：
+<br><br>1. <ruby>コンテナ<rt>Container</rt></ruby><ruby>化<rt>か</rt></ruby>（<ruby>Docker<rt>ドッカー</rt></ruby><ruby>構築<rp>（</rp><rt>こうちく</rt><rp>）</rp></ruby>）：
 <br>まず、<ruby>C#<rt>シーシャープ</rt></ruby>(<ruby>.NET<rt>ドットネット</rt></ruby>)の<ruby>コード<rt>Code</rt></ruby>を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いた<ruby>後<rp>（</rp><rt>あと</rt><rp>）</rp></ruby>、<ruby>マルチステージビルド<rt>Multi-stage build</rt></ruby>を<ruby>採<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>した<ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>適<rp>（</rp><rt>てき</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>された<ruby>Dockerfile<rt>ドッカーファイル</rt></ruby>を<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>します。<ruby>SDK<rt>エスディーケー</rt></ruby><ruby>イメージ<rt>Image</rt></ruby>で<ruby>コンパイル<rt>Compile</rt></ruby>を<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>い、<ruby>軽<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby>な<ruby>ランタイムイメージ<rt>Runtime Image</rt></ruby>に<ruby>バイナリ<rt>Binary</rt></ruby>を<ruby>コピー<rt>Copy</rt></ruby>することで、<ruby>セキュリティ<rt>Security</rt></ruby>と<ruby>イメージサイズ<rt>Image Size</rt></ruby>の<ruby>軽<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>を<ruby>図<rp>（</rp><rt>はか</rt><rp>）</rp></ruby>ります。
 <br><br>2. <ruby>ローカル<rt>Local</rt></ruby>での<ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>確<rp>（</rp><rt>かく</rt><rp>）</rp></ruby><ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>：
 <br><ruby>docker build<rt>ドッカー ビルド</rt></ruby> <ruby>コマンド<rt>Command</rt></ruby>で<ruby>イメージ<rt>Image</rt></ruby>を<ruby>ビルド<rt>Build</rt></ruby>し、<ruby>docker run<rt>ドッカー ラン</rt></ruby> で<ruby>ローカル<rt>Local</rt></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>にて<ruby>コンテナ<rt>Container</rt></ruby>として<ruby>正<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>常<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>に<ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>することを確認いたします。
 <br><br>3. <ruby>Azure<rt>アジュール</rt></ruby>への<ruby>デプロイ<rt>Deploy</rt></ruby>：
 <br><ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>した<ruby>コンテナイメージ<rt>Container Image</rt></ruby>を、<ruby>Azure<rt>アジュール</rt></ruby>の<ruby>コンテナレジストリ<rt>Container Registry</rt></ruby>（<ruby>ACR<rt>エーシーアール</rt></ruby>: <ruby>Azure Container Registry<rt>アジュール コンテナ レジストリ</rt></ruby>）に<ruby>プッシュ<rt>Push</rt></ruby>します。その<ruby>後<rp>（</rp><rt>あと</rt><rp>）</rp></ruby>、<ruby>Azure App Service<rt>アジュール アップ サービス</rt></ruby> や <ruby>Azure Function App<rt>アジュール ファンクション アプリ</rt></ruby> などの<ruby>プラットフォーム<rt>Platform</rt></ruby>を<ruby>利<rp>（</rp><rt>り</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>して、クラウド<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>へ<ruby>セキュア<rt>Secure</rt></ruby>かつ<ruby>スケーラブル<rt>Scalable</rt></ruby>に<ruby>デプロイ<rt>Deploy</rt></ruby>・<ruby>公<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>を<ruby>完<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>了<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby>させます。
-<br><br>このように、<ruby>ローカル<rt>Local</rt></ruby>での<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>から<ruby>クラウド<rt>Cloud</rt></ruby>の<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>まで、<ruby>コンテナ<rt>Container</rt></ruby>を<ruby>軸<rp>（</rp><rt>じく</rt><rp>）</rp></ruby>にした<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp></ruby><ruby>貫<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>した<rt>した</rt></ruby><ruby>デリバリープロセス<rt>Delivery Process</rt></ruby>を<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>することができます。</p>
+<br><br>このように、<ruby>ローカル<rt>Local</rt></ruby>での<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>から<ruby>クラウド<rt>Cloud</rt></ruby>の<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>まで、<ruby>コンテナ<rt>Container</rt></ruby>を<ruby>軸<rp>（</rp><rt>じく</rt><rp>）</rp></ruby>にした<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp></ruby><ruby>貫<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>した<ruby>デリバリープロセス<rt>Delivery Process</rt></ruby>を<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>することができます。</p>
 
 
 <p style="padding: 0 2em;"><strong>A: </strong>C#のコンソールアプリを例に、Docker化からローカルでの実行、そしてAzureへのデプロイに至る一連のクラウドネイティブな開発フローについてご説明いたします。
