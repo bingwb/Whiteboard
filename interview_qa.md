@@ -193,7 +193,7 @@
 ### <span id="db">データベース</span>
 ---
 
-#### <span id="db_keys">主キーとユニークキー</span>
+#### <span id="db_keys" style="margin-left: 2em;">主キーとユニークキー</span>
 ---
 [目次へ](#toc)
 
