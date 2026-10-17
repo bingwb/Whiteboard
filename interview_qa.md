@@ -441,6 +441,151 @@ MVCは、アプリケーションの構造をModel、View、Controllerの3つに
 充分发挥云特有的优势（如自动扩展、高性价比等）进行设计与开发，正是我的强项！)
 </p>
 
+#### <span id="arch_docker">ドッカー</span>
+---
+[目次へ](#toc)
+
+- <ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>い（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>の<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>（１）で、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）っていう<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）も<ruby>習<rp>（</rp><rt>しゅう</rt><rp>）</rp>熟<rp>（</rp><rt>じゅく</rt><rp>）</rp></ruby>ですよね。<ruby>少<rp>（</rp><rt>すこ</rt><rp>）</rp></ruby>し（２）だけ<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>していただけないでしょうか。
+<br><br>長い開発経験の中で、ドッカーっていう技術も習熟ですよね。少しだけ説明していただけないでしょうか。
+<br>(在长期的开发经验中，Docker 这项技术您也很熟练吧？能否稍微向我说明一下呢？)
+
+1.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）をはじめとする<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>（１）<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）の<ruby>実<rp>（</rp><rt>じつ</rt><rp>）</rp>務<rp>（</rp><rt>む</rt><rp>）</rp>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>についてですね。
+<br>はい、<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>の<ruby>統<rp>（</rp><rt>とう</rt><rp>）</rp>一<rp>（</rp><rt>いつ</rt><rp>）</rp></ruby>から、<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>（<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）や<ruby>エーダブリューエス<rp>（</rp><rt>AWS</rt><rp>）</rp></ruby>（<ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>ウェブ<rp>（</rp><rt>Web</rt><rp>）</rp></ruby> <ruby>サービシズ<rp>（</rp><rt>Services</rt><rp>）</rp></ruby>）<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>の<ruby>イーシーエス<rp>（</rp><rt>ECS</rt><rp>）</rp></ruby>（<ruby>エラスティック<rp>（</rp><rt>Elastic</rt><rp>）</rp></ruby> <ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）や<ruby>エーケーエス<rp>（</rp><rt>AKS</rt><rp>）</rp></ruby>（<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby> <ruby>クバネティス<rp>（</rp><rt>Kubernetes</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）など）へのデプロイに<ruby>至<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>るまで、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）を<ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>したコンテナ（１）<ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>を<ruby>長<rp>（</rp><rt>ちょう</rt><rp>）</rp>年<rp>（</rp><rt>ねん</rt><rp>）</rp></ruby>実務（１）で<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>践<rp>（</rp><rt>せん</rt><rp>）</rp></ruby>してまいりました。
+<br><br><ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）の<ruby>主<rp>（</rp><rt>しゅ</rt><rp>）</rp>要<rp>（</rp><rt>よう</rt><rp>）</rp>な</ruby>（５）<ruby>メリット<rp>（</rp><rt>Merit</rt><rp>）</rp></ruby>（１）と<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の活用<ruby>アプローチ<rp>（</rp><rt>Approach</rt><rp>）</rp></ruby>（２）としては、以下の通り（とおり）（３）です。
+<br><br>・<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp>差<rp>（</rp><rt>さ</rt><rp>）</rp>異<rp>（</rp><rt>い</rt><rp>）</rp></ruby>（１）の<ruby>排<rp>（</rp><rt>はい</rt><rp>）</rp>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>（<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>トラブル（２）の<ruby>防<rp>（</rp><rt>ぼ</rt><rp>）</rp>止<rp>（</rp><rt>し</rt><rp>）</rp></ruby>）：
+<br>「<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>のローカル（２）PC<rp>（</rp><rt>ピーシー</rt><rp>）</rp>（<ruby>Personal<rp>（</rp><rt>パーソナル</rt><rp>）</rp></ruby> <ruby>Computer<rp>（</rp><rt>コンピューター</rt><rp>）</rp></ruby>）では<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp>いたのに、</ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>や<ruby>他<rp>（</rp><rt>ほ</rt><rp>）</rp>の</ruby><ruby>メンバー<rp>（</rp><rt>Member</rt><rp>）</rp></ruby>（１）の環境で動（うご）かない」という<ruby>問<rp>（</rp><rt>もん</rt><rp>）</rp>題<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>を、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）によって<ruby>完<rp>（</rp><rt>かん</rt><rp>）</rp>全<rp>（</rp><rt>ぜん</rt><rp>）</rp>に</ruby><ruby>解<rp>（</rp><rt>かい</rt><rp>）</rp>決<rp>（</rp><rt>けつ</rt><rp>）</rp></ruby>し、どの環境でも<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp>貫<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>して動作（どうさ）（１）する<ruby>再<rp>（</rp><rt>さい</rt><rp>）</rp>現<rp>（</rp><rt>げん</rt><rp>）</rp>性<rp>（</rp><rt>せい</rt><rp>）</rp>の</ruby>高い（たかい）（２）システム（１）<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>を<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp>ってきました。</ruby>
+<br><br>・<ruby>マイクロサービス<rp>（</rp><rt>Microservices</rt><rp>）</rp></ruby>（４）と<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）<ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp>携<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>：
+<br><ruby>Ｃ＃<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>Ｃ<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Ｓｈａｒｐ<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）（.NET<rp>（</rp><rt>ドットネット</rt><rp>）</rp>（<ruby>Dot<rp>（</rp><rt>ドット</rt><rp>）</rp></ruby> <ruby>Network<rp>（</rp><rt>ネットワーク</rt><rp>）</rp></ruby>））で構築（こうちく）したバックエンド（４）API<rp>（</rp><rt>エーピーアイ</rt><rp>）</rp>（<ruby>Application<rp>（</rp><rt>アプリケーション</rt><rp>）</rp></ruby> <ruby>Programming<rp>（</rp><rt>プログラミング</rt><rp>）</rp></ruby> <ruby>Interface<rp>（</rp><rt>インターフェイス</rt><rp>）</rp></ruby>）や各種（かくしゅ）（１）サービス（１）をコンテナ（１）<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>（１）にパッケージング（４）し、<ruby>ドッカーコンポーズ<rp>（</rp><rt>Docker Compose</rt><rp>）</rp></ruby>（５）を<ruby>用<rp>（</rp><rt>もち</rt><rp>）</rp>いた</ruby>（２）ローカル（２）での<ruby>統<rp>（</rp><rt>とう</rt><rp>）</rp>合<rp>（</rp><rt>ごう</rt><rp>）</rp>テスト<rp>（</rp><rt>Test</rt><rp>）</rp></ruby>（１）から、クラウド（１）上の<ruby>クバネティス<rp>（</rp><rt>Kubernetes</rt><rp>）</rp></ruby>（４）やコンテナ（１）サービス（１）へのスムーズ（１）な<ruby>移<rp>（</rp><rt>い</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>・<ruby>運<rp>（</rp><rt>うん</rt><rp>）</rp>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>を<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>としています。
+<br><br>これにより、開発（かいはつ）からリリース（１）までのリードタイム（３）を<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp>きく</ruby>（１）<ruby>短<rp>（</rp><rt>たん</rt><rp>）</rp>縮<rp>（</rp><rt>しゅく</rt><rp>）</rp></ruby>し、インフラ（１）の管理（かんり）（１）コスト（１）を最適化（さいてきか）するアーキテクチャ（５）を<ruby>提<rp>（</rp><rt>てい</rt><rp>）</rp>供<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>してまいりました。
+<br><br>(关于以 Docker 为首的容器（Container）技术的实务经验。
+<br>是的，从开发环境的统一到生产环境（如 Azure 或 AWS 上的 ECS、AKS 等）的部署，我多年来一直在实务中实践基于 Docker 的容器化。
+<br><br>Docker 的主要优势及我的应用方法如下：
+<br>1. 消除环境差异（防止环境故障）： 通过 Docker 完全解决了“在本地 PC 上能运行，但在生产环境或其他成员环境中无法运行”的问题，构建了在任何环境下都能一致动作、具有高复现性的系统。
+<br>2. 微服务与云端集成： 将用 C# (.NET) 构建的后端 API 及各种服务打包成容器镜像，擅长从使用 Docker Compose 的本地集成测试，到向云端 Kubernetes 或容器服务的平稳迁移与运营。
+通过这些，我一直致力于大幅缩短从开发到发布的前置时间（Lead time），并提供优化基础设施管理成本的架构。)
+</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>Dockerをはじめとするコンテナ技術の実務経験についてですね。
+<br>はい、開発環境の統一から、本番環境（AzureやAWS上のECSやAKSなど）へのデプロイに至るまで、Dockerを活用したコンテナ化を長年実務で実践してまいりました。
+<br><br>Dockerの主なメリットと私の活用アプローチとしては、以下の通りです。
+<br><br>・環境差異の排除（環境トラブルの防止）：
+<br>「自分のローカルPCでは動いたのに、本番環境や他のメンバーの環境で動かない」という問題を、Dockerによって完全に解決し、どの環境でも一貫して動作する再現性の高いシステム構築を行ってきました。
+<br><br>・マイクロサービスとクラウド連携：
+<br>C#(.NET)で構築したバックエンドAPIや各種サービスをコンテナイメージにパッケージングし、Docker Composeを用いたローカルでの統合テストから、クラウド上のKubernetesやコンテナサービスへのスムーズな移行・運用を得意としています。
+<br><br>これにより、開発からリリースまでのリードタイムを大幅に短縮し、インフラの管理コストを最適化するアーキテクチャを提供してまいりました。
+<br><br>(关于以 Docker 为首的容器（Container）技术的实务经验。
+<br>是的，从开发环境的统一到生产环境（如 Azure 或 AWS 上的 ECS、AKS 等）的部署，我多年来一直在实务中实践基于 Docker 的容器化。
+<br><br>Docker 的主要优势及我的应用方法如下：
+<br>1. 消除环境差异（防止环境故障）： 通过 Docker 完全解决了“在本地 PC 上能运行，但在生产环境或其他成员环境中无法运行”的问题，构建了在任何环境下都能一致动作、具有高复现性的系统。
+<br>2. 微服务与云端集成： 将用 C# (.NET) 构建的后端 API 及各种服务打包成容器镜像，擅长从使用 Docker Compose 的本地集成测试，到向云端 Kubernetes 或容器服务的平稳迁移与运营。
+通过这些，我一直致力于大幅缩短从开发到发布的前置时间（Lead time），并提供优化基础设施管理成本的架构。)
+</p>
+
+2.
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>った<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>の<ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>ですね！
+<br>はい、もう<ruby>毎<rp>（</rp><rt>まい</rt><rp>）</rp>日<rp>（</rp><rt>にち</rt><rp>）</rp></ruby>（１）の<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>で<ruby>当<rp>（</rp><rt>あた</rt><rp>）</rp></ruby>たり<ruby>前<rp>（</rp><rt>まえ</rt><rp>）</rp></ruby>のようにガリガリ<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>っています。
+<br>よく<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>している<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）の<ruby>良<rp>（</rp><rt>よ</rt><rp>）</rp>さ</ruby>（１）は、このあたりですね！
+<br>・「<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かない！」という<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby><ruby>トラブル<rp>（</rp><rt>Trouble</rt><rp>）</rp></ruby>（２）の<ruby>消<rp>（</rp><rt>しょう</rt><rp>）</rp>滅<rp>（</rp><rt>めつ</rt><rp>）</rp></ruby>：
+<br>「<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>の<ruby>パソコン<rp>（</rp><rt>Personal Computer</rt><rp>）</rp></ruby>では<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>くのに、<ruby>サーバー<rp>（</rp><rt>Server</rt><rp>）</rp></ruby>（１）だと<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かない」という<ruby>昔<rp>（</rp><rt>むかし</rt><rp>）</rp></ruby>よくあった<ruby>面<rp>（</rp><rt>めん</rt><rp>）</rp>倒<rp>（</rp><rt>どう</rt><rp>）</rp></ruby>な（３）<ruby>エラー<rp>（</rp><rt>Error</rt><rp>）</rp></ruby>（１）が、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>うことで、きれいになくなるのが<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby>に<ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp>高<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>です。どこでも<ruby>全<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby>く<ruby>同<rp>（</rp><rt>おな</rt><rp>）</rp>じ</ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>を<ruby>秒<rp>（</rp><rt>びょう</rt><rp>）</rp></ruby>（１）で<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>れます。
+<br><br>・<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）や<ruby>マイクロサービス<rp>（</rp><rt>Microservices</rt><rp>）</rp></ruby>（４）との<ruby>相<rp>（</rp><rt>あい</rt><rp>）</rp>性<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>バツグン：
+<br><ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）（.NET<rp>（</rp><rt>ドットネット</rt><rp>）</rp>（<ruby>Dot<rp>（</rp><rt>ドット</rt><rp>）</rp></ruby> <ruby>Network<rp>（</rp><rt>ネットワーク</rt><rp>）</rp></ruby>））で<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>った<ruby>バックエンド<rp>（</rp><rt>Backend</rt><rp>）</rp></ruby>（４）の<ruby>アプリ<rp>（</rp><rt>Application</rt><rp>）</rp></ruby>（１）をサクッと<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>（１）にまとめて、<ruby>ドッカーコンポーズ<rp>（</rp><rt>Docker Compose</rt><rp>）</rp></ruby>（５）で<ruby>DB<rp>（</rp><rt>ディービー</rt><rp>）</rp></ruby>（<ruby>Database<rp>（</rp><rt>データベース</rt><rp>）</rp></ruby>）や<ruby>Redis<rp>（</rp><rt>レディス</rt><rp>）</rp></ruby>（<ruby>Remote<rp>（</rp><rt>リモート</rt><rp>）</rp></ruby> <ruby>Dictionary<rp>（</rp><rt>ディクショナリー</rt><rp>）</rp></ruby> <ruby>Server<rp>（</rp><rt>サーバー</rt><rp>）</rp></ruby>）と<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp>緒<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>に<ruby>ローカル<rp>（</rp><rt>Local</rt><rp>）</rp></ruby>（２）でまとめて<ruby>テスト<rp>（</rp><rt>Test</rt><rp>）</rp></ruby>（１）したり、そのまま<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）や<ruby>エーダブリューエス<rp>（</rp><rt>AWS</rt><rp>）</rp></ruby>（<ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>ウェブ<rp>（</rp><rt>Web</rt><rp>）</rp></ruby> <ruby>サービシズ<rp>（</rp><rt>Services</rt><rp>）</rp></ruby>）の<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>へデプロイしたりするのが<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>です。
+<br><br><ruby>インフラ<rp>（</rp><rt>Infrastructure</rt><rp>）</rp></ruby>（１）の<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>や<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp>設<rp>（</rp><rt>せっ</rt><rp>）</rp>定<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>で<ruby>無<rp>（</rp><rt>む</rt><rp>）</rp>駄<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>に<ruby>悩<rp>（</rp><rt>なや</rt><rp>）</rp></ruby>む（２）<ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>を<ruby>減<rp>（</rp><rt>へら</rt><rp>）</rp></ruby>して、<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>の<ruby>スピード<rp>（</rp><rt>Speed</rt><rp>）</rp></ruby>（３）を<ruby>爆<rp>（</rp><rt>ばく</rt><rp>）</rp>速<rp>（</rp><rt>そく</rt><rp>）</rp></ruby>にするための<ruby>マスト<rp>（</rp><rt>Must</rt><rp>）</rp></ruby>（１）な<ruby>相<rp>（</rp><rt>あい</rt><rp>）</rp>棒<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>として、<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp>年<rp>（</rp><rt>ねん</rt><rp>）</rp></ruby><ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>い<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>んでいます。
+<br><br>(关于使用 Docker 的容器开发经验！
+<br>是的，在每天的开发中就像理所当然一样深度使用着。
+我特别深有同感的 Docker 的优点主要有这些：
+<br><br>・消灭“无法运行！”的环境故障：
+<br>像以前经常遇到的“在我的电脑上能跑，但在服务器上跑不起来”这种麻烦错误，用 Docker 可以完美解决，真的是太棒了。无论在哪里都能秒级创建完全相同的环境。
+<br><br>・与云端和微服务的契合度极佳：
+<br>擅长把用 C# (.NET) 编写的后端应用轻快地打包进容器，用 Docker Compose 在本地和数据库、Redis 一起进行统一测试，或者直接部署到 Azure、AWS 的云环境中。
+减少在基础设施搭建 and 环境配置上白白烦恼的时间，作为将开发速度拉满的必备搭档，我已经使用多年了。)
+</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>Dockerを使ったコンテナ開発の経験ですね！
+<br>はい、もう毎日の開発で当たり前のようにガリガリ使っています。
+<br>よく実感しているDockerの良さは、このあたりですね！
+<br>・「動かない！」という環境トラブルの消滅：
+<br>「自分のパソコンでは動くのに、サーバーだと動かない」という昔よくあった面倒なエラーが、Dockerを使うことで綺麗になくなるのが本当に最高です。どこでも全く同じ環境を秒で作れます。
+<br><br>・クラウドやマイクロサービスとの相性抜群：
+<br>C#(.NET)で作ったバックエンドのアプリをサクッとコンテナにまとめて、Docker ComposeでDBやRedisと一緒にローカルでまとめてテストしたり、そのままAzureやAWSのクラウド環境へデプロイしたりするのが得意です。
+<br><br>インフラの構築や環境設定で無駄に悩む時間を減らして、開発のスピードを爆速にするためのマストな相棒として、長年使い込んでいます！
+<br><br>(关于使用 Docker 的容器开发经验！
+<br>是的，在每天的开发中就像理所当然一样深度使用着。
+我特别深有同感的 Docker 的优点主要有这些：
+<br><br>・消灭“无法运行！”的环境故障：
+<br>像以前经常遇到的“在我的电脑上能跑，但在服务器上跑不起来”这种麻烦错误，用 Docker 可以完美解决，真的是太棒了。无论在哪里都能秒级创建完全相同的环境。
+<br><br>・与云端和微服务的契合度极佳：
+<br>擅长把用 C# (.NET) 编写的后端应用轻快地打包进容器，用 Docker Compose 在本地和数据库、Redis 一起进行统一测试，或者直接部署到 Azure、AWS 的云环境中。
+减少在基础设施搭建 and 环境配置上白白烦恼的时间，作为将开发速度拉满的必备搭档，我已经使用多年了。)
+</p>
+
+---
+
+- <ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えば、<ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）で<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>な「Hello World」<ruby>プログラム<rp>（</rp><rt>Program</rt><rp>）</rp></ruby>（４）を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>きました。これを<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）<ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>し、<ruby>ローカル<rp>（</rp><rt>Local</rt><rp>）</rp></ruby>（２）で<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>してから、<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）へデプロイするにはどうすればよいですか。
+<br><br>例えば、C#で「Hello World」プログラムを書きました。これをDocker化し、ローカルで実行してから、Azureへデプロイするにはどうすればよいですか。
+<br>(假如说你用 C# 写了一个 HelloWorld 程序，请问如何把它 Docker 化，然后如何在本地运行，然后如何布署到 Azure 上？)
+
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>C#<rt>シーシャープ</rt></ruby>の<ruby>コンソールアプリ<rt>Console Application</rt></ruby>を<ruby>例<rp>（</rp><rt>れい</rt><rp>）</rp></ruby>に、<ruby>Docker<rt>ドッカー</rt></ruby><ruby>化<rt>か</rt></ruby>から<ruby>ローカル<rt>Local</rt></ruby>での<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>、<ruby>速<rp>（</rp><rt>そく</rt><rp>）</rp></ruby><ruby>度<rp>（</rp><rt>ど</rt><rp>）</rp></ruby>・<ruby>効<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>率<rp>（</rp><rt>りつ</rt><rp>）</rp></ruby>に<ruby>優<rp>（</rp><rt>すぐ</rt><rp>）</rp></ruby>れた<ruby>Azure<rt>アジュール</rt></ruby>への<ruby>デプロイ<rt>Deploy</rt></ruby>に<ruby>至<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>る<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp></ruby>の<ruby>クラウドネイティブ<rt>Cloud Native</rt></ruby>な<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>フロー<rt>Flow</rt></ruby>についてご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>いたします。
+<br><br>1. <ruby>コンテナ<rt>Container</rt></ruby><ruby>化<rt>か</rt></ruby>（<ruby>Docker<rt>ドッカー</rt></ruby><ruby>構築<rp>（</rp><rt>こうちく</rt><rp>）</rp></ruby>）：
+<br>まず、<ruby>C#<rt>シーシャープ</rt></ruby>(<ruby>.NET<rt>ドットネット</rt></ruby>)の<ruby>コード<rt>Code</rt></ruby>を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いた<ruby>後<rp>（</rp><rt>あと</rt><rp>）</rp></ruby>、<ruby>マルチステージビルド<rt>Multi-stage build</rt></ruby>を<ruby>採<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>した<ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>適<rp>（</rp><rt>てき</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>された<ruby>Dockerfile<rt>ドッカーファイル</rt></ruby>を<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>します。<ruby>SDK<rt>エスディーケー</rt></ruby><ruby>イメージ<rt>Image</rt></ruby>で<ruby>コンパイル<rt>Compile</rt></ruby>を<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>い、<ruby>軽<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby>な<ruby>ランタイムイメージ<rt>Runtime Image</rt></ruby>に<ruby>バイナリ<rt>Binary</rt></ruby>を<ruby>コピー<rt>Copy</rt></ruby>することで、<ruby>セキュリティ<rt>Security</rt></ruby>と<ruby>イメージサイズ<rt>Image Size</rt></ruby>の<ruby>軽<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>を<ruby>図<rp>（</rp><rt>はか</rt><rp>）</rp></ruby>ります。
+<br><br>2. <ruby>ローカル<rt>Local</rt></ruby>での<ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>確<rp>（</rp><rt>かく</rt><rp>）</rp></ruby><ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>：
+<br><ruby>docker build<rt>ドッカー ビルド</rt></ruby> <ruby>コマンド<rt>Command</rt></ruby>で<ruby>イメージ<rt>Image</rt></ruby>を<ruby>ビルド<rt>Build</rt></ruby>し、<ruby>docker run<rt>ドッカー ラン</rt></ruby> で<ruby>ローカル<rt>Local</rt></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>にて<ruby>コンテナ<rt>Container</rt></ruby>として<ruby>正<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>常<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>に<ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>することを確認いたします。
+<br><br>3. <ruby>Azure<rt>アジュール</rt></ruby>への<ruby>デプロイ<rt>Deploy</rt></ruby>：
+<br><ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>した<ruby>コンテナイメージ<rt>Container Image</rt></ruby>を、<ruby>Azure<rt>アジュール</rt></ruby>の<ruby>コンテナレジストリ<rt>Container Registry</rt></ruby>（<ruby>ACR<rt>エーシーアール</rt></ruby>: <ruby>Azure Container Registry<rt>アジュール コンテナ レジストリ</rt></ruby>）に<ruby>プッシュ<rt>Push</rt></ruby>します。その<ruby>後<rp>（</rp><rt>あと</rt><rp>）</rp></ruby>、<ruby>Azure App Service<rt>アジュール アップ サービス</rt></ruby> や <ruby>Azure Function App<rt>アジュール ファンクション アプリ</rt></ruby> などの<ruby>プラットフォーム<rt>Platform</rt></ruby>を<ruby>利<rp>（</rp><rt>り</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>して、クラウド<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>へ<ruby>セキュア<rt>Secure</rt></ruby>かつ<ruby>スケーラブル<rt>Scalable</rt></ruby>に<ruby>デプロイ<rt>Deploy</rt></ruby>・<ruby>公<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>を<ruby>完<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>了<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby>させます。
+<br><br>このように、<ruby>ローカル<rt>Local</rt></ruby>での<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>から<ruby>クラウド<rt>Cloud</rt></ruby>の<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>まで、<ruby>コンテナ<rt>Container</rt></ruby>を<ruby>軸<rp>（</rp><rt>じく</rt><rp>）</rp></ruby>にした<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp></ruby><ruby>貫<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>した<ruby>デリバリープロセス<rt>Delivery Process</rt></ruby>を<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>することができます。</p>
+
+
+<p style="padding: 0 2em;"><strong>A: </strong>C#のコンソールアプリを例に、Docker化からローカルでの実行、そしてAzureへのデプロイに至る一連のクラウドネイティブな開発フローについてご説明いたします。
+<br><br>実装およびデプロイのステップは以下の通りです。
+<br><br>1. コンテナ化（Docker構築）：
+<br>まず、C#のコードを書いた後、マルチステージビルドを採用した最適化されたDockerfileを作成します。SDKイメージでコンパイルを行い、軽量なランタイムイメージにバイナリをコピーすることで、セキュリティとイメージサイズの軽量化を図ります。
+<br><br>2. ローカルでの動作確認：
+<br>docker build コマンドでイメージをビルドし、docker run でローカル環境にて コンテナとして正常に動作することを確認します。
+<br><br>3. Azureへのデプロイ：
+<br>作成したコンテナイメージを、Azureのコンテナレジストリ（ACR: Azure Container Registry）にプッシュします。その後、Azure App Service や Azure Container Apps などのプラットフォームを利用して、クラウド上へセキュアかつスケーラブルにデプロイ・公開を完了させます。
+<br><br>このように、ローカルでの開発環境からクラウドの本番環境まで、コンテナを軸にした一貫したデリバリープロセスを構築することができます。
+<br><br>(以 C# 的控制台应用程序为例，关于从 Docker 化、本地运行，一直到部署至 Azure 的一系列云原生开发流程，我来为您做个说明。
+<br><br>实现与部署的步骤如下：
+<br><br>1. 容器化（Docker 构建）：
+<br>首先，在编写完 C# (.NET) 代码后，创建采用多阶段构建（Multi-stage build）且经过优化的 Dockerfile。通过在 SDK（软件开发工具包）镜像中进行编译，并将二进制文件复制到轻量的运行时镜像中，从而兼顾安全性和镜像体积的小型化。
+<br><br>2. 本地动作确认：
+<br>使用 docker build 命令构建镜像，并通过 docker run 确认其作为容器能够在本地环境中正常运行。
+<br><br>3. 部署至 Azure：
+<br>将制作好的容器镜像推送到 Azure 的容器注册表（ACR: Azure Container Registry）中。之后，利用 Azure App Service 或 Azure Container Apps 等平台，安全且具备高扩展性地在云端完成部署与公开。
+<br><br>通过这种方式，从本地的开发环境到云端的生产环境，能够构建起以容器为核心的、前后一致的交付流程。)
+</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>C#<rt>シーシャープ</rt></ruby>(<ruby>.NET<rt>ドットネット</rt></ruby>)の「<ruby>Hello World<rt>ハロー ワールド</rt></ruby>」のような<ruby>シンプル<rt>Simple</rt></ruby>な<ruby>アプリ<rt>Application</rt></ruby>を<ruby>ベース<rt>Base</rt></ruby>に、<ruby>Docker<rt>ドッカー</rt></ruby>で<ruby>コンテナ<rt>Container</rt></ruby>にして、<ruby>ローカル<rt>Local</rt></ruby>で<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かしてから<ruby>Azure<rt>アジュール</rt></ruby>に<ruby>デプロイ<rt>Deploy</rt></ruby>するまでの<ruby>流<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>れですね！
+<br><br>いつも<ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby>で<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>践<rp>（</rp><rt>せん</rt><rp>）</rp></ruby>している<ruby>手<rp>（</rp><rt>て</rt><rp>）</rp></ruby><ruby>順<rp>（</rp><rt>じゅん</rt><rp>）</rp></ruby>は、<ruby>大<rp>（</rp><rt>だい</rt><rp>）</rp></ruby><ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby>こんな<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じです！
+<br><br>まずは <ruby>Dockerfile<rt>ドッカーファイル</rt></ruby> を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いて<ruby>コンテナ化<rt>Container化</rt></ruby>：
+<br><ruby>.NET<rt>ドットネット</rt></ruby>の<ruby>SDK<rt>Software Development Kit</rt></ruby><ruby>イメージ<rt>Image</rt></ruby>で<ruby>ビルド<rt>Build</rt></ruby>して、<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>の<ruby>軽<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby>な<ruby>ランタイムイメージ<rt>Runtime Image</rt></ruby>に<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>果<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>物<rp>（</rp><rt>ぶつ</rt><rp>）</rp></ruby>をまとめる、<ruby>マルチステージビルド<rt>Multi-stage build</rt></ruby>というやり<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>で<ruby>無<rp>（</rp><rt>む</rt><rp>）</rp></ruby><ruby>駄<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>のないきれいなイメージを<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>ります。
+<br><br><ruby>ローカル<rt>Local</rt></ruby>でサクッと<ruby>テスト<rt>Test</rt></ruby>：
+<br><ruby>docker build<rt>ドッカー ビルド</rt></ruby> で<ruby>イメージ<rt>Image</rt></ruby>を<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby><ruby>ったら<rt>ったら</rt></ruby>、<ruby>docker run<rt>ドッカー ラン</rt></ruby> で<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby><ruby>の<rt>の</rt></ruby><ruby>パソコン<rt>Personal Computer</rt></ruby>の<ruby>コンテナ<rt>Container</rt></ruby><ruby>内<rp>（</rp><rt>ない</rt><rp>）</rp></ruby>でちゃんと<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby><ruby>くかを<rt>くかを</rt></ruby><ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby><ruby>の<rt>の</rt></ruby><ruby>目<rp>（</rp><rt>め</rt><rp>）</rp></ruby>でしっかり<ruby>確<rp>（</rp><rt>かく</rt><rp>）</rp></ruby><ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>します。
+<br><br><ruby>Azure<rt>アジュール</rt></ruby>へ<ruby>デプロイ<rt>Deploy</rt></ruby>して<ruby>クラウド<rt>Cloud</rt></ruby>で<ruby>公<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>：
+<br><ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby><ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>たイメージを<rt>たイメージを</rt></ruby><ruby>Azure<rt>アジュール</rt></ruby>の<ruby>レジストリ<rt>Registry</rt></ruby>（<ruby>ACR<rt>エーシーアール</rt></ruby>: <ruby>Azure Container Registry<rt>アジュール コンテナ レジストリ</rt></ruby>）に<ruby>プッシュ<rt>Push</rt></ruby>して、<ruby>Azure App Service<rt>アジュール アップ サービス</rt></ruby> や <ruby>Azure Container Apps<rt>アジュール コンテナ アップス</rt></ruby> などの<ruby>サービス<rt>Service</rt></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby><ruby>えば<rt>えば</rt></ruby>、そのままクラウド<ruby>上<rp>（</rp><rp>じょう</rp></ruby>で<ruby>アプリ<rt>Application</rt></ruby>を<ruby>爆<rp>（</rp><rt>ばく</rt><rp>）</rp></ruby><ruby>速<rp>（</rp><rt>そく</rt><rp>）</rp></ruby>で<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かすことができます！
+<br><br>こんなふうに、<ruby>手<rp>（</rp><rt>て</rt><rp>）</rp></ruby><ruby>元<rp>（</rp><rt>もと</rt><rp>）</rp></ruby>の<ruby>パソコン<rt>Personal Computer</rt></ruby>から<ruby>クラウド<rt>Cloud</rt></ruby>の<ruby>サーバー<rt>Server</rt></ruby>まで、まっすぐ<ruby>スムーズ<rt>Smooth</rt></ruby>につなげるのが<ruby>コンテナ<rt>Container</rt></ruby><ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>の<ruby>醍<rp>（</rp><rt>だい</rt><rp>）</rp></ruby><ruby>醐<rp>（</rp><rt>ご</rt><rp>）</rp></ruby><ruby>味<rp>（</rp><rt>み</rt><rp>）</rp></ruby>だと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>っています！</p>
+
+<p style="padding: 0 2em;"><strong>A: </strong>C#の「Hello World」のようなシンプルなアプリをベースに、Dockerでコンテナにして、ローカルで動かしてからAzureにデプロイするまでの流れですね！
+<br><br>いつも現場で実践している手順は、大体こんな感じです！
+<br><br>まずは Dockerfile を書いてコンテナ化：
+<br>.NETのSDKイメージでビルドして、実行用の軽量なランタイムイメージに成果物をまとめる、マルチステージビルドというやり方で無駄のないきれいなイメージを作ります。
+<br><br>ローカルでサクッとテスト：
+<br>docker build でイメージを作ったら、docker run で自分のパソコンのコンテナ内でちゃんと動くかを自分の目でしっかり確認します。
+<br><br>Azureへデプロイしてクラウドで公開：
+<br>出来たイメージをAzureのレジストリ（ACR: Azure Container Registry）にプッシュして、Azure App Service や Azure Container Apps などのサービスを使えば、そのままクラウド上でアプリを爆速で動かすことができます！
+<br><br>こんなふうに、手元のパソコンからクラウドのサーバーまで、まっすぐスムーズにつなげるのがコンテナ開発の醍醐味だと思っています！</p>
+
+
+<br><br>(以 C# (.NET) 的“Hello World”这样简单的应用程序为基础，关于用 Docker 做成容器、在本地运行、然后部署到 Azure 的整个流程！
+<br><br>我平时在现场实际操作的步骤，大致是这样的：
+<br><br>首先写个 Dockerfile 进行容器化：
+<br>用 .NET 的 SDK（软件开发工具包）镜像进行构建，然后把成果物打包到用于运行的轻量运行时镜像里。采用这种叫做多阶段构建（Multi-stage build）的方法，可以做出干净且没有冗余的镜像。
+<br><br>在本地轻快地测试：
+<br>用 docker build 做完镜像后，通过 docker run 亲眼确认它能在自己电脑的容器里面好好跑起来。
+<br><br>部署到 Azure 并在云端公开：
+<br>把做好的镜像推送到 Azure 的注册表（ACR: Azure Container Registry）里，然后使用 Azure App Service 或 Azure Container Apps 这类服务，就能直接让应用在云端飞速运转起来！
+<br><br>像这样，从手头的电脑到云端的服务器，能够顺畅无阻地连通起来，正是容器开发的妙处所在！)
+</p>
 
 ---
 
@@ -755,152 +900,6 @@ LINQ（Language Integrated Query / 統合言語クエリ）は、C#などの.NET
 <br>いちいちfor文やif文をぐるぐる回さなくても、一行でスマートに書けるので、コードがすっきりしてめちゃくちゃ便利ですよね！
 <br><br>(是的，当然经常用！使用 LINQ，可以像写 SQL 一样，把从列表或数组等数据中查找符合条件或排序等处理写得非常简单。
 <br>不需要特意去写一圈又一圈的 for 循环或 if 判断，一行就能优雅搞定，让代码变得很干净，真的超级方便！)
-</p>
-
-#### <span id="arch_docker">ドッカー</span>
----
-[目次へ](#toc)
-
-- <ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>い（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>の<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>（１）で、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）っていう<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）も<ruby>習<rp>（</rp><rt>しゅう</rt><rp>）</rp>熟<rp>（</rp><rt>じゅく</rt><rp>）</rp></ruby>ですよね。<ruby>少<rp>（</rp><rt>すこ</rt><rp>）</rp></ruby>し（２）だけ<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>していただけないでしょうか。
-<br><br>長い開発経験の中で、ドッカーっていう技術も習熟ですよね。少しだけ説明していただけないでしょうか。
-<br>(在长期的开发经验中，Docker 这项技术您也很熟练吧？能否稍微向我说明一下呢？)
-
-1.
-<p style="padding: 0 2em;"><strong>A: </strong><ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）をはじめとする<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>（１）<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）の<ruby>実<rp>（</rp><rt>じつ</rt><rp>）</rp>務<rp>（</rp><rt>む</rt><rp>）</rp>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>についてですね。
-<br>はい、<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>の<ruby>統<rp>（</rp><rt>とう</rt><rp>）</rp>一<rp>（</rp><rt>いつ</rt><rp>）</rp></ruby>から、<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>（<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）や<ruby>エーダブリューエス<rp>（</rp><rt>AWS</rt><rp>）</rp></ruby>（<ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>ウェブ<rp>（</rp><rt>Web</rt><rp>）</rp></ruby> <ruby>サービシズ<rp>（</rp><rt>Services</rt><rp>）</rp></ruby>）<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>の<ruby>イーシーエス<rp>（</rp><rt>ECS</rt><rp>）</rp></ruby>（<ruby>エラスティック<rp>（</rp><rt>Elastic</rt><rp>）</rp></ruby> <ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）や<ruby>エーケーエス<rp>（</rp><rt>AKS</rt><rp>）</rp></ruby>（<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby> <ruby>クバネティス<rp>（</rp><rt>Kubernetes</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）など）へのデプロイに<ruby>至<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>るまで、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）を<ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>したコンテナ（１）<ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>を<ruby>長<rp>（</rp><rt>ちょう</rt><rp>）</rp>年<rp>（</rp><rt>ねん</rt><rp>）</rp></ruby>実務（１）で<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>践<rp>（</rp><rt>せん</rt><rp>）</rp></ruby>してまいりました。
-<br><br><ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）の<ruby>主<rp>（</rp><rt>しゅ</rt><rp>）</rp>要<rp>（</rp><rt>よう</rt><rp>）</rp>な</ruby>（５）<ruby>メリット<rp>（</rp><rt>Merit</rt><rp>）</rp></ruby>（１）と<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の活用<ruby>アプローチ<rp>（</rp><rt>Approach</rt><rp>）</rp></ruby>（２）としては、以下の通り（とおり）（３）です。
-<br><br>・<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp>差<rp>（</rp><rt>さ</rt><rp>）</rp>異<rp>（</rp><rt>い</rt><rp>）</rp></ruby>（１）の<ruby>排<rp>（</rp><rt>はい</rt><rp>）</rp>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>（<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>トラブル（２）の<ruby>防<rp>（</rp><rt>ぼ</rt><rp>）</rp>止<rp>（</rp><rt>し</rt><rp>）</rp></ruby>）：
-<br>「<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>のローカル（２）PC<rp>（</rp><rt>ピーシー</rt><rp>）</rp>（<ruby>Personal<rp>（</rp><rt>パーソナル</rt><rp>）</rp></ruby> <ruby>Computer<rp>（</rp><rt>コンピューター</rt><rp>）</rp></ruby>）では<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp>いたのに、</ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>や<ruby>他<rp>（</rp><rt>ほ</rt><rp>）</rp>の</ruby><ruby>メンバー<rp>（</rp><rt>Member</rt><rp>）</rp></ruby>（１）の環境で動（うご）かない」という<ruby>問<rp>（</rp><rt>もん</rt><rp>）</rp>題<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>を、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）によって<ruby>完<rp>（</rp><rt>かん</rt><rp>）</rp>全<rp>（</rp><rt>ぜん</rt><rp>）</rp>に</ruby><ruby>解<rp>（</rp><rt>かい</rt><rp>）</rp>決<rp>（</rp><rt>けつ</rt><rp>）</rp></ruby>し、どの環境でも<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp>貫<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>して動作（どうさ）（１）する<ruby>再<rp>（</rp><rt>さい</rt><rp>）</rp>現<rp>（</rp><rt>げん</rt><rp>）</rp>性<rp>（</rp><rt>せい</rt><rp>）</rp>の</ruby>高い（たかい）（２）システム（１）<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>を<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp>ってきました。</ruby>
-<br><br>・<ruby>マイクロサービス<rp>（</rp><rt>Microservices</rt><rp>）</rp></ruby>（４）と<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）<ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp>携<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>：
-<br><ruby>Ｃ＃<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>Ｃ<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Ｓｈａｒｐ<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）（.NET<rp>（</rp><rt>ドットネット</rt><rp>）</rp>（<ruby>Dot<rp>（</rp><rt>ドット</rt><rp>）</rp></ruby> <ruby>Network<rp>（</rp><rt>ネットワーク</rt><rp>）</rp></ruby>））で構築（こうちく）したバックエンド（４）API<rp>（</rp><rt>エーピーアイ</rt><rp>）</rp>（<ruby>Application<rp>（</rp><rt>アプリケーション</rt><rp>）</rp></ruby> <ruby>Programming<rp>（</rp><rt>プログラミング</rt><rp>）</rp></ruby> <ruby>Interface<rp>（</rp><rt>インターフェイス</rt><rp>）</rp></ruby>）や各種（かくしゅ）（１）サービス（１）をコンテナ（１）<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>（１）にパッケージング（４）し、<ruby>ドッカーコンポーズ<rp>（</rp><rt>Docker Compose</rt><rp>）</rp></ruby>（５）を<ruby>用<rp>（</rp><rt>もち</rt><rp>）</rp>いた</ruby>（２）ローカル（２）での<ruby>統<rp>（</rp><rt>とう</rt><rp>）</rp>合<rp>（</rp><rt>ごう</rt><rp>）</rp>テスト<rp>（</rp><rt>Test</rt><rp>）</rp></ruby>（１）から、クラウド（１）上の<ruby>クバネティス<rp>（</rp><rt>Kubernetes</rt><rp>）</rp></ruby>（４）やコンテナ（１）サービス（１）へのスムーズ（１）な<ruby>移<rp>（</rp><rt>い</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>・<ruby>運<rp>（</rp><rt>うん</rt><rp>）</rp>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>を<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>としています。
-<br><br>これにより、開発（かいはつ）からリリース（１）までのリードタイム（３）を<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp>きく</ruby>（１）<ruby>短<rp>（</rp><rt>たん</rt><rp>）</rp>縮<rp>（</rp><rt>しゅく</rt><rp>）</rp></ruby>し、インフラ（１）の管理（かんり）（１）コスト（１）を最適化（さいてきか）するアーキテクチャ（５）を<ruby>提<rp>（</rp><rt>てい</rt><rp>）</rp>供<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>してまいりました。
-<br><br>(关于以 Docker 为首的容器（Container）技术的实务经验。
-<br>是的，从开发环境的统一到生产环境（如 Azure 或 AWS 上的 ECS、AKS 等）的部署，我多年来一直在实务中实践基于 Docker 的容器化。
-<br><br>Docker 的主要优势及我的应用方法如下：
-<br>1. 消除环境差异（防止环境故障）： 通过 Docker 完全解决了“在本地 PC 上能运行，但在生产环境或其他成员环境中无法运行”的问题，构建了在任何环境下都能一致动作、具有高复现性的系统。
-<br>2. 微服务与云端集成： 将用 C# (.NET) 构建的后端 API 及各种服务打包成容器镜像，擅长从使用 Docker Compose 的本地集成测试，到向云端 Kubernetes 或容器服务的平稳迁移与运营。
-通过这些，我一直致力于大幅缩短从开发到发布的前置时间（Lead time），并提供优化基础设施管理成本的架构。)
-</p>
-
-<p style="padding: 0 2em;"><strong>A: </strong>Dockerをはじめとするコンテナ技術の実務経験についてですね。
-<br>はい、開発環境の統一から、本番環境（AzureやAWS上のECSやAKSなど）へのデプロイに至るまで、Dockerを活用したコンテナ化を長年実務で実践してまいりました。
-<br><br>Dockerの主なメリットと私の活用アプローチとしては、以下の通りです。
-<br><br>・環境差異の排除（環境トラブルの防止）：
-<br>「自分のローカルPCでは動いたのに、本番環境や他のメンバーの環境で動かない」という問題を、Dockerによって完全に解決し、どの環境でも一貫して動作する再現性の高いシステム構築を行ってきました。
-<br><br>・マイクロサービスとクラウド連携：
-<br>C#(.NET)で構築したバックエンドAPIや各種サービスをコンテナイメージにパッケージングし、Docker Composeを用いたローカルでの統合テストから、クラウド上のKubernetesやコンテナサービスへのスムーズな移行・運用を得意としています。
-<br><br>これにより、開発からリリースまでのリードタイムを大幅に短縮し、インフラの管理コストを最適化するアーキテクチャを提供してまいりました。
-<br><br>(关于以 Docker 为首的容器（Container）技术的实务经验。
-<br>是的，从开发环境的统一到生产环境（如 Azure 或 AWS 上的 ECS、AKS 等）的部署，我多年来一直在实务中实践基于 Docker 的容器化。
-<br><br>Docker 的主要优势及我的应用方法如下：
-<br>1. 消除环境差异（防止环境故障）： 通过 Docker 完全解决了“在本地 PC 上能运行，但在生产环境或其他成员环境中无法运行”的问题，构建了在任何环境下都能一致动作、具有高复现性的系统。
-<br>2. 微服务与云端集成： 将用 C# (.NET) 构建的后端 API 及各种服务打包成容器镜像，擅长从使用 Docker Compose 的本地集成测试，到向云端 Kubernetes 或容器服务的平稳迁移与运营。
-通过这些，我一直致力于大幅缩短从开发到发布的前置时间（Lead time），并提供优化基础设施管理成本的架构。)
-</p>
-
-2.
-<p style="padding: 0 2em;"><strong>A: </strong><ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>った<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>の<ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>ですね！
-<br>はい、もう<ruby>毎<rp>（</rp><rt>まい</rt><rp>）</rp>日<rp>（</rp><rt>にち</rt><rp>）</rp></ruby>（１）の<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>で<ruby>当<rp>（</rp><rt>あた</rt><rp>）</rp></ruby>たり<ruby>前<rp>（</rp><rt>まえ</rt><rp>）</rp></ruby>のようにガリガリ<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>っています。
-<br>よく<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>している<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）の<ruby>良<rp>（</rp><rt>よ</rt><rp>）</rp>さ</ruby>（１）は、このあたりですね！
-<br>・「<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かない！」という<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby><ruby>トラブル<rp>（</rp><rt>Trouble</rt><rp>）</rp></ruby>（２）の<ruby>消<rp>（</rp><rt>しょう</rt><rp>）</rp>滅<rp>（</rp><rt>めつ</rt><rp>）</rp></ruby>：
-<br>「<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>の<ruby>パソコン<rp>（</rp><rt>Personal Computer</rt><rp>）</rp></ruby>では<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>くのに、<ruby>サーバー<rp>（</rp><rt>Server</rt><rp>）</rp></ruby>（１）だと<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かない」という<ruby>昔<rp>（</rp><rt>むかし</rt><rp>）</rp></ruby>よくあった<ruby>面<rp>（</rp><rt>めん</rt><rp>）</rp>倒<rp>（</rp><rt>どう</rt><rp>）</rp></ruby>な（３）<ruby>エラー<rp>（</rp><rt>Error</rt><rp>）</rp></ruby>（１）が、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>うことで、きれいになくなるのが<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby>に<ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp>高<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>です。どこでも<ruby>全<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby>く<ruby>同<rp>（</rp><rt>おな</rt><rp>）</rp>じ</ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>を<ruby>秒<rp>（</rp><rt>びょう</rt><rp>）</rp></ruby>（１）で<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>れます。
-<br><br>・<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）や<ruby>マイクロサービス<rp>（</rp><rt>Microservices</rt><rp>）</rp></ruby>（４）との<ruby>相<rp>（</rp><rt>あい</rt><rp>）</rp>性<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>バツグン：
-<br><ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）（.NET<rp>（</rp><rt>ドットネット</rt><rp>）</rp>（<ruby>Dot<rp>（</rp><rt>ドット</rt><rp>）</rp></ruby> <ruby>Network<rp>（</rp><rt>ネットワーク</rt><rp>）</rp></ruby>））で<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>った<ruby>バックエンド<rp>（</rp><rt>Backend</rt><rp>）</rp></ruby>（４）の<ruby>アプリ<rp>（</rp><rt>Application</rt><rp>）</rp></ruby>（１）をサクッと<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>（１）にまとめて、<ruby>ドッカーコンポーズ<rp>（</rp><rt>Docker Compose</rt><rp>）</rp></ruby>（５）で<ruby>DB<rp>（</rp><rt>ディービー</rt><rp>）</rp></ruby>（<ruby>Database<rp>（</rp><rt>データベース</rt><rp>）</rp></ruby>）や<ruby>Redis<rp>（</rp><rt>レディス</rt><rp>）</rp></ruby>（<ruby>Remote<rp>（</rp><rt>リモート</rt><rp>）</rp></ruby> <ruby>Dictionary<rp>（</rp><rt>ディクショナリー</rt><rp>）</rp></ruby> <ruby>Server<rp>（</rp><rt>サーバー</rt><rp>）</rp></ruby>）と<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp>緒<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>に<ruby>ローカル<rp>（</rp><rt>Local</rt><rp>）</rp></ruby>（２）でまとめて<ruby>テスト<rp>（</rp><rt>Test</rt><rp>）</rp></ruby>（１）したり、そのまま<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）や<ruby>エーダブリューエス<rp>（</rp><rt>AWS</rt><rp>）</rp></ruby>（<ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>ウェブ<rp>（</rp><rt>Web</rt><rp>）</rp></ruby> <ruby>サービシズ<rp>（</rp><rt>Services</rt><rp>）</rp></ruby>）の<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>へデプロイしたりするのが<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>です。
-<br><br><ruby>インフラ<rp>（</rp><rt>Infrastructure</rt><rp>）</rp></ruby>（１）の<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>や<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp>設<rp>（</rp><rt>せっ</rt><rp>）</rp>定<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>で<ruby>無<rp>（</rp><rt>む</rt><rp>）</rp>駄<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>に<ruby>悩<rp>（</rp><rt>なや</rt><rp>）</rp></ruby>む（２）<ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>を<ruby>減<rp>（</rp><rt>へら</rt><rp>）</rp></ruby>して、<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>の<ruby>スピード<rp>（</rp><rt>Speed</rt><rp>）</rp></ruby>（３）を<ruby>爆<rp>（</rp><rt>ばく</rt><rp>）</rp>速<rp>（</rp><rt>そく</rt><rp>）</rp></ruby>にするための<ruby>マスト<rp>（</rp><rt>Must</rt><rp>）</rp></ruby>（１）な<ruby>相<rp>（</rp><rt>あい</rt><rp>）</rp>棒<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>として、<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp>年<rp>（</rp><rt>ねん</rt><rp>）</rp></ruby><ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>い<ruby>込<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>んでいます。
-<br><br>(关于使用 Docker 的容器开发经验！
-<br>是的，在每天的开发中就像理所当然一样深度使用着。
-我特别深有同感的 Docker 的优点主要有这些：
-<br><br>・消灭“无法运行！”的环境故障：
-<br>像以前经常遇到的“在我的电脑上能跑，但在服务器上跑不起来”这种麻烦错误，用 Docker 可以完美解决，真的是太棒了。无论在哪里都能秒级创建完全相同的环境。
-<br><br>・与云端和微服务的契合度极佳：
-<br>擅长把用 C# (.NET) 编写的后端应用轻快地打包进容器，用 Docker Compose 在本地和数据库、Redis 一起进行统一测试，或者直接部署到 Azure、AWS 的云环境中。
-减少在基础设施搭建 and 环境配置上白白烦恼的时间，作为将开发速度拉满的必备搭档，我已经使用多年了。)
-</p>
-
-<p style="padding: 0 2em;"><strong>A: </strong>Dockerを使ったコンテナ開発の経験ですね！
-<br>はい、もう毎日の開発で当たり前のようにガリガリ使っています。
-<br>よく実感しているDockerの良さは、このあたりですね！
-<br>・「動かない！」という環境トラブルの消滅：
-<br>「自分のパソコンでは動くのに、サーバーだと動かない」という昔よくあった面倒なエラーが、Dockerを使うことで綺麗になくなるのが本当に最高です。どこでも全く同じ環境を秒で作れます。
-<br><br>・クラウドやマイクロサービスとの相性抜群：
-<br>C#(.NET)で作ったバックエンドのアプリをサクッとコンテナにまとめて、Docker ComposeでDBやRedisと一緒にローカルでまとめてテストしたり、そのままAzureやAWSのクラウド環境へデプロイしたりするのが得意です。
-<br><br>インフラの構築や環境設定で無駄に悩む時間を減らして、開発のスピードを爆速にするためのマストな相棒として、長年使い込んでいます！
-<br><br>(关于使用 Docker 的容器开发经验！
-<br>是的，在每天的开发中就像理所当然一样深度使用着。
-我特别深有同感的 Docker 的优点主要有这些：
-<br><br>・消灭“无法运行！”的环境故障：
-<br>像以前经常遇到的“在我的电脑上能跑，但在服务器上跑不起来”这种麻烦错误，用 Docker 可以完美解决，真的是太棒了。无论在哪里都能秒级创建完全相同的环境。
-<br><br>・与云端和微服务的契合度极佳：
-<br>擅长把用 C# (.NET) 编写的后端应用轻快地打包进容器，用 Docker Compose 在本地和数据库、Redis 一起进行统一测试，或者直接部署到 Azure、AWS 的云环境中。
-减少在基础设施搭建 and 环境配置上白白烦恼的时间，作为将开发速度拉满的必备搭档，我已经使用多年了。)
-</p>
-
----
-
-- <ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えば、<ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）で<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>な「Hello World」<ruby>プログラム<rp>（</rp><rt>Program</rt><rp>）</rp></ruby>（４）を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>きました。これを<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）<ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>し、<ruby>ローカル<rp>（</rp><rt>Local</rt><rp>）</rp></ruby>（２）で<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>してから、<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）へデプロイするにはどうすればよいですか。
-<br><br>例えば、C#で「Hello World」プログラムを書きました。これをDocker化し、ローカルで実行してから、Azureへデプロイするにはどうすればよいですか。
-<br>(假如说你用 C# 写了一个 HelloWorld 程序，请问如何把它 Docker 化，然后如何在本地运行，然后如何布署到 Azure 上？)
-
-<p style="padding: 0 2em;"><strong>A: </strong><ruby>C#<rt>シーシャープ</rt></ruby>の<ruby>コンソールアプリ<rt>Console Application</rt></ruby>を<ruby>例<rp>（</rp><rt>れい</rt><rp>）</rp></ruby>に、<ruby>Docker<rt>ドッカー</rt></ruby><ruby>化<rt>か</rt></ruby>から<ruby>ローカル<rt>Local</rt></ruby>での<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>、<ruby>速<rp>（</rp><rt>そく</rt><rp>）</rp></ruby><ruby>度<rp>（</rp><rt>ど</rt><rp>）</rp></ruby>・<ruby>効<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>率<rp>（</rp><rt>りつ</rt><rp>）</rp></ruby>に<ruby>優<rp>（</rp><rt>すぐ</rt><rp>）</rp></ruby>れた<ruby>Azure<rt>アジュール</rt></ruby>への<ruby>デプロイ<rt>Deploy</rt></ruby>に<ruby>至<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>る<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp></ruby>の<ruby>クラウドネイティブ<rt>Cloud Native</rt></ruby>な<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>フロー<rt>Flow</rt></ruby>についてご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>いたします。
-<br><br>1. <ruby>コンテナ<rt>Container</rt></ruby><ruby>化<rt>か</rt></ruby>（<ruby>Docker<rt>ドッカー</rt></ruby><ruby>構築<rp>（</rp><rt>こうちく</rt><rp>）</rp></ruby>）：
-<br>まず、<ruby>C#<rt>シーシャープ</rt></ruby>(<ruby>.NET<rt>ドットネット</rt></ruby>)の<ruby>コード<rt>Code</rt></ruby>を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いた<ruby>後<rp>（</rp><rt>あと</rt><rp>）</rp></ruby>、<ruby>マルチステージビルド<rt>Multi-stage build</rt></ruby>を<ruby>採<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>した<ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>適<rp>（</rp><rt>てき</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>された<ruby>Dockerfile<rt>ドッカーファイル</rt></ruby>を<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>します。<ruby>SDK<rt>エスディーケー</rt></ruby><ruby>イメージ<rt>Image</rt></ruby>で<ruby>コンパイル<rt>Compile</rt></ruby>を<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>い、<ruby>軽<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby>な<ruby>ランタイムイメージ<rt>Runtime Image</rt></ruby>に<ruby>バイナリ<rt>Binary</rt></ruby>を<ruby>コピー<rt>Copy</rt></ruby>することで、<ruby>セキュリティ<rt>Security</rt></ruby>と<ruby>イメージサイズ<rt>Image Size</rt></ruby>の<ruby>軽<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>を<ruby>図<rp>（</rp><rt>はか</rt><rp>）</rp></ruby>ります。
-<br><br>2. <ruby>ローカル<rt>Local</rt></ruby>での<ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>確<rp>（</rp><rt>かく</rt><rp>）</rp></ruby><ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>：
-<br><ruby>docker build<rt>ドッカー ビルド</rt></ruby> <ruby>コマンド<rt>Command</rt></ruby>で<ruby>イメージ<rt>Image</rt></ruby>を<ruby>ビルド<rt>Build</rt></ruby>し、<ruby>docker run<rt>ドッカー ラン</rt></ruby> で<ruby>ローカル<rt>Local</rt></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>にて<ruby>コンテナ<rt>Container</rt></ruby>として<ruby>正<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>常<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>に<ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>することを確認いたします。
-<br><br>3. <ruby>Azure<rt>アジュール</rt></ruby>への<ruby>デプロイ<rt>Deploy</rt></ruby>：
-<br><ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>した<ruby>コンテナイメージ<rt>Container Image</rt></ruby>を、<ruby>Azure<rt>アジュール</rt></ruby>の<ruby>コンテナレジストリ<rt>Container Registry</rt></ruby>（<ruby>ACR<rt>エーシーアール</rt></ruby>: <ruby>Azure Container Registry<rt>アジュール コンテナ レジストリ</rt></ruby>）に<ruby>プッシュ<rt>Push</rt></ruby>します。その<ruby>後<rp>（</rp><rt>あと</rt><rp>）</rp></ruby>、<ruby>Azure App Service<rt>アジュール アップ サービス</rt></ruby> や <ruby>Azure Function App<rt>アジュール ファンクション アプリ</rt></ruby> などの<ruby>プラットフォーム<rt>Platform</rt></ruby>を<ruby>利<rp>（</rp><rt>り</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>して、クラウド<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>へ<ruby>セキュア<rt>Secure</rt></ruby>かつ<ruby>スケーラブル<rt>Scalable</rt></ruby>に<ruby>デプロイ<rt>Deploy</rt></ruby>・<ruby>公<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>を<ruby>完<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>了<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby>させます。
-<br><br>このように、<ruby>ローカル<rt>Local</rt></ruby>での<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>から<ruby>クラウド<rt>Cloud</rt></ruby>の<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>まで、<ruby>コンテナ<rt>Container</rt></ruby>を<ruby>軸<rp>（</rp><rt>じく</rt><rp>）</rp></ruby>にした<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp></ruby><ruby>貫<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>した<ruby>デリバリープロセス<rt>Delivery Process</rt></ruby>を<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>することができます。</p>
-
-
-<p style="padding: 0 2em;"><strong>A: </strong>C#のコンソールアプリを例に、Docker化からローカルでの実行、そしてAzureへのデプロイに至る一連のクラウドネイティブな開発フローについてご説明いたします。
-<br><br>実装およびデプロイのステップは以下の通りです。
-<br><br>1. コンテナ化（Docker構築）：
-<br>まず、C#のコードを書いた後、マルチステージビルドを採用した最適化されたDockerfileを作成します。SDKイメージでコンパイルを行い、軽量なランタイムイメージにバイナリをコピーすることで、セキュリティとイメージサイズの軽量化を図ります。
-<br><br>2. ローカルでの動作確認：
-<br>docker build コマンドでイメージをビルドし、docker run でローカル環境にて コンテナとして正常に動作することを確認します。
-<br><br>3. Azureへのデプロイ：
-<br>作成したコンテナイメージを、Azureのコンテナレジストリ（ACR: Azure Container Registry）にプッシュします。その後、Azure App Service や Azure Container Apps などのプラットフォームを利用して、クラウド上へセキュアかつスケーラブルにデプロイ・公開を完了させます。
-<br><br>このように、ローカルでの開発環境からクラウドの本番環境まで、コンテナを軸にした一貫したデリバリープロセスを構築することができます。
-<br><br>(以 C# 的控制台应用程序为例，关于从 Docker 化、本地运行，一直到部署至 Azure 的一系列云原生开发流程，我来为您做个说明。
-<br><br>实现与部署的步骤如下：
-<br><br>1. 容器化（Docker 构建）：
-<br>首先，在编写完 C# (.NET) 代码后，创建采用多阶段构建（Multi-stage build）且经过优化的 Dockerfile。通过在 SDK（软件开发工具包）镜像中进行编译，并将二进制文件复制到轻量的运行时镜像中，从而兼顾安全性和镜像体积的小型化。
-<br><br>2. 本地动作确认：
-<br>使用 docker build 命令构建镜像，并通过 docker run 确认其作为容器能够在本地环境中正常运行。
-<br><br>3. 部署至 Azure：
-<br>将制作好的容器镜像推送到 Azure 的容器注册表（ACR: Azure Container Registry）中。之后，利用 Azure App Service 或 Azure Container Apps 等平台，安全且具备高扩展性地在云端完成部署与公开。
-<br><br>通过这种方式，从本地的开发环境到云端的生产环境，能够构建起以容器为核心的、前后一致的交付流程。)
-</p>
-
-<p style="padding: 0 2em;"><strong>A: </strong><ruby>C#<rt>シーシャープ</rt></ruby>(<ruby>.NET<rt>ドットネット</rt></ruby>)の「<ruby>Hello World<rt>ハロー ワールド</rt></ruby>」のような<ruby>シンプル<rt>Simple</rt></ruby>な<ruby>アプリ<rt>Application</rt></ruby>を<ruby>ベース<rt>Base</rt></ruby>に、<ruby>Docker<rt>ドッカー</rt></ruby>で<ruby>コンテナ<rt>Container</rt></ruby>にして、<ruby>ローカル<rt>Local</rt></ruby>で<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かしてから<ruby>Azure<rt>アジュール</rt></ruby>に<ruby>デプロイ<rt>Deploy</rt></ruby>するまでの<ruby>流<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>れですね！
-<br><br>いつも<ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby>で<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>践<rp>（</rp><rt>せん</rt><rp>）</rp></ruby>している<ruby>手<rp>（</rp><rt>て</rt><rp>）</rp></ruby><ruby>順<rp>（</rp><rt>じゅん</rt><rp>）</rp></ruby>は、<ruby>大<rp>（</rp><rt>だい</rt><rp>）</rp></ruby><ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby>こんな<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じです！
-<br><br>まずは <ruby>Dockerfile<rt>ドッカーファイル</rt></ruby> を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>いて<ruby>コンテナ化<rt>Container化</rt></ruby>：
-<br><ruby>.NET<rt>ドットネット</rt></ruby>の<ruby>SDK<rt>Software Development Kit</rt></ruby><ruby>イメージ<rt>Image</rt></ruby>で<ruby>ビルド<rt>Build</rt></ruby>して、<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>の<ruby>軽<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>量<rp>（</rp><rt>りょう</rt><rp>）</rp></ruby>な<ruby>ランタイムイメージ<rt>Runtime Image</rt></ruby>に<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>果<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>物<rp>（</rp><rt>ぶつ</rt><rp>）</rp></ruby>をまとめる、<ruby>マルチステージビルド<rt>Multi-stage build</rt></ruby>というやり<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>で<ruby>無<rp>（</rp><rt>む</rt><rp>）</rp></ruby><ruby>駄<rp>（</rp><rt>だ</rt><rp>）</rp></ruby>のないきれいなイメージを<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>ります。
-<br><br><ruby>ローカル<rt>Local</rt></ruby>でサクッと<ruby>テスト<rt>Test</rt></ruby>：
-<br><ruby>docker build<rt>ドッカー ビルド</rt></ruby> で<ruby>イメージ<rt>Image</rt></ruby>を<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby><ruby>ったら<rt>ったら</rt></ruby>、<ruby>docker run<rt>ドッカー ラン</rt></ruby> で<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby><ruby>の<rt>の</rt></ruby><ruby>パソコン<rt>Personal Computer</rt></ruby>の<ruby>コンテナ<rt>Container</rt></ruby><ruby>内<rp>（</rp><rt>ない</rt><rp>）</rp></ruby>でちゃんと<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby><ruby>くかを<rt>くかを</rt></ruby><ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby><ruby>の<rt>の</rt></ruby><ruby>目<rp>（</rp><rt>め</rt><rp>）</rp></ruby>でしっかり<ruby>確<rp>（</rp><rt>かく</rt><rp>）</rp></ruby><ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>します。
-<br><br><ruby>Azure<rt>アジュール</rt></ruby>へ<ruby>デプロイ<rt>Deploy</rt></ruby>して<ruby>クラウド<rt>Cloud</rt></ruby>で<ruby>公<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>：
-<br><ruby>出<rp>（</rp><rt>で</rt><rp>）</rp></ruby><ruby>来<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>たイメージを<rt>たイメージを</rt></ruby><ruby>Azure<rt>アジュール</rt></ruby>の<ruby>レジストリ<rt>Registry</rt></ruby>（<ruby>ACR<rt>エーシーアール</rt></ruby>: <ruby>Azure Container Registry<rt>アジュール コンテナ レジストリ</rt></ruby>）に<ruby>プッシュ<rt>Push</rt></ruby>して、<ruby>Azure App Service<rt>アジュール アップ サービス</rt></ruby> や <ruby>Azure Container Apps<rt>アジュール コンテナ アップス</rt></ruby> などの<ruby>サービス<rt>Service</rt></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby><ruby>えば<rt>えば</rt></ruby>、そのままクラウド<ruby>上<rp>（</rp><rp>じょう</rp></ruby>で<ruby>アプリ<rt>Application</rt></ruby>を<ruby>爆<rp>（</rp><rt>ばく</rt><rp>）</rp></ruby><ruby>速<rp>（</rp><rt>そく</rt><rp>）</rp></ruby>で<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp></ruby>かすことができます！
-<br><br>こんなふうに、<ruby>手<rp>（</rp><rt>て</rt><rp>）</rp></ruby><ruby>元<rp>（</rp><rt>もと</rt><rp>）</rp></ruby>の<ruby>パソコン<rt>Personal Computer</rt></ruby>から<ruby>クラウド<rt>Cloud</rt></ruby>の<ruby>サーバー<rt>Server</rt></ruby>まで、まっすぐ<ruby>スムーズ<rt>Smooth</rt></ruby>につなげるのが<ruby>コンテナ<rt>Container</rt></ruby><ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>の<ruby>醍<rp>（</rp><rt>だい</rt><rp>）</rp></ruby><ruby>醐<rp>（</rp><rt>ご</rt><rp>）</rp></ruby><ruby>味<rp>（</rp><rt>み</rt><rp>）</rp></ruby>だと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>っています！</p>
-
-<p style="padding: 0 2em;"><strong>A: </strong>C#の「Hello World」のようなシンプルなアプリをベースに、Dockerでコンテナにして、ローカルで動かしてからAzureにデプロイするまでの流れですね！
-<br><br>いつも現場で実践している手順は、大体こんな感じです！
-<br><br>まずは Dockerfile を書いてコンテナ化：
-<br>.NETのSDKイメージでビルドして、実行用の軽量なランタイムイメージに成果物をまとめる、マルチステージビルドというやり方で無駄のないきれいなイメージを作ります。
-<br><br>ローカルでサクッとテスト：
-<br>docker build でイメージを作ったら、docker run で自分のパソコンのコンテナ内でちゃんと動くかを自分の目でしっかり確認します。
-<br><br>Azureへデプロイしてクラウドで公開：
-<br>出来たイメージをAzureのレジストリ（ACR: Azure Container Registry）にプッシュして、Azure App Service や Azure Container Apps などのサービスを使えば、そのままクラウド上でアプリを爆速で動かすことができます！
-<br><br>こんなふうに、手元のパソコンからクラウドのサーバーまで、まっすぐスムーズにつなげるのがコンテナ開発の醍醐味だと思っています！</p>
-
-
-<br><br>(以 C# (.NET) 的“Hello World”这样简单的应用程序为基础，关于用 Docker 做成容器、在本地运行、然后部署到 Azure 的整个流程！
-<br><br>我平时在现场实际操作的步骤，大致是这样的：
-<br><br>首先写个 Dockerfile 进行容器化：
-<br>用 .NET 的 SDK（软件开发工具包）镜像进行构建，然后把成果物打包到用于运行的轻量运行时镜像里。采用这种叫做多阶段构建（Multi-stage build）的方法，可以做出干净且没有冗余的镜像。
-<br><br>在本地轻快地测试：
-<br>用 docker build 做完镜像后，通过 docker run 亲眼确认它能在自己电脑的容器里面好好跑起来。
-<br><br>部署到 Azure 并在云端公开：
-<br>把做好的镜像推送到 Azure 的注册表（ACR: Azure Container Registry）里，然后使用 Azure App Service 或 Azure Container Apps 这类服务，就能直接让应用在云端飞速运转起来！
-<br><br>像这样，从手头的电脑到云端的服务器，能够顺畅无阻地连通起来，正是容器开发的妙处所在！)
 </p>
 
 ---
