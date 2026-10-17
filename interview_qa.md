@@ -1,4 +1,15 @@
 # 日语面试 FAQ
+
+## <span id="toc">目次</span>
+
+- [データベース](#db)
+  - [主キーとユニークキー](#db_keys)
+- [アーキテクチャ](#arch)
+  - MVC
+- .NET
+- クラウド
+- ドッカー
+
 ---
 
 - 個人事業主(こじんじぎょうぬし) フリーランス(Freelance)のお仕事(しごと)も今(いま)終わ(おわ)られていてお仕事は今離職中(りしょくちゅう)って形(かたち)になるんですかねはそうですが
@@ -98,6 +109,9 @@
 <p style="padding: 0 2em;"><strong>A: </strong>はい、理解(りかい)しました。雇用(こよう)は御社(おんしゃ)で、勤務(きんむ)スタイルとして客先(きゃくさき)常駐(じょうちゅう)のパターンもあるということですね。働き方(はたらきかた)については特に(とくに)こだわりはありませんので大丈夫(だいじょうぶ)です。
 <br>(是的，理解了。雇佣关系在贵公司，工作模式也有常驻客户现场的情况对吧。我对工作方式没有什么特别的硬性要求，所以没问题。)</p>
 
+### <span id="arch">アーキテクチャ</span>
+[目次へ](#toc)
+
 ---
 
 - まずはこの<ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>の<ruby>キーワード<rt>Keyword</rt></ruby>である<ruby>MVC<rt>エムブイシー</rt></ruby>の<ruby>正<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>式<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>な<ruby>名<rp>（</rp><rt>めい</rt><rp>）</rp></ruby><ruby>称<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>とそれぞれのお<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby><ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby>についてご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
@@ -176,7 +190,11 @@
 <br>詳細設計ではそれをさらに落とし込んで、プログラムのクラス構造や処理の流れを示すシーケンス図やテーブル定義書など、実際にコードを書くための具体的な設計書を作成していました！
 <br>(就是基本设计和详细设计所制作文档的区别呢！在基本设计中，作为能看到的用户界面和整体数据结构等“外部设计”，我制作了画面设计书和 ER 图。在详细设计中则会进一步细化，制作出展示程序类结构或处理流程的时序图和表定义书等用于实际编写代码的具体设计书！)</p>
 
----
+### <span id="db">データベース</span>
+
+
+##### <span id="db_keys">主キーとユニークキー</span>
+[目次へ](#toc)
 
 - <ruby>テーブル<rt>Table</rt></ruby>の<ruby>ユニークキー<rt>Unique Key</rt></ruby>と<ruby>主<rp>（</rp><rt>しゅ</rt><rp>）</rp></ruby><ruby>キー<rt>Key</rt></ruby>をご<ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>じですか。
 (请问您知道数据表（Table）中的唯一键（Unique Key）和主键（Primary Key）吗？)
@@ -204,6 +222,8 @@
 <br>主キーはテーブルの「絶対に被らない、かつ空欄（NULL）もダメな絶対的な目印」で、1つのテーブルに1つだけ置けるものですよね。
 <br>ユニークキーも「重複しちゃいけない」という意味では似ているんですけど、こちらは複数作れたり、NULLを許容したりするケースがあるのが違いですね！
 <br>(是的，当然知道！主键就是表中“绝对不能重复、也不能为空（NULL）的绝对标记”，一个表里只能设一个。唯一键在“不能重复”这一点上很像，但区别在于它可以设多个，或者在某些情况下允许为 NULL！)</p>
+
+[目次へ](#toc)
 
 ---
 
@@ -803,7 +823,7 @@
 <p style="padding: 0 2em;"><strong>A: </strong><ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）をはじめとする<ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby>（１）<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）の<ruby>実<rp>（</rp><rt>じつ</rt><rp>）</rp>務<rp>（</rp><rt>む</rt><rp>）</rp>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>についてですね。
 <br>はい、<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>の<ruby>統<rp>（</rp><rt>とう</rt><rp>）</rp>一<rp>（</rp><rt>いつ</rt><rp>）</rp></ruby>から、<ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>（<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）や<ruby>エーダブリューエス<rp>（</rp><rt>AWS</rt><rp>）</rp></ruby>（<ruby>アマゾン<rp>（</rp><rt>Amazon</rt><rp>）</rp></ruby> <ruby>ウェブ<rp>（</rp><rt>Web</rt><rp>）</rp></ruby> <ruby>サービシズ<rp>（</rp><rt>Services</rt><rp>）</rp></ruby>）<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>の<ruby>イーシーエス<rp>（</rp><rt>ECS</rt><rp>）</rp></ruby>（<ruby>エラスティック<rp>（</rp><rt>Elastic</rt><rp>）</rp></ruby> <ruby>コンテナ<rp>（</rp><rt>Container</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）や<ruby>エーケーエス<rp>（</rp><rt>AKS</rt><rp>）</rp></ruby>（<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby> <ruby>クバネティス<rp>（</rp><rt>Kubernetes</rt><rp>）</rp></ruby> <ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>）など）へのデプロイに<ruby>至<rp>（</rp><rt>いた</rt><rp>）</rp></ruby>るまで、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）を<ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>したコンテナ（１）<ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>を<ruby>長<rp>（</rp><rt>ちょう</rt><rp>）</rp>年<rp>（</rp><rt>ねん</rt><rp>）</rp></ruby>実務（１）で<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>践<rp>（</rp><rt>せん</rt><rp>）</rp></ruby>してまいりました。
 <br><br><ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）の<ruby>主<rp>（</rp><rt>しゅ</rt><rp>）</rp>要<rp>（</rp><rt>よう</rt><rp>）</rp>な</ruby>（５）<ruby>メリット<rp>（</rp><rt>Merit</rt><rp>）</rp></ruby>（１）と<ruby>私<rp>（</rp><rt>わたし</rt><rp>）</rp></ruby>の活用<ruby>アプローチ<rp>（</rp><rt>Approach</rt><rp>）</rp></ruby>（２）としては、以下の通り（とおり）（３）です。
-<br><br>・<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp>差<rp>（</rp><rt>さ</rt><rp>）</rp>異<rp>（</rp><rt>い</rt><rp>）</rp></ruby>（１）の<ruby>排<rp>（</rp><rt>じょ</rt><rp>）</rp>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>（<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>トラブル（２）の<ruby>防<rp>（</rp><rt>ぼ</rt><rp>）</rp>止<rp>（</rp><rt>し</rt><rp>）</rp></ruby>）：
+<br><br>・<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp>差<rp>（</rp><rt>さ</rt><rp>）</rp>異<rp>（</rp><rt>い</rt><rp>）</rp></ruby>（１）の<ruby>排<rp>（</rp><rt>はい</rt><rp>）</rp>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>（<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>トラブル（２）の<ruby>防<rp>（</rp><rt>ぼ</rt><rp>）</rp>止<rp>（</rp><rt>し</rt><rp>）</rp></ruby>）：
 <br>「<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>のローカル（２）PC<rp>（</rp><rt>ピーシー</rt><rp>）</rp>（<ruby>Personal<rp>（</rp><rt>パーソナル</rt><rp>）</rp></ruby> <ruby>Computer<rp>（</rp><rt>コンピューター</rt><rp>）</rp></ruby>）では<ruby>動<rp>（</rp><rt>うご</rt><rp>）</rp>いたのに、</ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp>環<rp>（</rp><rt>かん</rt><rp>）</rp>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>や<ruby>他<rp>（</rp><rt>ほ</rt><rp>）</rp>の</ruby><ruby>メンバー<rp>（</rp><rt>Member</rt><rp>）</rp></ruby>（１）の環境で動（うご）かない」という<ruby>問<rp>（</rp><rt>もん</rt><rp>）</rp>題<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>を、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）によって<ruby>完<rp>（</rp><rt>かん</rt><rp>）</rp>全<rp>（</rp><rt>ぜん</rt><rp>）</rp>に</ruby><ruby>解<rp>（</rp><rt>かい</rt><rp>）</rp>決<rp>（</rp><rt>けつ</rt><rp>）</rp></ruby>し、どの環境でも<ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp>貫<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>して動作（どうさ）（１）する<ruby>再<rp>（</rp><rt>さい</rt><rp>）</rp>現<rp>（</rp><rt>げん</rt><rp>）</rp>性<rp>（</rp><rt>せい</rt><rp>）</rp>の</ruby>高い（たかい）（２）システム（１）<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>を<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp>ってきました。</ruby>
 <br><br>・<ruby>マイクロサービス<rp>（</rp><rt>Microservices</rt><rp>）</rp></ruby>（４）と<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）<ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp>携<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>：
 <br><ruby>Ｃ＃<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>Ｃ<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Ｓｈａｒｐ<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）（.NET<rp>（</rp><rt>ドットネット</rt><rp>）</rp>（<ruby>Dot<rp>（</rp><rt>ドット</rt><rp>）</rp></ruby> <ruby>Network<rp>（</rp><rt>ネットワーク</rt><rp>）</rp></ruby>））で構築（こうちく）したバックエンド（４）API<rp>（</rp><rt>エーピーアイ</rt><rp>）</rp>（<ruby>Application<rp>（</rp><rt>アプリケーション</rt><rp>）</rp></ruby> <ruby>Programming<rp>（</rp><rt>プログラミング</rt><rp>）</rp></ruby> <ruby>Interface<rp>（</rp><rt>インターフェイス</rt><rp>）</rp></ruby>）や各種（かくしゅ）（１）サービス（１）をコンテナ（１）<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>（１）にパッケージング（４）し、<ruby>ドッカーコンポーズ<rp>（</rp><rt>Docker Compose</rt><rp>）</rp></ruby>（５）を<ruby>用<rp>（</rp><rt>もち</rt><rp>）</rp>いた</ruby>（２）ローカル（２）での<ruby>統<rp>（</rp><rt>とう</rt><rp>）</rp>合<rp>（</rp><rt>ごう</rt><rp>）</rp>テスト<rp>（</rp><rt>Test</rt><rp>）</rp></ruby>（１）から、クラウド（１）上の<ruby>クバネティス<rp>（</rp><rt>Kubernetes</rt><rp>）</rp></ruby>（４）やコンテナ（１）サービス（１）へのスムーズ（１）な<ruby>移<rp>（</rp><rt>い</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>・<ruby>運<rp>（</rp><rt>うん</rt><rp>）</rp>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>を<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>としています。
