@@ -178,14 +178,19 @@
 (まずはこの当時のキーワードであるMVCの正式な名称とそれぞれのお役割についてご説明できますでしょうか。)
 <br>(请问能否说明一下作为当时关键词的 MVC 的正式名称以及各自的职责（作用）？)
 
+MVCは、アプリケーションの構造をModel、View、Controllerの3つに<strong>分離</strong>して設計するデザインパターンです。
+それぞれの役割として、
+<br><strong>まず</strong>Modelはデータの管理やビジネスロジックを担当します。
+<br><strong>次に</strong>Viewは、ユーザーに画面を表示する、いわゆるUIの部分を受け持ちます。
+<br><strong>そして</strong>Controllerは、ユーザーからの入力を受け付け、ModelとViewの間で制御を行う仲介役となります。
+<br>これら3つの役割を明確に分けることで、コードの変更が他の部分に影響しにくくなり、複数人での開発がスムーズになったり、保守性やテストのしやすさが向上したりするというメリットがあります。
+
 1.
 <p style="padding: 0 2em;"><strong>A: </strong><ruby>MVC<rt>エムブイシー</rt></ruby>は、<ruby>アプリケーション<rt>Application</rt></ruby>の<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>造<rp>（</rp><rt>ぞう</rt><rp>）</rp></ruby>を<ruby>Model<rt>モデル</rt></ruby>、<ruby>View<rt>ビュー</rt></ruby>、<ruby>Controller<rt>コントローラー</rt></ruby>の3つに<ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby><ruby>割<rp>（</rp><rt>かつ</rt><rp>）</rp></ruby>して<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>する<ruby>デザインパターン<rt>Design Pattern</rt></ruby>です。それぞれの<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby><ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby>として、<ruby>Model<rt>モデル</rt></ruby>は<ruby>データ<rt>Data</rt></ruby>の<ruby>管<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>や<ruby>ビジネスロジック<rt>Business Logic</rt></ruby>を<ruby>担<rp>（</rp><rt>たん</rt><rp>）</rp></ruby><ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby>し、<ruby>View<rt>ビュー</rt></ruby>は<ruby>ユーザー<rt>User</rt></ruby>に<ruby>画<rp>（</rp><rt>が</rt><rp>）</rp></ruby><ruby>面<rp>（</rp><rt>めん</rt><rp>）</rp></ruby>を<ruby>表<rp>（</rp><rt>ひょう</rt><rp>）</rp></ruby><ruby>示<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>する<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby><ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby>を<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>ちます。そして<ruby>Controller<rt>コントローラー</rt></ruby>は、<ruby>ユーザー<rt>User</rt></ruby>からの<ruby>入<rp>（</rp><rt>にゅう</rt><rp>）</rp></ruby><ruby>力<rp>（</rp><rt>りょく</rt><rp>）</rp></ruby>を<ruby>受<rp>（</rp><rt>う</rt><rp>）</rp></ruby>け<ruby>付<rp>（</rp><rt>つ</rt><rp>）</rp></ruby>け、<ruby>Model<rt>モデル</rt></ruby>と<ruby>View<rt>ビュー</rt></ruby>の<ruby>間<rp>（</rp><rt>あい</rt><rp>）</rp></ruby>で<ruby>制<rp>（</rp><rt>ぎょ</rt><rp>）</rp></ruby><ruby>御<rp>（</rp><rt>ぎょ</rt><rp>）</rp></ruby>を<ruby>行<rp>（</rp><rt>おこな</rt><rp>）</rp></ruby>う<ruby>仲<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>介<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>となります。</p>
 
 
 <p style="padding: 0 2em;"><strong>A: </strong>MVCは、アプリケーションの構造をModel、View、Controllerの3つに分割して設計するデザインパターンです。それぞれの役割として、Modelはデータの管理やビジネスロジックを担当し、Viewはユーザーに画面を表示する役割を持ちます。そしてControllerは、ユーザーからの入力を受け付け、ModelとViewの間で制御を行う仲介役となります。
-<br><strong>「より自然」</strong>MVCは、アプリケーションの構造をModel、View、Controllerの3つに<strong>分離</strong>して設計するデザインパターンです。
-それぞれの役割として、<strong>まず</strong>Modelはデータの管理やビジネスロジックを担当します。<strong>次に</strong>Viewは、ユーザーに画面を表示する、いわゆるUIの部分を受け持ちます。<strong>そして</strong>Controllerは、ユーザーからの入力を受け付け、ModelとViewの間で制御を行う仲介役となります。
-<br>これら3つの役割を明確に分けることで、コードの変更が他の部分に影響しにくくなり、複数人での開発がスムーズになったり、保守性やテストのしやすさが向上したりするというメリットがあります。
+<br>
 <br>(MVC 是将应用程序的结构分割为 Model（模型）、View（视图）、Controller（控制器）*三个部分进行设计的设计模式。从各自的职责来看，Model 负责数据管理与业务逻辑，View 负责向用户展示界面。而 Controller 则负责接收用户的输入，并在 Model 和 View 之间进行控制，充当纽带与协调者的角色。)
 </p>
 
@@ -556,6 +561,10 @@
 - えっと<ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（１）って<ruby>LINQ<rp>（</rp><rt>Language Integrated Query</rt><rp>）</rp></ruby>（１）という<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby><ruby>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）をよく<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>いますね。ご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
 <br><br>えっとC#ってLINQという技術をよく使いますね。ご説明できますでしょうか。
 <br>(那个，C# 里经常使用一种叫 LINQ 的技术呢。请问能否解释一下？)
+
+LINQ（Language Integrated Query / 統合言語クエリ）は、C#などの.NET言語において、**データの操作**を統一された構文で記述できる機能です。
+<br>**配列**や**データベース**などの**データソース**に対して、**抽出**や**絞り込み**、**並び替え**などの処理を、**SQLに似た**直感的な記述で行うことができます。
+<br>これにより、煩雑なループ処理を書く必要がなく、コードがとても**簡潔**になります。その結果、コードの**可読性**や**保守性**が大幅に**向上**するという**メリット**があるため、日頃の開発でも非常に頻繁に**活用**しております。
 
 1.
 <p style="padding: 0 2em;"><strong>A: </strong>はい、<ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>じております。
