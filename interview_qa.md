@@ -69,79 +69,108 @@
 ---
 [目次へ](#toc)
 
-- 個人事業主(こじんじぎょうぬし) フリーランス(Freelance)のお仕事(しごと)も今(いま)終わ(おわ)られていてお仕事は今離職中(りしょくちゅう)って形(かたち)になるんですかねはそうですが
-   <br>((“您之前做的”)个人事业主 / 自由职业者的工作现在也已经结束了，所以目前是处于离职状态，对吧？)
+- <ruby>個<rp>（</rp><rt>こ</rt><rp>）</rp></ruby><ruby>人<rp>（</rp><rt>じん</rt><rp>）</rp></ruby><ruby>事<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>主<rp>（</rp><rt>ぬし</rt><rp>）</rp></ruby>（５）<ruby>フリーランス<rp>（</rp><rt>Freelance</rt><rp>）</rp></ruby>（２）のお<ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>事<rp>（</rp><rt>ごと</rt><rp>）</rp></ruby>もう<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>（１）<ruby>終<rp>（</rp><rt>お</rt><rp>）</rp></ruby>わられていてお<ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>事<rp>（</rp><rt>ごと</rt><rp>）</rp></ruby>は<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>（１）<ruby>離<rp>（</rp><rt>り</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby><ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>って<ruby>形<rp>（</rp><rt>かたち</rt><rp>）</rp></ruby>になるんですかねはそうですが
+<br><br>個人事業主フリーランスのお仕事も今終わられていてお仕事は今**離職**中って形になるんですかねはそうですが
+<br>((“您之前做的”)个人事业主 / 自由职业者的工作现在也已经结束了，所以目前是处于离职状态，对吧？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>はい、おっしゃる通り(とおり)です。個人事業主(こじんじぎょうぬし)としての業務委託契約(ぎょうむいたくけいやく)が満了(まんりょう)いたしまして、現在(げんざい)は離職(りしょく)し、就職活動(しゅうしょくかつどう)に専念(せんねん)しております。
+<p style="padding: 0 2em;"><strong>A: </strong>はい、おっしゃる<ruby>通<rt>とお</rt></ruby>りです。<ruby>個人事業主<rt>こじんじぎょうぬし</rt></ruby>としての<ruby>業務委託契約<rt>ぎょうむいたくけいやく</rt></ruby>が<ruby>満了<rt>まんりょう</rt></ruby>いたしまして、<ruby>現在<rt>げんざい</rt></ruby>は<ruby>離職<rt>りしょく</rt></ruby>し、<ruby>就職活動<rt>しゅうしょくかつどう</rt></ruby>に<ruby>専念<rt>せんねん</rt></ruby>しております。
+<br><br>はい、おっしゃる通りです。個人事業主としての業務委託契約が満了いたしまして、現在は離職し、就職活動に専念しております。
 <br>(是的，正如您所说。作为个人事业主的业务委托合同已到期，目前处于离职状态，正在专心求职。)<p>
-
-<p style="padding: 0 2em;"><strong>A: </strong>はい、その通り(とおり)です。個人(こじん)事業(じぎょう)の契約(けいやく)が終わ(おわ)ったので、今(いま)は仕事(しごと)を探(さが)しているところです。
-<br>(是的，正是如此。个人事业的合同已经结束了，所以现在正在找工作。)</p>
+</p>
 
 ---
+[目次へ](#toc)
 
-- 週五日(しゅういつか)フル(Full)出社(しゅっしゃ)も問題(もんだい)はないって感じ(かんじ)になりますか。
+- <ruby>週<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby><ruby>五<rp>（</rp><rt>いつ</rt><rp>）</rp></ruby><ruby>日<rp>（</rp><rt>か</rt><rp>）</rp></ruby>（５）<ruby>フル<rp>（</rp><rt>Full</rt><rp>）</rp></ruby>（１）<ruby>出<rp>（</rp><rt>しゅっ</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby>も<ruby>問<rp>（</rp><rt>もん</rt><rp>）</rp></ruby><ruby>題<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>はないって<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じになりますか。
+<br><br>週五日フル出社も問題はないって感じになりますか。
 <br>(周五天全勤到岗办公也是没问题的，是这样吗？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>はい、出社(しゅっしゃ)勤務(きんむ)に関(かん)しては全(まった)く問題(もんだい)ございません。チームとのコミュニケーションを密(みつ)に取り(とり)ながら、業務(ぎょうむ)に邁進(まいしん)したいと考えております。
-<br>(是的，关于到岗办公完全没有问题。我希望能够与团队保持紧密沟通，全力投入工作。)</p>
+<p style="padding: 0 2em;"><strong>A: </strong>はい、<ruby>出<rp>（</rp><rt>しゅっ</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby><ruby>勤<rp>（</rp><rt>きん</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby>（１）に<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>しては<ruby>全<rp>（</rp><rt>まった</rt><rp>）</rp></ruby>く<ruby>問<rp>（</rp><rt>もん</rt><rp>）</rp></ruby><ruby>題<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>ございません。<ruby>チーム<rp>（</rp><rt>Team</rt><rp>）</rp></ruby>（１）との<ruby>コミュニケーション<rp>（</rp><rt>Communication</rt><rp>）</rp></ruby>（４）を<ruby>密<rp>（</rp><rt>みつ</rt><rp>）</rp></ruby>に<ruby>取<rp>（</rp><rt>と</rt><rp>）</rp></ruby>りながら、<ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby>（１）に<ruby>邁<rp>（</rp><rt>まい</rt><rp>）</rp></ruby><ruby>進<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>したいと<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>えております。
+<br><br>はい、出社勤務に関しては全く問題ございません。チームとのコミュニケーションを密に取りながら、業務に邁進したいと考えております。
+<br>(是的，关于到岗办公完全没有问题。我希望能够与团队保持紧密沟通，全力投入工作。)
+</p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>はい、週(しゅう)5日(いつか)の出社でも問題ありません。
-<br>(是的，一周到岗5天也没问题。)</p>
+<p style="padding: 0 2em;"><strong>A: </strong>はい、<ruby>週<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby>5<ruby>日<rp>（</rp><rt>か</rt><rp>）</rp></ruby>の<ruby>出<rp>（</rp><rt>しゅっ</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby>でも<ruby>問<rp>（</rp><rt>もん</rt><rp>）</rp></ruby><ruby>題<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>ありません。
+<br><br>はい、週5日の出社でも問題ありません。
+<br>(是的，一周到岗5天也没问题。)
+</p>
 
 ---
+[目次へ](#toc)
 
-- 週五日(しゅういつか)出社(しゅっしゃ)は避け(さけ)たいってとこなんですね。
+- <ruby>週<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby>5<ruby>日<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>出<rp>（</rp><rt>しゅっ</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby>は<ruby>避<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>けたい（３）ってとこなんですね。
+<br><br>週五日出社は避けたいってとこなんですね。
 <br>(也就是说，您还是想尽量避免一周到岗办公五天，对吧？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>必ずしも完全(かんぜん)回避(かいひ)を希望(きぼう)しているわけではありませんが、開発(かいはつ)効率(こうりつ)や集中(しゅうちゅう)できる環境(かんきょう)を考慮(こうりょ)し、可能(かのう)であればリモートワーク(Remote work)を並行(へいこう)できる働き方(はたらきかた)を希望(きぼう)しております。
-<br>(并非一定要完全避免到岗，但考虑到开发效率和集中精神的环境，如果可能的话，希望能够采取结合远程办公的工作方式。)</p>
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>必<rp>（</rp><rt>かなら</rt><rp>）</rp></ruby>ずしも<ruby>完<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>全<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>避<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>を<ruby>希<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>望<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>しているわけではありませんが、<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>効<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>率<rp>（</rp><rt>りつ</rt><rp>）</rp></ruby>や<ruby>集<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby><ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>できる<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>を<ruby>考<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>慮<rp>（</rp><rt>りょ</rt><rp>）</rp></ruby>し、<ruby>可<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>能<rp>（</rp><rt>のう</rt><rp>）</rp></ruby>であれば<ruby>リモートワーク<rp>（</rp><rt>Remote work</rt><rp>）</rp></ruby>（３）を<ruby>並<rp>（</rp><rt>へい</rt><rp>）</rp></ruby><ruby>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>できる<ruby>働<rp>（</rp><rt>はた</rt><rp>）</rp></ruby>き<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>を<ruby>希<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>望<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>しております。
+<br><br>必ずしも完全回避を希望しているわけではありませんが、開発効率や集中できる環境を考慮し、可能であればリモートワークを並行できる働き方を希望しております。
+<br>(并非一定要完全避免到岗，但考虑到开发效率和集中精神的环境，如果可能的话，希望能够采取结合远程办公的工作方式。)
+</p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>はい、できれば週(しゅう)に何日(なんにち)かはリモート(Remote)で作業(さぎょう)できるとありがたいと思っています。
-<br>(是的，如果可以的话，每周能有几天远程办公就太好了。)</p>
+<p style="padding: 0 2em;"><strong>A: </strong>はい、できれば<ruby>週<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby>に<ruby>何<rp>（</rp><rt>なん</rt><rp>）</rp></ruby><ruby>日<rp>（</rp><rt>にち</rt><rp>）</rp></ruby>かは<ruby>リモート<rp>（</rp><rt>Remote</rt><rp>）</rp></ruby>で<ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby>できるとありがたいと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>っています。
+<br><br>はい、できれば週に何日かはリモートで作業できるとありがたいと思っています。
+<br>(是的，如果可以的话，每周能有几天远程办公就太好了。)
+</p>
 
 ---
+[目次へ](#toc)
 
-- リモート(Remote)がある嬉しい(うれしい)っていうなイメージ(Image)で間違(まちが)いないですね。
+- <ruby>リモート<rp>（</rp><rt>Remote</rt><rp>）</rp></ruby>がある<ruby>嬉<rp>（</rp><rt>うれ</rt><rp>）</rp></ruby>しい（３）っていうな<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>で<ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby><ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いない（４）ですね。
+<br><br>リモートがある嬉しいっていうなイメージで間違いないですね。
 <br>(也就是说，如果有远程办公的话您会更高兴，是这个意思对吧？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>はい、その通り(とおり)です。リモートワークを活用(かつよう)することで、移動(いどう)時間(じかん)を開発(かいはつ)や学習(がくしゅう)に充て(あて)られ、より生産性(せいさんせい)を高(たか)められると考えております。
-<br>(是的，正是如此。我认为利用远程办公可以将通勤时间用于开发和学习，从而进一步提高生产力。)</p>
+<p style="padding: 0 2em;"><strong>A: </strong>はい、その<ruby>通<rp>（</rp><rt>とお</rt><rp>）</rp></ruby>り（３）です。<ruby>リモートワーク<rp>（</rp><rt>Remote work</rt><rp>）</rp></ruby>（３）を<ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>することで、<ruby>移<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>を<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>や<ruby>学<rp>（</rp><rt>がく</rt><rp>）</rp></ruby><ruby>習<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby>に<ruby>充<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>てられ、より<ruby>生<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>産<rp>（</rp><rt>さん</rt><rp>）</rp></ruby><ruby>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>を<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>められると<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>えております。
+<br><br>はい、その通りです。リモートワークを活用することで、移動時間を開発や学習に充てられ、より生産性を高められると考えております。
+<br>(是的，正是如此。我认为利用远程办公可以将通勤时间用于开发和学习，从而进一步提高生产力。)
+</p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>はい、その認識(にんしき)で間違いありません。リモート環境(かんきょう)のほうが集中(しゅうちゅう)しやすい業務(ぎょうむ)もあるので、選択肢(せんたくし)があるとありがたいです。
+<p style="padding: 0 2em;"><strong>A: </strong>はい、その<ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby><ruby>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>で<ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby><ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いありません（４）。<ruby>リモート<rp>（</rp><rt>Remote</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>のほうが<ruby>集<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby><ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>しやすい<ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby>もあるので、<ruby>選<rp>（</rp><rt>せん</rt><rp>）</rp></ruby><ruby>択<rp>（</rp><rt>たく</rt><rp>）</rp></ruby><ruby>肢<rp>（</rp><rt>し</rt><rp>）</rp></ruby>があるとありがたいです。
+<br><br>はい、その認識で間違いありません。リモート環境のほうが集中しやすい業務もあるので、選択肢があるとありがたいです。
 <br>(是的，这么理解完全没错。有些业务在远程环境下更容易集中精力，所以如果有这个选项的话就太好了。)</p>
 
 ---
+[目次へ](#toc)
 
-- 今回(こんかい)から転職(てんしょく)のタイミングで宋(そう)さんご自身(じしん)のご都合(つごう)でお引越し(ひっこし)の予定(よてい)は、特に(とくに)ない形(かたち)ですね。
+- <ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>から<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>の<ruby>タイミング<rp>（</rp><rt>Timing</rt><rp>）</rp></ruby>（２）で<ruby>宋<rp>（</rp><rt>そう</rt><rp>）</rp></ruby>さんご<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>身<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>のご<ruby>都<rp>（</rp><rt>つ</rt><rp>）</rp></ruby><ruby>合<rp>（</rp><rt>ごう</rt><rp>）</rp></ruby>でお<ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>っ<ruby>越<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>しの<ruby>予<rp>（</rp><rt>よ</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>は、<ruby>特<rp>（</rp><rt>とく</rt><rp>）</rp></ruby>にない<ruby>形<rp>（</rp><rt>かたち</rt><rp>）</rp></ruby>ですね。
+<br><br>今回から転職のタイミングで宋さんご自身のご都合でお引越しの予定は、特にない形ですね。
 <br>(趁着这次换工作的时机，出于宋先生您个人的原因，目前是没有搬家打算的，对吧？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>はい、その通り(とおり)です。現在(げんざい)の住まい(すまい)から十分(じゅうぶん)に通勤(つうきん)可能(かのう)ですので、引越し(ひっこし)の予定(よてい)はございません。
+<p style="padding: 0 2em;"><strong>A: </strong>はい、その<ruby>通<rp>（</rp><rt>とお</rt><rp>）</rp></ruby>り（３）です。<ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><ruby>在<rp>（</rp><rt>ざい</rt><rp>）</rp></ruby>（１）の<ruby>住<rp>（</rp><rt>す</rt><rp>）</rp></ruby>まいから<ruby>十<rp>（</rp><rt>じゅう</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>に<ruby>通<rp>（</rp><rt>つう</rt><rp>）</rp></ruby><ruby>勤<rp>（</rp><rt>きん</rt><rp>）</rp></ruby><ruby>可<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>能<rp>（</rp><rt>のう</rt><rp>）</rp></ruby>ですので、<ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>っ<ruby>越<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>しの<ruby>予<rp>（</rp><rt>よ</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>はございません。
+<br><br>はい、その通りです。現在の住まいから十分に通勤可能ですので、引越しの予定はございません。
 <br>(是的，正是如此。从目前居住的地方完全可以正常通勤，所以没有搬家的打算。)</p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>はい、今のところ引越す予定(よてい)はありません。
+<p style="padding: 0 2em;"><strong>A: </strong>はい、<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>（１）のところ<ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>っ<ruby>越<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>す<ruby>予<rp>（</rp><rt>よ</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>はありません（４）。
+<br><br>はい、今のところ引越す予定はありません。
 <br>(是的，目前没有搬家的打算。)</p>
 
 ---
+[目次へ](#toc)
 
-- 今回(こんかい)の転職(てんしょく)の目的(もくてき)みたいなとこ行(い)ってお伺(うかが)いができればと思う(おもう)んですが、
+- <ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>の<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>の<ruby>目<rp>（</rp><rt>もく</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>みたいなとこ行ってお伺いができればと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>うんですが、
+<br><br>今回の転職の目的みたいなとこ行ってお伺いができればと思うんですが、
 <br>(接下来想请教一下，您这次换工作的主要目的是什么呢？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>主(おも)な目的(もくてき)は、これまでの開発(かいはつ)経験(けいけん)を活(い)かしつつ、より上流(じょうりゅう)工程(こうてい)やモダンな技術(ぎじゅつ)環境(かんきょう)での業務(ぎょうむ)に携(たずさ)わり、エンジニアとしてのスキル幅(はば)を広(ひろ)げるためです。
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>な<ruby>目<rp>（</rp><rt>もく</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>は、これまでの<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>を<ruby>活<rp>（</rp><rt>い</rt><rp>）</rp></ruby>かしつつ、より<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>流<rp>（</rp><rt>りゅう</rt><rp>）</rp></ruby><ruby>工<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>程<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>（３）や<ruby>モダン<rp>（</rp><rt>Modern</rt><rp>）</rp></ruby>（２）な<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby><ruby>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>での<ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby>（１）に<ruby>携<rp>（</rp><rt>たずさ</rt><rp>）</rp></ruby>わり、<ruby>エンジニア<rp>（</rp><rt>Engineer</rt><rp>）</rp></ruby>（６）としての<ruby>スキル<rp>（</rp><rt>Skill</rt><rp>）</rp></ruby>（１）<ruby>幅<rp>（</rp><rt>はば</rt><rp>）</rp></ruby>を<ruby>広<rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby>げるためです。
+<br><br>主な目的は、これまでの開発経験を活かしつつ、より上流工程やモダンな技術環境での業務に携わり、エンジニアとしてのスキル幅を広げるためです。
 <br>(主要目的是在活用以往开发经验的同时，参与更多上游工程或现代技术环境的工作，以此拓展作为工程师的技能边界。)</p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>これまでの経験(けいけん)を活(い)かしながら、より成長(せいちょう)できる環境(かんきょう)で長(なが)く活躍(かつやく)したいというのが一番(いちばん)の目的(もくてき)です。
+<p style="padding: 0 2em;"><strong>A: </strong>これまでの<ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>を<ruby>活<rp>（</rp><rt>い</rt><rp>）</rp></ruby>かしながら、より<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>長<rp>（</rp><rt>ちょう</rt><rp>）</rp></ruby>できる<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>で<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>く<ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp></ruby><ruby>躍<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>したいというのが<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）の<ruby>目<rp>（</rp><rt>もく</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>です。
+<br><br>これまでの経験を活かしながら、より成長できる環境で長く活躍したいというのが一番の目的です。
 <br>(最主要的目的是希望在能发挥已有经验的同时，在一个更有成长空间的环境里长期发挥作用。)</p>
 
 ---
+[目次へ](#toc)
 
-- 今回(こんかい)のこの転職(てんしょく)しよう転職活動(てんしょくかつどう)を進(すす)められている。もうこれ目的(もくてき)だったりとか転職でか叶(かな)えたいややりたいことって言う(いう)のは今回どういったところが大きい(おおきい)でしょうか。
+- <ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>のこの<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>しよう<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby><ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp></ruby><ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby>を<ruby>進<rp>（</rp><rt>すす</rt><rp>）</rp></ruby>められている。もうこれ<ruby>目<rp>（</rp><rt>もく</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>だったりとか<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>でか<ruby>叶<rp>（</rp><rt>かな</rt><rp>）</rp></ruby>えたいややりたいことって<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>うのは<ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>どういったところが<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>きい（３）でしょうか。
+<br><br>今回のこの転職しよう転職活動を進められている。もうこれ目的だったりとか転職でか叶えたいややりたいことって言うのは今回どういったところが大きいでしょうか。
 <br>(您这次决定换工作并推进求职活动，要说到其中的目的，或者说通过跳槽最想实现、最想做的事，这次主要是在于哪些方面呢？)
 
-<p style="padding: 0 2em;"><strong>A: </strong>一番(いちばん)の目的(もくてき)は、モダンな技術(ぎじゅつ)スタックやクラウド環境(かんきょう)での開発(かいはつ)経験(けいけん)をさらに深(ふか)め、システム設計(せっけい)や上流(じょうりゅう)工程(こうてい)から携(たずさ)われるエンジニアへと成長(せいちょう)することです。チームの生産性(せいさんせい)向上(こうじょう)や品質(ひんしつ)管理(かんり)にも貢献(こうけん)したいと考えております。
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）の<ruby>目<rp>（</rp><rt>もく</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>は、<ruby>モダン<rp>（</rp><rt>Modern</rt><rp>）</rp></ruby>（２）な<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby><ruby>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby><ruby>スタック<rp>（</rp><rt>Stack</rt><rp>）</rp></ruby>（２）や<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（２）<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>での<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>をさらに<ruby>深<rp>（</rp><rt>ふか</rt><rp>）</rp></ruby>め、<ruby>システム<rp>（</rp><rt>System</rt><rp>）</rp></ruby>（１）<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>や<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>流<rp>（</rp><rt>りゅう</rt><rp>）</rp></ruby><ruby>工<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>程<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>（３）から<ruby>携<rp>（</rp><rt>たずさ</rt><rp>）</rp></ruby>われる<ruby>エンジニア<rp>（</rp><rt>Engineer</rt><rp>）</rp></ruby>（６）へと<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>長<rp>（</rp><rt>ちょう</rt><rp>）</rp></ruby>することです。<ruby>チーム<rp>（</rp><rt>Team</rt><rp>）</rp></ruby>（１）の<ruby>生<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>産<rp>（</rp><rt>さん</rt><rp>）</rp></ruby><ruby>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>向<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>や<ruby>品<rp>（</rp><rt>ひん</rt><rp>）</rp></ruby><ruby>質<rp>（</rp><rt>しつ</rt><rp>）</rp></ruby><ruby>管<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>にも<ruby>貢<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>献<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>したいと<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>えております。
+<br><br>一番の目的は、モダンな技術スタックやクラウド環境での開発経験をさらに深め、システム設計や上流工程から携われるエンジニアへと成長することです。チームの生産性向上や品質管理にも貢献したいと考えております。
 <br>(最主要的目的是进一步深化在现代技术栈及云环境下的开发经验，成长为能够参与系统设计与上游工程的工程师。同时我也希望能为提升团队生产力与质量管理做出贡献。)</p>
 
-<p style="padding: 0 2em;"><strong>A: </strong>よりモダンな開発(かいはつ)環境(かんきょう)でスキルアップしつつ、チームで協力(きょうりょく)して価値(かち)のあるプロダクトを作り(つくり)上げていきたい、というのが一番(いちばん)叶え(かなえ)たいことです。
+<p style="padding: 0 2em;"><strong>A: </strong>より<ruby>モダン<rp>（</rp><rt>Modern</rt><rp>）</rp></ruby>（２）な<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>でスキル（１）アップ（２）しつつ、<ruby>チーム<rp>（</rp><rt>Team</rt><rp>）</rp></ruby>（１）で<ruby>協<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby><ruby>力<rp>（</rp><rt>りょく</rt><rp>）</rp></ruby>して<ruby>価<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>値<rp>（</rp><rt>ち</rt><rp>）</rp></ruby>のあるプロダクトを<ruby>作<rp>（</rp><rt>つく</rt><rp>）</rp></ruby>り<ruby>上<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>げていきたい、というのが<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）<ruby>叶<rp>（</rp><rt>かな</rt><rp>）</rp></ruby>えたい（３）ことです。
+<br><br>よりモダンな開発環境でスキルアップしつつ、チームで協力して価値のあるプロダクトを作り上げていきたい、というのが一番叶えたいことです。
 <br>(最想实现的是在更现代化的开发环境中提升个人技能，同时与团队合作打造出有价值的产品。)</p>
 
 ---
