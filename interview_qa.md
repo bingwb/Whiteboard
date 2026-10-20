@@ -955,4 +955,5 @@ LINQ（Language Integrated Query / 統合言語クエリ）は、C#などの.NET
 ### 付録
 [目次へ](#toc)
 
+- [日语面试礼貌用语](./Interview_polite.md)
 - [オブジェクト指向プログラミング（OOP）の三大要素（原則）](interview/oopDesignPrinciple.md)
