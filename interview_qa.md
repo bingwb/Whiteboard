@@ -910,55 +910,46 @@ LINQ（Language Integrated Query / 統合言語クエリ）は、C#などの.NET
 ---
 [目次へ](#toc)
 
-- <ruby>直<rp>（</rp><rt>ちょっ</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>でなんか<ruby>ソース<rt>Source</rt></ruby>の<ruby>バージョン管理<rt>Version Control</rt></ruby>でどのような<ruby>ツール<rt>Tool</rt></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>ってるんですか。
-(最近在源码版本管理方面，大家一般都在使用什么工具呢？)
-<br>直近でなんかソースのバージョン管理でどのようなツールを使ってるんですか。
-(最近在源码版本管理方面，大家一般都在使用什么工具呢？)
+- <ruby>直<rp>（</rp><rt>ちょっ</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>でなんか<ruby>ソース<rt>Source</rt></ruby>の<ruby>バージョン<rt>Version</rt></ruby><ruby>管<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>でどのような<ruby>ツール<rt>Tool</rt></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>ってるんですか。
+<br><br>直近でなんかソースのバージョン管理でどのようなツールを使ってるんですか。
+<br>(最近在源码版本管理方面，大家一般都在使用什么工具呢？)
 
 1.
-<p style="padding: 0 2em;"><strong>A: </strong><ruby>直<rp>（</rp><rt>ちょっ</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>の<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby>におきましては、<ruby>ソースコード<rt>Source Code</rt></ruby>の<ruby>バージョン管理<rt>Version Control</rt></ruby>として<ruby>Git<rt>ギット</rt></ruby>を<ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>に<ruby>使<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>しております。
+<p style="padding: 0 2em;"><strong>A: </strong><ruby>直<rp>（</rp><rt>ちょっ</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>の<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby>におきましては、<ruby>ソースコード<rt>Source Code</rt></ruby>の<ruby>バージョン<rt>Version Control</rt></ruby><ruby>管<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>として<ruby>Git<rt>ギット</rt></ruby>を<ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>に<ruby>使<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>しております。
 <br><ruby>プラットフォーム<rt>Platform</rt></ruby>としては、<ruby>案<rp>（</rp><rt>あん</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>や<ruby>チーム<rt>Team</rt></ruby>の<ruby>方<rp>（</rp><rt>ほう</rt><rp>）</rp></ruby><ruby>針<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>に<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わせて<ruby>GitHub<rt>ギットハブ</rt></ruby>、<ruby>GitLab<rt>ギットラブ</rt></ruby>、あるいは<ruby>Azure DevOps<rt>アジュール デブオプス</rt></ruby>などを<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>い<ruby>分<rp>（</rp><rt>わ</rt><rp>）</rp></ruby>けており、<ruby>プルリクエスト<rt>Pull Request</rt></ruby>を<ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>した<ruby>コードレビュー<rt>Code Review</rt></ruby>や、<ruby>CI/CD<rt>シーアイシーディー</rt></ruby><ruby>パイプライン<rt>Pipeline</rt></ruby>による<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>ビルド<rt>Build</rt></ruby>・<ruby>テスト<rt>Test</rt></ruby>の<ruby>連<rp>（</rp><rt>れん</rt><rp>）</rp></ruby><ruby>携<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>といった、<ruby>チーム<rt>Team</rt></ruby><ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>における<ruby>標<rp>（</rp><rt>ひょう</rt><rp>）</rp></ruby><ruby>準<rp>（</rp><rt>じゅん</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>な<ruby>ワークフロー<rt>Workflow</rt></ruby>を<ruby>日<rp>（</rp><rt>にち</rt><rp>）</rp></ruby><ruby>常<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>に<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>践<rp>（</rp><rt>せん</rt><rp>）</rp></ruby>しております。
-<br>(在最近的开发现场中，源码版本管理主要使用 Git。作为平台，根据项目和团队的方针灵活选用 GitHub、GitLab 或 Azure DevOps 等，并通过利用 Pull Request 进行代码审查，以及通过 CI/CD 管道联动自动构建与测试等，日常实践着团队开发中的标准工作流。)</p>
-
-<p style="padding: 0 2em;"><strong>A: </strong>直近の開発現場におきましては、ソースコードのバージョン管理としてGitを主に使用しております。
+<br><br>直近の開発現場におきましては、ソースコードのバージョン管理としてGitを主に使用しております。
 <br>プラットフォームとしては、案件やチームの方針に合わせてGitHub、GitLab、あるいはAzure DevOpsなどを使い分けており、プルリクエストを活用したコードレビューや、CI/CDパイプラインによる自動ビルド・テストの連携といった、チーム開発における標準的なワークフローを日常的に実践しております。
 <br>(在最近的开发现场中，源码版本管理主要使用 Git。作为平台，根据项目和团队的方针灵活选用 GitHub、GitLab 或 Azure DevOps 等，并通过利用 Pull Request 进行代码审查，以及通过 CI/CD 管道联动自动构建与测试等，日常实践着团队开发中的标准工作流。)</p>
 
 2.
 <p style="padding: 0 2em;"><strong>A: </strong><ruby>最<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>だと、やっぱり<ruby>Git<rt>ギット</rt></ruby>を<ruby>メイン<rt>Main</rt></ruby>に<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>っていますね！
 <br><ruby>ホスティング<rt>Hosting</rt></ruby><ruby>サービス<rt>Service</rt></ruby>を<ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>心<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>としては<ruby>GitHub<rt>ギットハブ</rt></ruby>や<ruby>GitLab<rt>ギットラブ</rt></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>うことが<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>くて、<ruby>普<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby><ruby>段<rp>（</rp><rt>だん</rt><rp>）</rp></ruby>から<ruby>ブランチ<rt>Branch</rt></ruby>を<ruby>切<rp>（</rp><rt>き</rt><rp>）</rp></ruby>って、<ruby>プルリクエスト<rt>Pull Request</rt></ruby>を<ruby>投<rp>（</rp><rt>な</rt><rp>）</rp></ruby>げて、<ruby>チームメンバー<rt>Team Member</rt></ruby>に<ruby>コード<rt>Code</rt></ruby><ruby>レビュー<rt>Review</rt></ruby>をしてもらうという<ruby>フロー<rt>Flow</rt></ruby>で<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>を<ruby>進<rp>（</rp><rt>すす</rt><rp>）</rp></ruby>めています。<ruby>GitHub Copilot<rt>ギットハブ コパイロット</rt></ruby>などの<ruby>AI<rt>エーアイ</rt></ruby><ruby>ツール<rt>Tool</rt></ruby>を<ruby>組<rp>（</rp><rt>く</rt><rp>）</rp></ruby><ruby>み<rt></rt></ruby><ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わせて<ruby>効<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>率<rp>（</rp><rt>りつ</rt><rp>）</rp></ruby><ruby>化<rt>か</rt></ruby><ruby>を<rt></rt></ruby><ruby>図<rp>（</rp><rt>はか</rt><rp>）</rp></ruby>ることも<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>いですね！
-<br>(最近的话，主要还是在使用 Git 呢！作为托管服务，经常使用 GitHub 或 GitLab，平时都是通过开分支、提 Pull Request、让团队成员帮忙做 Code Review 的流程来推进开发的。也经常结合 GitHub Copilot 等 AI 工具来提高效率！)</p>
-
-<p style="padding: 0 2em;"><strong>A: </strong>最近だと、やっぱりGitをメインに使っていますね！
+<br><br>最近だと、やっぱりGitをメインに使っていますね！
 <br>ホスティングサービスを中心としてはGitHubやGitLabを使うことが多くて、普段からブランチを切って、プルリクエストを投げて、チームメンバーにコードレビューをしてもらうというフローで开发を進めています。GitHub CopilotなどのAIツールを組み合わせて効率化を図ることも多いですね！
 <br>(最近的话，主要还是在使用 Git 呢！作为托管服务，经常使用 GitHub 或 GitLab，平时都是通过开分支、提 Pull Request、让团队成员帮忙做 Code Review 的流程来推进开发的。也经常结合 GitHub Copilot 等 AI 工具来提高效率！)</p>
 
-- ギット [Git] ってえっとまず初め（はじめ）はコミット [Commit] とプッシュ [Push] の違い（ちがい）をご存知（ぞんじ）ですか。
-(请问您知道 Git 中的 commit（提交）和 push（推送）的区别吗？)
+- <ruby>ギット<rp>（</rp><rt>Git</rt><rp>）</rp></ruby>（１） ってえっとまず<ruby>初<rp>（</rp><rt>はじ</rt><rp>）</rp></ruby>めは<ruby>コミット<rp>（</rp><rt>Commit</rt><rp>）</rp></ruby> と<ruby>プッシュ<rp>（</rp><rt>Push</rt><rp>）</rp></ruby>（１） の<ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いをご<ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>じですか。
+<br><br>ギット ってえっとまず初めはコミット とプッシュ の違いをご存知ですか。
+<br>(请问您知道 Git 中的 commit（提交）和 push（推送）的区别吗？)
 
 1.
 <p style="padding: 0 2em;"><strong>A: </strong>はい、<ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>じております。
 <br><ruby>コミット<rt>Commit</rt></ruby>は、<ruby>ローカル<rt>Local</rt></ruby><ruby>リポジトリ<rt>Repository</rt></ruby>に<ruby>対<rp>（</rp><rt>たい</rt><rp>）</rp></ruby>して<ruby>変<rp>（</rp><rt>へん</rt><rp>）</rp></ruby><ruby>更<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>履<rp>（</rp><rt>り</rt><rp>）</rp></ruby><ruby>歴<rp>（</rp><rt>れき</rt><rp>）</rp></ruby>（<ruby>スナップショット<rt>Snapshot</rt></ruby>）を<ruby>記<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>する<ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby>であり、<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>の<ruby>手<rp>（</rp><rt>て</rt><rp>）</rp></ruby><ruby>元<rp>（</rp><rt>もと</rt><rp>）</rp></ruby>の<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>で<ruby>完<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>結<rp>（</rp><rt>けつ</rt><rp>）</rp></ruby>します。
 <br><ruby>一<rp>（</rp><rt>いっ</rt><rp>）</rp></ruby><ruby>方<rp>（</rp><rt>ぽう</rt><rp>）</rp></ruby>、<ruby>プッシュ<rt>Push</rt></ruby>は、その<ruby>ローカル<rt>Local</rt></ruby>で<ruby>コミット<rt>Commit</rt></ruby>された<ruby>変<rp>（</rp><rt>へん</rt><rp>）</rp></ruby><ruby>更<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>内<rp>（</rp><rt>ない</rt><rp>）</rp></ruby><ruby>容<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>を、<ruby>リモート<rt>Remote</rt></ruby><ruby>リポジトリ<rt>Repository</rt></ruby>（<ruby>GitHub<rt>ギットハブ</rt></ruby>や<ruby>GitLab<rt>ギットラブ</rt></ruby>などの<ruby>サーバー<rt>Server</rt></ruby><ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>）へ<ruby>送<rp>（</rp><rt>そう</rt><rp>）</rp></ruby><ruby>信<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>して<ruby>反<rp>（</rp><rt>はん</rt><rp>）</rp></ruby><ruby>映<rp>（</rp><rt>えい</rt><rp>）</rp></ruby>させる<ruby>操<rp>（</rp><rt>そう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>です。
-<br>(是的，我了解。Commit（提交）是将变更历史（快照）记录到本地仓库的操作，在自己手头的环境中即可完成。
-*而 Push（推送）则是将本地已 commit 的变更内容发送并反映到远程仓库（如 GitHub 或 GitLab 等服务器端）的操作。)</p>
-
-<p style="padding: 0 2em;"><strong>A: </strong>はい、存じております。
+<br><br>はい、存じております。
 <br>コミットは、ローカルリポジトリに対して変更履歴（スナップショット）を記録する作業であり、自分の手元の環境で完結します。
 <br>一方、プッシュは、そのローカルでコミットされた変更内容を、リモートリポジトリ（GitHubやGitLabなどのサーバー上）へ送信して反映させる操作です。
 <br>(是的，我了解。Commit（提交）是将变更历史（快照）记录到本地仓库的操作，在自己手头的环境中即可完成。
-*而 Push（推送）则是将本地已 commit 的变更内容发送并反映到远程仓库（如 GitHub 或 GitLab 等服务器端）的操作。)</p>
+而 Push（推送）则是将本地已 commit 的变更内容发送并反映到远程仓库（如 GitHub 或 GitLab 等服务器端）的操作。)</p>
 
 2.
 <p style="padding: 0 2em;"><strong>A: </strong>はい、もちろん<ruby>知<rp>（</rp><rt>し</rt><rp>）</rp></ruby>っています！
 <br><ruby>コミット<rt>Commit</rt></ruby>は、<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>の<ruby>パソコン<rt>Personal Computer</rt></ruby>（<ruby>ローカル<rt>Local</rt></ruby>）<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>の<ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>記<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>に「ここまでを<ruby>保<rp>（</rp><rt>ほ</rt><rp>）</rp></ruby><ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>！」と<ruby>区<rp>（</rp><rt>く</rt><rp>）</rp></ruby>切りをつける<ruby>イメージ<rt>Image</rt></ruby>です。
 <br>で、その<ruby>溜<rp>（</rp><rt>た</rt><rp>）</rp></ruby>めた<ruby>コミット<rt>Commit</rt></ruby>を、<ruby>チーム<rt>Team</rt></ruby>みんなで<ruby>見<rp>（</rp><rt>み</rt><rp>）</rp></ruby>られる<ruby>サーバー<rt>Server</rt></ruby>（<ruby>リモートリポジトリ<rt>Remote Repository</rt></ruby>）に<ruby>アップロード<rt>Upload</rt></ruby>するのが<ruby>プッシュ<rt>Push</rt></ruby>ね！
-<br>(是的，当然知道！Commit 的感觉就像是在自己电脑（本地）的工作记录上打上“保存到这里！”的标记。而要把这些积攒的 commit 上传到团队大家都能看到的服务器（远程仓库）上，就是 Push 啦！)
-</p>
-
-<p style="padding: 0 2em;"><strong>A: </strong>はい、もちろん知っています！
+<br><br>はい、もちろん知っています！
 <br>コミットは、自分のパソコン（ローカル）上の作業記録に「ここまでを保存！」と区切りをつけるイメージです。
 <br>で、その溜めたコミットを、チームみんなで見られるサーバー（リモートリポジトリ）にアップロードするのがプッシュね！
-<br>(是的，当然知道！Commit 的感觉就像是在自己电脑（本地）的工作记录上打上“保存到这里！”的标记。而要把这些积攒 of commit 上传到团队大家都能看到的服务器（远程仓库）上，就是 Push 啦！)</p>
+<br>(是的，当然知道！Commit 的感觉就像是在自己电脑（本地）的工作记录上打上“保存到这里！”的标记。而要把这些积攒的 commit 上传到团队大家都能看到的服务器（远程仓库）上，就是 Push 啦！)
+</p>
 
 [目次へ](#toc)
