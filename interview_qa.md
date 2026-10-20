@@ -1,27 +1,54 @@
 # 日语面试 FAQ
 
-### <span id="toc">目次</span>
+## <span id="toc">目次</span>
 
-- [状況など](#profile)
-  - [ビジョン](#profile_vision)
-  - [働き方](#profile_workMode)
-  - [日本に来られたきっかけ](#profile_whyJapan)
-- [開発プロセス](#process)
-  - [開発手法 (ウォーターフォール・アジャイル)](#process_type)
-  - [各フェーズ](#process_phrases)
-- [アーキテクチャ](#arch)
-  - [MVC](#arch_mvc)
-  - [クラウド](#arch_cloud)
-  - [ドッカー](#arch_docker)
-- [データベース](#db)
-  - [主キーとユニークキー](#db_keys)
-  - [親子テーブルの登録・削除処理の注意点](#db_relationalTablesDataOps)
-- [.NET](#dotNet)
-  - [非同期処理](#dotNet_async)
-  - [LINQ](#dotNet_linq)
-- [ツール](#tool)
-  - [AI](#tool_ai)
-  - [コードソースバージョン管理](#tool_git)
+- [状況など](#状況など)
+  - [ビジョン](#ビジョン)
+    - [将来ビジョンはお教えいただけないでしょうか](#将来ビジョンはお教えいただけないでしょうか)
+  - [働き方](#働き方)
+    - [個人事業主フリーランスのお仕事も今終わられていてお仕事は今離職中って形になるんですかねはそうですが](#個人事業主フリーランスのお仕事も今終わられていてお仕事は今離職中って形になるんですかねはそうですが)
+    - [週五日フル出社も問題はないって感じになりますか。](#週五日フル出社も問題はないって感じになりますか)
+    - [週五日出社は避けたいってとこなんですね。](#週五日出社は避けたいってとこなんですね)
+    - [リモートがある嬉しいっていうなイメージで間違いないですね。](#リモートがある嬉しいっていうなイメージで間違いないですね)
+    - [今回から転職のタイミングで宋さんご自身のご都合でお引越しの予定は、特にない形ですね。](#今回から転職のタイミングで宋さんご自身のご都合でお引越しの予定は特にない形ですね)
+    - [今回の転職の目的みたいなとこ行ってお伺いができればと思うんですが、](#今回の転職の目的みたいなとこ行ってお伺いができればと思うんですが)
+    - [今回のこの転職しよう転職活動を進められている。もうこれ目的だったりとか転職でか叶えたいややりたいことって言うのは今回どういったところが大きいでしょうか。](#今回のこの転職しよう転職活動を進められているもうこれ目的だったりとか転職でか叶えたいややりたいことって言うのは今回どういったところが大きいでしょうか)
+    - [転職後、宋さんとしてはどういったことやっていきたいって何かイメージされますか。](#転職後宋さんとしてはどういったことやっていきたいって何かイメージされますか)
+    - [SES（System Engineering Service）の形でこのお客様先に常駐していただくって形あったりはするんですが、まあ基本的に雇用に関しては弊社に乗せていただいていると思っていただいていいかなと思います。](#sessystem-engineering-serviceの形でこのお客様先に常駐していただくって形あったりはするんですがまあ基本的に雇用に関しては弊社に乗せていただいていると思っていただいていいかなと思います)
+  - [日本に来られたきっかけ](#日本に来られたきっかけ)
+    - [日本に来られたきっかけは何でしょうか。](#日本に来られたきっかけは何でしょうか)
+- [開発プロセス](#開発プロセス)
+  - [開発手法 (ウォーターフォール・アジャイル)](#開発手法-ウォーターフォールアジャイル)
+    - [これまでのプロジェクトにおける開発手法についてお伺いできますでしょうか。例えば、ウォーターフォール型やアジャイル型など、どのような体制が多かったですか？](#これまでのプロジェクトにおける開発手法についてお伺いできますでしょうか例えばウォーターフォール型やアジャイル型などどのような体制が多かったですか)
+  - [開発の各フェーズ](#開発の各フェーズ)
+    - [要件定義から、基本設計、詳細設計、実装、テスト、そしてリリース、運用、保守まで、各フェーズについて、ご簡単に説明できますでしょうか。](#要件定義から基本設計詳細設計実装テストそしてリリース運用保守まで各フェーズについてご簡単に説明できますでしょうか)
+    - [当時はあの要件定義と具体的にどのようなあの作業を担当されているか成果物は何を作成したか簡単にご説明できますでしょうか。](#当時はあの要件定義と具体的にどのようなあの作業を担当されているか成果物は何を作成したか簡単にご説明できますでしょうか)
+    - [まあ、簡単でもいいですけど、基本設計っていうと詳細設計フェーズのこの二つのフェーズでそれぞれどのような追加アップを作成したんですか。](#まあ簡単でもいいですけど基本設計っていうと詳細設計フェーズのこの二つのフェーズでそれぞれどのような追加アップを作成したんですか)
+    - [日本で直近の詳細設計書は新規で作成したこともありますか。](#日本で直近の詳細設計書は新規で作成したこともありますか)
+- [アーキテクチャ](#アーキテクチャ)
+  - [MVC](#mvc)
+    - [まずはこの当時のキーワードであるMVCの正式な名称とそれぞれのお役割についてご説明できますでしょうか。](#まずはこの当時のキーワードであるmvcの正式な名称とそれぞれのお役割についてご説明できますでしょうか)
+  - [クラウド](#クラウド)
+    - [クラウドって開発経験は豊富にあるイメージと感じてますね。やはりアジュールやAWSはよく開発されているでしょうね。少々その中に色々なサービスが説明できますでしょうか](#クラウドって開発経験は豊富にあるイメージと感じてますねやはりアジュールやawsはよく開発されているでしょうね少々その中に色々なサービスが説明できますでしょうか)
+  - [ドッカー](#ドッカー)
+    - [長い開発経験の中で、ドッカーっていう技術も習熟ですよね。少しだけ説明していただけないでしょうか。](#長い開発経験の中でドッカーっていう技術も習熟ですよね少しだけ説明していただけないでしょうか)
+    - [例えば、C#で「Hello World」プログラムを書きました。これをDocker化し、ローカルで実行してから、Azureへデプロイするにはどうすればよいですか。](#例えばcでhello-worldプログラムを書きましたこれをdocker化しローカルで実行してからazureへデプロイするにはどうすればよいですか)
+- [データベース](#データベース)
+  - [主キーとユニークキー](#主キーとユニークキー)
+    - [テーブルのユニークキーと主キーをご存知ですか。](#テーブルのユニークキーと主キーをご存知ですか)
+  - [親子テーブルの登録・削除処理の注意点](#親子テーブルの登録削除処理の注意点)
+    - [テーブルって例えばえっと普通にあのう基本的には今は関係あるあのうリレーションのデータベースなんですけど、例えばえっとテーブル二つ親と子テーブルがありまして、そのテーブルのあのう登](#テーブルって例えばえっと普通にあのう基本的には今は関係あるあのうリレーションのデータベースなんですけど例えばえっとテーブル二つ親と子テーブルがありましてそのテーブルのあのう登)
+- [.NET](#net)
+  - [非同期処理](#非同期処理)
+    - [C#が一番得意な言語としては、非同期処理にはよく使う技術は少し展開して説明していただけないでしょうか。](#cが一番得意な言語としては非同期処理にはよく使う技術は少し展開して説明していただけないでしょうか)
+  - [LINQ](#linq)
+    - [えっとC#ってLINQという技術をよく使いますね。ご説明できますでしょうか。](#えっとcってlinqという技術をよく使いますねご説明できますでしょうか)
+- [ツール](#ツール)
+  - [AI](#ai)
+    - [AIで生成式のツール例えばCodexなどってコーディングはどんな認識か教えていただけないでしょうか、例えばプログラマーの責任はどう変えていくでしょうか](#aiで生成式のツール例えばcodexなどってコーディングはどんな認識か教えていただけないでしょうか例えばプログラマーの責任はどう変えていくでしょうか)
+  - [コードソースバージョン管理](#コードソースバージョン管理)
+    - [直近でなんかソースのバージョン管理でどのようなツールを使ってるんですか。](#直近でなんかソースのバージョン管理でどのようなツールを使ってるんですか)
+    - [ギット ってえっとまず初めはコミット とプッシュ の違いをご存知ですか。](#ギット-ってえっとまず初めはコミット-とプッシュ-の違いをご存知ですか)
 
 ---
 ### <span id="profile">状況など</span>
@@ -29,10 +56,11 @@
 
 #### <span id="profile_vision">ビジョン</span>
 ---
+
+##### 将来ビジョンはお教えいただけないでしょうか
 [目次へ](#toc)
 
-- <ruby>将<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>来<rp>（</rp><rt>らい</rt><rp>）</rp></ruby> <ruby>ビジョン<rp>（</rp><rt>Vision</rt><rp>）</rp></ruby>（１）は お<ruby>教<rp>（</rp><rt>おし</rt><rp>）</rp></ruby>えいただけないでしょうか
-<br>将来ビジョンはお教えいただけないでしょうか
+<br><ruby>将<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>来<rp>（</rp><rt>らい</rt><rp>）</rp></ruby> <ruby>ビジョン<rp>（</rp><rt>Vision</rt><rp>）</rp></ruby>（１）は お<ruby>教<rp>（</rp><rt>おし</rt><rp>）</rp></ruby>えいただけないでしょうか
 <br>(请问能否谈谈您未来的职业规划/愿景呢？)
 
 1.
@@ -58,10 +86,12 @@
 
 #### <span id="profile_workMode">働き方</span>
 ---
+
+##### 個人事業主フリーランスのお仕事も今終わられていてお仕事は今離職中って形になるんですかねはそうですが
 [目次へ](#toc)
 
-- <ruby>個<rp>（</rp><rt>こ</rt><rp>）</rp></ruby><ruby>人<rp>（</rp><rt>じん</rt><rp>）</rp></ruby><ruby>事<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>主<rp>（</rp><rt>ぬし</rt><rp>）</rp></ruby>（５）<ruby>フリーランス<rp>（</rp><rt>Freelance</rt><rp>）</rp></ruby>（２）のお<ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>事<rp>（</rp><rt>ごと</rt><rp>）</rp></ruby>もう<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>（１）<ruby>終<rp>（</rp><rt>お</rt><rp>）</rp></ruby>わられていてお<ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>事<rp>（</rp><rt>ごと</rt><rp>）</rp></ruby>は<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>（１）<ruby>離<rp>（</rp><rt>り</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby><ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>って<ruby>形<rp>（</rp><rt>かたち</rt><rp>）</rp></ruby>になるんですかねはそうですが
-<br><br>個人事業主フリーランスのお仕事も今終わられていてお仕事は今**離職**中って形になるんですかねはそうですが
+<ruby>個<rp>（</rp><rt>こ</rt><rp>）</rp></ruby><ruby>人<rp>（</rp><rt>じん</rt><rp>）</rp></ruby><ruby>事<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>主<rp>（</rp><rt>ぬし</rt><rp>）</rp></ruby>（５）<ruby>フリーランス<rp>（</rp><rt>Freelance</rt><rp>）</rp></ruby>（２）のお<ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>事<rp>（</rp><rt>ごと</rt><rp>）</rp></ruby>もう<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>（１）<ruby>終<rp>（</rp><rt>お</rt><rp>）</rp></ruby>わられていてお<ruby>仕<rp>（</rp><rt>し</rt><rp>）</rp></ruby><ruby>事<rp>（</rp><rt>ごと</rt><rp>）</rp></ruby>は<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>（１）<ruby>離<rp>（</rp><rt>り</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby><ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>って<ruby>形<rp>（</rp><rt>かたち</rt><rp>）</rp></ruby>になるんですかねはそうですが
+<br><br>
 <br>((“您之前做的”)个人事业主 / 自由职业者的工作现在也已经结束了，所以目前是处于离职状态，对吧？)
 
 <p style="padding: 0 2em;"><strong>A: </strong>はい、おっしゃる<ruby>通<rt>とお</rt></ruby>りです。<ruby>個人事業主<rt>こじんじぎょうぬし</rt></ruby>としての<ruby>業務委託契約<rt>ぎょうむいたくけいやく</rt></ruby>が<ruby>満了<rt>まんりょう</rt></ruby>いたしまして、<ruby>現在<rt>げんざい</rt></ruby>は<ruby>離職<rt>りしょく</rt></ruby>し、<ruby>就職活動<rt>しゅうしょくかつどう</rt></ruby>に<ruby>専念<rt>せんねん</rt></ruby>しております。
@@ -69,11 +99,11 @@
 <br>(是的，正如您所说。作为个人事业主的业务委托合同已到期，目前处于离职状态，正在专心求职。)<p>
 </p>
 
----
+
+##### 週五日フル出社も問題はないって感じになりますか。
 [目次へ](#toc)
 
-- <ruby>週<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby><ruby>五<rp>（</rp><rt>いつ</rt><rp>）</rp></ruby><ruby>日<rp>（</rp><rt>か</rt><rp>）</rp></ruby>（５）<ruby>フル<rp>（</rp><rt>Full</rt><rp>）</rp></ruby>（１）<ruby>出<rp>（</rp><rt>しゅっ</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby>も<ruby>問<rp>（</rp><rt>もん</rt><rp>）</rp></ruby><ruby>題<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>はないって<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じになりますか。
-<br><br>週五日フル出社も問題はないって感じになりますか。
+<ruby>週<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby><ruby>五<rp>（</rp><rt>いつ</rt><rp>）</rp></ruby><ruby>日<rp>（</rp><rt>か</rt><rp>）</rp></ruby>（５）<ruby>フル<rp>（</rp><rt>Full</rt><rp>）</rp></ruby>（１）<ruby>出<rp>（</rp><rt>しゅっ</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby>も<ruby>問<rp>（</rp><rt>もん</rt><rp>）</rp></ruby><ruby>題<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>はないって<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>じになりますか。
 <br>(周五天全勤到岗办公也是没问题的，是这样吗？)
 
 <p style="padding: 0 2em;"><strong>A: </strong>はい、<ruby>出<rp>（</rp><rt>しゅっ</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby><ruby>勤<rp>（</rp><rt>きん</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby>（１）に<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>しては<ruby>全<rp>（</rp><rt>まった</rt><rp>）</rp></ruby>く<ruby>問<rp>（</rp><rt>もん</rt><rp>）</rp></ruby><ruby>題<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>ございません。<ruby>チーム<rp>（</rp><rt>Team</rt><rp>）</rp></ruby>（１）との<ruby>コミュニケーション<rp>（</rp><rt>Communication</rt><rp>）</rp></ruby>（４）を<ruby>密<rp>（</rp><rt>みつ</rt><rp>）</rp></ruby>に<ruby>取<rp>（</rp><rt>と</rt><rp>）</rp></ruby>りながら、<ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby>（１）に<ruby>邁<rp>（</rp><rt>まい</rt><rp>）</rp></ruby><ruby>進<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>したいと<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>えております。
@@ -86,11 +116,11 @@
 <br>(是的，一周到岗5天也没问题。)
 </p>
 
----
+
+##### 週五日出社は避けたいってとこなんですね。
 [目次へ](#toc)
 
-- <ruby>週<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby>5<ruby>日<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>出<rp>（</rp><rt>しゅっ</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby>は<ruby>避<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>けたい（３）ってとこなんですね。
-<br><br>週五日出社は避けたいってとこなんですね。
+<ruby>週<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby>5<ruby>日<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>出<rp>（</rp><rt>しゅっ</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby>は<ruby>避<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>けたい（３）ってとこなんですね。
 <br>(也就是说，您还是想尽量避免一周到岗办公五天，对吧？)
 
 <p style="padding: 0 2em;"><strong>A: </strong><ruby>必<rp>（</rp><rt>かなら</rt><rp>）</rp></ruby>ずしも<ruby>完<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>全<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>避<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>を<ruby>希<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>望<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>しているわけではありませんが、<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>効<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>率<rp>（</rp><rt>りつ</rt><rp>）</rp></ruby>や<ruby>集<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby><ruby>中<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>できる<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>を<ruby>考<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>慮<rp>（</rp><rt>りょ</rt><rp>）</rp></ruby>し、<ruby>可<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>能<rp>（</rp><rt>のう</rt><rp>）</rp></ruby>であれば<ruby>リモートワーク<rp>（</rp><rt>Remote work</rt><rp>）</rp></ruby>（３）を<ruby>並<rp>（</rp><rt>へい</rt><rp>）</rp></ruby><ruby>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>できる<ruby>働<rp>（</rp><rt>はた</rt><rp>）</rp></ruby>き<ruby>方<rp>（</rp><rt>かた</rt><rp>）</rp></ruby>を<ruby>希<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>望<rp>（</rp><rt>ぼう</rt><rp>）</rp></ruby>しております。
@@ -103,11 +133,10 @@
 <br>(是的，如果可以的话，每周能有几天远程办公就太好了。)
 </p>
 
----
+##### リモートがある嬉しいっていうなイメージで間違いないですね。
 [目次へ](#toc)
 
-- <ruby>リモート<rp>（</rp><rt>Remote</rt><rp>）</rp></ruby>がある<ruby>嬉<rp>（</rp><rt>うれ</rt><rp>）</rp></ruby>しい（３）っていうな<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>で<ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby><ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いない（４）ですね。
-<br><br>リモートがある嬉しいっていうなイメージで間違いないですね。
+<ruby>リモート<rp>（</rp><rt>Remote</rt><rp>）</rp></ruby>がある<ruby>嬉<rp>（</rp><rt>うれ</rt><rp>）</rp></ruby>しい（３）っていうな<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>で<ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby><ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いない（４）ですね。
 <br>(也就是说，如果有远程办公的话您会更高兴，是这个意思对吧？)
 
 <p style="padding: 0 2em;"><strong>A: </strong>はい、その<ruby>通<rp>（</rp><rt>とお</rt><rp>）</rp></ruby>り（３）です。<ruby>リモートワーク<rp>（</rp><rt>Remote work</rt><rp>）</rp></ruby>（３）を<ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>することで、<ruby>移<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby><ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>を<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>や<ruby>学<rp>（</rp><rt>がく</rt><rp>）</rp></ruby><ruby>習<rp>（</rp><rt>しゅう</rt><rp>）</rp></ruby>に<ruby>充<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>てられ、より<ruby>生<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>産<rp>（</rp><rt>さん</rt><rp>）</rp></ruby><ruby>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>を<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>められると<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>えております。
@@ -119,11 +148,11 @@
 <br><br>はい、その認識で間違いありません。リモート環境のほうが集中しやすい業務もあるので、選択肢があるとありがたいです。
 <br>(是的，这么理解完全没错。有些业务在远程环境下更容易集中精力，所以如果有这个选项的话就太好了。)</p>
 
----
+
+##### 今回から転職のタイミングで宋さんご自身のご都合でお引越しの予定は、特にない形ですね。
 [目次へ](#toc)
 
-- <ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>から<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>の<ruby>タイミング<rp>（</rp><rt>Timing</rt><rp>）</rp></ruby>（２）で<ruby>宋<rp>（</rp><rt>そう</rt><rp>）</rp></ruby>さんご<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>身<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>のご<ruby>都<rp>（</rp><rt>つ</rt><rp>）</rp></ruby><ruby>合<rp>（</rp><rt>ごう</rt><rp>）</rp></ruby>でお<ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>っ<ruby>越<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>しの<ruby>予<rp>（</rp><rt>よ</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>は、<ruby>特<rp>（</rp><rt>とく</rt><rp>）</rp></ruby>にない<ruby>形<rp>（</rp><rt>かたち</rt><rp>）</rp></ruby>ですね。
-<br><br>今回から転職のタイミングで宋さんご自身のご都合でお引越しの予定は、特にない形ですね。
+<ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>から<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>の<ruby>タイミング<rp>（</rp><rt>Timing</rt><rp>）</rp></ruby>（２）で<ruby>宋<rp>（</rp><rt>そう</rt><rp>）</rp></ruby>さんご<ruby>自<rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby>身<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>のご<ruby>都<rp>（</rp><rt>つ</rt><rp>）</rp></ruby><ruby>合<rp>（</rp><rt>ごう</rt><rp>）</rp></ruby>でお<ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>っ<ruby>越<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>しの<ruby>予<rp>（</rp><rt>よ</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>は、<ruby>特<rp>（</rp><rt>とく</rt><rp>）</rp></ruby>にない<ruby>形<rp>（</rp><rt>かたち</rt><rp>）</rp></ruby>ですね。
 <br>(趁着这次换工作的时机，出于宋先生您个人的原因，目前是没有搬家打算的，对吧？)
 
 <p style="padding: 0 2em;"><strong>A: </strong>はい、その<ruby>通<rp>（</rp><rt>とお</rt><rp>）</rp></ruby>り（３）です。<ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><ruby>在<rp>（</rp><rt>ざい</rt><rp>）</rp></ruby>（１）の<ruby>住<rp>（</rp><rt>す</rt><rp>）</rp></ruby>まいから<ruby>十<rp>（</rp><rt>じゅう</rt><rp>）</rp></ruby><ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby>に<ruby>通<rp>（</rp><rt>つう</rt><rp>）</rp></ruby><ruby>勤<rp>（</rp><rt>きん</rt><rp>）</rp></ruby><ruby>可<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>能<rp>（</rp><rt>のう</rt><rp>）</rp></ruby>ですので、<ruby>引<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>っ<ruby>越<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>しの<ruby>予<rp>（</rp><rt>よ</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>はございません。
@@ -134,11 +163,11 @@
 <br><br>はい、今のところ引越す予定はありません。
 <br>(是的，目前没有搬家的打算。)</p>
 
----
+
+##### 今回の転職の目的みたいなとこ行ってお伺いができればと思うんですが、
 [目次へ](#toc)
 
-- <ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>の<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>の<ruby>目<rp>（</rp><rt>もく</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>みたいなとこ行ってお伺いができればと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>うんですが、
-<br><br>今回の転職の目的みたいなとこ行ってお伺いができればと思うんですが、
+<ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>の<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>の<ruby>目<rp>（</rp><rt>もく</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>みたいなとこ行ってお伺いができればと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>うんですが、
 <br>(接下来想请教一下，您这次换工作的主要目的是什么呢？)
 
 <p style="padding: 0 2em;"><strong>A: </strong><ruby>主<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>な<ruby>目<rp>（</rp><rt>もく</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>は、これまでの<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>を<ruby>活<rp>（</rp><rt>い</rt><rp>）</rp></ruby>かしつつ、より<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>流<rp>（</rp><rt>りゅう</rt><rp>）</rp></ruby><ruby>工<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>程<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>（３）や<ruby>モダン<rp>（</rp><rt>Modern</rt><rp>）</rp></ruby>（２）な<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby><ruby>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby><ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>での<ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby>（１）に<ruby>携<rp>（</rp><rt>たずさ</rt><rp>）</rp></ruby>わり、<ruby>エンジニア<rp>（</rp><rt>Engineer</rt><rp>）</rp></ruby>（６）としての<ruby>スキル<rp>（</rp><rt>Skill</rt><rp>）</rp></ruby>（１）<ruby>幅<rp>（</rp><rt>はば</rt><rp>）</rp></ruby>を<ruby>広<rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby>げるためです。
@@ -149,11 +178,11 @@
 <br><br>これまでの経験を活かしながら、より成長できる環境で長く活躍したいというのが一番の目的です。
 <br>(最主要的目的是希望在能发挥已有经验的同时，在一个更有成长空间的环境里长期发挥作用。)</p>
 
----
+
+##### 今回のこの転職しよう転職活動を進められている。もうこれ目的だったりとか転職でか叶えたいややりたいことって言うのは今回どういったところが大きいでしょうか。
 [目次へ](#toc)
 
-- <ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>のこの<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>しよう<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby><ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp></ruby><ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby>を<ruby>進<rp>（</rp><rt>すす</rt><rp>）</rp></ruby>められている。もうこれ<ruby>目<rp>（</rp><rt>もく</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>だったりとか<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>でか<ruby>叶<rp>（</rp><rt>かな</rt><rp>）</rp></ruby>えたいややりたいことって<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>うのは<ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>どういったところが<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>きい（３）でしょうか。
-<br><br>今回のこの転職しよう転職活動を進められている。もうこれ目的だったりとか転職でか叶えたいややりたいことって言うのは今回どういったところが大きいでしょうか。
+<ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>のこの<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>しよう<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby><ruby>活<rp>（</rp><rt>かつ</rt><rp>）</rp></ruby><ruby>動<rp>（</rp><rt>どう</rt><rp>）</rp></ruby>を<ruby>進<rp>（</rp><rt>すす</rt><rp>）</rp></ruby>められている。もうこれ<ruby>目<rp>（</rp><rt>もく</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>だったりとか<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby>でか<ruby>叶<rp>（</rp><rt>かな</rt><rp>）</rp></ruby>えたいややりたいことって<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>うのは<ruby>今<rp>（</rp><rt>こん</rt><rp>）</rp></ruby><ruby>回<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>どういったところが<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>きい（３）でしょうか。
 <br>(您这次决定换工作并推进求职活动，要说到其中的目的，或者说通过跳槽最想实现、最想做的事，这次主要是在于哪些方面呢？)
 
 <p style="padding: 0 2em;"><strong>A: </strong><ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp></ruby><ruby>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）の<ruby>目<rp>（</rp><rt>もく</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>は、<ruby>モダン<rp>（</rp><rt>Modern</rt><rp>）</rp></ruby>（２）な<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby><ruby>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby><ruby>スタック<rp>（</rp><rt>Stack</rt><rp>）</rp></ruby>（２）や<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（２）<ruby>環<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>境<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>での<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>をさらに<ruby>深<rp>（</rp><rt>ふか</rt><rp>）</rp></ruby>め、<ruby>システム<rp>（</rp><rt>System</rt><rp>）</rp></ruby>（１）<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>や<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>流<rp>（</rp><rt>りゅう</rt><rp>）</rp></ruby><ruby>工<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>程<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>（３）から<ruby>携<rp>（</rp><rt>たずさ</rt><rp>）</rp></ruby>われる<ruby>エンジニア<rp>（</rp><rt>Engineer</rt><rp>）</rp></ruby>（６）へと<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>長<rp>（</rp><rt>ちょう</rt><rp>）</rp></ruby>することです。<ruby>チーム<rp>（</rp><rt>Team</rt><rp>）</rp></ruby>（１）の<ruby>生<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>産<rp>（</rp><rt>さん</rt><rp>）</rp></ruby><ruby>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>向<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>や<ruby>品<rp>（</rp><rt>ひん</rt><rp>）</rp></ruby><ruby>質<rp>（</rp><rt>しつ</rt><rp>）</rp></ruby><ruby>管<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>にも<ruby>貢<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>献<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>したいと<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>えております。
@@ -164,11 +193,11 @@
 <br><br>よりモダンな開発環境でスキルアップしつつ、チームで協力して価値のあるプロダクトを作り上げていきたい、というのが一番叶えたいことです。
 <br>(最想实现的是在更现代化的开发环境中提升个人技能，同时与团队合作打造出有价值的产品。)</p>
 
----
+
+##### 転職後、宋さんとしてはどういったことやっていきたいって何かイメージされますか。
 [目次へ](#toc)
 
-- <ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby><ruby>後<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>、<ruby>宋<rp>（</rp><rt>そう</rt><rp>）</rp></ruby>さんとしてはどういったことやっていきたいって何か<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>されますか。
-<br><br>転職後、宋さんとしてはどういったことやっていきたいって何かイメージされますか。
+<ruby>転<rp>（</rp><rt>てん</rt><rp>）</rp></ruby><ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby><ruby>後<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>、<ruby>宋<rp>（</rp><rt>そう</rt><rp>）</rp></ruby>さんとしてはどういったことやっていきたいって何か<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>されますか。
 <br>(“入职/换工作之后，宋先生您个人有什么想做的事吗？对此有没有具体的设想或规划呢？”)
 
 <p style="padding: 0 2em;"><strong>A: </strong><ruby>将<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>来<rp>（</rp><rt>らい</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>なことには、これまでの<ruby>バックエンド<rp>（</rp><rt>Backend</rt><rp>）</rp></ruby>（４）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>の<ruby>実<rp>（</rp><rt>じつ</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby>（１）<ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>を<ruby>活<rp>（</rp><rt>い</rt><rp>）</rp></ruby>かしつつ、<ruby>システム<rp>（</rp><rt>System</rt><rp>）</rp></ruby>（１）<ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>や<ruby>アーキテクチャ<rp>（</rp><rt>Architecture</rt><rp>）</rp></ruby>（２）<ruby>選<rp>（</rp><rt>せん</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>といった<ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>流<rp>（</rp><rt>りゅう</rt><rp>）</rp></ruby><ruby>工<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>程<rp>（</rp><rt>てい</rt><rp>）</rp></ruby>（３）から<ruby>主<rp>（</rp><rt>しゅ</rt><rp>）</rp></ruby><ruby>導<rp>（</rp><rt>どう</rt><rp>）</rp></ruby>できる<ruby>エンジニア<rp>（</rp><rt>Engineer</rt><rp>）</rp></ruby>（６）を<ruby>目<rp>（</rp><rt>め</rt><rp>）</rp></ruby><ruby>指<rp>（</rp><rt>し</rt><rp>）</rp></ruby>したいと<ruby>考<rp>（</rp><rt>かんが</rt><rp>）</rp></ruby>えております。また、コード（１）レビュー（１）や<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>プロセス<rp>（</rp><rt>Process</rt><rp>）</rp></ruby>（２）の<ruby>効<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>率<rp>（</rp><rt>りつ</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>を<ruby>通<rp>（</rp><rt>つう</rt><rp>）</rp></ruby>じて、<ruby>全<rp>（</rp><rt>ぜん</rt><rp>）</rp></ruby><ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby>の<ruby>生<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>産<rp>（</rp><rt>さん</rt><rp>）</rp></ruby><ruby>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>向<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>上<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby>にも<ruby>貢<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>献<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>していきたい<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>を<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>っています。
@@ -180,11 +209,11 @@
 <br><br>まずは現場の開発フローにしっかり適応しつつ、将来的には技術選定や設計にも携わって、チームを引っ張っていけるような存在になりたいと考えています。
 <br>(首先希望能切实适应现场的开发流程，将来则希望能够参与技术选型和设计，成为能够带领团队的前辈。)</p>
 
----
+
+##### SES（System Engineering Service）の形でこのお客様先に常駐していただくって形あったりはするんですが、まあ基本的に雇用に関しては弊社に乗せていただいていると思っていただいていいかなと思います。
 [目次へ](#toc)
 
-- <ruby>SES<rp>（</rp><rt>System Engineering Service</rt><rp>）</rp></ruby>（１）の<ruby>形<rp>（</rp><rt>かたち</rt><rp>）</rp></ruby>でこのお<ruby>客<rp>（</rp><rt>きゃく</rt><rp>）</rp></ruby><ruby>様<rp>（</rp><rt>さま</rt><rp>）</rp></ruby><ruby>先<rp>（</rp><rt>さき</rt><rp>）</rp></ruby>に<ruby>常<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>駐<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>していただくって<ruby>形<rp>（</rp><rt>かたち</rt><rp>）</rp></ruby>あったりはするんですが、まあ<ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>に<ruby>雇<rp>（</rp><rt>こ</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>に<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>しては<ruby>弊<rp>（</rp><rt>へい</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby>（１）に<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>せていただいていると<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>っていただいていいかなと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>います。
-<br><br>SES（System Engineering Service）の形でこのお客様先に常駐していただくって形あったりはするんですが、まあ基本的に雇用に関しては弊社に乗せていただいていると思っていただいていいかなと思います。
+<ruby>SES<rp>（</rp><rt>System Engineering Service</rt><rp>）</rp></ruby>（１）の<ruby>形<rp>（</rp><rt>かたち</rt><rp>）</rp></ruby>でこのお<ruby>客<rp>（</rp><rt>きゃく</rt><rp>）</rp></ruby><ruby>様<rp>（</rp><rt>さま</rt><rp>）</rp></ruby><ruby>先<rp>（</rp><rt>さき</rt><rp>）</rp></ruby>に<ruby>常<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>駐<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>していただくって<ruby>形<rp>（</rp><rt>かたち</rt><rp>）</rp></ruby>あったりはするんですが、まあ<ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>に<ruby>雇<rp>（</rp><rt>こ</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>に<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>しては<ruby>弊<rp>（</rp><rt>へい</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby>（１）に<ruby>乗<rp>（</rp><rt>の</rt><rp>）</rp></ruby>せていただいていると<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>っていただいていいかなと<ruby>思<rp>（</rp><rt>おも</rt><rp>）</rp></ruby>います。
 <br>(虽然形式上会有以 SES（技术外包）的模式常驻到客户现场的情况，但基本上关于雇佣关系，您可以理解为是直接签约在我们公司的。)
 
 <p style="padding: 0 2em;"><strong>A: </strong>はい、<ruby>承<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>知<rp>（</rp><rt>ち</rt><rp>）</rp></ruby>いたしました。<ruby>雇<rp>（</rp><rt>こ</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>契<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>約<rp>（</rp><rt>やく</rt><rp>）</rp></ruby>は<ruby>御<rp>（</rp><rt>おん</rt><rp>）</rp></ruby><ruby>社<rp>（</rp><rt>しゃ</rt><rp>）</rp></ruby>（１）と<ruby>結<rp>（</rp><rt>むす</rt><rp>）</rp></ruby>び、<ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby><ruby>務<rp>（</rp><rt>む</rt><rp>）</rp></ruby>（１）の<ruby>拠<rp>（</rp><rt>きょ</rt><rp>）</rp></ruby><ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>として<ruby>客<rp>（</rp><rt>きゃく</rt><rp>）</rp></ruby><ruby>先<rp>（</rp><rt>さき</rt><rp>）</rp></ruby><ruby>常<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>駐<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby>の<ruby>可<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>能<rp>（</rp><rt>のう</rt><rp>）</rp></ruby><ruby>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>もあるという<ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby><ruby>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>で<ruby>相<rp>（</rp><rt>そう</rt><rp>）</rp></ruby><ruby>違<rp>（</rp><rt>い</rt><rp>）</rp></ruby>ございません。<ruby>現<rp>（</rp><rt>げん</rt><rp>）</rp></ruby><ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby>の<ruby>状<rp>（</rp><rt>じょう</rt><rp>）</rp></ruby><ruby>況<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>に<ruby>応<rp>（</rp><rt>おう</rt><rp>）</rp></ruby>じた<ruby>柔<rp>（</rp><rt>じゅう</rt><rp>）</rp></ruby><ruby>軟<rp>（</rp><rt>なん</rt><rp>）</rp></ruby>な<ruby>対<rp>（</rp><rt>たい</rt><rp>）</rp></ruby><ruby>処<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>が<ruby>可<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>能<rp>（</rp><rt>のう</rt><rp>）</rp></ruby>ですので、<ruby>働<rp>（</rp><rt>はた</rt><rp>）</rp></ruby>き<ruby>方<rp>（</rp><rt>kata</rt><rp>）</rp></ruby>に<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>しては<ruby>全<rp>（</rp><rt>まっ</rt><rp>）</rp></ruby>たく<ruby>問<rp>（</rp><rt>もん</rt><rp>）</rp></ruby><ruby>題<rp>（</rp><rt>だい</rt><rp>）</rp></ruby>ございません。
@@ -196,11 +225,11 @@
 <br>(是的，理解了。雇佣关系在贵公司，工作模式也有常驻客户现场的情况对吧。我对工作方式没有什么特别的硬性要求，所以没问题。)</p>
 
 #### <span id="profile_whyJapan">日本に来られたきっかけ</span>
----
+
+##### 日本に来られたきっかけは何でしょうか。
 [目次へ](#toc)
 
-- <ruby>日<rp>（</rp><rt>に</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby>（２）に<ruby>来<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>られたきっかけは<ruby>何<rp>（</rp><rt>なん</rt><rp>）</rp></ruby>（１）でしょうか。
-<br><br>日本に来られたきっかけは何でしょうか。
+<ruby>日<rp>（</rp><rt>に</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby>（２）に<ruby>来<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>られたきっかけは<ruby>何<rp>（</rp><rt>なん</rt><rp>）</rp></ruby>（１）でしょうか。
 <br>(您是怎么想到要来日本的呢？)
 
 1.
@@ -223,10 +252,11 @@
 
 #### <span id="process_type">開発手法 (ウォーターフォール・アジャイル)</span>
 ---
+
+##### これまでのプロジェクトにおける開発手法についてお伺いできますでしょうか。例えば、ウォーターフォール型やアジャイル型など、どのような体制が多かったですか？
 [目次へ](#toc)
 
-- これまでの<ruby>プロジェクト<rp>（</rp><rt>Project</rt><rp>）</rp></ruby>における<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>手<rp>（</rp><rt>しゅ</rt><rp>）</rp></ruby><ruby>法<rp>（</rp><rt>ほう</rt><rp>）</rp></ruby>についてお<ruby>伺<rp>（</rp><rt>うかが</rt><rp>）</rp></ruby>いできますでしょうか。たとえば、<ruby>ウォーターフォール<rp>（</rp><rt>Waterfall</rt><rp>）</rp></ruby><ruby>型<rp>（</rp><rt>がた</rt><rp>）</rp></ruby>や<ruby>アジャイル<rp>（</rp><rt>Agile</rt><rp>）</rp></ruby><ruby>型<rp>（</rp><rt>がた</rt><rp>）</rp></ruby>など、どのような<ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby><ruby>制<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>が<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>かった（３）ですか？
-<br><br>これまでのプロジェクトにおける開発手法についてお伺いできますでしょうか。例えば、ウォーターフォール型やアジャイル型など、どのような体制が多かったですか？
+これまでの<ruby>プロジェクト<rp>（</rp><rt>Project</rt><rp>）</rp></ruby>における<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby><ruby>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>手<rp>（</rp><rt>しゅ</rt><rp>）</rp></ruby><ruby>法<rp>（</rp><rt>ほう</rt><rp>）</rp></ruby>についてお<ruby>伺<rp>（</rp><rt>うかが</rt><rp>）</rp></ruby>いできますでしょうか。たとえば、<ruby>ウォーターフォール<rp>（</rp><rt>Waterfall</rt><rp>）</rp></ruby><ruby>型<rp>（</rp><rt>がた</rt><rp>）</rp></ruby>や<ruby>アジャイル<rp>（</rp><rt>Agile</rt><rp>）</rp></ruby><ruby>型<rp>（</rp><rt>がた</rt><rp>）</rp></ruby>など、どのような<ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby><ruby>制<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>が<ruby>多<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>かった（３）ですか？
 <br>(能请教一下您在以往项目中所采用的开发方法吗？例如瀑布流型或敏捷型，哪种开发模式比较多呢？)
 
 1.
@@ -258,10 +288,11 @@
 
 #### <span id="process_phrases">開発の各フェーズ</span>
 ---
+
+##### 要件定義から、基本設計、詳細設計、実装、テスト、そしてリリース、運用、保守まで、各フェーズについて、ご簡単に説明できますでしょうか。
 [目次へ](#toc)
 
-- <ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby>から、<ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>、<ruby>詳<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>細<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>、<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>装<rp>（</rp><rt>そう</rt><rp>）</rp></ruby>、<ruby>テスト<rp>（</rp><rt>Test</rt><rp>）</rp></ruby>（１）、そして<ruby>リリース<rp>（</rp><rt>Release</rt><rp>）</rp></ruby>（２）、<ruby>運<rp>（</rp><rt>うん</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>、<ruby>保<rp>（</rp><rt>ほ</rt><rp>）</rp></ruby><ruby>守<rp>（</rp><rt>しゅ</rt><rp>）</rp></ruby>まで、<ruby>各<rp>（</rp><rt>かく</rt><rp>）</rp></ruby><ruby>フェーズ<rp>（</rp><rt>Phase</rt><rp>）</rp></ruby>（１）について、ご<ruby>簡<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>単<rp>（</rp><rt>たん</rt><rp>）</rp></ruby>にご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
-<br>要件定義から、基本設計、詳細設計、実装、テスト、そしてリリース、運用、保守まで、各フェーズについて、ご簡単に説明できますでしょうか。
+<ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby>から、<ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>、<ruby>詳<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>細<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>、<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp></ruby><ruby>装<rp>（</rp><rt>そう</rt><rp>）</rp></ruby>、<ruby>テスト<rp>（</rp><rt>Test</rt><rp>）</rp></ruby>（１）、そして<ruby>リリース<rp>（</rp><rt>Release</rt><rp>）</rp></ruby>（２）、<ruby>運<rp>（</rp><rt>うん</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby>、<ruby>保<rp>（</rp><rt>ほ</rt><rp>）</rp></ruby><ruby>守<rp>（</rp><rt>しゅ</rt><rp>）</rp></ruby>まで、<ruby>各<rp>（</rp><rt>かく</rt><rp>）</rp></ruby><ruby>フェーズ<rp>（</rp><rt>Phase</rt><rp>）</rp></ruby>（１）について、ご<ruby>簡<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>単<rp>（</rp><rt>たん</rt><rp>）</rp></ruby>にご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
 <br>(从需求定义、基本设计、详细设计、实现、测试，到发布、运维和维护，各个阶段能否为您作一个简单的说明呢？)
 
 1.
@@ -316,11 +347,11 @@
 <br><br>最后，发布到生产环境，运行之后检查是否在稳定运行、修复故障的运维与保守——这就是整个流程！)
 </p>
 
----
+
+##### 当時はあの要件定義と具体的にどのようなあの作業を担当されているか成果物は何を作成したか簡単にご説明できますでしょうか。
 [目次へ](#toc)
 
-- <ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>はあの<ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby>と<ruby>具<rp>（</rp><rt>ぐ</rt><rp>）</rp></ruby><ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>にどのようなあの<ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby>を<ruby>担<rp>（</rp><rt>たん</rt><rp>）</rp></ruby><ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby>されているか<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>果<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>物<rp>（</rp><rt>ぶつ</rt><rp>）</rp></ruby>は<ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby><ruby>を<rt></rt></ruby><ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>したか<ruby>簡<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>単<rp>（</rp><rt>たん</rt><rp>）</rp></ruby>にご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
-<br><br>当時はあの要件定義と具体的にどのようなあの作業を担当されているか成果物は何を作成したか簡単にご説明できますでしょうか。
+<ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>はあの<ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>件<rp>（</rp><rt>けん</rt><rp>）</rp></ruby><ruby>定<rp>（</rp><rt>てい</rt><rp>）</rp></ruby><ruby>義<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby>と<ruby>具<rp>（</rp><rt>ぐ</rt><rp>）</rp></ruby><ruby>体<rp>（</rp><rt>たい</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>にどのようなあの<ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby><ruby>業<rp>（</rp><rt>ぎょう</rt><rp>）</rp></ruby>を<ruby>担<rp>（</rp><rt>たん</rt><rp>）</rp></ruby><ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby>されているか<ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>果<rp>（</rp><rt>か</rt><rp>）</rp></ruby><ruby>物<rp>（</rp><rt>ぶつ</rt><rp>）</rp></ruby>は<ruby>何<rp>（</rp><rt>なに</rt><rp>）</rp></ruby><ruby>を<rt></rt></ruby><ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>したか<ruby>簡<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>単<rp>（</rp><rt>たん</rt><rp>）</rp></ruby>にご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
 <br>(请问能否简单说明一下，在当时的需求定义（Specs/Requirements Definition）阶段，您具体负责了哪些工作，以及制作了哪些成果物（Deliverables）？)
 
 1.
@@ -336,11 +367,11 @@
 <br>(在需求定义阶段，我主要负责听取客户的需求，并将其梳理落成为具体需要哪些功能的工作。主要的成果物就是汇总需求定义书和业务流程图，通过文档化来避免后期产生认知偏差！)
 </p>
 
----
+
+##### まあ、簡単でもいいですけど、基本設計っていうと詳細設計フェーズのこの二つのフェーズでそれぞれどのような追加アップを作成したんですか。
 [目次へ](#toc)
 
-- まあ、<ruby>簡<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>単<rp>（</rp><rt>たん</rt><rp>）</rp></ruby>でもいいですけど、<ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>っていうと<ruby>詳<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>細<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>フェーズ<rp>（</rp><rt>Phase</rt><rp>）</rp></ruby>（１）のこの<ruby>二<rp>（</rp><rt>ふた</rt><rp>）</rp></ruby>つの<ruby>フェーズ<rp>（</rp><rt>Phase</rt><rp>）</rp></ruby>（１）でそれぞれどのような<ruby>追<rp>（</rp><rt>つい</rt><rp>）</rp></ruby><ruby>加<rp>（</rp><rt>か</rt><rp>）</rp></ruby>アップを<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>したんですか。
-<br><br>まあ、簡単でもいいですけど、基本設計っていうと詳細設計フェーズのこの二つのフェーズでそれぞれどのような追加アップを作成したんですか。
+まあ、<ruby>簡<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>単<rp>（</rp><rt>たん</rt><rp>）</rp></ruby>でもいいですけど、<ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>っていうと<ruby>詳<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>細<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>フェーズ<rp>（</rp><rt>Phase</rt><rp>）</rp></ruby>（１）のこの<ruby>二<rp>（</rp><rt>ふた</rt><rp>）</rp></ruby>つの<ruby>フェーズ<rp>（</rp><rt>Phase</rt><rp>）</rp></ruby>（１）でそれぞれどのような<ruby>追<rp>（</rp><rt>つい</rt><rp>）</rp></ruby><ruby>加<rp>（</rp><rt>か</rt><rp>）</rp></ruby>アップを<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>したんですか。
 <br>(※注：「追加アップ」は音声認識や口语での「成果物（せいかぶつ）」の言い間違い・あるいは変換ゆらぎを想定して記載します)
 <br>(那么，简单说说也行，在基本设计和详细设计这两个阶段中，分别制作了什么样的附加内容/成果物呢？)
 
@@ -363,11 +394,11 @@
 <br>詳細設計ではそれをさらに落とし込んで、プログラムのクラス構造や処理の流れを示すシーケンス図やテーブル定義書など、実際にコードを書くための具体的な設計書を作成していました！
 <br>(就是基本设计和详细设计所制作文档的区别呢！在基本设计中，作为能看到的用户界面和整体数据结构等“外部设计”，我制作了画面设计书和 ER 图。在详细设计中则会进一步细化，制作出展示程序类结构或处理流程的时序图和表定义书等用于实际编写代码的具体设计书！)</p>
 
----
+
+##### 日本で直近の詳細設計書は新規で作成したこともありますか。
 [目次へ](#toc)
 
-- <ruby>日<rp>（</rp><rt>に</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby>（２）で<ruby>直<rp>（</rp><rt>ちょっ</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>の<ruby>詳<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>細<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>は<ruby>新<rp>（</rp><rt>しん</rt><rp>）</rp></ruby><ruby>規<rp>（</rp><rt>き</rt><rp>）</rp></ruby>（１）で<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>したこともありますか。
-<br><br>日本で直近の詳細設計書は新規で作成したこともありますか。
+<ruby>日<rp>（</rp><rt>に</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby>（２）で<ruby>直<rp>（</rp><rt>ちょっ</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>の<ruby>詳<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby><ruby>細<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>設<rp>（</rp><rt>せっ</rt><rp>）</rp></ruby><ruby>計<rp>（</rp><rt>けい</rt><rp>）</rp></ruby><ruby>書<rp>（</rp><rt>しょ</rt><rp>）</rp></ruby>は<ruby>新<rp>（</rp><rt>しん</rt><rp>）</rp></ruby><ruby>規<rp>（</rp><rt>き</rt><rp>）</rp></ruby>（１）で<ruby>作<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>したこともありますか。
 <br>(请问在日本，最近有没有从头开始（新規）编写详细设计书的经验呢？)
 
 1.
@@ -392,10 +423,11 @@
 
 #### <span id="arch_mvc">MVC</span>
 ---
+
+##### まずはこの当時のキーワードであるMVCの正式な名称とそれぞれのお役割についてご説明できますでしょうか。
 [目次へ](#toc)
 
-- まずはこの<ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>の<ruby>キーワード<rt>Keyword</rt></ruby>である<ruby>MVC<rt>エムブイシー</rt></ruby>の<ruby>正<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>式<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>な<ruby>名<rp>（</rp><rt>めい</rt><rp>）</rp></ruby><ruby>称<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>とそれぞれのお<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby><ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby>についてご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
-<br><br>まずはこの当時のキーワードであるMVCの正式な名称とそれぞれのお役割についてご説明できますでしょうか。
+まずはこの<ruby>当<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>時<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>の<ruby>キーワード<rt>Keyword</rt></ruby>である<ruby>MVC<rt>エムブイシー</rt></ruby>の<ruby>正<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>式<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>な<ruby>名<rp>（</rp><rt>めい</rt><rp>）</rp></ruby><ruby>称<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>とそれぞれのお<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby><ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby>についてご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
 <br>(请问能否说明一下作为当时关键词的 MVC 的正式名称以及各自的职责（作用）？)
 
 MVCは、アプリケーションの構造をModel、View、Controllerの3つに<strong>分離</strong>して設計するデザインパターンです。
@@ -419,10 +451,11 @@ MVCは、アプリケーションの構造をModel、View、Controllerの3つに
 
 #### <span id="arch_cloud">クラウド</span>
 ---
+
+##### クラウドって開発経験は豊富にあるイメージと感じてますね。やはりアジュールやAWSはよく開発されているでしょうね。少々その中に色々なサービスが説明できますでしょうか
 [目次へ](#toc)
 
-- <ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）って<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>は<ruby>豊<rp>（</rp><rt>ほう</rt><rp>）</rp>富<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>にある（１）<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>（２）と<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp>じ<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>て（２）ますね。やはり<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）や<ruby>AWS<rp>（</rp><rt>エーダブリューエス</rt><rp>）</rp></ruby>（<ruby>Amazon<rp>（</rp><rt>アマゾン</rt><rp>）</rp></ruby> <ruby>Web<rp>（</rp><rt>ウェブ</rt><rp>）</rp></ruby> <ruby>Services<rp>（</rp><rt>サービシズ</rt><rp>）</rp></ruby>）はよく（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>されているでしょうね。<ruby>少<rp>（</rp><rt>しょう</rt><rp>）</rp>々<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>（１）その（１）<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>（１）に<ruby>色<rp>（</rp><rt>いろ</rt><rp>）</rp>々<rp>（</rp><rt>いろ</rt><rp>）</rp></ruby>な<ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１）が<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できます（２）でしょうか。
-<br><br>クラウドって開発経験は豊富にあるイメージと感じてますね。やはりアジュールやAWSはよく開発されているでしょうね。少々その中に色々なサービスが説明できますでしょうか
+<ruby>クラウド<rp>（</rp><rt>Cloud</rt><rp>）</rp></ruby>（１）って<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>は<ruby>豊<rp>（</rp><rt>ほう</rt><rp>）</rp>富<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>にある（１）<ruby>イメージ<rp>（</rp><rt>Image</rt><rp>）</rp></ruby>（２）と<ruby>感<rp>（</rp><rt>かん</rt><rp>）</rp>じ<rp>（</rp><rt>じ</rt><rp>）</rp></ruby>て（２）ますね。やはり<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）や<ruby>AWS<rp>（</rp><rt>エーダブリューエス</rt><rp>）</rp></ruby>（<ruby>Amazon<rp>（</rp><rt>アマゾン</rt><rp>）</rp></ruby> <ruby>Web<rp>（</rp><rt>ウェブ</rt><rp>）</rp></ruby> <ruby>Services<rp>（</rp><rt>サービシズ</rt><rp>）</rp></ruby>）はよく（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby>されているでしょうね。<ruby>少<rp>（</rp><rt>しょう</rt><rp>）</rp>々<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>（１）その（１）<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>（１）に<ruby>色<rp>（</rp><rt>いろ</rt><rp>）</rp>々<rp>（</rp><rt>いろ</rt><rp>）</rp></ruby>な<ruby>サービス<rp>（</rp><rt>Service</rt><rp>）</rp></ruby>（１）が<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できます（２）でしょうか。
 <br>(感觉对于云有着丰富的开发经验的印象呢。想必大家也经常在 Azure 和 AWS 上进行开发吧。能否稍微为我说明一下其中的各种服务呢？)
 
 1.
@@ -482,10 +515,11 @@ MVCは、アプリケーションの構造をModel、View、Controllerの3つに
 
 #### <span id="arch_docker">ドッカー</span>
 ---
+
+##### 長い開発経験の中で、ドッカーっていう技術も習熟ですよね。少しだけ説明していただけないでしょうか。
 [目次へ](#toc)
 
-- <ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>い（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>の<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>（１）で、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）っていう<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）も<ruby>習<rp>（</rp><rt>しゅう</rt><rp>）</rp>熟<rp>（</rp><rt>じゅく</rt><rp>）</rp></ruby>ですよね。<ruby>少<rp>（</rp><rt>すこ</rt><rp>）</rp></ruby>し（２）だけ<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>していただけないでしょうか。
-<br><br>長い開発経験の中で、ドッカーっていう技術も習熟ですよね。少しだけ説明していただけないでしょうか。
+<ruby>長<rp>（</rp><rt>なが</rt><rp>）</rp></ruby>い（１）<ruby>開<rp>（</rp><rt>かい</rt><rp>）</rp>発<rp>（</rp><rt>はつ</rt><rp>）</rp></ruby><ruby>経<rp>（</rp><rt>けい</rt><rp>）</rp>験<rp>（</rp><rt>けん</rt><rp>）</rp></ruby>の<ruby>中<rp>（</rp><rt>なか</rt><rp>）</rp></ruby>（１）で、<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）っていう<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）も<ruby>習<rp>（</rp><rt>しゅう</rt><rp>）</rp>熟<rp>（</rp><rt>じゅく</rt><rp>）</rp></ruby>ですよね。<ruby>少<rp>（</rp><rt>すこ</rt><rp>）</rp></ruby>し（２）だけ<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>していただけないでしょうか。
 <br>(在长期的开发经验中，Docker 这项技术您也很熟练吧？能否稍微向我说明一下呢？)
 
 1.
@@ -540,10 +574,11 @@ MVCは、アプリケーションの構造をModel、View、Controllerの3つに
 减少在基础设施搭建 and 环境配置上白白烦恼的时间，作为将开发速度拉满的必备搭档，我已经使用多年了。)
 </p>
 
----
 
-- <ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えば、<ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）で<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>な「Hello World」<ruby>プログラム<rp>（</rp><rt>Program</rt><rp>）</rp></ruby>（４）を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>きました。これを<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）<ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>し、<ruby>ローカル<rp>（</rp><rt>Local</rt><rp>）</rp></ruby>（２）で<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>してから、<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）へデプロイするにはどうすればよいですか。
-<br><br>例えば、C#で「Hello World」プログラムを書きました。これをDocker化し、ローカルで実行してから、Azureへデプロイするにはどうすればよいですか。
+##### 例えば、C#で「Hello World」プログラムを書きました。これをDocker化し、ローカルで実行してから、Azureへデプロイするにはどうすればよいですか。
+[目次へ](#toc)
+
+<ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えば、<ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）で<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>な「Hello World」<ruby>プログラム<rp>（</rp><rt>Program</rt><rp>）</rp></ruby>（４）を<ruby>書<rp>（</rp><rt>か</rt><rp>）</rp></ruby>きました。これを<ruby>ドッカー<rp>（</rp><rt>Docker</rt><rp>）</rp></ruby>（１）<ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>し、<ruby>ローカル<rp>（</rp><rt>Local</rt><rp>）</rp></ruby>（２）で<ruby>実<rp>（</rp><rt>じっ</rt><rp>）</rp>行<rp>（</rp><rt>こう</rt><rp>）</rp></ruby>してから、<ruby>アジュール<rp>（</rp><rt>Azure</rt><rp>）</rp></ruby>（２）へデプロイするにはどうすればよいですか。
 <br>(假如说你用 C# 写了一个 HelloWorld 程序，请问如何把它 Docker 化，然后如何在本地运行，然后如何布署到 Azure 上？)
 
 1.
@@ -612,11 +647,12 @@ MVCは、アプリケーションの構造をModel、View、Controllerの3つに
 
 #### <span id="db_keys">主キーとユニークキー</span>
 ---
+
+##### テーブルのユニークキーと主キーをご存知ですか。
 [目次へ](#toc)
 
-- <ruby>テーブル<rt>Table</rt></ruby>の<ruby>ユニークキー<rt>Unique Key</rt></ruby>と<ruby>主<rp>（</rp><rt>しゅ</rt><rp>）</rp></ruby><ruby>キー<rt>Key</rt></ruby>をご<ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>じですか。
-(请问您知道数据表（Table）中的唯一键（Unique Key）和主键（Primary Key）吗？)
-<br>テーブルのユニークキーと主キーをご存知ですか。
+<ruby>テーブル<rt>Table</rt></ruby>の<ruby>ユニークキー<rt>Unique Key</rt></ruby>と<ruby>主<rp>（</rp><rt>しゅ</rt><rp>）</rp></ruby><ruby>キー<rt>Key</rt></ruby>をご<ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>じですか。
+<br>
 (请问您知道数据表（Table）中的唯一键（Unique Key）和主键（Primary Key）吗？)
 
 1.
@@ -645,11 +681,12 @@ MVCは、アプリケーションの構造をModel、View、Controllerの3つに
 
 #### <span id="db_relationalTablesDataOps">親子テーブルの登録・削除処理の注意点</span>
 ---
+
+##### テーブルって例えばえっと普通にあのう基本的には今は関係あるあのうリレーションのデータベースなんですけど、例えばえっとテーブル二つ親と子テーブルがありまして、そのテーブルのあのう登
 [目次へ](#toc)
 
-- <ruby>テーブル<rt>Table</rt></ruby>って<ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えばえっと<ruby>普<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby><ruby>通<rp>（</rp><rt>つう</rt><rp>）</rp></ruby>にあのう<ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>には<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>は<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>係<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>あるあのう<ruby>リレーション<rt>Relation</rt></ruby>の<ruby>データベース<rt>Database</rt></ruby>なんですけど、<ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えばえっと<ruby>テーブル<rt>Table</rt></ruby><ruby>二<rp>（</rp><rt>ふた</rt><rp>）</rp></ruby>つ<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby>と<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>テーブルがありまして、そのテーブルのあのう<ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby><ruby>操<rp>（</rp><rt>そう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>する<ruby>際<rp>（</rp><rt>さい</rt><rp>）</rp></ruby>に<ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>と<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>減<rp>（</rp><rt>げん</rt><rp>）</rp></ruby>［※<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>の<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>い<ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby>違い］に<ruby>注<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>か、いくつありますが、その<ruby>注<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>についてご<ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby><ruby>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>している<ruby>範<rp>（</rp><rt>はん</rt><rp>）</rp></ruby><ruby>囲<rp>（</rp><rt>い</rt><rp>）</rp></ruby>で<ruby>教<rp>（</rp><rt>おし</rt><rp>）</rp></ruby>えていかがでしょうか。
-(说到表，比如现在通常基本上都是有关系的、也就是关系型数据库（Relational Database）。比如说，如果有父表和子表这两张表，在对 these 表进行注册（插入/写入）和删除操作时，有什么需要注意的地方吗？有多少个注意事项呢？请在您认识的范围内为我解答一下。)
-<br>テーブルって例えばえっと普通にあのう基本的には今は関係あるあのうリレーションのデータベースなんですけど、例えばえっとテーブル二つ親と子テーブルがありまして、そのテーブルのあのう登録操作する際に登録と削減［※削除の言い間違い］に注意点か、いくつありますが、その注意点についてご認識している範囲で教えていかがでしょうか。
+<ruby>テーブル<rt>Table</rt></ruby>って<ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えばえっと<ruby>普<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby><ruby>通<rp>（</rp><rt>つう</rt><rp>）</rp></ruby>にあのう<ruby>基<rp>（</rp><rt>き</rt><rp>）</rp></ruby><ruby>本<rp>（</rp><rt>ほん</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>には<ruby>今<rp>（</rp><rt>いま</rt><rp>）</rp></ruby>は<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>係<rp>（</rp><rt>けい</rt><rp>）</rp></ruby>あるあのう<ruby>リレーション<rt>Relation</rt></ruby>の<ruby>データベース<rt>Database</rt></ruby>なんですけど、<ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えばえっと<ruby>テーブル<rt>Table</rt></ruby><ruby>二<rp>（</rp><rt>ふた</rt><rp>）</rp></ruby>つ<ruby>親<rp>（</rp><rt>おや</rt><rp>）</rp></ruby>と<ruby>子<rp>（</rp><rt>こ</rt><rp>）</rp></ruby>テーブルがありまして、そのテーブルのあのう<ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby><ruby>操<rp>（</rp><rt>そう</rt><rp>）</rp></ruby><ruby>作<rp>（</rp><rt>さ</rt><rp>）</rp></ruby>する<ruby>際<rp>（</rp><rt>さい</rt><rp>）</rp></ruby>に<ruby>登<rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby>録<rp>（</rp><rt>ろく</rt><rp>）</rp></ruby>と<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>減<rp>（</rp><rt>げん</rt><rp>）</rp></ruby>［※<ruby>削<rp>（</rp><rt>さく</rt><rp>）</rp></ruby><ruby>除<rp>（</rp><rt>じょ</rt><rp>）</rp></ruby>の<ruby>言<rp>（</rp><rt>い</rt><rp>）</rp></ruby>い<ruby>間<rp>（</rp><rt>ま</rt><rp>）</rp></ruby>違い］に<ruby>注<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>か、いくつありますが、その<ruby>注<rp>（</rp><rt>ちゅう</rt><rp>）</rp></ruby><ruby>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby><ruby>点<rp>（</rp><rt>てん</rt><rp>）</rp></ruby>についてご<ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp></ruby><ruby>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>している<ruby>範<rp>（</rp><rt>はん</rt><rp>）</rp></ruby><ruby>囲<rp>（</rp><rt>い</rt><rp>）</rp></ruby>で<ruby>教<rp>（</rp><rt>おし</rt><rp>）</rp></ruby>えていかがでしょうか。
+<br>録操作する際に登録と削減［※削除の言い間違い］に注意点か、いくつありますが、その注意点についてご認識している範囲で教えていかがでしょうか。
 (说到表，比如现在通常基本上都是有关系的、也就是关系型数据库（Relational Database）。比如说，如果有父表和子表这两张表，在对 these 表进行注册（插入/写入）和删除操作时，有什么需要注意的地方吗？有多少个注意事项见？请在您认识的范围内为我解答一下。)</p>
 
 1.
@@ -695,10 +732,11 @@ MVCは、アプリケーションの構造をModel、View、Controllerの3つに
 
 #### <span id="dotNet_async">非同期処理</span>
 ---
+
+##### C#が一番得意な言語としては、非同期処理にはよく使う技術は少し展開して説明していただけないでしょうか。
 [目次へ](#toc)
 
-- <ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）が<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>な<ruby>言<rp>（</rp><rt>げん</rt><rp>）</rp>語<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>としては、<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp>同<rp>（</rp><rt>どう</rt><rp>）</rp>期<rp>（</rp><rt>き</rt><rp>）</rp>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）にはよく（１）<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>う<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）は<ruby>少<rp>（</rp><rt>しょう</rt><rp>）</rp>々<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>（１）<ruby>展<rp>（</rp><rt>てん</rt><rp>）</rp>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>して<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>していただけないでしょうか。
-<br>C#が一番得意な言語としては、非同期処理にはよく使う技術は少し展開して説明していただけないでしょうか。
+<ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（<ruby>C<rp>（</rp><rt>シー</rt><rp>）</rp></ruby> <ruby>Sharp<rp>（</rp><rt>シャープ</rt><rp>）</rp></ruby>）が<ruby>一<rp>（</rp><rt>いち</rt><rp>）</rp>番<rp>（</rp><rt>ばん</rt><rp>）</rp></ruby>（２）<ruby>得<rp>（</rp><rt>とく</rt><rp>）</rp>意<rp>（</rp><rt>い</rt><rp>）</rp></ruby>な<ruby>言<rp>（</rp><rt>げん</rt><rp>）</rp>語<rp>（</rp><rt>ご</rt><rp>）</rp></ruby>としては、<ruby>非<rp>（</rp><rt>ひ</rt><rp>）</rp>同<rp>（</rp><rt>どう</rt><rp>）</rp>期<rp>（</rp><rt>き</rt><rp>）</rp>処<rp>（</rp><rt>しょ</rt><rp>）</rp>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>（１）にはよく（１）<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>う<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）は<ruby>少<rp>（</rp><rt>しょう</rt><rp>）</rp>々<rp>（</rp><rt>しょう</rt><rp>）</rp></ruby>（１）<ruby>展<rp>（</rp><rt>てん</rt><rp>）</rp>開<rp>（</rp><rt>かい</rt><rp>）</rp></ruby>して<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>していただけないでしょうか。
 <br>(作为以 C# 为最拿手语言的程序员，能否稍微展开详细说明一下在异步处理中经常使用的技术呢？)
 
 1.
@@ -793,10 +831,11 @@ MVCは、アプリケーションの構造をModel、View、Controllerの3つに
 
 #### <span id="dotNet_linq">LINQ</span>
 ---
+
+##### えっとC#ってLINQという技術をよく使いますね。ご説明できますでしょうか。
 [目次へ](#toc)
 
-- えっと<ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（１）って<ruby>LINQ<rp>（</rp><rt>Language Integrated Query</rt><rp>）</rp></ruby>（１）という<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby><ruby>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）をよく<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>いますね。ご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
-<br><br>えっとC#ってLINQという技術をよく使いますね。ご説明できますでしょうか。
+えっと<ruby>C#<rp>（</rp><rt>シーシャープ</rt><rp>）</rp></ruby>（１）って<ruby>LINQ<rp>（</rp><rt>Language Integrated Query</rt><rp>）</rp></ruby>（１）という<ruby>技<rp>（</rp><rt>ぎ</rt><rp>）</rp></ruby><ruby>術<rp>（</rp><rt>じゅつ</rt><rp>）</rp></ruby>（１）をよく<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>いますね。ご<ruby>説<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby><ruby>明<rp>（</rp><rt>めい</rt><rp>）</rp></ruby>できますでしょうか。
 <br>(那个，C# 里经常使用一种叫 LINQ 的技术呢。请问能否解释一下？)
 
 LINQ（Language Integrated Query / 統合言語クエリ）は、C#などの.NET言語において、**データの操作**を統一された構文で記述できる機能です。
@@ -837,8 +876,6 @@ LINQ（Language Integrated Query / 統合言語クエリ）は、C#などの.NET
 <br>不需要特意去写一圈又一圈的 for 循环或 if 判断，一行就能优雅搞定，让代码变得很干净，真的超级方便！)
 </p>
 
----
-[目次へ](#toc)
 
 ---
 ### <span id="tool">ツール</span>
@@ -846,10 +883,11 @@ LINQ（Language Integrated Query / 統合言語クエリ）は、C#などの.NET
 
 #### <span id="tool_ai">AI</span>
 ---
+
+##### AIで生成式のツール例えばCodexなどってコーディングはどんな認識か教えていただけないでしょうか、例えばプログラマーの責任はどう変えていくでしょうか
 [目次へ](#toc)
 
-- <ruby>AI<rp>（</rp><rt>エーアイ</rt><rp>）</rp></ruby>（<ruby>Artificial<rp>（</rp><rt>アーティフィシャル</rt><rp>）</rp></ruby> <ruby>Intelligence<rp>（</rp><rt>インテリジェンス</rt><rp>）</rp></ruby>）で<ruby>生<rp>（</rp><rt>せい</rt><rp>）</rp>成<rp>（</rp><rt>せい</rt><rp>）</rp>式<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>（３）の<ruby>ツール<rp>（</rp><rt>Tool</rt><rp>）</rp></ruby>（１）<ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えば<ruby>Codex<rp>（</rp><rt>コーデックス</rt><rp>）</rp></ruby>（１）などって<ruby>コーディング<rp>（</rp><rt>Coding</rt><rp>）</rp></ruby>はどんな<ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>か<ruby>教<rp>（</rp><rt>おし</rt><rp>）</rp></ruby>えていただけないでしょうか、<ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えば<ruby>プログラマー<rp>（</rp><rt>Programmer</rt><rp>）</rp></ruby>（４）の<ruby>責<rp>（</rp><rt>せき</rt><rp>）</rp>任<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>はどう<ruby>変<rp>（</rp><rt>か</rt><rp>）</rp></ruby>えていくでしょうか
-<br><br>AIで生成式のツール例えばCodexなどってコーディングはどんな認識か教えていただけないでしょうか、例えばプログラマーの責任はどう変えていくでしょうか
+<ruby>AI<rp>（</rp><rt>エーアイ</rt><rp>）</rp></ruby>（<ruby>Artificial<rp>（</rp><rt>アーティフィシャル</rt><rp>）</rp></ruby> <ruby>Intelligence<rp>（</rp><rt>インテリジェンス</rt><rp>）</rp></ruby>）で<ruby>生<rp>（</rp><rt>せい</rt><rp>）</rp>成<rp>（</rp><rt>せい</rt><rp>）</rp>式<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>（３）の<ruby>ツール<rp>（</rp><rt>Tool</rt><rp>）</rp></ruby>（１）<ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えば<ruby>Codex<rp>（</rp><rt>コーデックス</rt><rp>）</rp></ruby>（１）などって<ruby>コーディング<rp>（</rp><rt>Coding</rt><rp>）</rp></ruby>はどんな<ruby>認<rp>（</rp><rt>にん</rt><rp>）</rp>識<rp>（</rp><rt>しき</rt><rp>）</rp></ruby>か<ruby>教<rp>（</rp><rt>おし</rt><rp>）</rp></ruby>えていただけないでしょうか、<ruby>例<rp>（</rp><rt>たと</rt><rp>）</rp></ruby>えば<ruby>プログラマー<rp>（</rp><rt>Programmer</rt><rp>）</rp></ruby>（４）の<ruby>責<rp>（</rp><rt>せき</rt><rp>）</rp>任<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>はどう<ruby>変<rp>（</rp><rt>か</rt><rp>）</rp></ruby>えていくでしょうか
 <br>(请问您如何看待 AI 生成式工具（例如 Codex 等）在编码（Coding）方面的作用？比如，它将如何改变程序员的责任呢？)
 
 1.
@@ -908,10 +946,11 @@ LINQ（Language Integrated Query / 統合言語クエリ）は、C#などの.NET
 
 #### <span id="tool_git">コードソースバージョン管理</span>
 ---
+
+##### 直近でなんかソースのバージョン管理でどのようなツールを使ってるんですか。
 [目次へ](#toc)
 
-- <ruby>直<rp>（</rp><rt>ちょっ</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>でなんか<ruby>ソース<rt>Source</rt></ruby>の<ruby>バージョン<rt>Version</rt></ruby><ruby>管<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>でどのような<ruby>ツール<rt>Tool</rt></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>ってるんですか。
-<br><br>直近でなんかソースのバージョン管理でどのようなツールを使ってるんですか。
+<ruby>直<rp>（</rp><rt>ちょっ</rt><rp>）</rp></ruby><ruby>近<rp>（</rp><rt>きん</rt><rp>）</rp></ruby>でなんか<ruby>ソース<rt>Source</rt></ruby>の<ruby>バージョン<rt>Version</rt></ruby><ruby>管<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>でどのような<ruby>ツール<rt>Tool</rt></ruby>を<ruby>使<rp>（</rp><rt>つか</rt><rp>）</rp></ruby>ってるんですか。
 <br>(最近在源码版本管理方面，大家一般都在使用什么工具呢？)
 
 1.
@@ -928,8 +967,10 @@ LINQ（Language Integrated Query / 統合言語クエリ）は、C#などの.NET
 <br>ホスティングサービスを中心としてはGitHubやGitLabを使うことが多くて、普段からブランチを切って、プルリクエストを投げて、チームメンバーにコードレビューをしてもらうというフローで开发を進めています。GitHub CopilotなどのAIツールを組み合わせて効率化を図ることも多いですね！
 <br>(最近的话，主要还是在使用 Git 呢！作为托管服务，经常使用 GitHub 或 GitLab，平时都是通过开分支、提 Pull Request、让团队成员帮忙做 Code Review 的流程来推进开发的。也经常结合 GitHub Copilot 等 AI 工具来提高效率！)</p>
 
-- <ruby>ギット<rp>（</rp><rt>Git</rt><rp>）</rp></ruby>（１） ってえっとまず<ruby>初<rp>（</rp><rt>はじ</rt><rp>）</rp></ruby>めは<ruby>コミット<rp>（</rp><rt>Commit</rt><rp>）</rp></ruby> と<ruby>プッシュ<rp>（</rp><rt>Push</rt><rp>）</rp></ruby>（１） の<ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いをご<ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>じですか。
-<br><br>ギット ってえっとまず初めはコミット とプッシュ の違いをご存知ですか。
+##### ギット ってえっとまず初めはコミット とプッシュ の違いをご存知ですか。
+[目次へ](#toc)
+
+<ruby>ギット<rp>（</rp><rt>Git</rt><rp>）</rp></ruby>（１） ってえっとまず<ruby>初<rp>（</rp><rt>はじ</rt><rp>）</rp></ruby>めは<ruby>コミット<rp>（</rp><rt>Commit</rt><rp>）</rp></ruby> と<ruby>プッシュ<rp>（</rp><rt>Push</rt><rp>）</rp></ruby>（１） の<ruby>違<rp>（</rp><rt>ちが</rt><rp>）</rp></ruby>いをご<ruby>存<rp>（</rp><rt>ぞん</rt><rp>）</rp></ruby>じですか。
 <br>(请问您知道 Git 中的 commit（提交）和 push（推送）的区别吗？)
 
 1.
