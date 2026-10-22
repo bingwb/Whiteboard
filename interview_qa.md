@@ -957,5 +957,6 @@ LINQ（Language Integrated Query / 統合言語クエリ）は、C#などの.NET
 
 - [日语面试礼貌用语](./Interview_polite.md)
 - [オブジェクト指向プログラミング（OOP）の三大要素（原則）](interview/oopDesignPrinciple.md)
+- [GoF（Gang of Four）パターン](interview/designPattern.md)
 - [SOLID原則](interview/solidDesignPrinciple.md)
 - [オブジェクト指向プログラミング（OOP）のベスト実践の原則](interview/bestPracticePrinciple.md)
