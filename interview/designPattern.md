@@ -2,6 +2,35 @@
 
 [日语面试 FAQ](../interview_qa.md)
 
+## <span id="toc">目次</span>
+- [生成に関するパターン](#生成に関するパターン)
+  - [抽象的な工場①](#抽象的な工場)
+  - [建築者（けんちくしゃ）②](#建築者けんちくしゃ)
+  - [工場メソッド③](#工場メソッド)
+  - [原型（げんけい）④](#原型げんけい)
+  - [単一（いつ）構造（こうぞう）体⑤](#単一いつ構造こうぞう体)
+- [構造に関するパターン](#構造に関するパターン)
+  - [適合（てきごう）者⑥](#適合てきごう者)
+  - [架け橋（かけはし）⑦](#架け橋かけはし)
+  - [合成物（ごうせいぶつ）⑧](#合成物ごうせいぶつ)
+  - [装飾者（そうしょくしゃ）⑨](#装飾者そうしょくしゃ)
+  - [正面・窓口⑩](#正面窓口)
+  - [フライ級・軽量（けいりょう）⑪](#フライ級軽量けいりょう)
+  - [代理人⑫](#代理人)
+- [振る舞いに関するパターン](#振る舞いに関するパターン)
+  - [責任の連鎖⑬](#責任の連鎖)
+  - [命令⑭](#命令)
+- [通訳者⑮](#通訳者)
+  - [反復子⑯](#反復子)
+  - [調停者⑰](#調停者)
+  - [形見・記憶⑱](#形見記憶)
+  - [観察者⑲](#観察者)
+  - [状態⑳](#状態)
+  - [戦略㉑](#戦略)
+  - [雛形（ひながた）メソッド㉒](#雛形ひながたメソッド)
+  - [訪問者㉓](#訪問者)
+- [付録](#付録)
+
 ### 生成に関するパターン
 
 **Creational** Patterns クリエイショナル パターン
@@ -12,6 +41,7 @@
 <ruby>オブジェクト<rp>（</rp><rt>Object</rt><rp>）</rp></ruby>（２）の<ruby>生<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>メカニズム<rp>（</rp><rt>Mechanism</rt><rp>）</rp></ruby>（２）に<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby><ruby>する<ruby>パターン<rp>（</rp><rt>Pattern</rt><rp>）</rp></ruby>（１）です。<ruby>オブジェクト<rp>（</rp><rt>Object</rt><rp>）</rp></ruby>（２）を<ruby>直<rp>（</rp><rt>ちょく</rt><rp>）</rp></ruby><ruby>接<rp>（</rp><rt>せつ</rt><rp>）</rp></ruby>（１）<ruby>インスタンス<rp>（</rp><rt>Instance</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>（new）するのではなく、<ruby>生<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>成<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>ロジック<rp>（</rp><rt>Logic</rt><rp>）</rp></ruby>（１）を<ruby>隠<rp>（</rp><rt>いん</rt><rp>）</rp></ruby><ruby>蔽<rp>（</rp><rt>ぺい</rt><rp>）</rp></ruby>（３）・<ruby>カプセル<rp>（</rp><rt>Capsule</rt><rp>）</rp></ruby><ruby>化<rp>（</rp><rt>か</rt><rp>）</rp></ruby>（４）することで、<ruby>システム<rp>（</rp><rt>System</rt><rp>）</rp></ruby>（１）の<ruby>柔<rp>（</rp><rt>じゅう</rt><rp>）</rp></ruby><ruby>軟<rp>（</rp><rt>なん</rt><rp>）</rp></ruby><ruby>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>（３）と<ruby>再<rp>（</rp><rt>さい</rt><rp>）</rp></ruby><ruby>利<rp>（</rp><rt>り</rt><rp>）</rp></ruby><ruby>用<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>性<rp>（</rp><rt>せい</rt><rp>）</rp></ruby>（３）を<ruby>高<rp>（</rp><rt>たか</rt><rp>）</rp></ruby>めます。
 
 #### 抽象的な工場①
+[目次へ](#toc)
 
 **Abstract Factory** アブストラクト ファクトリー
 
@@ -52,6 +82,7 @@ public class Application {
 ```
 
 #### <ruby>建築者<rp>（</rp><rt>けんちくしゃ</rt><rp>）</rp></ruby>②
+[目次へ](#toc)
 
 **Builder** ビルダー
 
@@ -79,6 +110,7 @@ var myPC = new ComputerBuilder().SetCPU("Intel i9").SetRAM("32GB").Build();
 ```
 
 #### 工場メソッド③
+[目次へ](#toc)
 
 **Factory Method** ファクトリー メソッド
 
@@ -105,6 +137,7 @@ public class TextCreator : Creator {
 ```
 
 #### <ruby>原型<rp>（</rp><rt>げんけい</rt><rp>）</rp></ruby>④
+[目次へ](#toc)
 
 **Prototype** プロトタイプ
 
@@ -126,6 +159,7 @@ public class Zombie : Monster {
 ```
 
 #### 単<ruby>一<rp>（</rp><rt>いつ</rt><rp>）</rp></ruby><ruby>構造<rp>（</rp><rt>こうぞう</rt><rp>）</rp></ruby>体⑤
+[目次へ](#toc)
 
 **Singleton** シングルトン
 
@@ -159,6 +193,7 @@ public class DatabaseConnection {
 <ruby>クラス<rp>（</rp><rt>Class</rt><rp>）</rp></ruby>（１）や<ruby>オブジェクト<rp>（</rp><rt>Object</rt><rp>）</rp></ruby>（２）の<ruby>組<rp>（</rp><rt>く</rt><rp>）</rp></ruby>み<ruby>合<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>わせに<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>するパターン（１）です。<ruby>異<rp>（</rp><rt>こと</rt><rp>）</rp></ruby>なる<ruby>インターフェース<rp>（</rp><rt>Interface</rt><rp>）</rp></ruby>（４）を<ruby>持<rp>（</rp><rt>も</rt><rp>）</rp></ruby>つ<ruby>オブジェクト<rp>（</rp><rt>Object</rt><rp>）</rp></ruby>（２）<ruby>同<rp>（</rp><rt>どう</rt><rp>）</rp></ruby>しを<ruby>繋<rp>（</rp><rt>つな</rt><rp>）</rp></ruby>いだり、<ruby>大<rp>（</rp><rt>おお</rt><rp>）</rp></ruby>きな<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>造<rp>（</rp><rt>ぞう</rt><rp>）</rp></ruby>を<ruby>効<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>率<rp>（</rp><rt>りつ</rt><rp>）</rp></ruby><ruby>的<rp>（</rp><rt>てき</rt><rp>）</rp></ruby>に<ruby>構<rp>（</rp><rt>こう</rt><rp>）</rp></ruby><ruby>築<rp>（</rp><rt>ちく</rt><rp>）</rp></ruby>したりします。
 
 #### <ruby>適合<rp>（</rp><rt>てきごう</rt><rp>）</rp></ruby>者⑥
+[目次へ](#toc)
 
 **Adapter** アダプター
 
@@ -185,6 +220,7 @@ public class CalculatorAdapter : ITarget {
 ```
 
 #### <ruby>架け橋<rp>（</rp><rt>かけはし</rt><rp>）</rp></ruby>⑦
+[目次へ](#toc)
 
 **Bridge** ブリッジ
 
@@ -213,6 +249,7 @@ public class Circle : Shape {
 ```
 
 #### <ruby>合成物<rp>（</rp><rt>ごうせいぶつ</rt><rp>）</rp></ruby>⑧
+[目次へ](#toc)
 
 **Composite** コンポジット
 
@@ -241,6 +278,7 @@ public class FolderItem : IFileSystemItem {
 ```
 
 #### <ruby>装飾者<rp>（</rp><rt>そうしょくしゃ</rt><rp>）</rp></ruby>⑨
+[目次へ](#toc)
 
 **Decorator** デコレーター
 
@@ -269,6 +307,7 @@ public class MilkDecorator : CoffeeDecorator {
 ```
 
 #### 正面・窓口⑩
+[目次へ](#toc)
 
 **Facade** ファサード
 
@@ -295,6 +334,7 @@ public class HomeTheaterFacade {
 ```
 
 #### フライ級・<ruby>軽量<rp>（</rp><rt>けいりょう</rt><rp>）</rp></ruby>⑪
+[目次へ](#toc)
 
 **Flyweight** フライウェイト
 
@@ -322,6 +362,7 @@ public class TreeFactory {
 ```
 
 #### 代理人⑫
+[目次へ](#toc)
 
 **Proxy** プロキシ
 
@@ -359,6 +400,7 @@ public class ProxyImage : IImage {
 <ruby>オブジェクト<rp>（</rp><rt>Object</rt><rp>）</rp></ruby><ruby>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>（２）の<ruby>通<rp>（</rp><rt>つう</rt><rp>）</rp></ruby><ruby>信<rp>（</rp><rt>しん</rt><rp>）</rp></ruby>や<ruby>責<rp>（</rp><rt>せき</rt><rp>）</rp></ruby><ruby>任<rp>（</rp><rt>にん</rt><rp>）</rp></ruby>の<ruby>分<rp>（</rp><rt>ぶん</rt><rp>）</rp></ruby><ruby>散<rp>（</rp><rt>さん</rt><rp>）</rp></ruby>に<ruby>関<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>する<ruby>パターン<rp>（</rp><rt>Pattern</rt><rp>）</rp></ruby>（１）です。<ruby>アルゴリズム<rp>（</rp><rt>Algorithm</rt><rp>）</rp></ruby>（４）や<ruby>割<rp>（</rp><rt>わ</rt><rp>）</rp></ruby>り<ruby>当<rp>（</rp><rt>あ</rt><rp>）</rp></ruby>てられた<ruby>役<rp>（</rp><rt>やく</rt><rp>）</rp></ruby><ruby>割<rp>（</rp><rt>わり</rt><rp>）</rp></ruby>を<ruby>オブジェクト<rp>（</rp><rt>Object</rt><rp>）</rp></ruby><ruby>間<rp>（</rp><rt>かん</rt><rp>）</rp></ruby>（２）でどのようにやり<ruby>取<rp>（</rp><rt>と</rt><rp>）</rp></ruby>りするかを<ruby>整<rp>（</rp><rt>せい</rt><rp>）</rp></ruby><ruby>理<rp>（</rp><rt>り</rt><rp>）</rp></ruby>します。
 
 #### 責任の連鎖⑬
+[目次へ](#toc)
 
 **Chain of Responsibility** チェイン オブ レスポンシビリティ
 
@@ -384,6 +426,7 @@ public class Manager : Approver {
 ```
 
 #### 命令⑭
+[目次へ](#toc)
 
 **Command** コマンド
 
@@ -413,6 +456,7 @@ public class Light { public void TurnOn() { } }
 ```
 
 ### 通訳者⑮
+[目次へ](#toc)
 
 **Interpreter** インタプリタ
 
@@ -434,6 +478,7 @@ public class TerminalExpression : IExpression {
 ```
 
 #### 反復子⑯
+[目次へ](#toc)
 
 **Iterator** イテレーター
 
@@ -455,6 +500,7 @@ public class MyCollection {
 ```
 
 #### 調停者⑰
+[目次へ](#toc)
 
 **Mediator** メディエーター
 
@@ -479,6 +525,7 @@ public class User {
 ```
 
 #### 形見・記憶⑱
+[目次へ](#toc)
 
 **Memento** メメント
 
@@ -503,6 +550,7 @@ public class Originator {
 ```
 
 #### 観察者⑲
+[目次へ](#toc)
 
 **Observer** オブザーバー
 
@@ -521,6 +569,7 @@ public class NewsAgency { // 配信元
 ```
 
 #### 状態⑳
+[目次へ](#toc)
 
 **State** ステート
 
@@ -549,6 +598,7 @@ public class Context {
 ```
 
 #### 戦略㉑
+[目次へ](#toc)
 
 **Strategy** ストラテジー
 
@@ -572,6 +622,7 @@ public class ShoppingCart {
 ```
 
 #### <ruby>雛形<rp>（</rp><rt>ひながた</rt><rp>）</rp></ruby>メソッド㉒
+[目次へ](#toc)
 
 **Template Method** テンプレート メソッド
 
@@ -599,9 +650,10 @@ public class PdfDataMiner : DataMiner {
 }
 ```
 
-#### 訪問者
+#### 訪問者㉓
+[目次へ](#toc)
 
-**Visitor** ビジター㉓
+**Visitor** ビジター
 
 データ構造（要素クラス群）を変更することなく、そのデータ構造に対して「新しい操作（処理内容）」を外部から追加できるようにします。データ構造と処理を完全に分離します。
 <br>（在不改变数据结构（元素类群）的前提下，能够从外部向该数据结构添加“新的操作（处理内容）”。将数据结构与处理内容完全分离。）
