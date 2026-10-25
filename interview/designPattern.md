@@ -675,4 +675,4 @@ public class ConcreteVisitor : IVisitor {
 ```
 
 ### 付録
-- [Refactoring.Guru](https://refactoring.guru/)
+- [Refactoring.Guru](https://refactoring.guru/ja)
