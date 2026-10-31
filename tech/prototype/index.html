@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイホーム家計簿 ダッシュボード</title>
+    <!-- Tailwind CSS (デザイン調整用) -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- Chart.js (グラフ描画用) -->
+    <script src="https://jsdelivr.net"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen font-sans">
+
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
+            <h1 class="text-xl font-bold text-gray-900 flex items-center gap-2">
+                📊 マイホーム家計簿
+            </h1>
+            <!-- 期間選択 -->
+            <div class="flex items-center gap-2 bg-gray-100 rounded-lg p-1">
+                <button class="px-3 py-1 text-sm font-medium hover:bg-white rounded-md transition shadow-sm">◀
+                    前月</button>
+                <span class="px-4 text-sm font-semibold text-gray-700">2026年 10月</span>
+                <button class="px-3 py-1 text-sm font-medium hover:bg-white rounded-md transition shadow-sm">次月
+                    ▶</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+
+        <!-- 1. 今月の収支概要（カード型 UI） -->
+        <section class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+            <!-- 収入カード -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <span class="text-sm font-medium text-gray-500">今月の収入</span>
+                <span class="text-2xl font-bold text-blue-600 mt-2">¥350,000</span>
+            </div>
+            <!-- 支出カード -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <span class="text-sm font-medium text-gray-500">今月の支出</span>
+                <span class="text-2xl font-bold text-red-500 mt-2">¥280,000</span>
+            </div>
+            <!-- 収支バランスカード -->
+            <div
+                class="bg-white p-6 rounded-2xl shadow-sm border border-green-100 bg-green-50/30 flex flex-col justify-between">
+                <span class="text-sm font-medium text-gray-500">今月の収支（黒字）</span>
+                <span class="text-2xl font-bold text-green-600 mt-2">+¥70,000</span>
+            </div>
+        </section>
+
+        <!-- 2. グラフエリア（2段組み構成） -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- 左：今月の支出内訳（円グラフ） -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <h2 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    🍕 支出の内訳
+                </h2>
+                <div class="relative w-full max-w-[320px] mx-auto">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+
+            <!-- 右：年間収支の推移（棒グラフ） -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <h2 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    📈 年間収支の推移
+                </h2>
+                <div class="relative w-full h-[300px]">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- グラフの制御ロジック (JavaScript) -->
+    <script>
+        // --- 1. 支出の内訳（円グラフ）の初期化 ---
+        const ctxPie = document.getElementById('pieChart').getContext('2d');
+        new Chart(ctxPie, {
+            type: 'doughnut', // ドーナツ型（円グラフ）
+            data: {
+                labels: ['住居費', '食費', '光熱費', '通信費', '娯楽・その他'],
+                datasets: [{
+                    data:,
+                    backgroundColor: [
+                        '#4F46E5', // インディゴ（固定費）
+                        '#F59E0B', // アンバー（変動費）
+                        '#10B981', // エメラルド（固定費）
+                        '#06B6D4', // シアン（固定費）
+                        '#EC4899'  // ピンク（変動費）
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { boxWidth: 12, font: { size: 12 } }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                let label = context.label || '';
+                                let value = context.raw || 0;
+                                return ` ${label}: ¥${value.toLocaleString()}`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // --- 2. 年間収支の推移（縦棒グラフ）の初期化 ---
+        const ctxBar = document.getElementById('barChart').getContext('2d');
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['5月', '6月', '7月', '8月', '9月', '10月'],
+                datasets: [
+                    {
+                        label: '収入',
+                        data:,
+                        backgroundColor: '#3B82F6', // ブルー
+                        borderRadius: 4
+                    },
+                    {
+                        label: '支出',
+                        data:,
+                        backgroundColor: '#EF4444', // レッド
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function (value) {
+                                return '¥' + (value / 1000) + 'k'; // 万単位など見やすく調整
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: { boxWidth: 12 }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
