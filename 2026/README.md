@@ -1,1 +1,2 @@
+- [標準日本語初級](./Japanese/textElementary.md)
 - [1月](01.md)
