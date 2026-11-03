@@ -1,4 +1,195 @@
 # AI学习路径
+
+## 目次
+- [第一阶段：宏观直觉与核心概念（破除神秘感）](#第一阶段宏观直觉与核心概念破除神秘感)
+  - [1. **《The Illustrated Transformer》（图解 Transformer）**](#1-the-illustrated-transformer图解-transformer)
+  - [2. **3Blue1Brown 的“神经网络系列”文章与视频文字稿**](#2-3blue1brown-的神经网络系列文章与视频文字稿)
+- [第二阶段：从底层数学到代码实现（硬核原理解析）](#第二阶段从底层数学到代码实现硬核原理解析)
+  - [3. **《The Annotated Transformer》（带注释的 Transformer）**](#3-the-annotated-transformer带注释的-transformer)
+  - [4. **Andrej Karpathy 的 “Zero-to-Hero” 系列配套文章/博客**](#4-andrej-karpathy-的-zero-to-hero-系列配套文章博客)
+- [💡 核心原理串联：AI 到底是怎么工作的？](#-核心原理串联ai-到底是怎么工作的)
+- [1. 《The Illustrated Transformer》（图解 Transformer）](#1-the-illustrated-transformer图解-transformer-1)
+- [2. 3Blue1Brown 的神经网络数学原理系列](#2-3blue1brown-的神经网络数学原理系列)
+- [3. 《The Annotated Transformer》（带注释的 Transformer）](#3-the-annotated-transformer带注释的-transformer-1)
+- [4. Andrej Karpathy 的 “Zero-to-Hero” 系列](#4-andrej-karpathy-的-zero-to-hero-系列)
+- [第一阶段：AI 基础与核心原理（1 ~ 2 个月）](#第一阶段ai-基础与核心原理1--2-个月)
+- [第二阶段：大语言模型（LLM）与生成式 AI 开发（2 ~ 3 个月）](#第二阶段大语言模型llm与生成式-ai-开发2--3-个月)
+- [第三阶段：AI 模型工程、微调与生产级架构（2 ~ 3 个月）](#第三阶段ai-模型工程微调与生产级架构2--3-个月)
+- [建议的学习路径与资源推荐](#建议的学习路径与资源推荐)
+- [总结](#总结)
+- [第一阶段：AI 基础与核心原理（1 ~ 2 个月）](#第一阶段ai-基础与核心原理1--2-个月-1)
+  - [1. 推荐学习资源（日语）](#1-推荐学习资源日语)
+  - [2. 核心日语术语（AI 基礎用語）](#2-核心日语术语ai-基礎用語)
+- [第二阶段：LLM 与生成式 AI 开发（2 ~ 3 个月）](#第二阶段llm-与生成式-ai-开发2--3-个月)
+  - [1. 推荐学习资源（日语）](#1-推荐学习资源日语-1)
+  - [2. 核心日语术语（生成AI / LLM 用語）](#2-核心日语术语生成ai--llm-用語)
+- [第三阶段：模型微调、部署与 MLOps（2 ~ 3 个月）](#第三阶段模型微调部署与-mlops2--3-个月)
+  - [1. 推荐学习资源（日语）](#1-推荐学习资源日语-2)
+  - [2. 核心日语术语（ファインチューニング \& 運用）](#2-核心日语术语ファインチューニング--運用)
+- [💡 给宋先生的日语学习与项目实战建议](#-给宋先生的日语学习与项目实战建议)
+- [1. 核心工具链选型与配置](#1-核心工具链选型与配置)
+- [2. Prompt Engineering for Coding（代码提示词工程）](#2-prompt-engineering-for-coding代码提示词工程)
+- [1. 单元测试与重构自动化（Test \& Refactoring Generation）](#1-单元测试与重构自动化test--refactoring-generation)
+- [2. Context Management \& `.cursorrules` / `.github/copilot-instructions.md`](#2-context-management--cursorrules--githubcopilot-instructionsmd)
+- [3. 多语言与 SQL 转换（Cross-Language Translation）](#3-多语言与-sql-转换cross-language-translation)
+- [1. Spec-Driven Development (SDD / 规范驱动开发)](#1-spec-driven-development-sdd--规范驱动开发)
+- [2. 开源 AI Coding Agent 框架探秘](#2-开源-ai-coding-agent-框架探秘)
+- [1. 结合 RAG 构建企业私有代码库问答系统](#1-结合-rag-构建企业私有代码库问答系统)
+- [2. Code Model Fine-Tuning（代码大模型微调）](#2-code-model-fine-tuning代码大模型微调)
+- [3. CI/CD Pipeline 与 AI 自動 Code Review](#3-cicd-pipeline-与-ai-自動-code-review)
+- [💡 总结给宋先生的技术落地建议](#-总结给宋先生的技术落地建议)
+- [一、 OpenAI Codex 的演进与现状](#一-openai-codex-的演进与现状)
+  - [1. 从 API 模型到自主编程 Agent（Agentic Coding）](#1-从-api-模型到自主编程-agentagentic-coding)
+  - [2. Codex 的核心形态与功能特点](#2-codex-的核心形态与功能特点)
+- [二、 OpenAI Codex 与 GitHub Copilot 的区别](#二-openai-codex-与-github-copilot-的区别)
+- [三、 为什么 Codex 理念在今天大火？](#三-为什么-codex-理念在今天大火)
+- [1. 为什么 Claude 在代码领域能打败对手？](#1-为什么-claude-在代码领域能打败对手)
+- [2. 当前 AI 代码生成的市场竞争格局](#2-当前-ai-代码生成的市场竞争格局)
+- [3. 如何在实际开发中最大化利用 Claude？](#3-如何在实际开发中最大化利用-claude)
+- [总结](#总结-1)
+- [一、 个人 / 团队订阅模式（推荐个人日常开发使用）](#一-个人--团队订阅模式推荐个人日常开发使用)
+- [二、 API 开发者按量计费模式（按 Token 扣费）](#二-api-开发者按量计费模式按-token-扣费)
+- [三、 极致节省 API 成本的 2 个核心技术](#三-极致节省-api-成本的-2-个核心技术)
+- [💡 总结与建议](#-总结与建议)
+- [1. 官方网页端与 App（最快速上手）](#1-官方网页端与-app最快速上手)
+- [2. Cursor IDE 免费版（重度推荐：体验顶级 AI 编程环境）](#2-cursor-ide-免费版重度推荐体验顶级-ai-编程环境)
+- [3. OpenRouter（免费额度 / 低成本试用 API）](#3-openrouter免费额度--低成本试用-api)
+- [4. Claude API 官方 Console 新用户赠额](#4-claude-api-官方-console-新用户赠额)
+- [5. 聚合平台（如 Poe / Perplexity）](#5-聚合平台如-poe--perplexity)
+- [💡 体验建议路线：](#-体验建议路线)
+- [一、 微软 (Microsoft) \& OpenAI 生态：最契合 .NET / Azure 开发](#一-微软-microsoft--openai-生态最契合-net--azure-开发)
+  - [1. GitHub Copilot / Visual Studio Copilot](#1-github-copilot--visual-studio-copilot)
+  - [2. Azure OpenAI Service \& Semantic Kernel](#2-azure-openai-service--semantic-kernel)
+- [二、 深度求索 (DeepSeek)：性价比与开源代码生成之王](#二-深度求索-deepseek性价比与开源代码生成之王)
+  - [1. DeepSeek-V3 / R1 / DeepSeek-Coder](#1-deepseek-v3--r1--deepseek-coder)
+- [三、 谷歌 (Google)：超长上下文与 Cloud 生态](#三-谷歌-google超长上下文与-cloud-生态)
+  - [1. Gemini Code Assist / Gemini 2.0 Pro](#1-gemini-code-assist--gemini-20-pro)
+- [四、 AI-First 独立新星工具（目前开发者圈子最火）](#四-ai-first-独立新星工具目前开发者圈子最火)
+  - [1. Windsurf (by Codeium)](#1-windsurf-by-codeium)
+  - [2. Aider (Terminal-First CLI Tool)](#2-aider-terminal-first-cli-tool)
+- [📊 各大厂家工具横向对比与选型指南](#-各大厂家工具横向对比与选型指南)
+- [💡 快速免费体验建议组合：](#-快速免费体验建议组合)
+- [一、 核心概念解析与日文对照](#一-核心概念解析与日文对照)
+  - [1. AI Agent (AI 智能体 / 代理)](#1-ai-agent-ai-智能体--代理)
+  - [2. Agentic Coding (智能体驱动编程)](#2-agentic-coding-智能体驱动编程)
+  - [3. Agentic Workflow (智能体工作流)](#3-agentic-workflow-智能体工作流)
+  - [4. Human-in-the-Loop (HITL / 人机协同)](#4-human-in-the-loop-hitl--人机协同)
+  - [5. Multi-Agent System (多智能体系统)](#5-multi-agent-system-多智能体系统)
+- [二、 Agent 架构的三大核心要素 (Core Components)](#二-agent-架构的三大核心要素-core-components)
+- [三、 经典 AI 编程概念对比](#三-经典-ai-编程概念对比)
+- [四、 日语技术沟通常用短句示例](#四-日语技术沟通常用短句示例)
+- [一、 核心概念解析与日文对照](#一-核心概念解析与日文对照-1)
+  - [1. AI Alignment (AI 对齐)](#1-ai-alignment-ai-对齐)
+  - [2. RLHF (Reinforcement Learning from Human Feedback / 基于人类反馈的强化学習)](#2-rlhf-reinforcement-learning-from-human-feedback--基于人类反馈的强化学習)
+  - [3. RAG (Retrieval-Augmented Generation / 检索增强生成)](#3-rag-retrieval-augmented-generation--检索增强生成)
+  - [4. Grounding (接地 / 事实锚定)](#4-grounding-接地--事实锚定)
+  - [5. MCP (Model Context Protocol / 模型上下文协议)](#5-mcp-model-context-protocol--模型上下文协议)
+  - [6. Fine-Tuning (微调 / SFT)](#6-fine-tuning-微调--sft)
+  - [7. System Prompt \& Guardrails (系统提示词与安全围栏)](#7-system-prompt--guardrails-系统提示词与安全围栏)
+- [二、 现代 LLM 系统架构术语全景图](#二-现代-llm-系统架构术语全景图)
+- [三、 经典 AI 概念对比](#三-经典-ai-概念对比)
+- [四、 日语技术沟通常用短句示例](#四-日语技术沟通常用短句示例-1)
+
+---
+
+- 推荐一篇文章或者一组文章，能讲清楚AI的原理
+
+要彻底搞懂人工智能（AI）的原理，单看一篇短文往往容易流于表面（比如只知道“AI是靠大量数据训练出来的”），而只看学术论文又过于晦涩。
+
+针对你的技术背景和对深层原理的探求，我为你精选了**一组由浅入深、兼具直觉与硬核原理的高质量文章与指南**。这组内容不讲空洞的商业概念，而是从数学本质、架构演进（从传统机器学习到Transformer大模型）带你把AI的底层逻辑彻底看透。
+
+---
+
+### 第一阶段：宏观直觉与核心概念（破除神秘感）
+
+#### 1. **《The Illustrated Transformer》（图解 Transformer）**
+
+* **作者**：Jay Alammar（AI界公认的科普大神）
+* **推荐理由**：这是整个现代生成式AI（ChatGPT、Claude等大模型背后的架构）流传最广、最通俗易懂的图解教程。它通过精妙的彩色图表，把复杂的矩阵运算和注意力机制（Attention Mechanism）拆解成一眼就能看懂的视觉逻辑。
+* **核心解决的问题**：大模型究竟是如何“理解”上下文的？注意力机制是怎么把一句话里的词与词关联起来的？
+* **阅读建议**：国内有很多优质的中文翻译版（搜“图解Transformer Jay Alammar”即可），建议结合图表反复琢磨，这是理解当前大模型原理的**绝对敲门砖**。
+
+#### 2. **3Blue1Brown 的“神经网络系列”文章与视频文字稿**
+
+* **作者**：Grant Sanderson（数学科普名家）
+* **推荐理由**：3Blue1Brown 用极具美感的几何视角，解释了神经网络为什么能分类、什么是反向传播（Backpropagation）、什么是梯度下降。
+* **核心解决的问题**：抛开代码，从纯数学和几何直觉上让你明白：所谓的“AI学习”，本质上就是在多维空间里用几百万个参数去“捏”出一个能够拟合数据的超级曲面。
+
+---
+
+### 第二阶段：从底层数学到代码实现（硬核原理解析）
+
+#### 3. **《The Annotated Transformer》（带注释的 Transformer）**
+
+* **出处**：哈佛大学 NLP 研究团队
+* **推荐理由**：如果你想用工程师的思维去真正搞懂原理，光看图解还不够。这篇文章将经典的 Transformer 论文《Attention Is All You Need》与**可运行的 PyTorch 代码**结合在了一起。每一段核心原理（如 Multi-Head Attention、Positional Encoding）旁边，都有精简的代码实现和原理解释。
+* **核心解决的问题**：理论公式是如何一行行转化成张量（Tensor）运算和代码逻辑的？
+
+#### 4. **Andrej Karpathy 的 “Zero-to-Hero” 系列配套文章/博客**
+
+* **作者**：Andrej Karpathy（前 OpenAI 联合创始人、前特斯拉 AI 负责人）
+* **推荐理由**：Karpathy 是全球公认最会讲AI原理的人。他的“Neural Networks: Zero to Hero”系列教程（包含配套的文字大纲与极简代码）带你从零手写一个微型自动求导引擎（Micrograd），再到亲手写一个语言模型（Bigram Transformer / GPT）。
+* **核心解决的问题**：不依赖庞大的框架（如直接调用现成库），从最基础的标量求导开始，带你用几百行代码重现大模型的诞生过程。
+
+---
+
+### 💡 核心原理串联：AI 到底是怎么工作的？
+
+如果你想在阅读这些文章前有一个全局的框架，可以将现代 AI（特别是大模型）的原理精简为四个核心步骤：
+
+1. **万物皆可化向量（Embedding）**：
+计算机不懂文字、图片或声音，AI 的第一步是把所有的输入（如一个词、一个像素）通过高维空间映射成**数字向量**。在这个空间里，“语义相近”的东西，在数学上的距离就很近（比如“国王”减“男人”加“女人”约等于“女王”）。
+2. **拟合与预测（Next-Token Prediction）**：
+以大语言模型为例，它的核心底层任务极其纯粹：**给你前面的词，猜下一个词是什么**。它不是在“思考”，而是在做极高维度的概率统计预测。
+3. **参数与损失（Loss & Optimization）**：
+模型内部有成百上千亿个参数（权重）。一开始它猜得很烂，“损失函数（Loss）”会计算它猜错的程度。通过**反向传播**和**梯度下降**，微调每一个参数，让下一次猜得更准。
+4. **对齐与涌现（Alignment & Emergence）**：
+当参数量和数据量达到海量级别时，量变引起质变（涌现），模型开始表现出类似逻辑推理、写代码、翻译的能力；最后通过人类反馈强化学习（RLHF），让它学会听懂人话、遵守规范。
+
+**建议阅读路径**：
+先看 **3Blue1Brown** 建立数学直觉 $\rightarrow$ 读 **Jay Alammar 的《图解 Transformer》** 理解大模型架构 $\rightarrow$ 如果想深入代码，再翻阅 **Andrej Karpathy 的极简实现**。这套组合拳能够让你对 AI 原理的理解从“知其然”跃升至“知其所以然”。
+
+---
+
+- 这些文章都可以从网上找到吗？能给出文网址吗？
+
+这些文章和系列资源完全可以在公开网络上免费获取。以下是为你整理好的**原版网址以及推荐的优质中文翻译/配套资源链接**：
+
+---
+
+### 1. 《The Illustrated Transformer》（图解 Transformer）
+
+* **英文原博客**：[Jay Alammar - The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+* **优质中文翻译**：
+* [知乎 / 博客园中文翻译版本](https://www.cnblogs.com/SkySource/articles/18200578)（完整保留了原博文的所有精美动态图表与色彩对应）
+
+
+
+---
+
+### 2. 3Blue1Brown 的神经网络数学原理系列
+
+* **英文官方互动网页与视频**：[3Blue1Brown - Neural Networks](https://www.3blue1brown.com/topics/neural-networks)
+* **Bilibili 官方中文配音/字幕版**：在 B 站搜索 **“3Blue1Brown 深度学习”**，可以找到官方发布的完整高清带中文字幕的视频集（数学动画与图文结合效果极佳）。
+
+---
+
+### 3. 《The Annotated Transformer》（带注释的 Transformer）
+
+* **Harvard NLP 官方原文（含可运行代码）**：[Harvard NLP - The Annotated Transformer](https://nlp.seas.harvard.edu/2018/04/03/attention.html)
+* **GitHub 开源仓库**：[harvardnlp/annotated-transformer](https://github.com/harvardnlp/annotated-transformer)
+
+---
+
+### 4. Andrej Karpathy 的 “Zero-to-Hero” 系列
+
+* **GitHub 官方课程仓库**：[karpathy/nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero)
+* 内含从零实现自动求导 `micrograd` 到极简 GPT 语言模型 `nanoGPT` 的完整 Jupyter Notebook 源码。
+
+
+* **YouTube 视频主页**：[Andrej Karpathy - Neural Networks: Zero to Hero](https://www.google.com/search?q=https://www.youtube.com/playlist%3Flist%3DPLAqh13U4cq4DqJk7iA7P6O-yP9aZl7W-_)
+* **中文社区笔记/翻译**：GitHub 上搜索 `karpathy zero to hero 中文` 即可找到众多开发者整理的逐行代码中文详解与中文笔记。
+
 ---
 
 - 请看下我的简历。我想深入学习AI开发，既能深入理解其原理，又能熟练运用其开发软件，请给一个学习进程建议
