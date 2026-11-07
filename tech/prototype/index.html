@@ -5,63 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>マイホーム家計簿 Canvas直描版</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f8fafc; color: #334155; margin: 0; padding: 0; }
-        header { background-color: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
-        h1 { margin: 0; font-size: 20px; color: #0f172a; }
-        main { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: block; }
-        .grid-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; }
-        @media (max-width: 1024px) { .grid-layout { grid-template-columns: 1fr; } }
-        .panel { background-color: #ffffff; padding: 24px; border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 1px 3px 0 rgba(0,0,0,0.05); }
-        .panel-title { font-size: 16px; font-weight: 700; color: #475569; margin-top: 0; margin-bottom: 20px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
-        .form-group { margin-bottom: 16px; }
-        .form-group label { display: block; font-size: 13px; font-weight: 600; color: #64748b; margin-bottom: 6px; }
-        .form-group input { width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; font-size: 14px; font-weight: 600; }
-        .grid-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
-        .card { background-color: #f8fafc; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; text-align: center; }
-        .card-title { font-size: 12px; color: #64748b; display: block; margin-bottom: 4px; }
-        .card-val { font-size: 18px; font-weight: 800; }
-        .chart-box-title { font-size: 13px; font-weight: bold; color: #64748b; margin-bottom: 12px; display: block; }
-        .legend { display: flex; justify-content: center; gap: 14px; margin-top: 24px; font-size: 12px; flex-wrap: wrap; }
-        .legend-box { display: inline-block; width: 12px; height: 12px; margin-right: 4px; border-radius: 2px; vertical-align: middle; }
+        :root {
+            color-scheme: light;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #243247;
+            background: #f3f6fb;
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        * { box-sizing: border-box; }
+        body { min-width: 320px; min-height: 100vh; margin: 0; background: radial-gradient(ellipse at 50% -20%, #e8f0ff 0, transparent 48%), #f3f6fb; }
+        header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px max(24px, calc((100vw - 1280px) / 2)); background: rgba(255,255,255,.9); border-bottom: 1px solid #e5eaf2; box-shadow: 0 4px 18px rgba(31, 51, 82, .04); }
+        h1 { margin: 0; color: #17243b; font-size: clamp(17px, 2vw, 21px); letter-spacing: -.03em; }
+        .month-badge { flex: 0 0 auto; padding: 8px 14px; border: 1px solid #dce7fa; border-radius: 999px; background: #f0f5ff; color: #41629a; font-size: 13px; font-weight: 700; }
+        main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 48px; }
+        .grid-layout { display: grid; grid-template-columns: minmax(270px, .82fr) minmax(0, 2fr); align-items: start; gap: 24px; }
+        .panel { min-width: 0; padding: clamp(20px, 2.5vw, 30px); border: 1px solid #e5eaf2; border-radius: 20px; background: #fff; box-shadow: 0 12px 32px rgba(31, 51, 82, .06); }
+        .panel-title { display: flex; align-items: center; gap: 10px; margin: 0 0 22px; padding-bottom: 15px; border-bottom: 1px solid #edf1f7; color: #263650; font-size: 16px; font-weight: 750; }
+        .panel-title::before { width: 4px; height: 18px; border-radius: 4px; background: #5681d8; content: ""; }
+        .form-group { margin-bottom: 17px; }
+        .form-group:last-child { margin-bottom: 0; }
+        .form-group label { display: block; margin-bottom: 7px; color: #65748c; font-size: 13px; font-weight: 650; }
+        .form-group input { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #dce3ee; border-radius: 10px; outline: none; background: #fbfcfe; color: #243247; font: inherit; font-size: 14px; font-weight: 650; transition: border-color .15s, box-shadow .15s, background .15s; }
+        .form-group input:hover { border-color: #b7c8e5; }
+        .form-group input:focus { border-color: #5681d8; background: #fff; box-shadow: 0 0 0 3px rgba(86, 129, 216, .15); }
+        .grid-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 28px; }
+        .card { min-width: 0; padding: 17px 12px; border: 1px solid #e8edf5; border-radius: 14px; background: #f8faff; text-align: center; }
+        .card-title { display: block; margin-bottom: 7px; color: #6b7890; font-size: 12px; font-weight: 600; }
+        .card-val { display: block; overflow-wrap: anywhere; font-size: clamp(16px, 2vw, 21px); font-weight: 800; letter-spacing: -.035em; }
+        .income-value { color: #2874c8; }
+        .expense-value { color: #d34d55; }
+        .balance-value { color: #23956a; }
+        .charts-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.35fr); align-items: start; gap: 24px; text-align: center; }
+        .chart-box-title { display: block; margin-bottom: 14px; color: #64748b; font-size: 13px; font-weight: 700; }
+        canvas { display: block; width: 100%; height: auto; }
+        #cnvPie { max-width: 240px; margin: 0 auto; }
+        .legend { display: flex; justify-content: center; gap: 12px 16px; margin-top: 26px; color: #526179; font-size: 12px; font-weight: 550; flex-wrap: wrap; }
+        .legend-box { display: inline-block; width: 11px; height: 11px; margin-right: 5px; border-radius: 3px; vertical-align: -1px; }
+        @media (max-width: 960px) {
+            .grid-layout { grid-template-columns: minmax(0, 1fr); }
+            .input-panel { order: 1; }
+        }
+        @media (max-width: 640px) {
+            header { padding: 14px 18px; }
+            main { padding: 20px 16px 32px; }
+            .grid-layout { gap: 16px; }
+            .panel { padding: 20px; border-radius: 16px; }
+            .grid-cards { grid-template-columns: 1fr; gap: 9px; margin-bottom: 24px; }
+            .card { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 15px; text-align: left; }
+            .card-title { margin: 0; }
+            .card-val { font-size: 18px; }
+            .charts-grid { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+        }
+        @media (max-width: 420px) {
+            header { align-items: flex-start; flex-direction: column; gap: 10px; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>📊 マイホーム家計簿 (Canvas直描版)</h1>
-        <div style="font-size: 14px; font-weight: 600; color: #475569; background: #f1f5f9; padding: 6px 16px; border-radius: 20px;">
+        <div class="month-badge">
             2026年 10月
         </div>
     </header>
 
     <main>
         <div class="grid-layout">
-            <div class="panel">
-                <h2 class="panel-title">今月の支出入力</h2>
-                <div class="form-group"><label>住居費 (円)</label><input type="number" id="inp-ju" value="100000" oninput="drawAll()"></div>
-                <div class="form-group"><label>食費 (円)</label><input type="number" id="inp-shoku" value="100000" oninput="drawAll()"></div>
-                <div class="form-group"><label>光熱費 (円)</label><input type="number" id="inp-kou" value="50000" oninput="drawAll()"></div>
-                <div class="form-group"><label>通信費 (円)</label><input type="number" id="inp-tsu" value="20000" oninput="drawAll()"></div>
-                <div class="form-group"><label>娯楽・その他 (円)</label><input type="number" id="inp-go" value="10000" oninput="drawAll()"></div>
-            </div>
+            <section class="panel input-panel" aria-labelledby="input-title">
+                <h2 class="panel-title" id="input-title">今月の支出入力</h2>
+                <div class="form-group"><label for="inp-ju">住居費 (円)</label><input type="number" id="inp-ju" value="100000"></div>
+                <div class="form-group"><label for="inp-shoku">食費 (円)</label><input type="number" id="inp-shoku" value="100000"></div>
+                <div class="form-group"><label for="inp-kou">光熱費 (円)</label><input type="number" id="inp-kou" value="50000"></div>
+                <div class="form-group"><label for="inp-tsu">通信費 (円)</label><input type="number" id="inp-tsu" value="20000"></div>
+                <div class="form-group"><label for="inp-go">娯楽・その他 (円)</label><input type="number" id="inp-go" value="10000"></div>
+            </section>
             
-            <div class="panel">
-                <h2 class="panel-title">家計簿ダッシュボード</h2>
+            <section class="panel" aria-labelledby="dashboard-title">
+                <h2 class="panel-title" id="dashboard-title">家計簿ダッシュボード</h2>
                 
                 <div class="grid-cards">
-                    <div class="card"><span class="card-title">今月の収入</span><span class="card-val" style="color: #2563eb;">¥350,000</span></div>
-                    <div class="card"><span class="card-title">今月の支出</span><span class="card-val" id="lbl-exp" style="color: #dc2626;">¥280,000</span></div>
-                    <div class="card"><span class="card-title">今月の収支</span><span class="card-val" id="lbl-bal" style="color: #16a34a;">+¥70,000</span></div>
+                    <div class="card"><span class="card-title">今月の収入</span><span class="card-val income-value">¥350,000</span></div>
+                    <div class="card"><span class="card-title">今月の支出</span><span class="card-val expense-value" id="lbl-exp">¥280,000</span></div>
+                    <div class="card"><span class="card-title">今月の収支</span><span class="card-val balance-value" id="lbl-bal">+¥70,000</span></div>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: 5fr 7fr; gap: 20px; text-align: center;">
+                <div class="charts-grid">
                     <div>
                         <span class="chart-box-title">支出の内訳 (円グラフ)</span>
-                        <canvas id="cnvPie" width="240" height="240"></canvas>
+                        <canvas id="cnvPie" width="240" height="240" role="img" aria-label="支出の内訳を示す円グラフ"></canvas>
                     </div>
                     <div>
                         <span class="chart-box-title">年間収支の推移</span>
-                        <canvas id="cnvBar" width="360" height="240"></canvas>
+                        <canvas id="cnvBar" width="360" height="240" role="img" aria-label="月ごとの収入と支出を示す棒グラフ"></canvas>
                     </div>
                 </div>
                 
@@ -74,122 +113,71 @@
                     <div style="margin-left: 8px;"><span class="legend-box" style="background:#1F77B4;"></span>収入</div>
                     <div><span class="legend-box" style="background:#D62728;"></span>支出</div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 
+    <script src="./scripts/data.js"></script>
     <script>
-        const mInc = [338, 351, 328, 314, 342, 307, 320, 338, 356, 350];
-        const baseExp = [243, 222, 241, 273, 221, 249, 257, 221, 283];
+        const data = {
+            expenseInputs: {
+                ju: document.getElementById('inp-ju'),
+                shoku: document.getElementById('inp-shoku'),
+                kou: document.getElementById('inp-kou'),
+                tsu: document.getElementById('inp-tsu'),
+                go: document.getElementById('inp-go')
+            },
+            expenseLabel: document.getElementById('lbl-exp'),
+            balanceLabel: document.getElementById('lbl-bal'),
+            income: 350000,
+            historicalIncome: [338, 351, 328, 314, 342, 307, 320, 338, 356, 350],
+            historicalExpenses: [243, 222, 241, 273, 221, 249, 257, 221, 283]
+        };
+        const canvas = {
+            pie: document.getElementById('cnvPie'),
+            bar: document.getElementById('cnvBar')
+        };
 
-        function drawAll() {
-            const ju = Math.max(0, parseInt(document.getElementById('inp-ju').value) || 0);
-            const shoku = Math.max(0, parseInt(document.getElementById('inp-shoku').value) || 0);
-            const kou = Math.max(0, parseInt(document.getElementById('inp-kou').value) || 0);
-            const tsu = Math.max(0, parseInt(document.getElementById('inp-tsu').value) || 0);
-            const go = Math.max(0, parseInt(document.getElementById('inp-go').value) || 0);
-            
-            const currentTotalExpense = ju + shoku + kou + tsu + go;
-            const currentIncome = 350000;
-            const currentBalance = currentIncome - currentTotalExpense;
-            
-            document.getElementById('lbl-exp').innerText = "¥" + currentTotalExpense.toLocaleString();
-            document.getElementById('lbl-bal').innerText = (currentBalance >= 0 ? "+" : "-") + "¥" + Math.abs(currentBalance).toLocaleString();
-            document.getElementById('lbl-bal').style.color = currentBalance >= 0 ? "#16a34a" : "#dc2626";
-            
-            const mExp = [];
-            for (let i = 0; i < baseExp.length; i++) {
-                mExp.push(baseExp[i]);
+        drawAll(data, canvas);
+        let redrawFrame = 0;
+        const scheduleRedraw = () => {
+            if (!redrawFrame) {
+                redrawFrame = requestAnimationFrame(() => {
+                    redrawFrame = 0;
+                    drawAll(data, canvas);
+                });
             }
-            mExp.push(currentTotalExpense / 1000);
+        };
+        Object.values(data.expenseInputs).forEach(input => {
+            input.addEventListener('input', () => drawAll(data, canvas));
+        });
+        window.addEventListener('resize', scheduleRedraw);
+        if ('ResizeObserver' in window) {
+            const canvasObserver = new ResizeObserver(scheduleRedraw);
+            Object.values(canvas).forEach(element => canvasObserver.observe(element));
+        }
 
-            const cnvPie = document.getElementById('cnvPie');
-            const ctxPie = cnvPie.getContext('2d');
-            ctxPie.clearRect(0, 0, cnvPie.width, cnvPie.height);
-            
-            const centerPieX = cnvPie.width / 2;
-            const centerPieY = cnvPie.height / 2;
-            const radiusPie = Math.min(centerPieX, centerPieY) - 10;
-            const totalForPie = currentTotalExpense || 1;
-            
-            const pieValues = [ju, shoku, go, kou, tsu];
-            const pieColors = ['#B4C6E7', '#F8CBAD', '#FFE699', '#8FAADC', '#A9D18E'];
-            let startAngle = -Math.PI / 2;
-            
-            for (let i = 0; i < pieValues.length; i++) {
-                if (pieValues[i] > 0) {
-                    const sliceAngle = (pieValues[i] / totalForPie) * (Math.PI * 2);
-                    ctxPie.beginPath();
-                    ctxPie.moveTo(centerPieX, centerPieY);
-                    ctxPie.arc(centerPieX, centerPieY, radiusPie, startAngle, startAngle + sliceAngle);
-                    ctxPie.closePath();
-                    ctxPie.fillStyle = pieColors[i];
-                    ctxPie.fill();
-                    startAngle += sliceAngle;
+        let pixelRatioQuery;
+        const watchPixelRatio = () => {
+            if (pixelRatioQuery) {
+                if (pixelRatioQuery.removeEventListener) {
+                    pixelRatioQuery.removeEventListener('change', onPixelRatioChange);
+                } else {
+                    pixelRatioQuery.removeListener(onPixelRatioChange);
                 }
             }
-
-            const cnvBar = document.getElementById('cnvBar');
-            const ctxBar = cnvBar.getContext('2d');
-            ctxBar.clearRect(0, 0, cnvBar.width, cnvBar.height);
-            
-            const chartTop = 20;
-            const chartBottom = cnvBar.height - 25;
-            const chartLeft = 35;
-            const chartRight = cnvBar.width - 10;
-            const chartHeight = chartBottom - chartTop;
-            const chartWidth = chartRight - chartLeft;
-            
-            ctxBar.strokeStyle = '#e2e8f0';
-            ctxBar.lineWidth = 1;
-            ctxBar.fillStyle = '#64748b';
-            ctxBar.font = '10px sans-serif';
-            ctxBar.textAlign = 'right';
-            ctxBar.textBaseline = 'middle';
-            
-            const steps = [0, 50, 100, 150, 200, 250, 300, 350, 400];
-            for (let s = 0; s < steps.length; s++) {
-                const yPos = chartBottom - (steps[s] / 400) * chartHeight;
-                ctxBar.beginPath();
-                ctxBar.moveTo(chartLeft, yPos);
-                ctxBar.lineTo(chartRight, yPos);
-                ctxBar.stroke();
-                ctxBar.fillText(steps[s] === 0 ? '0' : steps[s] + 'K', chartLeft - 6, yPos);
+            pixelRatioQuery = window.matchMedia(`(resolution: ${window.devicePixelRatio || 1}dppx)`);
+            if (pixelRatioQuery.addEventListener) {
+                pixelRatioQuery.addEventListener('change', onPixelRatioChange);
+            } else {
+                pixelRatioQuery.addListener(onPixelRatioChange);
             }
-            
-            ctxBar.strokeStyle = '#94a3b8';
-            ctxBar.lineWidth = 2;
-            ctxBar.beginPath();
-            ctxBar.moveTo(chartLeft, chartBottom);
-            ctxBar.lineTo(chartRight, chartBottom);
-            ctxBar.moveTo(chartLeft, chartTop);
-            ctxBar.lineTo(chartLeft, chartBottom);
-            ctxBar.stroke();
-            
-            const monthLabels = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月'];
-            const numMonths = 10;
-            const groupWidth = chartWidth / numMonths;
-            const barWidth = 10;
-            
-            ctxBar.textAlign = 'center';
-            ctxBar.textBaseline = 'top';
-            
-            for (let m = 0; m < numMonths; m++) {
-                const groupCenterX = chartLeft + (m * groupWidth) + (groupWidth / 2);
-                const hInc = (mInc[m] / 400) * chartHeight;
-                ctxBar.fillStyle = '#1F77B4';
-                ctxBar.fillRect(groupCenterX - barWidth - 1, chartBottom - hInc, barWidth, hInc);
-                
-                const hExp = (mExp[m] / 400) * chartHeight;
-                ctxBar.fillStyle = '#D62728';
-                ctxBar.fillRect(groupCenterX + 1, chartBottom - hExp, barWidth, hExp);
-                
-                ctxBar.fillStyle = '#64748b';
-                ctxBar.font = 'bold 11px sans-serif';
-                ctxBar.fillText(monthLabels[m], groupCenterX, chartBottom + 6);
-            }
-        }
-        window.onload = drawAll;
+        };
+        const onPixelRatioChange = () => {
+            watchPixelRatio();
+            scheduleRedraw();
+        };
+        watchPixelRatio();
     </script>
 </body>
 </html>
