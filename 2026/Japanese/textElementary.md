@@ -1,6 +1,7 @@
 # 標準日本語初級
 
 - [標準日本語中級](./textIntermediate.md)
+- [標準日本語上級](./textAdvanced.md)
 
 ## <span id="toc">目次</span>
 - [29 電気を消せ](#29-電気を消せ)

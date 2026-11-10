@@ -1,6 +1,7 @@
 # 標準日本語中級
 
 - [標準日本語初級](./textElementary.md)
+- [標準日本語上級](./textAdvanced.md)
 
 ## <span id="toc">目次</span>
 - [第１課](#第１課)
