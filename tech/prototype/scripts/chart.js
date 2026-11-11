@@ -25,11 +25,7 @@ function prepareCanvas(canvas) {
 }
 
 function drawAll(data, canvas) {
-    const ju = Math.max(0, parseInt(data.expenseInputs.ju.value) || 0);
-    const shoku = Math.max(0, parseInt(data.expenseInputs.shoku.value) || 0);
-    const kou = Math.max(0, parseInt(data.expenseInputs.kou.value) || 0);
-    const tsu = Math.max(0, parseInt(data.expenseInputs.tsu.value) || 0);
-    const go = Math.max(0, parseInt(data.expenseInputs.go.value) || 0);
+    const { ju, shoku, kou, tsu, go } = data.expenses;
 
     const currentTotalExpense = ju + shoku + kou + tsu + go;
     const currentIncome = data.income;
@@ -40,37 +36,6 @@ function drawAll(data, canvas) {
     data.balanceLabel.style.color = currentBalance >= 0 ? "#16a34a" : "#dc2626";
 
     const mExp = [...data.historicalExpenses, currentTotalExpense / 1000];
-
-    const pie = prepareCanvas(canvas.pie);
-
-    if (!pie) {
-        return;
-    }
-
-    const ctxPie = pie.context;
-
-    const centerPieX = pie.width / 2;
-    const centerPieY = pie.height / 2;
-    const radiusPie = Math.min(centerPieX, centerPieY) - 10;
-    const totalForPie = currentTotalExpense || 1;
-
-    const pieValues = [ju, shoku, go, kou, tsu];
-    const pieColors = ['#B4C6E7', '#F8CBAD', '#FFE699', '#8FAADC', '#A9D18E'];
-    let startAngle = -Math.PI / 2;
-
-    for (let i = 0; i < pieValues.length; i++) {
-        if (pieValues[i] > 0) {
-            const sliceAngle = (pieValues[i] / totalForPie) * (Math.PI * 2);
-            ctxPie.beginPath();
-            ctxPie.moveTo(centerPieX, centerPieY);
-            ctxPie.arc(centerPieX, centerPieY, radiusPie, startAngle, startAngle + sliceAngle);
-            ctxPie.closePath();
-            ctxPie.fillStyle = pieColors[i];
-            ctxPie.fill();
-
-            startAngle += sliceAngle;
-        }
-    }
 
     const bar = prepareCanvas(canvas.bar);
 
