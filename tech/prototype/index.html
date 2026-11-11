@@ -65,8 +65,8 @@
 
             <div class="grid-cards">
                 <div class="card"><span class="card-title">今月の収入</span><span class="card-val income-value" id="lbl-inc"></span></div>
-                <div class="card"><span class="card-title">今月の支出</span><span class="card-val expense-value" id="lbl-exp">¥280,000</span></div>
-                <div class="card"><span class="card-title">今月の収支</span><span class="card-val balance-value" id="lbl-bal">+¥70,000</span></div>
+                <div class="card"><span class="card-title">今月の支出</span><span class="card-val expense-value" id="lbl-exp"></span></div>
+                <div class="card"><span class="card-title">今月の収支</span><span class="card-val balance-value" id="lbl-bal"></span></div>
             </div>
 
             <div class="charts-grid">
@@ -86,14 +86,11 @@
     <script src="./scripts/data.js"></script>
     <script src="./scripts/chart.js"></script>
     <script>
-        document.getElementById('lbl-inc').innerText = "¥" + financeData.income.toLocaleString();
         const data = {
+            categories: budgetData,
+            incomeLabel: document.getElementById('lbl-inc'),
             expenseLabel: document.getElementById('lbl-exp'),
-            balanceLabel: document.getElementById('lbl-bal'),
-            income: financeData.income,
-            expenses: financeData.expenses,
-            historicalIncome: financeData.historicalIncome,
-            historicalExpenses: financeData.historicalExpenses
+            balanceLabel: document.getElementById('lbl-bal')
         };
         const canvas = {
             bar: document.getElementById('cnvBar')

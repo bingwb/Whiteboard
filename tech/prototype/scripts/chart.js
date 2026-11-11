@@ -24,18 +24,48 @@ function prepareCanvas(canvas) {
     return { context, width, height };
 }
 
+function aggregateMonthlyData(categories) {
+    const monthlyData = Array.from({ length: 10 }, () => ({ income: 0, expenses: 0 }));
+
+    Object.values(categories).forEach(category => {
+        if (typeof category.isExpense !== 'boolean' || !Array.isArray(category.details)) {
+            throw new Error('Invalid budget category data.');
+        }
+
+        category.details.forEach(detail => {
+            const dateMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(detail.date);
+            const amount = detail.amount;
+
+            if (!dateMatch || !Number.isSafeInteger(amount) || amount < 0) {
+                throw new Error('Invalid budget detail data.');
+            }
+
+            const year = Number(dateMatch[1]);
+            const month = Number(dateMatch[2]);
+            const day = Number(dateMatch[3]);
+            const daysInMonth = new Date(Date.UTC(year, month, 0)).getUTCDate();
+
+            if (year !== 2026 || month < 1 || month > monthlyData.length || day < 1 || day > daysInMonth) {
+                throw new Error('Budget detail date is outside the supported period.');
+            }
+
+            const field = category.isExpense ? 'expenses' : 'income';
+            monthlyData[month - 1][field] += amount;
+        });
+    });
+
+    return monthlyData;
+}
+
 function drawAll(data, canvas) {
-    const { ju, shoku, kou, tsu, go } = data.expenses;
+    const monthlyData = aggregateMonthlyData(data.categories);
+    const currentMonth = monthlyData[monthlyData.length - 1];
+    const currentBalance = currentMonth.income - currentMonth.expenses;
 
-    const currentTotalExpense = ju + shoku + kou + tsu + go;
-    const currentIncome = data.income;
-    const currentBalance = currentIncome - currentTotalExpense;
-
-    data.expenseLabel.innerText = "¥" + currentTotalExpense.toLocaleString();
+    data.incomeLabel.innerText = "¥" + currentMonth.income.toLocaleString();
+    data.expenseLabel.innerText = "¥" + currentMonth.expenses.toLocaleString();
     data.balanceLabel.innerText = (currentBalance >= 0 ? "+" : "-") + "¥" + Math.abs(currentBalance).toLocaleString();
     data.balanceLabel.style.color = currentBalance >= 0 ? "#16a34a" : "#dc2626";
-
-    const mExp = [...data.historicalExpenses, currentTotalExpense / 1000];
 
     const bar = prepareCanvas(canvas.bar);
 
@@ -79,8 +109,8 @@ function drawAll(data, canvas) {
     ctxBar.lineTo(chartLeft, chartBottom);
     ctxBar.stroke();
 
-    const monthLabels = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月'];
-    const numMonths = 10;
+    const monthLabels = monthlyData.map((_, index) => (index + 1) + '月');
+    const numMonths = monthlyData.length;
     const groupWidth = chartWidth / numMonths;
     const barWidth = 10;
 
@@ -89,11 +119,11 @@ function drawAll(data, canvas) {
 
     for (let m = 0; m < numMonths; m++) {
         const groupCenterX = chartLeft + (m * groupWidth) + (groupWidth / 2);
-        const hInc = (data.historicalIncome[m] / 400) * chartHeight;
+        const hInc = (monthlyData[m].income / 1000 / 400) * chartHeight;
         ctxBar.fillStyle = '#1F77B4';
         ctxBar.fillRect(groupCenterX - barWidth - 1, chartBottom - hInc, barWidth, hInc);
 
-        const hExp = (mExp[m] / 400) * chartHeight;
+        const hExp = (monthlyData[m].expenses / 1000 / 400) * chartHeight;
         ctxBar.fillStyle = '#D62728';
         ctxBar.fillRect(groupCenterX + 1, chartBottom - hExp, barWidth, hExp);
 
