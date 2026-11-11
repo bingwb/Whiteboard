@@ -33,6 +33,8 @@
         .balance-value { color: #23956a; }
         .charts-grid { text-align: center; }
         .chart-box-title { display: block; margin-bottom: 14px; color: #64748b; font-size: 13px; font-weight: 700; }
+        .chart-container { position: relative; }
+        .chart-tooltip { position: absolute; z-index: 1; max-width: 280px; padding: 8px 10px; border-radius: 8px; background: rgba(23, 36, 59, .95); box-shadow: 0 4px 14px rgba(23, 36, 59, .2); color: #fff; font-size: 12px; line-height: 1.5; white-space: pre-line; pointer-events: none; }
         canvas { display: block; width: 100%; height: auto; }
         .legend { display: flex; justify-content: center; gap: 12px 16px; margin-top: 26px; color: #526179; font-size: 12px; font-weight: 550; flex-wrap: wrap; }
         .legend-box { display: inline-block; width: 11px; height: 11px; margin-right: 5px; border-radius: 3px; vertical-align: -1px; }
@@ -70,9 +72,10 @@
             </div>
 
             <div class="charts-grid">
-                <div>
+                <div class="chart-container" id="chart-container">
                     <span class="chart-box-title">年間収支の推移</span>
                     <canvas id="cnvLine" width="360" height="240" role="img" aria-label="月ごとの収入と支出を示す折れ線グラフ"></canvas>
+                    <div class="chart-tooltip" id="chart-tooltip" role="status" aria-live="polite" hidden></div>
                 </div>
             </div>
 
@@ -97,6 +100,43 @@
         };
 
         drawAll(data, canvas);
+
+        const chartTooltip = document.getElementById('chart-tooltip');
+        const chartContainer = document.getElementById('chart-container');
+        const hideChartTooltip = () => {
+            chartTooltip.hidden = true;
+            canvas.line.style.cursor = '';
+        };
+        canvas.line.addEventListener('pointermove', event => {
+            const canvasRect = canvas.line.getBoundingClientRect();
+            const pointerX = event.clientX - canvasRect.left;
+            const pointerY = event.clientY - canvasRect.top;
+            const hits = data.markers
+                .map(marker => ({
+                    marker,
+                    distance: Math.hypot(marker.x - pointerX, marker.y - pointerY)
+                }))
+                .filter(hit => hit.distance <= 12)
+                .sort((left, right) => left.distance - right.distance);
+
+            if (hits.length === 0) {
+                hideChartTooltip();
+                return;
+            }
+
+            chartTooltip.textContent = hits
+                .map(({ marker }) => `2026年${marker.month}月・${marker.label}: ¥${marker.amount.toLocaleString()}`)
+                .join('\n');
+            chartTooltip.hidden = false;
+            canvas.line.style.cursor = 'pointer';
+
+            const containerRect = chartContainer.getBoundingClientRect();
+            const left = event.clientX - containerRect.left + 12;
+            const top = event.clientY - containerRect.top - chartTooltip.offsetHeight - 12;
+            chartTooltip.style.left = `${Math.max(8, Math.min(left, chartContainer.clientWidth - chartTooltip.offsetWidth - 8))}px`;
+            chartTooltip.style.top = `${Math.max(8, top)}px`;
+        });
+        canvas.line.addEventListener('pointerleave', hideChartTooltip);
 
         let redrawFrame = 0;
         const scheduleRedraw = () => {

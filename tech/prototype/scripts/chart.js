@@ -71,6 +71,7 @@ function drawAll(data, canvas) {
     data.balanceLabel.innerText = (currentBalance >= 0 ? "+" : "-") + "¥" + Math.abs(currentBalance).toLocaleString();
     data.balanceLabel.style.color = currentBalance >= 0 ? "#16a34a" : "#dc2626";
 
+    data.markers = [];
     const lineChart = prepareCanvas(canvas.line);
 
     if (!lineChart) {
@@ -89,8 +90,8 @@ function drawAll(data, canvas) {
     const numMonths = monthlyData.length;
     const xPosition = index => chartLeft + (index / (numMonths - 1)) * chartWidth;
     const series = [
-        { key: 'income', color: '#1F77B4' },
-        { key: 'expenses', color: '#D62728' }
+        { key: 'income', label: '収入', color: '#1F77B4' },
+        { key: 'expenses', label: '支出', color: '#D62728' }
     ];
     const values = monthlyData.flatMap(month => series.map(item => month[item.key] / 1000));
     const axisStep = 50;
@@ -144,6 +145,13 @@ function drawAll(data, canvas) {
         monthlyData.forEach((month, index) => {
             const x = xPosition(index);
             const y = yPosition(month[item.key] / 1000);
+            data.markers.push({
+                x,
+                y,
+                month: index + 1,
+                label: item.label,
+                amount: month[item.key]
+            });
             ctx.beginPath();
             ctx.arc(x, y, 7, 0, Math.PI * 2);
             ctx.fill();
