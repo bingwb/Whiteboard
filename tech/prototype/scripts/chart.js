@@ -54,6 +54,10 @@ function aggregateMonthlyData(categories) {
         });
     });
 
+    monthlyData.forEach(month => {
+        month.balance = month.income - month.expenses;
+    });
+
     return monthlyData;
 }
 
@@ -67,68 +71,94 @@ function drawAll(data, canvas) {
     data.balanceLabel.innerText = (currentBalance >= 0 ? "+" : "-") + "¥" + Math.abs(currentBalance).toLocaleString();
     data.balanceLabel.style.color = currentBalance >= 0 ? "#16a34a" : "#dc2626";
 
-    const bar = prepareCanvas(canvas.bar);
+    const lineChart = prepareCanvas(canvas.line);
 
-    if (!bar) {
+    if (!lineChart) {
         return;
     }
 
-    const ctxBar = bar.context;
+    const ctx = lineChart.context;
 
     const chartTop = 20;
-    const chartBottom = bar.height - 25;
-    const chartLeft = 35;
-    const chartRight = bar.width - 10;
+    const chartBottom = lineChart.height - 30;
+    const chartLeft = 45;
+    const chartRight = lineChart.width - 15;
     const chartHeight = chartBottom - chartTop;
     const chartWidth = chartRight - chartLeft;
-
-    ctxBar.strokeStyle = '#e2e8f0';
-    ctxBar.lineWidth = 1;
-    ctxBar.fillStyle = '#64748b';
-    ctxBar.font = '11px sans-serif';
-    ctxBar.textAlign = 'right';
-    ctxBar.textBaseline = 'middle';
-
-    const steps = [0, 50, 100, 150, 200, 250, 300, 350, 400];
-
-    for (let s = 0; s < steps.length; s++) {
-        const yPos = chartBottom - (steps[s] / 400) * chartHeight;
-        ctxBar.beginPath();
-        ctxBar.moveTo(chartLeft, yPos);
-        ctxBar.lineTo(chartRight, yPos);
-        ctxBar.stroke();
-        ctxBar.fillText(steps[s] === 0 ? '0' : steps[s] + 'K', chartLeft - 6, yPos);
-    }
-
-    ctxBar.strokeStyle = '#94a3b8';
-    ctxBar.lineWidth = 2;
-    ctxBar.beginPath();
-    ctxBar.moveTo(chartLeft, chartBottom);
-    ctxBar.lineTo(chartRight, chartBottom);
-    ctxBar.moveTo(chartLeft, chartTop);
-    ctxBar.lineTo(chartLeft, chartBottom);
-    ctxBar.stroke();
-
     const monthLabels = monthlyData.map((_, index) => (index + 1) + '月');
     const numMonths = monthlyData.length;
-    const groupWidth = chartWidth / numMonths;
-    const barWidth = 10;
+    const xPosition = index => chartLeft + (index / (numMonths - 1)) * chartWidth;
+    const series = [
+        { key: 'income', color: '#1F77B4' },
+        { key: 'expenses', color: '#D62728' }
+    ];
+    const values = monthlyData.flatMap(month => series.map(item => month[item.key] / 1000));
+    const axisStep = 50;
+    const axisMin = Math.floor(Math.min(0, ...values) / axisStep) * axisStep;
+    const axisMax = Math.ceil(Math.max(0, ...values) / axisStep) * axisStep + axisStep;
+    const yPosition = value => chartBottom - ((value - axisMin) / (axisMax - axisMin)) * chartHeight;
 
-    ctxBar.textAlign = 'center';
-    ctxBar.textBaseline = 'top';
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'middle';
+    ctx.font = '11px sans-serif';
 
-    for (let m = 0; m < numMonths; m++) {
-        const groupCenterX = chartLeft + (m * groupWidth) + (groupWidth / 2);
-        const hInc = (monthlyData[m].income / 1000 / 400) * chartHeight;
-        ctxBar.fillStyle = '#1F77B4';
-        ctxBar.fillRect(groupCenterX - barWidth - 1, chartBottom - hInc, barWidth, hInc);
+    for (let step = axisMin; step <= axisMax; step += axisStep) {
+        const y = yPosition(step);
+        ctx.beginPath();
+        ctx.strokeStyle = step === 0 ? '#94a3b8' : '#e2e8f0';
+        ctx.lineWidth = step === 0 ? 2 : 1;
+        ctx.moveTo(chartLeft, y);
+        ctx.lineTo(chartRight, y);
+        ctx.stroke();
+        ctx.fillStyle = '#64748b';
+        ctx.fillText(step === 0 ? '0' : step + 'K', chartLeft - 8, y);
+    }
 
-        const hExp = (monthlyData[m].expenses / 1000 / 400) * chartHeight;
-        ctxBar.fillStyle = '#D62728';
-        ctxBar.fillRect(groupCenterX + 1, chartBottom - hExp, barWidth, hExp);
+    ctx.beginPath();
+    ctx.strokeStyle = '#94a3b8';
+    ctx.lineWidth = 2;
+    ctx.moveTo(chartLeft, chartTop);
+    ctx.lineTo(chartLeft, chartBottom);
+    ctx.stroke();
 
-        ctxBar.fillStyle = '#64748b';
-        ctxBar.font = 'bold 11px sans-serif';
-        ctxBar.fillText(monthLabels[m], groupCenterX, chartBottom + 6);
+    series.forEach(item => {
+        ctx.beginPath();
+        ctx.strokeStyle = item.color;
+        ctx.lineWidth = 2.5;
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
+
+        monthlyData.forEach((month, index) => {
+            const x = xPosition(index);
+            const y = yPosition(month[item.key] / 1000);
+            if (index === 0) {
+                ctx.moveTo(x, y);
+            } else {
+                ctx.lineTo(x, y);
+            }
+        });
+
+        ctx.stroke();
+        ctx.fillStyle = item.color;
+
+        monthlyData.forEach((month, index) => {
+            const x = xPosition(index);
+            const y = yPosition(month[item.key] / 1000);
+            ctx.beginPath();
+            ctx.arc(x, y, 3.5, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.strokeStyle = '#fff';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+        });
+    });
+
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    ctx.fillStyle = '#64748b';
+    ctx.font = 'bold 11px sans-serif';
+
+    for (let index = 0; index < numMonths; index++) {
+        ctx.fillText(monthLabels[index], xPosition(index), chartBottom + 6);
     }
 }

@@ -72,7 +72,7 @@
             <div class="charts-grid">
                 <div>
                     <span class="chart-box-title">年間収支の推移</span>
-                    <canvas id="cnvBar" width="360" height="240" role="img" aria-label="月ごとの収入と支出を示す棒グラフ"></canvas>
+                    <canvas id="cnvLine" width="360" height="240" role="img" aria-label="月ごとの収入と支出を示す折れ線グラフ"></canvas>
                 </div>
             </div>
 
@@ -93,7 +93,7 @@
             balanceLabel: document.getElementById('lbl-bal')
         };
         const canvas = {
-            bar: document.getElementById('cnvBar')
+            line: document.getElementById('cnvLine')
         };
 
         drawAll(data, canvas);
