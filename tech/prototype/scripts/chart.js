@@ -145,7 +145,7 @@ function drawAll(data, canvas) {
             const x = xPosition(index);
             const y = yPosition(month[item.key] / 1000);
             ctx.beginPath();
-            ctx.arc(x, y, 3.5, 0, Math.PI * 2);
+            ctx.arc(x, y, 7, 0, Math.PI * 2);
             ctx.fill();
             ctx.strokeStyle = '#fff';
             ctx.lineWidth = 1;
