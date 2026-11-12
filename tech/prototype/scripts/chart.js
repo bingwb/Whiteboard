@@ -90,14 +90,20 @@ function calculateAxis(values, plotHeight) {
     return { minimum: axisMin, maximum: axisMax, step };
 }
 
+function formatAmount(value) {
+    const [integer, fraction] = Math.abs(value).toString().split('.');
+    const groupedInteger = integer.replace(/\B(?=(\d{4})+(?!\d))/g, ',');
+    return (value < 0 ? '-' : '') + groupedInteger + (fraction ? '.' + fraction : '');
+}
+
 function drawAll(data, canvas) {
     const monthlyData = aggregateMonthlyData(data.categories);
     const currentMonth = monthlyData[monthlyData.length - 1];
     const currentBalance = currentMonth.income - currentMonth.expenses;
 
-    data.incomeLabel.innerText = "¥" + currentMonth.income.toLocaleString();
-    data.expenseLabel.innerText = "¥" + currentMonth.expenses.toLocaleString();
-    data.balanceLabel.innerText = (currentBalance >= 0 ? "+" : "-") + "¥" + Math.abs(currentBalance).toLocaleString();
+    data.incomeLabel.innerText = "¥" + formatAmount(currentMonth.income);
+    data.expenseLabel.innerText = "¥" + formatAmount(currentMonth.expenses);
+    data.balanceLabel.innerText = (currentBalance >= 0 ? "+" : "-") + "¥" + formatAmount(Math.abs(currentBalance));
     data.balanceLabel.style.color = currentBalance >= 0 ? "#16a34a" : "#dc2626";
 
     data.markers = [];
@@ -109,7 +115,7 @@ function drawAll(data, canvas) {
 
     const ctx = lineChart.context;
 
-    const chartTop = 20;
+    const chartTop = 36;
     const chartBottom = lineChart.height - 30;
     const chartLeft = 45;
     const chartRight = lineChart.width - 15;
@@ -122,7 +128,7 @@ function drawAll(data, canvas) {
         { key: 'income', label: '収入', color: '#1F77B4' },
         { key: 'expenses', label: '支出', color: '#D62728' }
     ];
-    const values = monthlyData.flatMap(month => series.map(item => month[item.key] / 1000));
+    const values = monthlyData.flatMap(month => series.map(item => month[item.key] / 10000));
     const axis = calculateAxis(values, chartHeight);
     const axisMin = axis.minimum;
     const axisMax = axis.maximum;
@@ -132,6 +138,8 @@ function drawAll(data, canvas) {
     ctx.textAlign = 'right';
     ctx.textBaseline = 'middle';
     ctx.font = '11px sans-serif';
+    ctx.fillStyle = '#64748b';
+    ctx.fillText('(万)', chartLeft - 8, chartTop / 4);
 
     const tickCount = Math.round((axisMax - axisMin) / axisStep);
     for (let index = 0; index <= tickCount; index++) {
@@ -144,7 +152,7 @@ function drawAll(data, canvas) {
         ctx.lineTo(chartRight, y);
         ctx.stroke();
         ctx.fillStyle = '#64748b';
-        ctx.fillText(step === 0 ? '0' : Number(step.toPrecision(12)) + 'K', chartLeft - 8, y);
+        ctx.fillText(formatAmount(Number(step.toPrecision(12))), chartLeft - 8, y);
     }
 
     ctx.beginPath();
@@ -163,7 +171,7 @@ function drawAll(data, canvas) {
 
         monthlyData.forEach((month, index) => {
             const x = xPosition(index);
-            const y = yPosition(month[item.key] / 1000);
+            const y = yPosition(month[item.key] / 10000);
             if (index === 0) {
                 ctx.moveTo(x, y);
             } else {
@@ -176,7 +184,7 @@ function drawAll(data, canvas) {
 
         monthlyData.forEach((month, index) => {
             const x = xPosition(index);
-            const y = yPosition(month[item.key] / 1000);
+            const y = yPosition(month[item.key] / 10000);
             data.markers.push({
                 x,
                 y,

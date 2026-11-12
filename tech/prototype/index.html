@@ -124,7 +124,7 @@
             }
 
             chartTooltip.textContent = hits
-                .map(({ marker }) => `2026年${marker.month}月・${marker.label}: ¥${marker.amount.toLocaleString()}`)
+                .map(({ marker }) => `2026年${marker.month}月・${marker.label}: ¥${formatAmount(marker.amount)}`)
                 .join('\n');
             chartTooltip.hidden = false;
             canvas.line.style.cursor = 'pointer';
