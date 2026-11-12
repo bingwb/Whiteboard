@@ -117,7 +117,7 @@ function drawAll(data, canvas) {
 
     const chartTop = 36;
     const chartBottom = lineChart.height - 30;
-    const chartLeft = 45;
+    const chartLeft = 70;
     const chartRight = lineChart.width - 15;
     const chartHeight = chartBottom - chartTop;
     const chartWidth = chartRight - chartLeft;
@@ -138,8 +138,6 @@ function drawAll(data, canvas) {
     ctx.textAlign = 'right';
     ctx.textBaseline = 'middle';
     ctx.font = '11px sans-serif';
-    ctx.fillStyle = '#64748b';
-    ctx.fillText('(万)', chartLeft - 8, chartTop / 4);
 
     const tickCount = Math.round((axisMax - axisMin) / axisStep);
     for (let index = 0; index <= tickCount; index++) {
@@ -152,7 +150,7 @@ function drawAll(data, canvas) {
         ctx.lineTo(chartRight, y);
         ctx.stroke();
         ctx.fillStyle = '#64748b';
-        ctx.fillText(formatAmount(Number(step.toPrecision(12))), chartLeft - 8, y);
+        ctx.fillText(formatAmount(Number((step * 10000).toPrecision(12))), chartLeft - 8, y);
     }
 
     ctx.beginPath();
