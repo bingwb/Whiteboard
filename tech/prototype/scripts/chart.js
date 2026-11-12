@@ -61,6 +61,35 @@ function aggregateMonthlyData(categories) {
     return monthlyData;
 }
 
+function calculateAxis(values, plotHeight) {
+    let minimum = Math.min(...values);
+    let maximum = Math.max(...values);
+
+    if (minimum === maximum) {
+        const padding = Math.max(Math.abs(minimum) * 0.1, 1);
+        minimum -= padding;
+        maximum += padding;
+    }
+
+    const targetIntervals = Math.max(2, Math.floor(plotHeight / 40));
+    const rawStep = (maximum - minimum) / targetIntervals;
+    const magnitude = 10 ** Math.floor(Math.log10(rawStep));
+    const normalizedStep = rawStep / magnitude;
+    const stepFactor = normalizedStep <= 1 ? 1 : normalizedStep <= 2 ? 2 : normalizedStep <= 5 ? 5 : 10;
+    const step = stepFactor * magnitude;
+    let axisMin = Math.floor(minimum / step) * step;
+    let axisMax = Math.ceil(maximum / step) * step;
+
+    while (axisMin > minimum) {
+        axisMin -= step;
+    }
+    while (axisMax < maximum) {
+        axisMax += step;
+    }
+
+    return { minimum: axisMin, maximum: axisMax, step };
+}
+
 function drawAll(data, canvas) {
     const monthlyData = aggregateMonthlyData(data.categories);
     const currentMonth = monthlyData[monthlyData.length - 1];
@@ -94,16 +123,19 @@ function drawAll(data, canvas) {
         { key: 'expenses', label: '支出', color: '#D62728' }
     ];
     const values = monthlyData.flatMap(month => series.map(item => month[item.key] / 1000));
-    const axisStep = 50;
-    const axisMin = Math.floor(Math.min(0, ...values) / axisStep) * axisStep;
-    const axisMax = Math.ceil(Math.max(0, ...values) / axisStep) * axisStep + axisStep;
+    const axis = calculateAxis(values, chartHeight);
+    const axisMin = axis.minimum;
+    const axisMax = axis.maximum;
+    const axisStep = axis.step;
     const yPosition = value => chartBottom - ((value - axisMin) / (axisMax - axisMin)) * chartHeight;
 
     ctx.textAlign = 'right';
     ctx.textBaseline = 'middle';
     ctx.font = '11px sans-serif';
 
-    for (let step = axisMin; step <= axisMax; step += axisStep) {
+    const tickCount = Math.round((axisMax - axisMin) / axisStep);
+    for (let index = 0; index <= tickCount; index++) {
+        const step = Number((axisMin + index * axisStep).toPrecision(12));
         const y = yPosition(step);
         ctx.beginPath();
         ctx.strokeStyle = step === 0 ? '#94a3b8' : '#e2e8f0';
@@ -112,7 +144,7 @@ function drawAll(data, canvas) {
         ctx.lineTo(chartRight, y);
         ctx.stroke();
         ctx.fillStyle = '#64748b';
-        ctx.fillText(step === 0 ? '0' : step + 'K', chartLeft - 8, y);
+        ctx.fillText(step === 0 ? '0' : Number(step.toPrecision(12)) + 'K', chartLeft - 8, y);
     }
 
     ctx.beginPath();
