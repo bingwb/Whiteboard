@@ -24,43 +24,6 @@ function prepareCanvas(canvas) {
     return { context, width, height };
 }
 
-function aggregateMonthlyData(categories) {
-    const monthlyData = Array.from({ length: 10 }, () => ({ income: 0, expenses: 0 }));
-
-    Object.values(categories).forEach(category => {
-        if (typeof category.isExpense !== 'boolean' || !Array.isArray(category.details)) {
-            throw new Error('Invalid budget category data.');
-        }
-
-        category.details.forEach(detail => {
-            const dateMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(detail.date);
-            const amount = detail.amount;
-
-            if (!dateMatch || !Number.isSafeInteger(amount) || amount < 0) {
-                throw new Error('Invalid budget detail data.');
-            }
-
-            const year = Number(dateMatch[1]);
-            const month = Number(dateMatch[2]);
-            const day = Number(dateMatch[3]);
-            const daysInMonth = new Date(Date.UTC(year, month, 0)).getUTCDate();
-
-            if (year !== 2026 || month < 1 || month > monthlyData.length || day < 1 || day > daysInMonth) {
-                throw new Error('Budget detail date is outside the supported period.');
-            }
-
-            const field = category.isExpense ? 'expenses' : 'income';
-            monthlyData[month - 1][field] += amount;
-        });
-    });
-
-    monthlyData.forEach(month => {
-        month.balance = month.income - month.expenses;
-    });
-
-    return monthlyData;
-}
-
 function calculateAxis(values, plotHeight) {
     let minimum = Math.min(...values);
     let maximum = Math.max(...values);
@@ -90,59 +53,42 @@ function calculateAxis(values, plotHeight) {
     return { minimum: axisMin, maximum: axisMax, step };
 }
 
-function formatAmount(value) {
-    const [integer, fraction] = Math.abs(value).toString().split('.');
-    const groupedInteger = integer.replace(/\B(?=(\d{4})+(?!\d))/g, ',');
-    return (value < 0 ? '-' : '') + groupedInteger + (fraction ? '.' + fraction : '');
-}
+function drawLineChart(canvas, monthlyData, options) {
+    const settings = options || {};
+    const formatAmount = BudgetAggregate.formatAmount;
+    const chart = prepareCanvas(canvas);
 
-function drawAll(data, canvas) {
-    const monthlyData = aggregateMonthlyData(data.categories);
-    const currentMonth = monthlyData[monthlyData.length - 1];
-    const currentBalance = currentMonth.income - currentMonth.expenses;
-
-    data.incomeLabel.innerText = "¥" + formatAmount(currentMonth.income);
-    data.expenseLabel.innerText = "¥" + formatAmount(currentMonth.expenses);
-    data.balanceLabel.innerText = (currentBalance >= 0 ? "+" : "-") + "¥" + formatAmount(Math.abs(currentBalance));
-    data.balanceLabel.style.color = currentBalance >= 0 ? "#16a34a" : "#dc2626";
-
-    data.markers = [];
-    const lineChart = prepareCanvas(canvas.line);
-
-    if (!lineChart) {
-        return;
+    if (!chart || monthlyData.length === 0) {
+        return { markers: [], layout: null };
     }
 
-    const ctx = lineChart.context;
-
+    const ctx = chart.context;
     const chartTop = 36;
-    const chartBottom = lineChart.height - 30;
+    const chartBottom = chart.height - 30;
     const chartLeft = 70;
-    const chartRight = lineChart.width - 15;
+    const chartRight = chart.width - 15;
     const chartHeight = chartBottom - chartTop;
     const chartWidth = chartRight - chartLeft;
-    const monthLabels = monthlyData.map((_, index) => (index + 1) + '月');
-    const numMonths = monthlyData.length;
-    const xPosition = index => chartLeft + (index / (numMonths - 1)) * chartWidth;
+    const monthCount = monthlyData.length;
+    const xPosition = index => chartLeft + (monthCount === 1 ? chartWidth / 2 : (index / (monthCount - 1)) * chartWidth);
     const series = [
         { key: 'income', label: '収入', color: '#1F77B4' },
         { key: 'expenses', label: '支出', color: '#D62728' }
     ];
     const values = monthlyData.flatMap(month => series.map(item => month[item.key] / 10000));
     const axis = calculateAxis(values, chartHeight);
-    const axisMin = axis.minimum;
-    const axisMax = axis.maximum;
-    const axisStep = axis.step;
-    const yPosition = value => chartBottom - ((value - axisMin) / (axisMax - axisMin)) * chartHeight;
+    const yPosition = value => chartBottom - ((value - axis.minimum) / (axis.maximum - axis.minimum)) * chartHeight;
 
     ctx.textAlign = 'right';
     ctx.textBaseline = 'middle';
     ctx.font = '11px sans-serif';
 
-    const tickCount = Math.round((axisMax - axisMin) / axisStep);
+    const tickCount = Math.round((axis.maximum - axis.minimum) / axis.step);
+
     for (let index = 0; index <= tickCount; index++) {
-        const step = Number((axisMin + index * axisStep).toPrecision(12));
+        const step = Number((axis.minimum + index * axis.step).toPrecision(12));
         const y = yPosition(step);
+
         ctx.beginPath();
         ctx.strokeStyle = step === 0 ? '#94a3b8' : '#e2e8f0';
         ctx.lineWidth = step === 0 ? 2 : 1;
@@ -160,6 +106,22 @@ function drawAll(data, canvas) {
     ctx.lineTo(chartLeft, chartBottom);
     ctx.stroke();
 
+    if (settings.highlightMonth) {
+        const highlightX = xPosition(settings.highlightMonth - 1);
+
+        ctx.save();
+        ctx.setLineDash([6, 6]);
+        ctx.strokeStyle = '#b6c6e2';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(highlightX, chartTop);
+        ctx.lineTo(highlightX, chartBottom);
+        ctx.stroke();
+        ctx.restore();
+    }
+
+    const markers = [];
+
     series.forEach(item => {
         ctx.beginPath();
         ctx.strokeStyle = item.color;
@@ -170,6 +132,7 @@ function drawAll(data, canvas) {
         monthlyData.forEach((month, index) => {
             const x = xPosition(index);
             const y = yPosition(month[item.key] / 10000);
+
             if (index === 0) {
                 ctx.moveTo(x, y);
             } else {
@@ -178,23 +141,25 @@ function drawAll(data, canvas) {
         });
 
         ctx.stroke();
-        ctx.fillStyle = item.color;
 
         monthlyData.forEach((month, index) => {
             const x = xPosition(index);
             const y = yPosition(month[item.key] / 10000);
-            data.markers.push({
+
+            markers.push({
                 x,
                 y,
                 month: index + 1,
                 label: item.label,
                 amount: month[item.key]
             });
+
             ctx.beginPath();
-            ctx.arc(x, y, 7, 0, Math.PI * 2);
+            ctx.arc(x, y, settings.highlightMonth === index + 1 ? 8 : 6, 0, Math.PI * 2);
+            ctx.fillStyle = item.color;
             ctx.fill();
             ctx.strokeStyle = '#fff';
-            ctx.lineWidth = 1;
+            ctx.lineWidth = settings.highlightMonth === index + 1 ? 2.5 : 1;
             ctx.stroke();
         });
     });
@@ -204,7 +169,18 @@ function drawAll(data, canvas) {
     ctx.fillStyle = '#64748b';
     ctx.font = 'bold 11px sans-serif';
 
-    for (let index = 0; index < numMonths; index++) {
-        ctx.fillText(monthLabels[index], xPosition(index), chartBottom + 6);
-    }
+    const labelStep = chartWidth / monthCount < 30 ? 2 : 1;
+
+    monthlyData.forEach((month, index) => {
+        if (index % labelStep !== 0 && index !== monthCount - 1) {
+            return;
+        }
+
+        ctx.fillText(`${month.month}月`, xPosition(index), chartBottom + 6);
+    });
+
+    return {
+        markers,
+        layout: { left: chartLeft, right: chartRight, top: chartTop, bottom: chartBottom }
+    };
 }

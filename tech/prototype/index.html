@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マイホーム家計簿 Canvas直描版</title>
+    <title>マイホーム家計簿</title>
     <style>
         :root {
             color-scheme: light;
@@ -22,8 +22,13 @@
         .month-badge { flex: 0 0 auto; padding: 8px 14px; border: 1px solid #dce7fa; border-radius: 999px; background: #f0f5ff; color: #41629a; font-size: 13px; font-weight: 700; }
         main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 48px; }
         .panel { min-width: 0; padding: clamp(20px, 2.5vw, 30px); border: 1px solid #e5eaf2; border-radius: 20px; background: #fff; box-shadow: 0 12px 32px rgba(31, 51, 82, .06); }
+        main > .panel + .panel { margin-top: 22px; }
         .panel-title { display: flex; align-items: center; gap: 10px; margin: 0 0 22px; padding-bottom: 15px; border-bottom: 1px solid #edf1f7; color: #263650; font-size: 16px; font-weight: 750; }
         .panel-title::before { width: 4px; height: 18px; border-radius: 4px; background: #5681d8; content: ""; }
+        .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: -4px 0 24px; }
+        .control { display: inline-flex; align-items: center; gap: 7px; color: #6b7890; font-size: 12px; font-weight: 700; }
+        .control select { padding: 7px 10px; border: 1px solid #dce3ee; border-radius: 10px; background: #f8faff; color: #243247; font: inherit; font-size: 13px; font-weight: 650; }
+        .control select:focus-visible { outline: 2px solid #5681d8; outline-offset: 1px; }
         .grid-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 28px; }
         .card { min-width: 0; padding: 17px 12px; border: 1px solid #e8edf5; border-radius: 14px; background: #f8faff; text-align: center; }
         .card-title { display: block; margin-bottom: 7px; color: #6b7890; font-size: 12px; font-weight: 600; }
@@ -38,6 +43,35 @@
         canvas { display: block; width: 100%; height: auto; }
         .legend { display: flex; justify-content: center; gap: 12px 16px; margin-top: 26px; color: #526179; font-size: 12px; font-weight: 550; flex-wrap: wrap; }
         .legend-box { display: inline-block; width: 11px; height: 11px; margin-right: 5px; border-radius: 3px; vertical-align: -1px; }
+        .table-scroll { overflow-x: auto; }
+        .table-scroll.is-scrollable { max-height: 440px; overflow-y: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+        thead th { position: sticky; top: 0; z-index: 1; padding: 9px 10px; border-bottom: 1px solid #e5eaf2; background: #fff; color: #6b7890; font-size: 12px; font-weight: 700; text-align: left; white-space: nowrap; }
+        tbody td { padding: 9px 10px; border-bottom: 1px solid #f0f3f9; color: #33415c; }
+        tbody tr:hover { background: #f8faff; }
+        tbody tr.is-current { background: #f0f5ff; }
+        tbody tr.is-current td { font-weight: 650; }
+        .num { text-align: right; }
+        td.num { white-space: nowrap; }
+        .date-cell { color: #5b6a83; white-space: nowrap; }
+        .is-positive { color: #23956a; }
+        .is-negative { color: #d34d55; }
+        tfoot td, tfoot th { padding: 10px; border-top: 2px solid #e5eaf2; color: #243247; font-weight: 800; }
+        tfoot .tfoot-label { text-align: right; color: #526179; font-size: 12px; font-weight: 700; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+        .tag-income { background: #e8f1ff; color: #2874c8; }
+        .tag-expense { background: #ffeff0; color: #d34d55; }
+        .table-summary { margin: 14px 2px 0; color: #526179; font-size: 12px; font-weight: 600; }
+        .empty-note { padding: 18px 10px; color: #8a96ab; font-size: 13px; text-align: center; }
+        .summary-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+        .summary-item { display: grid; grid-template-columns: 92px minmax(0, 1fr) auto; align-items: center; gap: 12px; }
+        .summary-name { overflow: hidden; color: #526179; font-size: 13px; font-weight: 650; white-space: nowrap; text-overflow: ellipsis; }
+        .summary-item.is-selected .summary-name { color: #1f3d6b; font-weight: 800; }
+        .summary-track { height: 10px; border-radius: 999px; background: #eef2f9; overflow: hidden; }
+        .summary-bar { display: block; height: 100%; min-width: 2px; border-radius: 999px; }
+        .summary-bar.income { background: #1F77B4; }
+        .summary-bar.expense { background: #D62728; }
+        .summary-amount { color: #33415c; font-size: 13px; font-weight: 700; text-align: right; white-space: nowrap; }
         @media (max-width: 640px) {
             header { padding: 14px 18px; }
             main { padding: 20px 16px 32px; }
@@ -46,6 +80,8 @@
             .card { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 15px; text-align: left; }
             .card-title { margin: 0; }
             .card-val { font-size: 18px; }
+            .summary-item { grid-template-columns: 72px minmax(0, 1fr) auto; gap: 8px; }
+            .summary-amount { font-size: 12px; }
         }
         @media (max-width: 420px) {
             header { align-items: flex-start; flex-direction: column; gap: 10px; }
@@ -55,131 +91,93 @@
 <body>
 
     <header>
-        <h1>📊 マイホーム家計簿 (Canvas直描版)</h1>
-        <div class="month-badge">
-            2026年 10月
-        </div>
+        <h1>📊 マイホーム家計簿</h1>
+        <div class="month-badge" id="period-badge">2026年 通年</div>
     </header>
 
     <main>
         <section class="panel" aria-labelledby="dashboard-title">
-            <h2 class="panel-title" id="dashboard-title">家計簿ダッシュボード</h2>
+            <h2 class="panel-title" id="dashboard-title">ダッシュボード</h2>
+
+            <div class="toolbar">
+                <label class="control">年
+                    <select id="ctrl-year" aria-label="対象年"></select>
+                </label>
+                <label class="control">月
+                    <select id="ctrl-month" aria-label="対象月"></select>
+                </label>
+            </div>
 
             <div class="grid-cards">
-                <div class="card"><span class="card-title">今月の収入</span><span class="card-val income-value" id="lbl-inc"></span></div>
-                <div class="card"><span class="card-title">今月の支出</span><span class="card-val expense-value" id="lbl-exp"></span></div>
-                <div class="card"><span class="card-title">今月の収支</span><span class="card-val balance-value" id="lbl-bal"></span></div>
+                <div class="card"><span class="card-title">収入</span><span class="card-val income-value" id="lbl-inc"></span></div>
+                <div class="card"><span class="card-title">支出</span><span class="card-val expense-value" id="lbl-exp"></span></div>
+                <div class="card"><span class="card-title">収支</span><span class="card-val balance-value" id="lbl-bal"></span></div>
             </div>
 
             <div class="charts-grid">
                 <div class="chart-container" id="chart-container">
-                    <span class="chart-box-title">年間収支の推移</span>
+                    <span class="chart-box-title" id="chart-title">年間収支の推移</span>
                     <canvas id="cnvLine" width="360" height="240" role="img" aria-label="月ごとの収入と支出を示す折れ線グラフ"></canvas>
                     <div class="chart-tooltip" id="chart-tooltip" role="status" aria-live="polite" hidden></div>
                 </div>
             </div>
 
             <div class="legend">
-                <div style="margin-left: 8px;"><span class="legend-box" style="background:#1F77B4;"></span>収入</div>
+                <div><span class="legend-box" style="background:#1F77B4;"></span>収入</div>
                 <div><span class="legend-box" style="background:#D62728;"></span>支出</div>
+            </div>
+        </section>
+
+        <section class="panel" aria-labelledby="detail-title">
+            <h2 class="panel-title" id="detail-title">明細</h2>
+            <div class="toolbar">
+                <label class="control">分類
+                    <select id="ctrl-category" aria-label="分類で絞り込み"></select>
+                </label>
+            </div>
+            <div class="table-scroll is-scrollable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">日付</th>
+                            <th scope="col">分類</th>
+                            <th scope="col">区分</th>
+                            <th scope="col" class="num">金額</th>
+                        </tr>
+                    </thead>
+                    <tbody id="detail-body"></tbody>
+                    <tfoot id="detail-footer"></tfoot>
+                </table>
+            </div>
+            <p class="table-summary" id="detail-summary"></p>
+        </section>
+
+        <section class="panel" aria-labelledby="summary-title">
+            <h2 class="panel-title" id="summary-title">カテゴリ別集計</h2>
+            <ul class="summary-list" id="summary-list"></ul>
+            <p class="table-summary" id="summary-footer"></p>
+        </section>
+
+        <section class="panel" aria-labelledby="monthly-title">
+            <h2 class="panel-title" id="monthly-title">月別集計</h2>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">月</th>
+                            <th scope="col" class="num">収入</th>
+                            <th scope="col" class="num">支出</th>
+                            <th scope="col" class="num">収支</th>
+                        </tr>
+                    </thead>
+                    <tbody id="monthly-body"></tbody>
+                    <tfoot id="monthly-footer"></tfoot>
+                </table>
             </div>
         </section>
     </main>
 
     <script>
-    function initializeChartPage() {
-        const data = {
-            categories: budgetData,
-            incomeLabel: document.getElementById('lbl-inc'),
-            expenseLabel: document.getElementById('lbl-exp'),
-            balanceLabel: document.getElementById('lbl-bal')
-        };
-        const canvas = {
-            line: document.getElementById('cnvLine')
-        };
-
-        drawAll(data, canvas);
-
-        const chartTooltip = document.getElementById('chart-tooltip');
-        const chartContainer = document.getElementById('chart-container');
-        const hideChartTooltip = () => {
-            chartTooltip.hidden = true;
-            canvas.line.style.cursor = '';
-        };
-        canvas.line.addEventListener('pointermove', event => {
-            const canvasRect = canvas.line.getBoundingClientRect();
-            const pointerX = event.clientX - canvasRect.left;
-            const pointerY = event.clientY - canvasRect.top;
-            const hits = data.markers
-                .map(marker => ({
-                    marker,
-                    distance: Math.hypot(marker.x - pointerX, marker.y - pointerY)
-                }))
-                .filter(hit => hit.distance <= 12)
-                .sort((left, right) => left.distance - right.distance);
-
-            if (hits.length === 0) {
-                hideChartTooltip();
-                return;
-            }
-
-            chartTooltip.textContent = hits
-                .map(({ marker }) => `2026年${marker.month}月・${marker.label}: ¥${formatAmount(marker.amount)}`)
-                .join('\n');
-            chartTooltip.hidden = false;
-            canvas.line.style.cursor = 'pointer';
-
-            const containerRect = chartContainer.getBoundingClientRect();
-            const left = event.clientX - containerRect.left + 12;
-            const top = event.clientY - containerRect.top - chartTooltip.offsetHeight - 12;
-            chartTooltip.style.left = `${Math.max(8, Math.min(left, chartContainer.clientWidth - chartTooltip.offsetWidth - 8))}px`;
-            chartTooltip.style.top = `${Math.max(8, top)}px`;
-        });
-        canvas.line.addEventListener('pointerleave', hideChartTooltip);
-
-        let redrawFrame = 0;
-        const scheduleRedraw = () => {
-            if (!redrawFrame) {
-                redrawFrame = requestAnimationFrame(() => {
-                    redrawFrame = 0;
-
-                    drawAll(data, canvas);
-                });
-            }
-        };
-        window.addEventListener('resize', scheduleRedraw);
-
-        if ('ResizeObserver' in window) {
-            const canvasObserver = new ResizeObserver(scheduleRedraw);
-            Object.values(canvas).forEach(element => canvasObserver.observe(element));
-        }
-
-        let pixelRatioQuery;
-        const watchPixelRatio = () => {
-            if (pixelRatioQuery) {
-                if (pixelRatioQuery.removeEventListener) {
-                    pixelRatioQuery.removeEventListener('change', onPixelRatioChange);
-                } else {
-                    pixelRatioQuery.removeListener(onPixelRatioChange);
-                }
-            }
-
-            pixelRatioQuery = window.matchMedia(`(resolution: ${window.devicePixelRatio || 1}dppx)`);
-
-            if (pixelRatioQuery.addEventListener) {
-                pixelRatioQuery.addEventListener('change', onPixelRatioChange);
-            } else {
-                pixelRatioQuery.addListener(onPixelRatioChange);
-            }
-        };
-        const onPixelRatioChange = () => {
-            watchPixelRatio();
-            scheduleRedraw();
-        };
-
-        watchPixelRatio();
-    }
-
     function loadClassicScript(source) {
         return new Promise((resolve, reject) => {
             const script = document.createElement('script');
@@ -196,14 +194,19 @@
         : 'data.js';
 
     loadClassicScript(`./scripts/${datasetName}`)
+        .then(() => loadClassicScript('./scripts/aggregate.js'))
         .then(() => loadClassicScript('./scripts/chart.js'))
-        .then(initializeChartPage)
+        .then(() => loadClassicScript('./scripts/app.js'))
+        .then(() => {
+            startBudgetPrototype({ categories: budgetData });
+        })
         .catch(error => {
             console.error(error);
             const message = document.createElement('p');
             message.setAttribute('role', 'alert');
-            message.textContent = '家計簿データまたはチャートを読み込めませんでした。';
-            document.querySelector('.charts-grid').prepend(message);
+            message.className = 'empty-note';
+            message.textContent = '家計簿データまたはスクリプトを読み込めませんでした。';
+            document.querySelector('main').prepend(message);
         });
     </script>
 </body>
