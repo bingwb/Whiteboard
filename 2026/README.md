@@ -1,3 +1,4 @@
+- [語彙](./Japanese/vocabulary.md)
 - [標準日本語初級](./Japanese/textElementary.md)
 - [標準日本語中級](./Japanese/textIntermediate.md)
 - [標準日本語上級](./Japanese/textAdvanced.md)

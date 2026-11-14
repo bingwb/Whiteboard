@@ -1,5 +1,6 @@
 # 標準日本語上級
 
+- [語彙](./vocabulary.md)
 - [標準日本語初級](./textElementary.md)
 - [標準日本語中級](./textIntermediate.md)
 
