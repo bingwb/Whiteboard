@@ -24,11 +24,12 @@
 
 **主な意味と例文**
 
-- 足りない部分や<ruby>欠<rp>（</rp><rt>か</rt><rp>）</rp></ruby>けたものを足して<ruby>満<rp>（</rp><rt>み</rt><rp>）</rp></ruby>たす<br>
-必要な量や質に<ruby>達<rp>（</rp><rt>たっ</rt><rp>）</rp></ruby>していないところに、別のものを加えて完全な状態にすることを表します。<br>
+- 足りない部分や<ruby>欠<rp>（</rp><rt>か</rt><rp>）</rp></ruby>けたものを足して<ruby>満<rp>（</rp><rt>み</rt><rp>）</rp></ruby>たす。<br>
+必要な量や質に<ruby>達<rp>（</rp><rt>たっ</rt><rp>）</rp></ruby>していないところに、別のものを加えて完全な状態にすることを表します。<br><br>
 <i>食事で<ruby>摂<rp>（</rp><rt>と</rt><rp>）</rp></ruby>れない<ruby>栄養<rp>（</rp><rt>えいよう</rt><rp>）</rp></ruby>を<ruby>サプリメント<rp>（</rp><rt>Supplement</rt><rp>）</rp></ruby>で<strong>補う</strong>。</i>
+
 - <ruby>損失<rp>（</rp><rt>そんしつ</rt><rp>）</rp></ruby>や<ruby>欠点<rp>（</rp><rt>けってん</rt><rp>）</rp></ruby>を別の何かで<ruby>埋<rp>（</rp><rt>う</rt><rp>）</rp></ruby>め合わせる
-<ruby>失<rp>（</rp><rt>うしな</rt><rp>）</rp></ruby>われたものや弱い部分を、<ruby>他<rp>（</rp><rt>ほか</rt><rp>）</rp></ruby>の<ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>素<rp>（</rp><rt>そ</rt><rp>）</rp></ruby>や<ruby>努<rp>（</rp><rt>ど</rt><rp>）</rp></ruby><ruby>力<rp>（</rp><rt>りょく</rt><rp>）</rp></ruby>によって<ruby>カバー<rp>（</rp><rt>Cover</rt><rp>）</rp></ruby>することを表します。<br>
+<ruby>失<rp>（</rp><rt>うしな</rt><rp>）</rp></ruby>われたものや弱い部分を、<ruby>他<rp>（</rp><rt>ほか</rt><rp>）</rp></ruby>の<ruby>要<rp>（</rp><rt>よう</rt><rp>）</rp></ruby><ruby>素<rp>（</rp><rt>そ</rt><rp>）</rp></ruby>や<ruby>努<rp>（</rp><rt>ど</rt><rp>）</rp></ruby><ruby>力<rp>（</rp><rt>りょく</rt><rp>）</rp></ruby>によって<ruby>カバー<rp>（</rp><rt>Cover</rt><rp>）</rp></ruby>することを表します。<br><br>
 <i>経験の<ruby>浅<rp>（</rp><rt>あさ</rt><rp>）</rp></ruby>さを持ち前の行動力で<strong>補う</strong>。</i>
 
 **類義語（意味が近い語彙）とニュアンスの差異**
@@ -55,11 +56,11 @@
 **主な意味**
 
 - 年齢が低い・子供である
-<ruby>生<rp>（</rp><rt>う</rt><rp>）</rp></ruby>まれてからまだあまり時間が<ruby>経<rp>（</rp><rt>た</rt><rp>）</rp></ruby>っておらず、年がいかない様子を<ruby>表<rp>（</rp><rt>あらわ</rt><rp>）</rp></ruby>します。<br>
+<ruby>生<rp>（</rp><rt>う</rt><rp>）</rp></ruby>まれてからまだあまり時間が<ruby>経<rp>（</rp><rt>た</rt><rp>）</rp></ruby>っておらず、年がいかない様子を<ruby>表<rp>（</rp><rt>あらわ</rt><rp>）</rp></ruby>します。<br><br>
 <i><strong>幼い</strong>ころに見た景色の記憶が今も残っている。</i>
 
 - 考え方や<ruby>振<rp>（</rp><rt>ふ</rt><rp>）</rp></ruby>る<ruby>舞<rp>（</rp><rt>ま</rt><rp>）</rp></ruby>いが未熟である
-年齢のわりに精神面や経験が十分に<ruby>育<rp>（</rp><rt>そだ</rt><rp>）</rp></ruby>っておらず、子供っぽい様子を表します。少し批判的なニュアンスで使われることも多いです。<br>
+年齢のわりに精神面や経験が十分に<ruby>育<rp>（</rp><rt>そだ</rt><rp>）</rp></ruby>っておらず、子供っぽい様子を表します。少し批判的なニュアンスで使われることも多いです。<br><br>
 <i>失敗を他人のせいにするのは考え方が<strong>幼い</strong>。</i>
 
 **類義語（意味が近い語彙）とニュアンスの差異**
