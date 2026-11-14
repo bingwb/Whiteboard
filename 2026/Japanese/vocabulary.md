@@ -126,7 +126,7 @@
 
 **対義語（反対の意味の語彙）**
 
-- 仕事場（しごとば）・職場（しょくば）：「寝床」が<ruby>休<rp>（</rp><rt>きゅう</rt><rp>）</rp></ruby><ruby>息<rp>（</rp><rt>そく</rt><rp>）</rp></ruby>して<ruby>眠<rp>（</rp><rt>ねむ</rt><rp>）</rp></ruby>る場所であるのに対し、活動して働く場所を指す<ruby>対<rp>（</rp><rt>たい</rt><rp>）</rp></ruby><ruby>比<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>的な言葉です（<ruby>厳密<rp>（</rp><rt>げんみつ</rt><rp>）</rp></ruby>な対義語は存在しません）。
+- 仕事<ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby>・<ruby>職<rp>（</rp><rt>しょく</rt><rp>）</rp></ruby><ruby>場<rp>（</rp><rt>ば</rt><rp>）</rp></ruby>：「寝床」が<ruby>休<rp>（</rp><rt>きゅう</rt><rp>）</rp></ruby><ruby>息<rp>（</rp><rt>そく</rt><rp>）</rp></ruby>して<ruby>眠<rp>（</rp><rt>ねむ</rt><rp>）</rp></ruby>る場所であるのに対し、活動して働く場所を指す<ruby>対<rp>（</rp><rt>たい</rt><rp>）</rp></ruby><ruby>比<rp>（</rp><rt>ひ</rt><rp>）</rp></ruby>的な言葉です（<ruby>厳密<rp>（</rp><rt>げんみつ</rt><rp>）</rp></ruby>な対義語は存在しません）。
 
 **語源**
 
