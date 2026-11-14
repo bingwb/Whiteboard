@@ -8,7 +8,7 @@
 | **-** | [あ ア](../vocabulary.md#toc)  | [い イ](./02_i.md#toc)   | [う ウ](./03_u.md#toc)   | [え エ](./04_e.md#toc)  | [お オ](./05_o.md#toc)  |
 | **k** | [か カ](./06_ka.md#toc)        | [き キ](./07_ki.md#toc)  | [く ク](./08_ku.md#toc)  | [け ケ](./09_ke.md#toc) | [こ コ](./10_ko.md#toc) |
 | **s** | [さ サ](./11_sa.md#toc)        | [し シ](./12_shi.md#toc) | [す ス](./13_su.md#toc)  | [せ セ](./14_se.md#toc) | [そ ソ](./15_so.md#toc) |
-| **t** | [た タ](./16_ta.md#toc)        | [ち チ](./17_chi.md#toc) | [つ ツ](#toc)        | [て テ](./19_te.md#toc) | [と ト](./20_to.md#toc) |
+| **t** | [た タ](./16_ta.md#toc)        | [ち チ](./17_chi.md#toc) | [つ ツ](#toc)            | [て テ](./19_te.md#toc) | [と ト](./20_to.md#toc) |
 | **n** | [な ナ](./21_na.md#toc)        | [に ニ](./22_ni.md#toc)  | [ぬ ヌ](./23_nu.md#toc)  | [ね ネ](./24_ne.md#toc) | [の ノ](./25_no.md#toc) |
 | **h** | [は ハ](./26_ha.md#toc)        | [ひ ヒ](./27_hi.md#toc)  | [ふ フ](./28_fu.md#toc)  | [へ ヘ](./29_he.md#toc) | [ほ ホ](./30_ho.md#toc) |
 | **m** | [ま マ](./31_ma.md#toc)        | [み ミ](./32_mi.md#toc)  | [む ム](./33_mu.md#toc)  | [め メ](./34_me.md#toc) | [も モ](./35_mo.md#toc) |
@@ -17,3 +17,13 @@
 | **w** | [わ ワ](./46_wa.md#toc)        | ー | ー | ー | ー |
 
 ## <span id="toc">目次</span>
+- [つぶす](#つぶす)
+
+
+---
+
+### つぶす
+
+[目次へ](#toc)
+
+---
