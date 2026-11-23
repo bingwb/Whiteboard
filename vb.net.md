@@ -279,3 +279,490 @@
 
 1. **写新逻辑时**：优先使用 `AndAlso` / `OrElse`、`If(a, b)`、`TryCast` / `DirectCast`、字符串插值 `$"..."` 与 `Async Function ... As Task(Of T)`。
 2. **改老代码时**：先检查工程或文件头部的 `Option Strict` 设置，警惕隐式转换、字符串 `+` 拼接与遗留 `On Error` / 后期绑定写法。
+
+### 8. 访问修饰符与可见性（Access Modifiers）
+
+VB.NET 的可见性语义和底层 IL 规则与 C# 基本一致，但关键字名称不同，且在**模块级成员默认可见性**、**组合修饰符**以及**嵌套类访问限制**上有一些容易踩坑的细节。
+
+#### 8.1 C# 与 VB.NET 可见性对照表
+
+| 作用域 / 语义 | C# | VB.NET | 说明 |
+| :--- | :--- | :--- | :--- |
+| **公开（跨程序集可见）** | `public` | `Public` | 任意可访问该类型的代码均可调用 |
+| **当前程序集内可见** | `internal` | `Friend` | VB 中用 `Friend` 表示程序集内可见，而不是 `Internal` |
+| **派生类（含外部程序集）及本类** | `protected` | `Protected` | 仅限本类型及派生类型访问（结构体不能被继承，通常不用） |
+| **当前程序集 + 派生类** | `protected internal` | `Protected Friend` | 词序相反：VB 是 `Protected Friend`，C# 是 `protected internal` |
+| **仅当前程序集内的派生类** | `private protected` | `Private Protected` | 词序同样相反：VB 是 `Private Protected`，C# 是 `private protected` |
+| **仅当前类型内可见** | `private` | `Private` | 私有成员，仅限声明它的类/结构/模块内部访问 |
+
+#### 8.2 默认可见性差异（高频踩坑点）
+
+1. **命名空间级类型（`Class`、`Structure`、`Module`、`Interface`、`Enum`）**
+   * **C#**：未写修饰符时，顶层类型默认是 `internal`。
+   * **VB.NET**：未写修饰符时，顶层类型默认是 **`Public`**（不过显式写出 `Public` 或 `Friend` 可读性更好）。
+2. **类 / 结构体 / 模块内部成员**
+   * 在类或结构体中，`Dim x As Integer` 或 `Sub Foo()` 未写修饰符时，默认是 **`Public`**（这与 C# 中类成员默认 `private` 不同）；在 `Module` 中，未写修饰符的成员同样默认是 **`Public`**。
+   * **工程建议**：明确写上 `Public`、`Private` 或 `Friend`，不要依赖隐式默认可见性。
+
+#### 8.3 代码示例与组合修饰符说明
+
+**VB.NET 示例**
+
+    Public Class BaseRepository
+        ' 仅当前程序集内的派生类可访问
+        Private Protected _connectionString As String
+
+        ' 当前程序集或任意派生类可访问
+        Protected Friend Sub LogDebug(msg As String)
+            Console.WriteLine(msg)
+        End Sub
+
+        ' 仅派生类可访问
+        Protected Overridable Sub Validate()
+        End Sub
+
+        ' 仅本类内部可访问
+        Private _retryCount As Integer = 3
+    End Class
+
+    Friend Class InternalCache
+        ' 仅当前程序集内可见
+    End Class
+
+**等价的 C# 示例**
+
+    public class BaseRepository
+    {
+        private protected string _connectionString;
+
+        protected internal void LogDebug(string msg)
+        {
+            Console.WriteLine(msg);
+        }
+
+        protected virtual void Validate()
+        {
+        }
+
+        private int _retryCount = 3;
+    }
+
+    internal class InternalCache
+    {
+    }
+
+#### 8.4 可见性常见坑点
+
+1. **成员可见性不能高于所属类型**
+   * 如果一个类是 `Friend`（相当于 C# `internal`），即使内部成员标为 `Public`，外部程序集也无法直接通过该类型访问它。
+2. **`Protected Friend` 与 `Private Protected` 的词序**
+   * C# 习惯先写 `protected` 再写 `internal` / `private`，而 VB.NET 习惯写 `Protected Friend` 和 `Private Protected`，跨语言切换时容易写反。
+3. **模块（`Module`）中的 `Friend` 成员**
+   * 团队内部共享但不想暴露给外部调用方的工具变量或辅助方法，优先用 `Friend` 限制在当前程序集内，减少外部耦合。
+
+### 9. 类（`Class`）、结构体（`Structure`）与构造函数（`Sub New`）
+
+VB.NET 中的 `Class` 对应引用类型、`Structure` 对应值类型，底层同样是 .NET 的类与 `System.ValueType`；构造函数统一命名为 **`Sub New`**（而不是与类名同名）。
+
+#### 9.1 声明与构造函数（`Sub New`）对比
+
+| 维度 | C# | VB.NET | 说明 |
+| :--- | :--- | :--- | :--- |
+| **类声明** | `public class User { }` | `Public Class User`<br>`End Class` | 引用类型，支持继承 |
+| **结构体声明** | `public struct Point { }` | `Public Structure Point`<br>`End Structure` | 值类型，不支持继承，可实现接口 |
+| **构造函数** | `public User(string name) { }` | `Public Sub New(name As String)`<br>`End Sub` | 统一用 `Sub New`，无返回值 |
+| **调用基类构造** | `: base(name)` | `MyBase.New(name)` | 放在 `Sub New` 的第一行 |
+| **调用同类其他构造** | `: this(name, 0)` | `Me.New(name, 0)` | 放在 `Sub New` 的第一行，用于构造函数链 |
+| **自动属性** | `public string Name { get; set; }` | `Public Property Name As String` | 也可设默认值：`Public Property Retry As Integer = 3` |
+| **只读属性** | `public string Id { get; }` | `Public ReadOnly Property Id As String` | 仅可在构造函数或声明处赋值 |
+
+#### 9.2 类与构造函数示例（含 `MyBase.New` / `Me.New`）
+
+**VB.NET 写法**
+
+    Public Class EntityBase
+        Public ReadOnly Property Id As Guid
+
+        Protected Sub New(id As Guid)
+            Me.Id = id
+        End Sub
+    End Class
+
+    Public Class Customer
+        Inherits EntityBase
+
+        Public Property Name As String
+        Public Property Tier As String = "Standard"
+
+        ' 链式调用同类另一构造函数
+        Public Sub New(name As String)
+            Me.New(Guid.NewGuid(), name)
+        End Sub
+
+        ' 调用基类构造函数
+        Public Sub New(id As Guid, name As String)
+            MyBase.New(id)
+            Me.Name = name
+        End Sub
+    End Class
+
+**等价的 C# 写法**
+
+    public class EntityBase
+    {
+        public Guid Id { get; }
+
+        protected EntityBase(Guid id)
+        {
+            Id = id;
+        }
+    }
+
+    public class Customer : EntityBase
+    {
+        public string Name { get; set; }
+        public string Tier { get; set; } = "Standard";
+
+        public Customer(string name) : this(Guid.NewGuid(), name)
+        {
+        }
+
+        public Customer(Guid id, string name) : base(id)
+        {
+            Name = name;
+        }
+    }
+
+#### 9.3 结构体（`Structure`）声明与用法
+
+* 现代 VB.NET（VB 11+）支持结构体带参数的 `Sub New(...)`，但和 C# 类似，**不能显式声明无参构造函数 `Public Sub New()`**。
+* 结构体有自定义构造函数时，必须为所有实例字段赋值（或通过 `Me.New()` 委托初始化），否则编译会报错。
+* 适合表示轻量级不可变数据（如坐标、金额区间、尺寸），字段过多或频繁装箱/拆箱时应改用 `Class`。
+
+**VB.NET 结构体示例**
+
+    Public Structure MoneyRange
+        Public ReadOnly MinValue As Decimal
+        Public ReadOnly MaxValue As Decimal
+
+        Public Sub New(minVal As Decimal, maxVal As Decimal)
+            If minVal > maxVal Then
+                Throw New ArgumentException("MinValue 不能大于 MaxValue")
+            End If
+            MinValue = minVal
+            MaxValue = maxVal
+        End Sub
+
+        Public Function Contains(value As Decimal) As Boolean
+            Return value >= MinValue AndAlso value <= MaxValue
+        End Function
+    End Structure
+
+    ' 使用处：
+    Public Sub UseStruct()
+        Dim r1 As New MoneyRange(10D, 100D)
+        Dim r2 As MoneyRange ' 默认全零值初始化（MinValue = 0, MaxValue = 0）
+        Dim ok = r1.Contains(50D)
+    End Sub
+
+#### 9.4 类与结构体常见坑点
+
+1. **构造函数名固定为 `Sub New`**：重命名类名时不需要改构造函数名，但跨语言切换时容易写成与类名同名导致编译错误。
+2. **`Structure` 无法定义无参 `Sub New()`**：默认无参构造由运行时提供，将所有字段置零/默认引用；若需默认初始化逻辑，通常提供静态工厂方法（如 `Shared Function CreateDefault() As ...`）。
+3. **结构体属性/字段修改与拷贝语义**：结构体按值传递与赋值时会复制整个值；若通过接口或 `Object` 引用操作结构体，会触发装箱（Boxing），修改副本不会影响原值。
+
+### 10. `My` 对象层次与快捷入口
+
+在 VB.NET 中，**`My`** 是编译器与 `Microsoft.VisualBasic` 命名空间提供的一组**按项目类型动态生成的快捷辅助对象**。底层依然调用标准 .NET 类库（如 `System.IO`、`System.Environment`、`System.Configuration` 等），但在桌面/传统 VB.NET 项目中提供了顺手的快捷入口。
+
+#### 10.1 `My` 的核心特点
+
+1. **按项目类型动态适配**：WinForms 等桌面模板通常包含 `My.Application`、`My.Computer`、`My.User`、`My.Forms`、`My.Settings`、`My.Resources` 等；不同宿主模板下可用子对象有所差异。
+2. **本质是标准 .NET 能力的快捷封装**：读老代码时不必当成黑盒，它只是把常见操作包装成了层级更扁平的调用。
+3. **工程权衡**：维护旧项目或快速编写辅助逻辑时很方便；在核心业务层或现代可测试架构中，显式传参/依赖注入与标准 BCL API 通常更清晰、更易单测。
+
+#### 10.2 常用 `My` 子对象及 C# 对照
+
+| VB.NET `My` 用法 | 常见用途 | 对应的 C# / 标准 .NET 写法思路 |
+| :--- | :--- | :--- |
+| **`My.Application`** | 获取当前程序集信息、命令行参数、生命周期事件 | `Assembly.GetExecutingAssembly()`、`Environment.GetCommandLineArgs()` |
+| **`My.Computer.FileSystem`** | 读写文本/字节、复制移动目录、组合路径 | `System.IO.File`、`System.IO.Directory`、`System.IO.Path` |
+| **`My.Computer.Info`** | 操作系统信息、可用/总物理内存 | `Environment.OSVersion`、`RuntimeInformation.OSDescription` |
+| **`My.Computer.Network`** | 检查网络可用性、快捷文件传输 | `NetworkInterface.GetIsNetworkAvailable()`、`HttpClient` |
+| **`My.User`** | 当前用户主体、身份验证与角色信息 | `Thread.CurrentPrincipal`、`WindowsIdentity.GetCurrent()` |
+| **`My.Settings`** | 读写强类型应用/用户配置 | `Properties.Settings.Default` 或 `IConfiguration` / `IOptions<T>` |
+| **`My.Resources`** | 访问 `.resx` 中的字符串、图像等资源 | `Properties.Resources` 或 `ResourceManager` |
+| **`My.Forms.Form1`** | 通过默认实例直接访问 WinForms 窗体 | 显式 `new Form1()` 或通过 DI / 窗体管理器创建实例 |
+
+#### 10.3 代码示例与 `My.Forms` 坑点
+
+**VB.NET 示例**
+
+    Dim appDir = My.Application.Info.DirectoryPath
+    Dim logPath = My.Computer.FileSystem.CombinePath(appDir, "app.log")
+
+    My.Computer.FileSystem.WriteAllText(logPath, "Started" & Environment.NewLine, append:=True)
+
+    Dim timeoutSec As Integer = My.Settings.RequestTimeoutSeconds
+
+**C# 等价思路**
+
+    var appDir = AppContext.BaseDirectory;
+    var logPath = Path.Combine(appDir, "app.log");
+
+    File.AppendAllText(logPath, "Started" + Environment.NewLine);
+
+    var timeoutSec = Properties.Settings.Default.RequestTimeoutSeconds;
+
+#### 10.4 常见坑点
+
+1. **`My.Forms` 的默认实例（Default Instance）**：在 WinForms 中首次访问 `My.Forms.MainForm` 会按线程隐式创建实例；若窗体关闭后又被访问，可能再次新建实例，导致状态混乱或生命周期难控。新逻辑建议显式管理窗体实例。
+2. **隐式环境耦合**：业务服务类直接调用 `My.Settings`、`My.Computer.FileSystem` 等会让类与宿主环境强绑定，降低单元测试隔离度。
+
+### 11.0 VB.NET 内置常量（Intrinsic Constants）
+
+VB.NET 在 `Microsoft.VisualBasic` 命名空间（主要是 `Constants` 模块及 `ControlChars` 类）中提供了一批**内置常量**，覆盖换行符、控制字符、消息框返回值/按钮样式、比较模式（`CompareMethod`）等常见场景。
+
+从 C# 视角来看，它们大多对应 **`Environment.NewLine`**、**转义字符（`\r`、`\n`、`\t`）**或 **`System.Windows.Forms` / `Microsoft.VisualBasic` 的枚举值**。
+
+#### 11.1 常用内置常量及 C# 对照
+
+| 维度 | VB.NET 内置常量 | 含义 / 常见用途 | C# 等价写法 |
+| :--- | :--- | :--- | :--- |
+| **系统换行符** | `vbCrLf` | 回车 + 换行（`\r\n`，Windows 常见） | `Environment.NewLine` 或 `"\r\n"` |
+| **回车 / 换行** | `vbCr` / `vbLf` | 回车（`\r`）/ 换行（`\n`） | `"\r"` / `"\n"` |
+| **制表符 / 退格** | `vbTab` / `vbBack` | 水平制表符（`\t`）/ 退格（`\b`） | `"\t"` / `"\b"` |
+| **空字符串** | `vbNullString` | 历史遗留空串常量（注意与 `Nothing` 区别） | `string.Empty` 或 `null` |
+| **跨平台换行（`ControlChars`）** | `ControlChars.CrLf`、`ControlChars.NewLine` | 语义更清晰的 `Char` / `String` 形式控制字符 | `Environment.NewLine`、`'\r'`、`'\n'` |
+| **比较方式** | `CompareMethod.Binary` / `CompareMethod.Text` | 二进制（区分大小写）或文本（不区分大小写）比较 | `StringComparison.Ordinal` / `StringComparison.OrdinalIgnoreCase` |
+| **MsgBox 按钮/结果** | `MsgBoxStyle.YesNo`、`MsgBoxResult.Yes` | 传统 `MsgBox` 弹窗样式与用户点击结果 | `MessageBoxButtons.YesNo`、`DialogResult.Yes` |
+
+#### 11.2 代码示例
+
+**VB.NET 写法**
+
+    Imports Microsoft.VisualBasic
+
+    Public Module BuiltInConstantsDemo
+        Public Function BuildReportLines(lines As IEnumerable(Of String)) As String
+            ' 使用 vbCrLf 或 Environment.NewLine 拼接多行文本
+            Return String.Join(Environment.NewLine, lines) & vbCrLf & "End" & vbTab & "OK"
+        End Function
+
+        Public Function ContainsIgnoreCase(source As String, target As String) As Boolean
+            ' InStr 支持 CompareMethod.Text（不区分大小写）与 CompareMethod.Binary
+            Return InStr(1, source, target, CompareMethod.Text) > 0
+        End Function
+    End Module
+
+**C# 等价思路**
+
+    using System;
+    using System.Collections.Generic;
+
+    public static class BuiltInConstantsDemo
+    {
+        public static string BuildReportLines(IEnumerable<string> lines)
+        {
+            return string.Join(Environment.NewLine, lines) + Environment.NewLine + "End\tOK";
+        }
+
+        public static bool ContainsIgnoreCase(string source, string target)
+        {
+            return source.Contains(target, StringComparison.OrdinalIgnoreCase);
+        }
+    }
+
+#### 11.3 常见坑点与工程建议
+
+1. **`vbCrLf` 与 `Environment.NewLine` 的选择**：`vbCrLf` 固定为 `\r\n`；若需随当前运行平台自适应，优先用 `Environment.NewLine`（跨平台更稳妥），或在明确要求 CRLF 的协议/文件格式中使用 `vbCrLf`。
+2. **谨慎对待 `vbNullString`**：它是为兼容旧 VB 指针/字符串语义保留的特殊值（在 `Option Strict On` 下传入期望 `String` 的位置需注意类型与空值行为），新代码中更推荐使用 `String.Empty` 或 `Nothing`。
+3. **新代码优先标准 .NET API**：像 `InStr`、`MsgBox` 这类 `Microsoft.VisualBasic` 传统函数与常量在旧代码中很常见，新写逻辑时用 `String.Contains(..., StringComparison.OrdinalIgnoreCase)`、`MessageBox.Show` 等标准 .NET API 更直观，也更便于跨语言团队协作。
+
+### 12.0 VB.NET 循环语句与 C# 对照
+
+VB.NET 的循环结构语义与 C# 高度对应，但关键字更偏自然语言，块级闭合明确（`Next`、`Loop`、`End While`），且在**闭区间上界**、**条件判断位置（前测/后测）**以及**提前退出/继续**上有几个容易踩坑的细节。
+
+#### 12.1 循环类型与 C# 对照表
+
+| 循环类型 | C# | VB.NET | 说明 / 坑点提示 |
+| :--- | :--- | :--- | :--- |
+| **计数循环（递增/递减）** | `for (int i = 0; i < 5; i++)`<br>`for (int i = 5; i > 0; i--)` | `For i As Integer = 0 To 4`<br>`For i As Integer = 5 To 1 Step -1` | **`To` 是闭区间**（包含上界）；步长默认 `1`，倒序或自定义步长用 `Step` |
+| **集合遍历** | `foreach (var item in items)` | `For Each item In items` | 遍历 `IEnumerable` / 数组 / 集合，循环变量通常只读 |
+| **前测条件循环（为真继续）** | `while (cond) { ... }` | `While cond`<br>`  ...`<br>`End While`<br>或 `Do While cond ... Loop` | 条件为 `True` 时执行；循环体可能一次都不执行 |
+| **前测条件循环（为假继续）** | `while (!cond) { ... }` | `Do Until cond`<br>`  ...`<br>`Loop` | VB 特有的 `Until`：条件为 `False` 时继续，直到变为 `True` 停止 |
+| **后测条件循环（至少执行一次）** | `do { ... } while (cond);` | `Do`<br>`  ...`<br>`Loop While cond` | 先执行一次循环体，再判断 `cond` 是否为 `True` |
+| **后测条件循环（直到为真停止）** | `do { ... } while (!cond);` | `Do`<br>`  ...`<br>`Loop Until cond` | 先执行一次循环体，直到 `cond` 变为 `True` 停止 |
+| **提前跳出循环** | `break;` | `Exit For` / `Exit Do` / `Exit While` | 按循环种类对应 `Exit ...` |
+| **跳过本次迭代** | `continue;` | `Continue For` / `Continue Do` / `Continue While` | 按循环种类对应 `Continue ...` |
+
+#### 12.2 代码示例与 C# 对照
+
+**VB.NET 写法**
+
+    Public Module LoopExamples
+        Public Sub RunLoops(items As IList(Of String))
+            ' 1. For ... To / Step（闭区间：0, 2, 4）
+            For i As Integer = 0 To 4 Step 2
+                Console.WriteLine($"Index: {i}")
+            Next
+
+            ' 2. For Each 与 Continue For / Exit For
+            For Each item In items
+                If String.IsNullOrWhiteSpace(item) Then
+                    Continue For
+                End If
+                If item = "STOP" Then
+                    Exit For
+                End If
+                Console.WriteLine(item)
+            Next
+
+            ' 3. Do While（前测）与 Do ... Loop Until（后测）
+            Dim count As Integer = 0
+            Do While count < 3
+                count += 1
+            Loop
+
+            Do
+                count -= 1
+            Loop Until count <= 0
+        End Sub
+    End Module
+
+**等价的 C# 写法**
+
+    using System;
+    using System.Collections.Generic;
+
+    public static class LoopExamples
+    {
+        public static void RunLoops(IList<string> items)
+        {
+            for (int i = 0; i <= 4; i += 2)
+            {
+                Console.WriteLine($"Index: {i}");
+            }
+
+            foreach (var item in items)
+            {
+                if (string.IsNullOrWhiteSpace(item))
+                {
+                    continue;
+                }
+                if (item == "STOP")
+                {
+                    break;
+                }
+                Console.WriteLine(item);
+            }
+
+            int count = 0;
+            while (count < 3)
+            {
+                count++;
+            }
+
+            do
+            {
+                count--;
+            } while (count > 0);
+        }
+    }
+
+#### 12.3 循环常见坑点
+
+1. **`For ... To` 是闭区间，不是半开区间**
+   * C# 习惯写 `for (int i = 0; i < list.Count; i++)`；VB 中若写成 `For i = 0 To list.Count`，最后一个下标会越界抛 `ArgumentOutOfRangeException`，正确写法是 `For i = 0 To list.Count - 1`。
+2. **`Exit` 和 `Continue` 需匹配循环关键字**
+   * 在 `For` 循环中写 `Continue For` / `Exit For`，在 `Do` 循环中写 `Continue Do` / `Exit Do`（嵌套循环时各自作用于最内层循环）。
+3. **倒序循环必须显式指定 `Step -1`**
+   * 写 `For i = 10 To 1` 时默认步长为 `+1`，循环体不会执行；从大到小遍历必须加上 `Step -1`。
+4. **循环变量作用域与闭包捕获**
+   * 在 `For i As Integer = ...` 中声明的 `i` 作用域仅限该 `For` 循环块；若在循环内创建 Lambda 捕获循环变量，注意与 C# 类似的变量捕获时机，必要时先拷贝到局部变量。
+
+### 13.0 VB.NET 分支语句与 C# 对照
+
+VB.NET 的分支结构主要有两类：**`If ... Then ... ElseIf ... Else ... End If`**（以及单行/三元式 `If(...)`）和 **`Select Case ... End Select`**。整体语义与 C# 接近，但关键字大小写、无 `break` 贯通规则以及 `Select Case` 的范围/关系匹配有一些实用特性和常见坑点。
+
+#### 13.1 分支语法与 C# 对照表
+
+| 分支类型 | C# | VB.NET | 说明 / 坑点提示 |
+| :--- | :--- | :--- | :--- |
+| **多分支 `if / else if / else`** | `if (a) { ... }`<br>`else if (b) { ... }`<br>`else { ... }` | `If a Then`<br>`  ...`<br>`ElseIf b Then`<br>`  ...`<br>`Else`<br>`  ...`<br>`End If` | 注意 VB 中是 **`ElseIf`**（连写，无空格）；块级写法必须带 `Then` 和 `End If` |
+| **单行 `If` 语句** | `if (cond) DoA(); else DoB();` | `If cond Then DoA() Else DoB()` | 单行形式不需要 `End If`，适合极简语句；复杂逻辑建议拆成多行 |
+| **条件表达式（三元）** | `var res = cond ? a : b;` | `Dim res = If(cond, a, b)` | 推荐用三参数函数 `If(cond, a, b)`（仅求值被选分支），避免用历史 `IIf(cond, a, b)`（两边都会求值） |
+| **空合并表达式** | `var res = x ?? fallback;` | `Dim res = If(x, fallback)` | 双参数 `If(a, b)` 等价于 C# 的 `a ?? b` |
+| **多路匹配 `switch` / `Select Case`** | `switch (x) {`<br>`  case 1: ... break;`<br>`  case 2: case 3: ... break;`<br>`  default: ... break;`<br>`}` | `Select Case x`<br>`  Case 1`<br>`    ...`<br>`  Case 2, 3`<br>`    ...`<br>`  Case Else`<br>`    ...`<br>`End Select` | **无需 `break`**：匹配某个 `Case` 后自动结束 `Select Case`，不会自然“掉入”下一个 `Case` |
+| **范围与关系匹配** | `case >= 10 and <= 20:`（C# 9+）<br>`case > 100:` | `Case 10 To 20`<br>`Case Is > 100` | VB 的 `Select Case` 原生支持 `To` 闭区间和 `Is < / > / >= / <=` 关系判断 |
+
+#### 13.2 代码示例与 C# 对照
+
+**VB.NET 写法**
+
+    Public Module BranchExamples
+        Public Function ClassifyScore(score As Integer) As String
+            If score < 0 OrElse score > 100 Then
+                Return "Invalid"
+            ElseIf score >= 90 Then
+                Return "A"
+            Else
+                Return "Normal"
+            End If
+        End Function
+
+        Public Function DescribeLevel(level As Integer) As String
+            Select Case level
+                Case Is <= 0
+                    Return "Disabled"
+                Case 1, 2
+                    Return "Basic"
+                Case 3 To 5
+                    Return "Standard"
+                Case Is > 5
+                    Return "Enterprise"
+                Case Else
+                    Return "Unknown"
+            End Select
+        End Function
+    End Module
+
+**等价的 C# 写法**
+
+    public static class BranchExamples
+    {
+        public static string ClassifyScore(int score)
+        {
+            if (score < 0 || score > 100)
+            {
+                return "Invalid";
+            }
+            else if (score >= 90)
+            {
+                return "A";
+            }
+            else
+            {
+                return "Normal";
+            }
+        }
+
+        public static string DescribeLevel(int level)
+        {
+            return level switch
+            {
+                <= 0 => "Disabled",
+                1 or 2 => "Basic",
+                >= 3 and <= 5 => "Standard",
+                > 5 => "Enterprise",
+                _ => "Unknown"
+            };
+        }
+    }
+
+#### 13.3 分支常见坑点
+
+1. **写法是 `ElseIf`，不是 `Else If`**
+   * 在多行块中写成 `Else If` 会被编译器当作嵌套在 `Else` 块里的**新 `If` 语句**，需要额外配一个 `End If`，极易导致块层级错乱；标准写法是 `ElseIf`。
+2. **`Select Case` 不会“贯穿（Fall-through）”**
+   * C# `switch` 只有空 `case` 才允许贯穿，其他分支需 `break`；VB 的 `Select Case` 每个 `Case` 分支执行完就跳出整个 `Select Case`，多值匹配直接用逗号分隔（如 `Case 1, 2, 3`）。
