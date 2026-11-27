@@ -1,4 +1,5 @@
 # 語彙 あ ア
+- [擬態語](./onomatopoeia.md)
 - [語構成・造語法](./wordFormation.md)
 - [標準日本語初級](./textElementary.md)
 - [標準日本語中級](./textIntermediate.md)
